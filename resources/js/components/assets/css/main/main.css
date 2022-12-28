@@ -1,0 +1,281 @@
+body {
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.ant-layout-sider {
+  background-color: #212529;
+  width: 240px !important;
+  max-width: 240px !important;
+}
+
+/* .ant-layout-sider {
+    background-color: #212529;
+    width: 240px !important;
+    max-width: 240px !important;
+} */
+.ant-layout-header {
+  background-color: #0866c6;
+  height: 100px;
+}
+
+.sideMenuLogo {
+  background-color: #0759ad;
+  height: 100px;
+  font-size: 24px;
+  color: white;
+  padding: 0 20px;
+  padding-top: 30px;
+}
+
+.sideMenu {
+  background-color: #212529;
+}
+
+.sideMenu .ant-menu-item-group-title {
+  /* color: #868e96; */
+  color: #495057;
+  font-size: 10px;
+}
+
+.sideMenu .ant-menu-item a {
+  color: #868e96;
+}
+
+.sideMenu .ant-menu-item-selected {
+  background-color: #0759ad !important;
+  color: white;
+}
+
+.sideMenu .ant-menu-item-active .ant-menu-item-selected {
+  background-color: #0759ad !important;
+}
+
+.sideMenu .ant-menu-item-selected a {
+  color: white;
+}
+
+.sideMenu .ant-menu-item {
+  border-top: 1px solid #282d31 !important;
+}
+
+.sideMenu .ant-menu-submenu {
+  border-top: 1px solid #282d31 !important;
+}
+
+.sideMenu .ant-menu-item-icon {
+  color: #868e96;
+}
+
+.sideMenu
+.ant-menu-submenu
+.ant-menu-submenu-inline
+.ant-menu-submenu-selected {
+  background-color: #0759ad !important;
+  color: white;
+}
+
+.sideMenu .ant-menu-title-content {
+  color: #868e96;
+}
+
+.sideMenu .ant-menu-submenu-arrow {
+  color: #868e96;
+}
+
+.sideMenu .ant-menu-sub {
+  background-color: #212529 !important;
+}
+
+.headerNavs {
+  background-color: #0866c6;
+  padding: 16px;
+  height: 50px;
+}
+
+.ant-menu-horizontal {
+  border-bottom: none;
+}
+
+.headerNavs .ant-menu-submenu-horizontal {
+  color: white;
+}
+
+.backgroundColorHeadernavs {
+  background-color: #0759ad;
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.backgroundColorHeadernavs:hover {
+  color: white;
+}
+
+.headerNavs li {
+  padding-right: 10px !important;
+  padding-left: 10px !important;
+}
+
+.headerNavsLeft {
+  font-size: 60px;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 15px;
+}
+
+.headerNavlefttext {
+  position: relative;
+  font-size: 12px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  top: -9px;
+  height: 0;
+  line-height: 0px !important;
+}
+
+.headerNavleftHover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.headerNavleftHover:hover {
+  color: white !important;
+}
+
+.transitionhide {
+  -webkit-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  display: none;
+}
+
+.transtionGrow {
+  -webkit-transition: width 200ms;
+  transition: width 200ms;
+  margin-left: 0px !important;
+}
+
+.menuCollapseOnClose {
+  position: absolute;
+  right: 0;
+  top: 39px;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.5);
+  right: 20px;
+}
+
+.menuCollapseOnClose:hover {
+  color: white;
+}
+
+.menu-hide {
+  display: none;
+}
+
+.menuCollapseOnopen {
+  margin-top: 10px;
+}
+
+.noMarginLeft {
+  margin-left: -20px !important;
+}
+
+.ant-menu-inline,
+.ant-menu-vertical,
+.ant-menu-vertical-left {
+  border-right: none;
+}
+
+.appsMobile {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+.login-layout {
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#2F3950));
+  background: linear-gradient(to bottom, #fff 0%, #2F3950 100%);
+}
+
+.globalLoading {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999999999;
+  padding-top: 45vh;
+  text-align: center;
+  background-color: #80808045;
+}
+
+.scrollbar-1 {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(246, 246, 255, 0.57) rgba(205, 205, 209, 0.35);
+}
+
+.scrollbar-1::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar-1::-webkit-scrollbar-track {
+  background-clip: content-box;
+  border: 2px solid transparent;
+}
+
+.scrollbar-1::-webkit-scrollbar-thumb {
+  background-color: rgba(246, 246, 255, 0.57);
+}
+
+.scrollbar-1::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(192, 192, 199, 0.613);
+}
+
+.scrollbar-1::-webkit-scrollbar-corner, .scrollbar-1::-webkit-scrollbar-track {
+  background-color: rgba(205, 205, 209, 0.35);
+}
+
+.scrollbar-2 {
+  scrollbar-width: thin;
+  scrollbar-color: #008aff #bbb;
+}
+
+.scrollbar-2::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.scrollbar-2::-webkit-scrollbar-track {
+  background-color: #bbb;
+}
+
+.scrollbar-2::-webkit-scrollbar-thumb {
+  background-color: #008aff;
+}
+
+.scrollbar-2::-webkit-scrollbar-track, .scrollbar-2::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.ant-upload.ant-upload-select-picture-card {
+  width: 150px;
+  height: 150px;
+}
+
+.mb-0 {
+  margin-bottom: 0px !important;
+}
+
+.ant-menu-item {
+  margin: 0px !important;
+}
+/*# sourceMappingURL=main.css.map */

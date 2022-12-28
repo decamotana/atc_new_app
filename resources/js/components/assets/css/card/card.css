@@ -1,0 +1,276 @@
+.card-primary {
+  background-color: #2F3950;
+  color: #ffffff;
+}
+
+.card-primary-head > .ant-card-head {
+  background-color: #2F3950;
+  color: #ffffff;
+}
+
+.card-primary-border {
+  border-color: #2F3950;
+  border-radius: 4px;
+}
+
+.card-primary-no-border > .ant-card-head {
+  border: none;
+}
+
+.card-secondary {
+  background-color: #868e96;
+  color: #ffffff;
+}
+
+.card-secondary-border {
+  border-color: #868e96;
+  border-radius: 4px;
+}
+
+.card-secondary-head > .ant-card-head {
+  background-color: #868e96;
+  color: #ffffff;
+}
+
+.card-secondary-no-border > .ant-card-head {
+  border: none;
+}
+
+.card-success {
+  background-color: #23bf08;
+  color: #ffffff;
+}
+
+.card-success-border {
+  border-color: #23bf08;
+  border-radius: 4px;
+}
+
+.card-success-head > .ant-card-head {
+  background-color: #23bf08;
+  color: #ffffff;
+}
+
+.card-success-no-border > .ant-card-head {
+  border: none;
+}
+
+.card-warning {
+  background-color: #F4BA41;
+  color: #ffffff;
+}
+
+.card-warning-border {
+  border-color: #F4BA41;
+  border-radius: 4px;
+}
+
+.card-warning-head > .ant-card-head {
+  background-color: #F4BA41;
+  color: #ffffff;
+}
+
+.card-warning-no-border > .ant-card-head {
+  border: none;
+}
+
+.card-danger {
+  background-color: #C82A1C;
+  color: #ffffff;
+}
+
+.card-danger-border {
+  border-color: #C82A1C;
+  border-radius: 4px;
+}
+
+.card-danger-head > .ant-card-head {
+  background-color: #C82A1C;
+  color: #ffffff;
+}
+
+.card-danger-no-border > .ant-card-head {
+  border: none;
+}
+
+.card-info {
+  background-color: #5b93d3;
+  color: #ffffff;
+}
+
+.card-info-border {
+  border-color: #5b93d3;
+  border-radius: 4px;
+}
+
+.card-info-head > .ant-card-head {
+  background-color: #5b93d3;
+  color: #ffffff;
+}
+
+.card-info-no-border > .ant-card-head {
+  border: none;
+}
+
+.card-indigo {
+  background-color: #6610f2;
+  color: #ffffff;
+}
+
+.card-indigo-border {
+  border-color: #6610f2;
+  border-radius: 4px;
+}
+
+.card-indigo-head > .ant-card-head {
+  background-color: #6610f2;
+  color: #ffffff;
+}
+
+.card-indigo-no-border > .ant-card-head {
+  border: none;
+}
+
+.card-purple {
+  background-color: #6f42c1;
+  color: #ffffff;
+}
+
+.card-purple-border {
+  border-color: #6f42c1;
+  border-radius: 4px;
+}
+
+.card-purple-head > .ant-card-head {
+  background-color: #6f42c1;
+  color: #ffffff;
+}
+
+.card-purple-no-border > .ant-card-head {
+  border: none;
+}
+
+.card-pink {
+  background-color: #e83e8c;
+  color: #ffffff;
+}
+
+.card-pink-border {
+  border-color: #e83e8c;
+  border-radius: 4px;
+}
+
+.card-pink-head > .ant-card-head {
+  background-color: #e83e8c;
+  color: #ffffff;
+}
+
+.card-pink-no-border > .ant-card-head {
+  border: none;
+}
+
+.card-teal {
+  background-color: #1caf9a;
+  color: #ffffff;
+}
+
+.card-teal-border {
+  border-color: #1caf9a;
+  border-radius: 4px;
+}
+
+.card-teal-head > .ant-card-head {
+  background-color: #1caf9a;
+  color: #ffffff;
+}
+
+.card-teal-no-border > .ant-card-head {
+  border: none;
+}
+
+.card-dark {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+.card-dark-border {
+  border-color: #343a40;
+  border-radius: 4px;
+}
+
+.card-dark-no-border > .ant-card-head {
+  border: none;
+}
+
+.card-dark-head > .ant-card-head {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+.card-orange {
+  background-color: #f27510;
+  color: #ffffff;
+}
+
+.card-orange-border {
+  border-color: #f27510;
+  border-radius: 4px;
+}
+
+.card-orange-no-border > .ant-card-head {
+  border: none;
+}
+
+.card-orange-head > .ant-card-head {
+  background-color: #f27510;
+  color: #ffffff !important;
+}
+
+.card-white {
+  background-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+.card-white-border {
+  border-color: #ffffff !important;
+  border-radius: 4px;
+}
+
+.card-white-no-border > .ant-card-head {
+  border: none !important;
+}
+
+.card-white-head > .ant-card-head {
+  background-color: #ffffff !important;
+  color: #343a40 !important;
+}
+
+.sh-pagetitle-title-sub {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.sh-pagetitle-title {
+  color: #0866c6;
+  font-weight: 400;
+  margin-bottom: 5px;
+  margin-left: 8px;
+  margin-top: 17px;
+}
+
+.sh-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ant-page-header-heading-title {
+  width: 400px;
+}
+/*# sourceMappingURL=card.css.map */

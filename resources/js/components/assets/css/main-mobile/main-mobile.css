@@ -1,0 +1,30 @@
+@media (max-width: 768px) {
+  .headerNavleftHover {
+    display: none;
+  }
+  .menuCollapseOnopen .headerNavleftHover {
+    display: block;
+  }
+  .colheaderNavs {
+    margin-left: -216px !important;
+  }
+  .transtionGrow .colheaderNavs {
+    margin-left: 0px !important;
+  }
+  .sidemenuDark {
+    height: 100% !important;
+  }
+  .mobileWidthContent {
+    width: 300px;
+  }
+  .appsMobile {
+    display: inline-block;
+  }
+  .layout-main {
+    min-width: 300px !important;
+  }
+  .layout-main-footer {
+    min-width: 300px !important;
+  }
+}
+/*# sourceMappingURL=main-mobile.css.map */

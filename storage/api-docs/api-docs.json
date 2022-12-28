@@ -1,0 +1,1362 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Promise Network Gift Cards API",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/Info/Checkbalance": {
+            "post": {
+                "summary": "Checks the balance",
+                "operationId": "App\\Http\\Controllers\\Swagger\\InfoCheckBalanceController::infoCheckBalance",
+                "requestBody": {
+                    "description": "The request.",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "HardwareID",
+                                    "CardNumber",
+                                    "Amount",
+                                    "TipAmount",
+                                    "TransactionRef",
+                                    "CashierRef",
+                                    "ReferenceNumber",
+                                    "Force"
+                                ],
+                                "properties": {
+                                    "HardwareID": {
+                                        "type": "string",
+                                        "example": "TestHardWare1"
+                                    },
+                                    "CardNumber": {
+                                        "type": "string",
+                                        "example": "TestCardNumber1"
+                                    },
+                                    "Amount": {
+                                        "type": "integer",
+                                        "example": 0
+                                    },
+                                    "TipAmount": {
+                                        "type": "integer",
+                                        "example": 0
+                                    },
+                                    "TransactionRef": {
+                                        "type": "string",
+                                        "example": "TransactionRef4k109"
+                                    },
+                                    "CashierRef": {
+                                        "type": "string",
+                                        "example": "CashierRef106"
+                                    },
+                                    "ReferenceNumber": {
+                                        "type": "string",
+                                        "example": "ReferenceNumber105"
+                                    },
+                                    "Force": {
+                                        "type": "boolean",
+                                        "example": false
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "Message": {
+                                            "type": "string"
+                                        },
+                                        "ReferenceCode": {
+                                            "type": "string"
+                                        },
+                                        "FinalTransaction": {
+                                            "type": "integer",
+                                            "example": 0
+                                        },
+                                        "CardBalance": {
+                                            "type": "integer",
+                                            "example": 0
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Authorization has been denied for this request"
+                    },
+                    "400": {
+                        "description": "Business logic failure. Must process response body to determine details of failure reason.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "ErrorCode": {
+                                            "type": "integer",
+                                            "example": 0
+                                        },
+                                        "Message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/POS/Checkbalance": {
+            "post": {
+                "summary": "Checks the balance of the card specified",
+                "operationId": "App\\Http\\Controllers\\Swagger\\POSController::checkBalance",
+                "requestBody": {
+                    "description": "The request.",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "HardwareID",
+                                    "CardNumber",
+                                    "Amount",
+                                    "TipAmount",
+                                    "TransactionRef",
+                                    "CashierRef",
+                                    "ReferenceNumber",
+                                    "Force"
+                                ],
+                                "properties": {
+                                    "HardwareID": {
+                                        "type": "string",
+                                        "example": "TestHardWare1"
+                                    },
+                                    "CardNumber": {
+                                        "type": "string",
+                                        "example": "TestCardNumber1"
+                                    },
+                                    "Amount": {
+                                        "type": "integer",
+                                        "example": 0
+                                    },
+                                    "TipAmount": {
+                                        "type": "integer",
+                                        "example": 0
+                                    },
+                                    "TransactionRef": {
+                                        "type": "string",
+                                        "example": "TransactionRef4k109"
+                                    },
+                                    "CashierRef": {
+                                        "type": "string",
+                                        "example": "CashierRef106"
+                                    },
+                                    "ReferenceNumber": {
+                                        "type": "string",
+                                        "example": "ReferenceNumber105"
+                                    },
+                                    "Force": {
+                                        "type": "boolean",
+                                        "example": false
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "Message": {
+                                            "type": "string"
+                                        },
+                                        "ReferenceCode": {
+                                            "type": "string"
+                                        },
+                                        "FinalTransaction": {
+                                            "type": "integer",
+                                            "example": 0
+                                        },
+                                        "CardBalance": {
+                                            "type": "integer",
+                                            "example": 0
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Authorization has been denied for this request"
+                    },
+                    "400": {
+                        "description": "Business logic failure. Must process response body to determine details of failure reason.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "ErrorCode": {
+                                            "type": "integer",
+                                            "example": 0
+                                        },
+                                        "Message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/POS/Activate": {
+            "post": {
+                "summary": "Activates the specific card",
+                "operationId": "App\\Http\\Controllers\\Swagger\\POSController::activate",
+                "requestBody": {
+                    "description": "The request.",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "HardwareID",
+                                    "CardNumber",
+                                    "Amount",
+                                    "TipAmount",
+                                    "TransactionRef",
+                                    "CashierRef",
+                                    "ReferenceNumber",
+                                    "Force"
+                                ],
+                                "properties": {
+                                    "HardwareID": {
+                                        "type": "string",
+                                        "example": "TestHardWare1"
+                                    },
+                                    "CardNumber": {
+                                        "type": "string",
+                                        "example": "TestCardNumber1"
+                                    },
+                                    "Amount": {
+                                        "type": "integer",
+                                        "example": 0
+                                    },
+                                    "TipAmount": {
+                                        "type": "integer",
+                                        "example": 0
+                                    },
+                                    "TransactionRef": {
+                                        "type": "string",
+                                        "example": "TransactionRef4k109"
+                                    },
+                                    "CashierRef": {
+                                        "type": "string",
+                                        "example": "CashierRef106"
+                                    },
+                                    "ReferenceNumber": {
+                                        "type": "string",
+                                        "example": "ReferenceNumber105"
+                                    },
+                                    "Force": {
+                                        "type": "boolean",
+                                        "example": false
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "Message": {
+                                            "type": "string"
+                                        },
+                                        "ReferenceCode": {
+                                            "type": "string"
+                                        },
+                                        "FinalTransaction": {
+                                            "type": "integer",
+                                            "example": 0
+                                        },
+                                        "CardBalance": {
+                                            "type": "integer",
+                                            "example": 0
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Authorization has been denied for this request"
+                    },
+                    "400": {
+                        "description": "Business logic failure. Must process response body to determine details of failure reason.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "ErrorCode": {
+                                            "type": "integer",
+                                            "example": 0
+                                        },
+                                        "Message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/POS/AddValue": {
+            "post": {
+                "summary": "Adds the given value to the balance of a given card",
+                "operationId": "App\\Http\\Controllers\\Swagger\\POSController::addValue",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "description": "The request.",
+                                "required": [
+                                    "HardwareID",
+                                    "CardNumber",
+                                    "Amount",
+                                    "TipAmount",
+                                    "TransactionRef",
+                                    "CashierRef",
+                                    "ReferenceNumber",
+                                    "Force"
+                                ],
+                                "properties": {
+                                    "HardwareID": {
+                                        "type": "string",
+                                        "example": "TestHardWare1"
+                                    },
+                                    "CardNumber": {
+                                        "type": "string",
+                                        "example": "TestCardNumber1"
+                                    },
+                                    "Amount": {
+                                        "type": "integer",
+                                        "example": 0
+                                    },
+                                    "TipAmount": {
+                                        "type": "integer",
+                                        "example": 0
+                                    },
+                                    "TransactionRef": {
+                                        "type": "string",
+                                        "example": "TransactionRef4k109"
+                                    },
+                                    "CashierRef": {
+                                        "type": "string",
+                                        "example": "CashierRef106"
+                                    },
+                                    "ReferenceNumber": {
+                                        "type": "string",
+                                        "example": "ReferenceNumber105"
+                                    },
+                                    "Force": {
+                                        "type": "boolean",
+                                        "example": false
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "Message": {
+                                            "type": "string"
+                                        },
+                                        "ReferenceCode": {
+                                            "type": "string"
+                                        },
+                                        "FinalTransaction": {
+                                            "type": "integer",
+                                            "example": 0
+                                        },
+                                        "CardBalance": {
+                                            "type": "integer",
+                                            "example": 0
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Authorization has been denied for this request"
+                    },
+                    "400": {
+                        "description": "Business logic failure. Must process response body to determine details of failure reason.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "ErrorCode": {
+                                            "type": "integer",
+                                            "example": 0
+                                        },
+                                        "Message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/POS/Redeem": {
+            "post": {
+                "summary": "Redeems the given amount from a specific card",
+                "operationId": "App\\Http\\Controllers\\Swagger\\POSController::redeem",
+                "requestBody": {
+                    "description": "The request.",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "HardwareID",
+                                    "CardNumber",
+                                    "Amount",
+                                    "TipAmount",
+                                    "TransactionRef",
+                                    "CashierRef",
+                                    "ReferenceNumber",
+                                    "Force"
+                                ],
+                                "properties": {
+                                    "HardwareID": {
+                                        "type": "string",
+                                        "example": "TestHardWare1"
+                                    },
+                                    "CardNumber": {
+                                        "type": "string",
+                                        "example": "TestCardNumber1"
+                                    },
+                                    "Amount": {
+                                        "type": "integer",
+                                        "example": 0
+                                    },
+                                    "TipAmount": {
+                                        "type": "integer",
+                                        "example": 0
+                                    },
+                                    "TransactionRef": {
+                                        "type": "string",
+                                        "example": "TransactionRef4k109"
+                                    },
+                                    "CashierRef": {
+                                        "type": "string",
+                                        "example": "CashierRef106"
+                                    },
+                                    "ReferenceNumber": {
+                                        "type": "string",
+                                        "example": "ReferenceNumber105"
+                                    },
+                                    "Force": {
+                                        "type": "boolean",
+                                        "example": false
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "Message": {
+                                            "type": "string"
+                                        },
+                                        "ReferenceCode": {
+                                            "type": "string"
+                                        },
+                                        "FinalTransaction": {
+                                            "type": "integer",
+                                            "example": 0
+                                        },
+                                        "CardBalance": {
+                                            "type": "integer",
+                                            "example": 0
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Authorization has been denied for this request"
+                    },
+                    "400": {
+                        "description": "Business logic failure. Must process response body to determine details of failure reason.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "ErrorCode": {
+                                            "type": "integer",
+                                            "example": 0
+                                        },
+                                        "Message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/POS/Void": {
+            "post": {
+                "summary": "Voids the specified card",
+                "operationId": "App\\Http\\Controllers\\Swagger\\POSController::void",
+                "requestBody": {
+                    "description": "The request.",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "HardwareID",
+                                    "CardNumber",
+                                    "Amount",
+                                    "TipAmount",
+                                    "TransactionRef",
+                                    "CashierRef",
+                                    "ReferenceNumber",
+                                    "Force"
+                                ],
+                                "properties": {
+                                    "HardwareID": {
+                                        "type": "string",
+                                        "example": "TestHardWare1"
+                                    },
+                                    "CardNumber": {
+                                        "type": "string",
+                                        "example": "TestCardNumber1"
+                                    },
+                                    "Amount": {
+                                        "type": "integer",
+                                        "example": 0
+                                    },
+                                    "TipAmount": {
+                                        "type": "integer",
+                                        "example": 0
+                                    },
+                                    "TransactionRef": {
+                                        "type": "string",
+                                        "example": "TransactionRef4k109"
+                                    },
+                                    "CashierRef": {
+                                        "type": "string",
+                                        "example": "CashierRef106"
+                                    },
+                                    "ReferenceNumber": {
+                                        "type": "string",
+                                        "example": "ReferenceNumber105"
+                                    },
+                                    "Force": {
+                                        "type": "boolean",
+                                        "example": false
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "Message": {
+                                            "type": "string"
+                                        },
+                                        "ReferenceCode": {
+                                            "type": "string"
+                                        },
+                                        "FinalTransaction": {
+                                            "type": "integer",
+                                            "example": 0
+                                        },
+                                        "CardBalance": {
+                                            "type": "integer",
+                                            "example": 0
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Authorization has been denied for this request"
+                    },
+                    "400": {
+                        "description": "Business logic failure. Must process response body to determine details of failure reason.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "ErrorCode": {
+                                            "type": "integer",
+                                            "example": 0
+                                        },
+                                        "Message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/POS/Return": {
+            "post": {
+                "summary": "Returns the given amount to the specified card",
+                "requestBody": {
+                    "description": "The request.",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "HardwareID",
+                                    "CardNumber",
+                                    "Amount",
+                                    "TipAmount",
+                                    "TransactionRef",
+                                    "CashierRef",
+                                    "ReferenceNumber",
+                                    "Force"
+                                ],
+                                "properties": {
+                                    "HardwareID": {
+                                        "type": "string",
+                                        "example": "TestHardWare1"
+                                    },
+                                    "CardNumber": {
+                                        "type": "string",
+                                        "example": "TestCardNumber1"
+                                    },
+                                    "Amount": {
+                                        "type": "integer",
+                                        "example": 0
+                                    },
+                                    "TipAmount": {
+                                        "type": "integer",
+                                        "example": 0
+                                    },
+                                    "TransactionRef": {
+                                        "type": "string",
+                                        "example": "TransactionRef4k109"
+                                    },
+                                    "CashierRef": {
+                                        "type": "string",
+                                        "example": "CashierRef106"
+                                    },
+                                    "ReferenceNumber": {
+                                        "type": "string",
+                                        "example": "ReferenceNumber105"
+                                    },
+                                    "Force": {
+                                        "type": "boolean",
+                                        "example": false
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "Message": {
+                                            "type": "string"
+                                        },
+                                        "ReferenceCode": {
+                                            "type": "string"
+                                        },
+                                        "FinalTransaction": {
+                                            "type": "integer",
+                                            "example": 0
+                                        },
+                                        "CardBalance": {
+                                            "type": "integer",
+                                            "example": 0
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Authorization has been denied for this request"
+                    },
+                    "400": {
+                        "description": "Business logic failure. Must process response body to determine details of failure reason.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "ErrorCode": {
+                                            "type": "integer",
+                                            "example": 0
+                                        },
+                                        "Message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/POS/TransactionHistory": {
+            "post": {
+                "summary": "Returns a history of transactions (max. 1 year) for the provided hardware id/account",
+                "operationId": "App\\Http\\Controllers\\Swagger\\POSController::transactionHistory",
+                "requestBody": {
+                    "description": "The request.",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "HardwareID",
+                                    "StartDate",
+                                    "EndDate"
+                                ],
+                                "properties": {
+                                    "HardwareID": {
+                                        "type": "string",
+                                        "example": "TestHardWare1"
+                                    },
+                                    "StartDate": {
+                                        "type": "date",
+                                        "example": "2020-11-11"
+                                    },
+                                    "EndDate": {
+                                        "type": "date",
+                                        "example": "2020-11-11"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Authorization has been denied for this request"
+                    },
+                    "400": {
+                        "description": "Business logic failure. Must process response body to determine details of failure reason.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "ErrorCode": {
+                                            "type": "integer",
+                                            "example": 0
+                                        },
+                                        "Message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/Provision/Procure": {
+            "post": {
+                "summary": "Procure a gift card (with optional SMS and email notification for beneficiary)",
+                "operationId": "App\\Http\\Controllers\\Swagger\\ProvisionController::procure",
+                "requestBody": {
+                    "description": "The request.",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "Amount"
+                                ],
+                                "properties": {
+                                    "Amount": {
+                                        "type": "integer"
+                                    },
+                                    "SMS": {
+                                        "properties": {
+                                            "Number": {
+                                                "type": "string"
+                                            },
+                                            "Sender": {
+                                                "type": "string"
+                                            },
+                                            "Recipient": {
+                                                "type": "string"
+                                            },
+                                            "Message": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "Email": {
+                                        "properties": {
+                                            "From": {
+                                                "properties": {
+                                                    "Name": {
+                                                        "type": "string"
+                                                    },
+                                                    "Address": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "To": {
+                                                "properties": {
+                                                    "Name": {
+                                                        "type": "string"
+                                                    },
+                                                    "Address": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "Subject": {
+                                                "type": "string"
+                                            },
+                                            "Template": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "CustomerReference": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "Message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Authorization has been denied for this request"
+                    },
+                    "400": {
+                        "description": "Business logic failure. Must process response body to determine details of failure reason.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "ErrorCode": {
+                                            "type": "integer",
+                                            "example": 0
+                                        },
+                                        "Message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/Provision/ResendSMS": {
+            "post": {
+                "summary": "Resend a failed SMS request",
+                "operationId": "App\\Http\\Controllers\\Swagger\\ProvisionController::resendSMS",
+                "requestBody": {
+                    "description": "The request.",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "ReferenceCode"
+                                ],
+                                "properties": {
+                                    "ReferenceCode": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "Message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Authorization has been denied for this request"
+                    },
+                    "400": {
+                        "description": "Business logic failure. Must process response body to determine details of failure reason.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "ErrorCode": {
+                                            "type": "integer",
+                                            "example": 0
+                                        },
+                                        "Message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/Provision/AddValue": {
+            "post": {
+                "summary": "Add a value to a gift card.",
+                "operationId": "App\\Http\\Controllers\\Swagger\\ProvisionController::addValue",
+                "requestBody": {
+                    "description": "The request.",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "Amount",
+                                    "CardNumber"
+                                ],
+                                "properties": {
+                                    "CardNumber": {
+                                        "type": "string"
+                                    },
+                                    "Amount": {
+                                        "type": "integer"
+                                    },
+                                    "SMS": {
+                                        "properties": {
+                                            "Number": {
+                                                "type": "string"
+                                            },
+                                            "Sender": {
+                                                "type": "string"
+                                            },
+                                            "Recipient": {
+                                                "type": "string"
+                                            },
+                                            "Message": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "Email": {
+                                        "properties": {
+                                            "From": {
+                                                "properties": {
+                                                    "Name": {
+                                                        "type": "string"
+                                                    },
+                                                    "Address": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "To": {
+                                                "properties": {
+                                                    "Name": {
+                                                        "type": "string"
+                                                    },
+                                                    "Address": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            },
+                                            "Subject": {
+                                                "type": "string"
+                                            },
+                                            "Template": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "CustomerReference": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "Message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Authorization has been denied for this request"
+                    },
+                    "400": {
+                        "description": "Business logic failure. Must process response body to determine details of failure reason.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "ErrorCode": {
+                                            "type": "integer",
+                                            "example": 0
+                                        },
+                                        "Message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/System/Version": {
+            "post": {
+                "summary": "Returns the current system version number",
+                "operationId": "App\\Http\\Controllers\\Swagger\\SystemController::version",
+                "requestBody": {
+                    "description": "The request.",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "Message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Authorization has been denied for this request"
+                    },
+                    "400": {
+                        "description": "Business logic failure. Must process response body to determine details of failure reason.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "ErrorCode": {
+                                            "type": "integer",
+                                            "example": 0
+                                        },
+                                        "Message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        },
+        "/System/ValidatedHardwareID": {
+            "post": {
+                "summary": "Validates the terminal Hardware ID to ensure it's valid as entered on the client application",
+                "operationId": "App\\Http\\Controllers\\Swagger\\SystemController::validateHardwareId",
+                "requestBody": {
+                    "description": "The request.",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "Amount",
+                                    "HardwareID"
+                                ],
+                                "properties": {
+                                    "HardwareID": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "Message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Authorization has been denied for this request"
+                    },
+                    "400": {
+                        "description": "Business logic failure. Must process response body to determine details of failure reason.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "ErrorCode": {
+                                            "type": "integer",
+                                            "example": 0
+                                        },
+                                        "Message": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "passport": {
+                "type": "oauth2",
+                "description": "Laravel passport oauth2 security.",
+                "in": "header",
+                "scheme": "https",
+                "flows": {
+                    "password": {
+                        "authorizationUrl": "/connect/authorize",
+                        "tokenUrl": "/connect/token",
+                        "refreshUrl": "/connect/refresh",
+                        "scopes": []
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        []
+    ]
+}

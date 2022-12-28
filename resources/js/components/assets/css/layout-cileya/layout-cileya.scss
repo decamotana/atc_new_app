@@ -1,0 +1,200 @@
+@import "../variables/variables";
+.c-layout-header {
+    background-color: $white;
+    /* change variable
+   */
+}
+.headerNavs {
+    background-color: $white;
+    padding: 20px 0px;
+    height: 0px !important;
+}
+
+.headerNavleftHover {
+    color: $clightorange;
+    /* change variable
+   */
+}
+.headerNavlefttext {
+    color: $white;
+    /* change variable
+   */
+}
+
+.headerNavleftHover:hover {
+    .headerNavlefttext {
+        color: $clightorange;
+        /* change variable
+         */
+    }
+}
+
+.headerNavleftDiv {
+    background-color: $cdarkgray;
+    /* change variable
+         */
+    height: 100px;
+    float: left;
+}
+.backgroundColorHeadernavs {
+    color: $white;
+}
+
+.sideMenuLogo img {
+    width: 70%;
+    padding-top: 7px;
+}
+
+.sideMenuLogo {
+    width: 100%;
+    padding: 0;
+    background: $white;
+    text-align: center;
+}
+.menuCollapseOnClose {
+    color: $cdarkgray;
+}
+
+.menuCollapseOnClose:hover {
+    color: $clightorange;
+}
+
+.sideMenu .ant-menu-item-selected {
+    background-color: $clightorange !important;
+}
+.sideMenu .ant-menu-item-selected .ant-menu-item-icon {
+    color: $white;
+}
+
+.sideMenu .ant-menu-item-icon {
+    color: $clightorange;
+}
+.ant-menu-vertical .ant-menu-item::after,
+.ant-menu-vertical-left .ant-menu-item::after,
+.ant-menu-vertical-right .ant-menu-item::after,
+.ant-menu-inline .ant-menu-item::after {
+    border-right: none;
+}
+
+.sideMenu .ant-menu-submenu-arrow {
+    color: #868e96 !important;
+}
+
+.sideMenu .ant-menu-submenu-arrow:hover {
+    color: $clightorange !important;
+}
+
+.headerNavsLeft {
+    font-size: 50px;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 30px;
+}
+.transtionGrow {
+    transition: width 200ms;
+    margin-left: 0px !important;
+
+    -webkit-transition: margin-left, 0.1s linear;
+    -moz-transition: margin-left, 0.1s linear;
+    -ms-transition: margin-left, 0.1s linear;
+    -o-transition: margin-left, 0.1s linear;
+    transition: margin-left, 0.1s linear;
+}
+
+.layout-main {
+    -webkit-transition: margin-left, 0.1s linear;
+    -moz-transition: margin-left, 0.1s linear;
+    -ms-transition: margin-left, 0.1s linear;
+    -o-transition: margin-left, 0.1s linear;
+    transition: margin-left, 0.1s linear;
+}
+
+.sidemenuDark {
+    background-color: $cdarkgray;
+    z-index: 99;
+}
+
+.sideMenu {
+    background-color: $cdarkgray;
+}
+.sideMenu .ant-menu-item {
+    border-top: none !important;
+}
+
+.sideMenu .ant-menu-submenu {
+    border-top: none !important;
+}
+.sideMenu .ant-menu-sub {
+    background-color: $white !important;
+}
+.scrollbar-2 {
+    scrollbar-color: $clightorange #bbb;
+}
+.scrollbar-2::-webkit-scrollbar-thumb {
+    background-color: $clightorange;
+}
+
+.sidemenuDark .ant-menu-submenu .ant-menu-item {
+    padding-left: 35px !important;
+}
+
+.sideMenu .ant-menu-title-content {
+    color: $white;
+}
+
+.sidemenuDark .ant-menu-submenu a {
+    color: $cdarkgray !important;
+}
+
+.sidemenuDark .ant-menu-submenu a {
+    color: $cdarkgray !important;
+}
+
+.backgroundColorHeadernavs {
+    background-color: $cdarkgray;
+}
+
+.sidemenuDark .notSub a {
+    color: $white !important;
+}
+
+.profile_hover:hover a {
+    color: $clightorange !important;
+}
+.profile_hover:hover .ant-menu-item-icon {
+    color: $clightorange !important;
+}
+
+.sh-pagetitle-title {
+    color: $cdarkgray;
+}
+
+.ant-form-item-label
+    > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+    content: "";
+}
+
+.ant-form-item-label
+    > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::after {
+    display: inline-block;
+    margin-right: 4px;
+    color: $clightorange;
+    font-size: 14px;
+    font-family: SimSun, sans-serif;
+    line-height: 1;
+    content: "*";
+}
+
+.site-page-header svg {
+    fill: $cdarkgray;
+    width: 40px;
+    height: 40px;
+}
+.site-page-header .anticon {
+    border-radius: 50%;
+    border: 2px solid $cdarkgray;
+    padding: 10px;
+}
+
+.sideMenu .ant-menu-item-selected {
+    background-color: $clightorange !important;
+}

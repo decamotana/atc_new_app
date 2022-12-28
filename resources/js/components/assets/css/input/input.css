@@ -1,0 +1,73 @@
+.login-input {
+  width: 100% !important;
+  font-size: 14px !important;
+}
+
+.login-input input {
+  background: transparent !important;
+}
+
+.login-input select {
+  background: transparent !important;
+}
+
+.login-select {
+  padding-left: 0px !important;
+}
+
+/* Might want to wrap a span around your checkbox text */
+@supports (zoom: 2) {
+  input[type="radio"],
+  input[type="checkbox"] {
+    zoom: 2;
+  }
+}
+
+@supports not (zoom: 2) {
+  input[type="radio"],
+  input[type="checkbox"] {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    margin: 15px;
+  }
+}
+
+label {
+  /* fix vertical align issues */
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 10px;
+}
+
+.float-label {
+  position: relative;
+}
+
+.label {
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 12px;
+  top: 0px;
+  -webkit-transition: 0.2s ease all;
+  transition: 0.2s ease all;
+}
+
+.as-placeholder {
+  color: gray;
+  z-index: 1;
+}
+
+.as-label {
+  top: -18px;
+  font-size: 12px !important;
+  background: white;
+  padding: 0 4px;
+  margin-left: -4px;
+  z-index: 1;
+}
+
+.as-label .text-danger {
+  color: red;
+}
+/*# sourceMappingURL=input.css.map */

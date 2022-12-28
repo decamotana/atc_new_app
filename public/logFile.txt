@@ -1,0 +1,48 @@
+*   Trying 45.60.31.70:443...
+* Connected to boarding.clearent.net (45.60.31.70) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* successfully set certificate verify locations:
+*   CAfile: /usr/local/etc/openssl@1.1/cert.pem
+  CApath: /usr/local/etc/openssl@1.1/certs
+* SSL connection using TLSv1.3 / TLS_AES_128_GCM_SHA256
+* ALPN, server accepted to use h2
+* Server certificate:
+*  subject: C=US; ST=Missouri; L=Clayton; O=Clearent, LLC; OU=IT; CN=*.clearent.net
+*  start date: Jan  2 00:00:00 2019 GMT
+*  expire date: Apr  6 00:00:00 2021 GMT
+*  subjectAltName: host "boarding.clearent.net" matched cert's "*.clearent.net"
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert SHA2 Secure Server CA
+*  SSL certificate verify ok.
+* Using HTTP2, server supports multi-use
+* Connection state changed (HTTP/2 confirmed)
+* Copying HTTP/2 data in stream buffer to connection buffer after upgrade: len=0
+* Using Stream ID: 1 (easy handle 0x7fd94f011600)
+> POST /api/pricing/v2/PricingPlan/6588000000066936 HTTP/2
+Host: boarding.clearent.net
+accept: */*
+content-type: application/json
+connection: Keep-Alive
+accesskey: a5028af3-76ea-4480-925e-1b82dd6995ff
+exchangeid: 1593700433
+merchantid: 6588000000066936
+content-length: 3903
+
+* We are completely uploaded and fine
+* old SSL session ID is stale, removing
+* Connection state changed (MAX_CONCURRENT_STREAMS == 128)!
+< HTTP/2 200 
+< date: Thu, 02 Jul 2020 14:33:53 GMT
+< x-content-type-options: nosniff
+< x-xss-protection: 1; mode=block
+< cache-control: no-cache, no-store, max-age=0, must-revalidate
+< pragma: no-cache
+< expires: 0
+< x-frame-options: DENY
+< content-type: application/json;charset=utf-8
+< set-cookie: visid_incap_1880236=auiVMVw6RHivoMr/pdpyJ1Lw/V4AAAAAQUIPAAAAAAAJCmRWglFJFn67r8OK4sXu; expires=Fri, 02 Jul 2021 07:07:12 GMT; HttpOnly; path=/; Domain=.clearent.net
+< set-cookie: incap_ses_1163_1880236=RSgMR7m2JFKnCSjiX84jEFLw/V4AAAAAh8zk1CAap+rEeT7j0+O4Pg==; path=/; Domain=.clearent.net
+< x-cdn: Incapsula
+< x-iinfo: 9-475281-475013 PNNy RT(1593700433834 0) q(0 0 0 -1) r(3 3) U6
+< 
+* Connection #0 to host boarding.clearent.net left intact

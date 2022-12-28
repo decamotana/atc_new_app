@@ -1,0 +1,181 @@
+.primary-collapse {
+  background-color: #dee2e6;
+  color: #868e96;
+}
+
+.primary-collapse > .ant-collapse-item > .ant-collapse-header:focus {
+  outline: none;
+  background-color: #2F3950;
+  border: 1px solid #2F3950;
+  color: #ffffff;
+}
+
+.secondary-collapse {
+  background-color: #dee2e6;
+  color: #868e96;
+}
+
+.secondary-collapse > .ant-collapse-item > .ant-collapse-header:focus {
+  outline: none;
+  background-color: #868e96;
+  border: 1px solid #868e96;
+  color: #ffffff;
+}
+
+.success-collapse {
+  background-color: #dee2e6;
+  color: #23bf08;
+}
+
+.success-collapse > .ant-collapse-item > .ant-collapse-header:focus {
+  outline: none;
+  background-color: #23bf08;
+  border: 1px solid #23bf08;
+  color: #ffffff;
+}
+
+.warning-collapse {
+  background-color: #dee2e6;
+  color: #F4BA41;
+}
+
+.warning-collapse > .ant-collapse-item > .ant-collapse-header:focus {
+  outline: none;
+  background-color: #F4BA41;
+  border: 1px solid #F4BA41;
+  color: #ffffff;
+}
+
+.danger-collapse {
+  background-color: #dee2e6;
+  color: #C82A1C;
+}
+
+.danger-collapse > .ant-collapse-item > .ant-collapse-header:focus {
+  outline: none;
+  background-color: #C82A1C;
+  border: 1px solid #C82A1C;
+  color: #ffffff;
+}
+
+.info-collapse {
+  background-color: #dee2e6;
+  color: #5b93d3;
+}
+
+.info-collapse > .ant-collapse-item > .ant-collapse-header:focus {
+  outline: none;
+  background-color: #5b93d3;
+  border: 1px solid #5b93d3;
+  color: #ffffff;
+}
+
+.indigo-collapse {
+  background-color: #dee2e6;
+  color: #6610f2;
+}
+
+.indigo-collapse > .ant-collapse-item > .ant-collapse-header:focus {
+  outline: none;
+  background-color: #6610f2;
+  border: 1px solid #6610f2;
+  color: #ffffff;
+}
+
+.purple-collapse {
+  background-color: #dee2e6;
+  color: #6f42c1;
+}
+
+.purple-collapse > .ant-collapse-item > .ant-collapse-header:focus {
+  outline: none;
+  background-color: #6f42c1;
+  border: 1px solid #6f42c1;
+  color: #ffffff;
+}
+
+.pink-collapse {
+  background-color: #dee2e6;
+  color: #e83e8c;
+}
+
+.pink-collapse > .ant-collapse-item > .ant-collapse-header:focus {
+  outline: none;
+  background-color: #e83e8c;
+  border: 1px solid #e83e8c;
+  color: #ffffff;
+}
+
+.teal-collapse {
+  background-color: #dee2e6;
+  color: #1caf9a;
+}
+
+.teal-collapse > .ant-collapse-item > .ant-collapse-header:focus {
+  outline: none;
+  background-color: #1caf9a;
+  border: 1px solid #1caf9a;
+  color: #ffffff;
+}
+
+.dark-collapse {
+  background-color: #dee2e6;
+  color: #343a40;
+}
+
+.dark-collapse > .ant-collapse-item > .ant-collapse-header:focus {
+  outline: none;
+  background-color: #343a40;
+  border: 1px solid #343a40;
+  color: #ffffff;
+}
+
+.orange-collapse {
+  background-color: #dee2e6;
+  color: #f27510;
+}
+
+.orange-collapse > .ant-collapse-item > .ant-collapse-header:focus {
+  outline: none;
+  background-color: #f27510;
+  border: 1px solid #f27510;
+  color: #ffffff;
+}
+
+.login-collapse {
+  background-color: transparent;
+  color: #2F3950;
+  border: 0px;
+}
+
+.login-collapse .ant-collapse-content {
+  background: transparent;
+  border: 0px;
+}
+
+.login-collapse .ant-collapse-item {
+  border: 0px;
+}
+
+.login-collapse .ant-collapse-arrow {
+  width: 33px;
+  height: 33px;
+  border: 1px solid #2F3950;
+  font-size: 23px !important;
+  padding-top: 4px;
+  background: #2F3950;
+  color: #ffffff;
+}
+
+.login-collapse .ant-collapse-content > .ant-collapse-content-box {
+  padding-top: 0px;
+  text-align: left;
+  margin-top: -13px;
+}
+
+.login-collapse > .ant-collapse-item > .ant-collapse-header:focus {
+  outline: none;
+  background-color: transparent;
+  border: 0px;
+}
+/*# sourceMappingURL=accordion.css.map */

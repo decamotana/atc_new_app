@@ -1,0 +1,105 @@
+@import "../variables/variables.scss";
+
+// body{
+//     background: white;
+//     background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(80%, #e2c991));
+//     background: linear-gradient(180deg, white 0%, #e2c991 80%);
+//     width: 100%;
+// }
+
+/* login-outline */
+.btn-login-outline {
+    color: #fff;
+    // background-color: white;
+    background-color: $login;
+    border-color: $login;
+}
+
+.btn-login-outline:hover {
+    color: $login;
+    background-color: white;
+    border-color: $login;
+}
+
+.btn-login-outline:focus {
+    color: $login;
+    background-color: white;
+    border-color: $login;
+}
+
+.btn-login-outline-active {
+    color: $login;
+    background-color: white;
+    border-color: $login;
+}
+
+.btn-login-outline-active:hover {
+    color: $login;
+    background-color: white;
+    border-color: $login;
+}
+
+.btn-login-outline-active:focus {
+    color: $login;
+    background-color: white;
+    border-color: $login;
+}
+
+.btn-login-outline-disabled {
+    color: $login;
+    background-color: white;
+    border-color: $login;
+    opacity: 0.6;
+}
+
+.btn-login-outline-disabled:hover {
+    color: $login;
+    background-color: white;
+    border-color: $login;
+    opacity: 0.6;
+}
+
+.btn-login-outline-disabled:focus {
+    color: $login;
+    background-color: white;
+    border-color: $login;
+    opacity: 0.6;
+}
+
+.ant-form-item-with-help .ant-form-item-explain {
+    text-align: left;
+}
+
+.editIcon {
+    border: solid 2px #3a4658;
+    border-radius: 100%;
+    padding: 10px 14px;
+    margin-right: 15px;
+    color: #3a4658;
+    font-size: 40px;
+    width: 77px;
+    height: 77px;
+}
+
+.newMemberTitle {
+    font-size: 40px;
+    font-weight: 400;
+    color: #3a4658;
+    margin-bottom: 0;
+}
+
+.text {
+    font-size: 0.9em;
+    font-weight: normal;
+    white-space: normal;
+    width: auto;
+    color: #696969;
+    line-height: 1.3 !important;
+    padding: 0;
+    margin-top: -8px;
+}
+
+.ant-input-group-addon {
+    margin: 0 !important;
+    padding: 0 !important;
+}

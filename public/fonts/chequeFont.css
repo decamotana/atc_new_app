@@ -1,0 +1,4 @@
+@font-face {
+    font-family: "ChequeFont";
+    src: local("ChequeFont"), url(./MicrEncoding-ZEDJ.ttf), format("truetype");
+}

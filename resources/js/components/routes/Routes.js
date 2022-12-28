@@ -18,7 +18,8 @@ import "../assets/css/tooltip/tooltip.css";
 import "../assets/css/typography/typography.css";
 import "../assets/css/login/login.css";
 import "../assets/css/input/input.css";
-import "../assets/css/layout-cileya/layout-cileya.css";
+import "../assets/css/layout/layout.css";
+import "../assets/css/helper/helper.css";
 
 import getUserData from "../providers/getUserData";
 
@@ -36,7 +37,6 @@ import PageRegistration from "../views/public/PageRegistration/PageRegistration"
 
 // Dashboard
 import RouteAdmin from "./RoleRoute/RouteAdmin";
-import RouteStaff from "./RoleRoute/RouteStaff";
 
 const queryClient = new QueryClient();
 const userdata = getUserData();
@@ -73,7 +73,6 @@ export default function Routes() {
                     <PublicRoute exact path="/2fa" component={Page2FA} />
 
                     {userdata?.role === "Super Admin" && <RouteAdmin />}
-                    {userdata?.role === "Staff" && <RouteStaff />}
 
                     {/* this should always in the bottom */}
                     <Redirect from="/dashboard" to="/login" />

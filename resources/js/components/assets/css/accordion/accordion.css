@@ -5,8 +5,8 @@
 
 .primary-collapse > .ant-collapse-item > .ant-collapse-header:focus {
   outline: none;
-  background-color: #2F3950;
-  border: 1px solid #2F3950;
+  background-color: #2f3950;
+  border: 1px solid #2f3950;
   color: #ffffff;
 }
 
@@ -36,25 +36,25 @@
 
 .warning-collapse {
   background-color: #dee2e6;
-  color: #F4BA41;
+  color: #f4ba41;
 }
 
 .warning-collapse > .ant-collapse-item > .ant-collapse-header:focus {
   outline: none;
-  background-color: #F4BA41;
-  border: 1px solid #F4BA41;
+  background-color: #f4ba41;
+  border: 1px solid #f4ba41;
   color: #ffffff;
 }
 
 .danger-collapse {
   background-color: #dee2e6;
-  color: #C82A1C;
+  color: #c82a1c;
 }
 
 .danger-collapse > .ant-collapse-item > .ant-collapse-header:focus {
   outline: none;
-  background-color: #C82A1C;
-  border: 1px solid #C82A1C;
+  background-color: #c82a1c;
+  border: 1px solid #c82a1c;
   color: #ffffff;
 }
 
@@ -144,7 +144,7 @@
 
 .login-collapse {
   background-color: transparent;
-  color: #2F3950;
+  color: #2f3950;
   border: 0px;
 }
 
@@ -160,10 +160,10 @@
 .login-collapse .ant-collapse-arrow {
   width: 33px;
   height: 33px;
-  border: 1px solid #2F3950;
+  border: 1px solid #2f3950;
   font-size: 23px !important;
   padding-top: 4px;
-  background: #2F3950;
+  background: #2f3950;
   color: #ffffff;
 }
 

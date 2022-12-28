@@ -1,58 +1,58 @@
 /* login-outline */
 .btn-login-outline {
   color: #fff;
-  background-color: #2F3950;
-  border-color: #2F3950;
+  background-color: #2f3950;
+  border-color: #2f3950;
 }
 
 .btn-login-outline:hover {
-  color: #2F3950;
+  color: #2f3950;
   background-color: white;
-  border-color: #2F3950;
+  border-color: #2f3950;
 }
 
 .btn-login-outline:focus {
-  color: #2F3950;
+  color: #2f3950;
   background-color: white;
-  border-color: #2F3950;
+  border-color: #2f3950;
 }
 
 .btn-login-outline-active {
-  color: #2F3950;
+  color: #2f3950;
   background-color: white;
-  border-color: #2F3950;
+  border-color: #2f3950;
 }
 
 .btn-login-outline-active:hover {
-  color: #2F3950;
+  color: #2f3950;
   background-color: white;
-  border-color: #2F3950;
+  border-color: #2f3950;
 }
 
 .btn-login-outline-active:focus {
-  color: #2F3950;
+  color: #2f3950;
   background-color: white;
-  border-color: #2F3950;
+  border-color: #2f3950;
 }
 
 .btn-login-outline-disabled {
-  color: #2F3950;
+  color: #2f3950;
   background-color: white;
-  border-color: #2F3950;
+  border-color: #2f3950;
   opacity: 0.6;
 }
 
 .btn-login-outline-disabled:hover {
-  color: #2F3950;
+  color: #2f3950;
   background-color: white;
-  border-color: #2F3950;
+  border-color: #2f3950;
   opacity: 0.6;
 }
 
 .btn-login-outline-disabled:focus {
-  color: #2F3950;
+  color: #2f3950;
   background-color: white;
-  border-color: #2F3950;
+  border-color: #2f3950;
   opacity: 0.6;
 }
 

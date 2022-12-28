@@ -11,7 +11,7 @@
 }
 
 .headerNavleftHover {
-  color: #F4BA41;
+  color: #f4ba41;
   /* change variable
    */
 }
@@ -23,13 +23,13 @@
 }
 
 .headerNavleftHover:hover .headerNavlefttext {
-  color: #F4BA41;
+  color: #f4ba41;
   /* change variable
          */
 }
 
 .headerNavleftDiv {
-  background-color: #2F3950;
+  background-color: #2f3950;
   /* change variable
          */
   height: 100px;
@@ -50,18 +50,42 @@
   padding: 0;
   background: #ffffff;
   text-align: center;
+  padding-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.sideMenuLogo .sideMenuLogoIcon {
+  margin-top: 35px;
+  color: #2f3950;
+}
+
+.sideMenuLogo .sideMenuLogoIcon:hover {
+  color: #f4ba41;
+}
+
+.sideMenuLogo .sideMenuLogoImage {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 166px;
+  margin-left: 10px;
+  margin-top: -13px;
 }
 
 .menuCollapseOnClose {
-  color: #2F3950;
+  color: #2f3950;
 }
 
 .menuCollapseOnClose:hover {
-  color: #F4BA41;
+  color: #f4ba41;
 }
 
 .sideMenu .ant-menu-item-selected {
-  background-color: #F4BA41 !important;
+  background-color: #f4ba41 !important;
 }
 
 .sideMenu .ant-menu-item-selected .ant-menu-item-icon {
@@ -69,7 +93,8 @@
 }
 
 .sideMenu .ant-menu-item-icon {
-  color: #F4BA41;
+  color: #f4ba41;
+  font-size: 22px !important;
 }
 
 .ant-menu-vertical .ant-menu-item::after,
@@ -84,7 +109,7 @@
 }
 
 .sideMenu .ant-menu-submenu-arrow:hover {
-  color: #F4BA41 !important;
+  color: #f4ba41 !important;
 }
 
 .headerNavsLeft {
@@ -107,16 +132,29 @@
 }
 
 .sidemenuDark {
-  background-color: #2F3950;
+  background-color: #2f3950;
   z-index: 99;
 }
 
 .sideMenu {
-  background-color: #2F3950;
+  background-color: #2f3950;
 }
 
 .sideMenu .ant-menu-item {
   border-top: none !important;
+  padding-left: 15px !important;
+}
+
+.sideMenu .ant-menu-submenu-title {
+  padding-left: 15px !important;
+}
+
+.sidemenuDark .ant-menu-submenu .ant-menu-item {
+  padding-left: 48px !important;
+}
+
+.sideMenu .ant-menu-item-selected {
+  background-color: #f4ba41 !important;
 }
 
 .sideMenu .ant-menu-submenu {
@@ -128,15 +166,11 @@
 }
 
 .scrollbar-2 {
-  scrollbar-color: #F4BA41 #bbb;
+  scrollbar-color: #f4ba41 #bbb;
 }
 
 .scrollbar-2::-webkit-scrollbar-thumb {
-  background-color: #F4BA41;
-}
-
-.sidemenuDark .ant-menu-submenu .ant-menu-item {
-  padding-left: 35px !important;
+  background-color: #f4ba41;
 }
 
 .sideMenu .ant-menu-title-content {
@@ -144,15 +178,15 @@
 }
 
 .sidemenuDark .ant-menu-submenu a {
-  color: #2F3950 !important;
+  color: #2f3950 !important;
 }
 
 .sidemenuDark .ant-menu-submenu a {
-  color: #2F3950 !important;
+  color: #2f3950 !important;
 }
 
 .backgroundColorHeadernavs {
-  background-color: #2F3950;
+  background-color: #2f3950;
 }
 
 .sidemenuDark .notSub a {
@@ -160,15 +194,15 @@
 }
 
 .profile_hover:hover a {
-  color: #F4BA41 !important;
+  color: #f4ba41 !important;
 }
 
 .profile_hover:hover .ant-menu-item-icon {
-  color: #F4BA41 !important;
+  color: #f4ba41 !important;
 }
 
 .sh-pagetitle-title {
-  color: #2F3950;
+  color: #2f3950;
 }
 
 .ant-form-item-label
@@ -180,7 +214,7 @@
 > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::after {
   display: inline-block;
   margin-right: 4px;
-  color: #F4BA41;
+  color: #f4ba41;
   font-size: 14px;
   font-family: SimSun, sans-serif;
   line-height: 1;
@@ -188,18 +222,26 @@
 }
 
 .site-page-header svg {
-  fill: #2F3950;
+  fill: #2f3950;
   width: 40px;
   height: 40px;
 }
 
 .site-page-header .anticon {
   border-radius: 50%;
-  border: 2px solid #2F3950;
+  border: 2px solid #2f3950;
   padding: 10px;
 }
 
-.sideMenu .ant-menu-item-selected {
-  background-color: #F4BA41 !important;
+.ant-menu-vertical .ant-menu-item,
+.ant-menu-vertical-left .ant-menu-item,
+.ant-menu-vertical-right .ant-menu-item,
+.ant-menu-inline .ant-menu-item,
+.ant-menu-vertical .ant-menu-submenu-title,
+.ant-menu-vertical-left .ant-menu-submenu-title,
+.ant-menu-vertical-right .ant-menu-submenu-title,
+.ant-menu-inline .ant-menu-submenu-title {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
 }
-/*# sourceMappingURL=layout-cileya.css.map */
+/*# sourceMappingURL=layout.css.map */

@@ -2,19 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Layout, Menu, Image } from "antd";
 import {
-    AppstoreOutlined,
     MenuFoldOutlined,
     HomeOutlined,
-    InboxOutlined,
-    BankOutlined,
-    CalendarOutlined,
-    SearchOutlined,
-    TeamOutlined,
-    BookOutlined,
-    FileOutlined,
     UsergroupAddOutlined,
-    FlagOutlined,
-    ContainerOutlined,
+    MenuUnfoldOutlined,
 } from "@ant-design/icons";
 import $ from "jquery";
 import imageLogo from "/resources/assets/img/brand/logo_placeholder_dark.png";
@@ -42,11 +33,14 @@ export default function Sidemenu({ history, state }) {
         console.log("wew", pathname);
     }, []);
 
+    const [sideMenuCollapse, setSideMenuCollapse] = useState(false);
+
     return (
         <>
             <Layout.Sider
                 trigger={null}
-                collapsible={false}
+                collapsible={true}
+                collapsed={sideMenuCollapse}
                 className="sidemenuDark scrollbar-2"
                 key="desktop"
                 style={{
@@ -60,7 +54,22 @@ export default function Sidemenu({ history, state }) {
                 }}
             >
                 <div className="sideMenuLogo">
-                    <img style={{ marginTop: 20 }} src={imageLogo}></img>
+                    <MenuUnfoldOutlined
+                        className="sideMenuLogoIcon"
+                        id="btn_sidemenu_collapse_unfold"
+                        onClick={() => setSideMenuCollapse(false)}
+                        style={{ display: sideMenuCollapse ? "block" : "none" }}
+                    />
+
+                    <MenuFoldOutlined
+                        className="sideMenuLogoIcon"
+                        id="btn_sidemenu_collapse_fold"
+                        onClick={() => setSideMenuCollapse(true)}
+                        style={{
+                            display: !sideMenuCollapse ? "block" : "none",
+                        }}
+                    />
+                    <img className="sideMenuLogoImage" src={imageLogo}></img>
                 </div>
 
                 {defaultOptionKey != "" && (

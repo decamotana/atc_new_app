@@ -29,6 +29,7 @@ export default function RouteAdmin(props) {
                 component={PageDashboard}
                 permission="Dashboard"
             />
+
             {/* Dashboard */}
             <PrivateRoute
                 exact
@@ -36,6 +37,7 @@ export default function RouteAdmin(props) {
                 component={PageDashboard}
                 permission="Dashboard"
             />
+
             {/* USERS */}
             <PrivateRoute
                 exact

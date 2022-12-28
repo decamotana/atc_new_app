@@ -1,15 +1,15 @@
 .card-primary {
-  background-color: #2F3950;
+  background-color: #2f3950;
   color: #ffffff;
 }
 
 .card-primary-head > .ant-card-head {
-  background-color: #2F3950;
+  background-color: #2f3950;
   color: #ffffff;
 }
 
 .card-primary-border {
-  border-color: #2F3950;
+  border-color: #2f3950;
   border-radius: 4px;
 }
 
@@ -56,17 +56,17 @@
 }
 
 .card-warning {
-  background-color: #F4BA41;
+  background-color: #f4ba41;
   color: #ffffff;
 }
 
 .card-warning-border {
-  border-color: #F4BA41;
+  border-color: #f4ba41;
   border-radius: 4px;
 }
 
 .card-warning-head > .ant-card-head {
-  background-color: #F4BA41;
+  background-color: #f4ba41;
   color: #ffffff;
 }
 
@@ -75,17 +75,17 @@
 }
 
 .card-danger {
-  background-color: #C82A1C;
+  background-color: #c82a1c;
   color: #ffffff;
 }
 
 .card-danger-border {
-  border-color: #C82A1C;
+  border-color: #c82a1c;
   border-radius: 4px;
 }
 
 .card-danger-head > .ant-card-head {
-  background-color: #C82A1C;
+  background-color: #c82a1c;
   color: #ffffff;
 }
 

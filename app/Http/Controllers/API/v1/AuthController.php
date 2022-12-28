@@ -69,8 +69,8 @@ class AuthController extends Controller
         // event(new \App\Events\SendMailEvent($data));
 
 
-       
-        return response()->json(['success'=> true,'data' => $user], 200);
+
+        return response()->json(['success' => true, 'data' => $user], 200);
     }
 
     /**
@@ -81,25 +81,29 @@ class AuthController extends Controller
      */
     public function login(Request $request)
     {
-        $credentials = [
-            'username' => $request->email,
-            'password' => $request->password
-        ];
+
+        if (filter_var($request->email, FILTER_VALIDATE_EMAIL)) {
+            $credentials = [
+                'email' => $request->email,
+                'password' => $request->password
+            ];
+        } else {
+            $credentials = [
+                'username' => $request->email,
+                'password' => $request->password
+            ];
+        }
 
         if (auth()->attempt($credentials)) {
-            if(auth()->user()->status == 'Active') {
+            if (auth()->user()->status == 'Active') {
                 $token = auth()->user()->createToken('davidinvoice2022')->accessToken;
-                return response()->json(['token' => $token,'data' => auth()->user()], 200);
-            
+                return response()->json(['token' => $token, 'data' => auth()->user()], 200);
             } else {
-                return response()->json(['error' => 'Username or Password is Invalid', 'data' => $credentials], 401);    
+                return response()->json(['error' => 'Username or Password is Invalid', 'data' => $credentials], 401);
             }
         } else {
             return response()->json(['error' => 'Username or Password is Invalid1', 'data' => $credentials], 401);
         }
-
-
-
     }
 
 
@@ -113,13 +117,14 @@ class AuthController extends Controller
         return response()->json(['user' => auth()->user()], 200);
     }
 
-    public function registrationVerify(Request $request) {
+    public function registrationVerify(Request $request)
+    {
 
 
-            $user=  Auth::guard('api')->user();
-            $user->status = 'Active';
-            $user->email_verified_at = date('Y-m-d H:i:s');
-            $user->save();
+        $user =  Auth::guard('api')->user();
+        $user->status = 'Active';
+        $user->email_verified_at = date('Y-m-d H:i:s');
+        $user->save();
 
         return response()->json([
             'success' => true
@@ -127,17 +132,18 @@ class AuthController extends Controller
     }
 
 
-    public function verify(Request $request) {
+    public function verify(Request $request)
+    {
 
         $this->validate($request, [
             'password' => 'required|min:6',
-              ]);
-             $user=  Auth::guard('api')->user();
+        ]);
+        $user =  Auth::guard('api')->user();
 
-            $user->status = 'Active';
-            $user->email_verified_at = date('Y-m-d H:i:s');
-            $user->password = Hash::make($request->password) ;
-            $user->save();
+        $user->status = 'Active';
+        $user->email_verified_at = date('Y-m-d H:i:s');
+        $user->password = Hash::make($request->password);
+        $user->save();
 
 
 
@@ -147,16 +153,18 @@ class AuthController extends Controller
         ]);
     }
 
-    public function auth(Request $request){
+    public function auth(Request $request)
+    {
 
-        return response()->json(['success'=> true],200);
+        return response()->json(['success' => true], 200);
     }
 
-    public function logout(Request $request) {
+    public function logout(Request $request)
+    {
         $user_online = \App\User::find($request->user_id);
         // $user_online->online_status = 0;
         // $user_online->save();
 
-        return response()->json(['success'=> true,'data' => $user_online], 200);
+        return response()->json(['success' => true, 'data' => $user_online], 200);
     }
 }

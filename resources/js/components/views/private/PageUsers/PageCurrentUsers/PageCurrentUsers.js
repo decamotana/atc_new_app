@@ -10,25 +10,16 @@ import {
     Popconfirm,
     Row,
     Select,
+    Space,
     Table,
 } from "antd";
-import Title from "antd/lib/typography/Title";
 import {
-    CheckOutlined,
-    InboxOutlined,
-    UsergroupAddOutlined,
-    UserAddOutlined,
     UserSwitchOutlined,
     EditFilled,
-    FolderOpenOutlined,
     CloseOutlined,
 } from "@ant-design/icons";
-import Text from "antd/lib/typography/Text";
 import ComponentHeader from "../../Components/ComponentHeader";
 import useAxiosQuery from "../../../../providers/useAxiosQuery";
-import FloatInput from "../../../../providers/FloatInput";
-import FloatSelect from "../../../../providers/FloatSelect";
-import notificationErrors from "../../../../providers/notificationErrors";
 import { useHistory } from "react-router-dom";
 import moment from "moment";
 const { Content } = Layout;
@@ -134,7 +125,6 @@ const PageCurrentUsers = ({ permission }) => {
                         pagination={{
                             total: dataUsers ? dataUsers.data.total : 0,
                             pageSize: dataUsers ? dataUsers.data.per_page : 0,
-                            // hideOnSinglePage: true,
                             showSizeChanger: true,
                         }}
                     >
@@ -151,12 +141,14 @@ const PageCurrentUsers = ({ permission }) => {
                                 );
                             }}
                         />
+
                         <Table.Column
                             title="Company"
                             dataIndex="company"
                             key="company"
                             sorter={(a, b) => a.company - b.company}
                         />
+
                         <Table.Column
                             title="User Type"
                             key="role"
@@ -176,13 +168,23 @@ const PageCurrentUsers = ({ permission }) => {
                                 );
                             }}
                         />
+
                         <Table.Column
                             align="center"
                             title="View/Edit"
                             key="action"
                             render={(text, record) => {
+                                return <></>;
+                            }}
+                        />
+
+                        <Table.Column
+                            align="center"
+                            title="Deactivate"
+                            key="action"
+                            render={(text, record) => {
                                 return (
-                                    <>
+                                    <Space>
                                         <Button
                                             // type="primary"
                                             className="btn-primary m-r-sm"
@@ -195,17 +197,6 @@ const PageCurrentUsers = ({ permission }) => {
                                                 );
                                             }}
                                         ></Button>
-                                    </>
-                                );
-                            }}
-                        />
-                        <Table.Column
-                            align="center"
-                            title="Deactivate"
-                            key="action"
-                            render={(text, record) => {
-                                return (
-                                    <>
                                         <Popconfirm
                                             title="Are you sure you want to deactivate this User?"
                                             okText="Yes"
@@ -221,7 +212,7 @@ const PageCurrentUsers = ({ permission }) => {
                                                 icon={<CloseOutlined />}
                                             ></Button>
                                         </Popconfirm>
-                                    </>
+                                    </Space>
                                 );
                             }}
                         />

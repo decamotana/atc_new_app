@@ -30,11 +30,18 @@
 }
 
 .headerNavleftDiv {
-    background-color: $cdarkgray;
-    /* change variable
-         */
+    // background-color: $cdarkgray;
     height: 100px;
-    float: left;
+    padding-top: 20px;
+    padding-left: 14px;
+
+    .anticon {
+        font-size: 24px !important;
+        color: $cdarkgray;
+    }
+    .anticon:hover {
+        color: $clightorange;
+    }
 }
 .backgroundColorHeadernavs {
     color: $white;
@@ -50,7 +57,7 @@
     padding: 0;
     background: $white;
     text-align: center;
-    padding-left: 15px;
+    padding-left: 14px;
     display: flex;
     justify-content: flex-start;
 
@@ -132,11 +139,35 @@
 
 .sidemenuDark {
     background-color: $cdarkgray;
-    z-index: 99;
+    z-index: 1;
 }
 
 .sideMenu {
     background-color: $cdarkgray;
+
+    .anticon {
+        line-height: 0px !important;
+        margin-top: 7px !important;
+    }
+
+    .ant-menu-item:active,
+    .ant-menu-submenu-title:active {
+        background: $clightorange !important;
+
+        .anticon {
+            color: $white;
+        }
+    }
+}
+
+.ant-layout-sider-collapsed {
+    .ant-menu-item {
+        .anticon {
+            margin: 0 !important;
+            line-height: 0px !important;
+            margin-top: 7px !important;
+        }
+    }
 }
 
 .sideMenu .ant-menu-item {
@@ -227,6 +258,13 @@
     padding: 10px;
 }
 
+.ant-menu-inline.ant-menu-root .ant-menu-item,
+.ant-menu-inline.ant-menu-root .ant-menu-submenu-title {
+    display: block !important;
+    align-items: none !important;
+    transition: none;
+}
+
 .ant-menu-vertical .ant-menu-item,
 .ant-menu-vertical-left .ant-menu-item,
 .ant-menu-vertical-right .ant-menu-item,
@@ -235,6 +273,13 @@
 .ant-menu-vertical-left .ant-menu-submenu-title,
 .ant-menu-vertical-right .ant-menu-submenu-title,
 .ant-menu-inline .ant-menu-submenu-title {
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.ant-layout-sider-collapse {
+    width: 52px !important;
+    max-width: 52px !important;
+    min-width: 52px !important;
+    flex: 0 0 52px !important;
 }

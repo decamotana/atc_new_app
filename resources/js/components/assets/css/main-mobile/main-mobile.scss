@@ -6,12 +6,12 @@
     .menuCollapseOnopen .headerNavleftHover {
         display: block;
     }
-    .colheaderNavs {
-        margin-left: -216px !important;
-    }
-    .transtionGrow .colheaderNavs {
-        margin-left: 0px !important;
-    }
+    // .colheaderNavs {
+    //     margin-left: -216px !important;
+    // }
+    // .transtionGrow .colheaderNavs {
+    //     margin-left: 0px !important;
+    // }
     .sidemenuDark {
         height: 100% !important;
     }
@@ -28,4 +28,30 @@
     .layout-main-footer {
         min-width: 300px !important;
     }
+}
+
+@media (max-width: 576px) {
+    .ant-layout-sider.ant-layout-sider-collapsed {
+        display: none;
+    }
+
+    .layout-main {
+        margin-left: 0px !important;
+    }
+
+    .ant-layout-sider-collapse {
+        width: 240px !important;
+        max-width: 240px !important;
+        min-width: 240px !important;
+        flex: 0 0 240px !important;
+        // z-index: 100 !important;
+    }
+
+    .sidemenuDark {
+        z-index: 2 !important;
+    }
+
+    // .sideMenuLogo {
+    //     padding-left: 10px !important;
+    // }
 }

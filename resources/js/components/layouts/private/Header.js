@@ -23,17 +23,14 @@ import $ from "jquery";
 import getUserData from "../../providers/getUserData";
 import useAxiosQuery from "../../providers/useAxiosQuery";
 
-export default function Header({ state, toggle }) {
-    // let history = useHistory();
+export default function Header({
+    state,
+    toggle,
+    sideMenuCollapse,
+    setSideMenuCollapse,
+    width,
+}) {
     const userdata = getUserData();
-    console.log("userdata", userdata);
-    // useEffect(() => {
-    //     // console.log("@header user", userdata);
-    //     // socketio.on("message", message => {
-    //     //     refetchNotif();
-    //     // });
-    //     return () => {};
-    // }, []);
 
     const handleLogout = (e) => {
         mutateLogout(
@@ -74,39 +71,42 @@ export default function Header({ state, toggle }) {
             className="site-layout-background c-layout-header"
             style={{
                 padding: 0,
-                position: "fixed",
-                zIndex: 99,
+                padding: "0px 12px 0px 0px",
+                zIndex: 1,
                 width: "100%",
                 boxShadow: "0px 0px 11px 0px rgba(105 107 112 / 60%)",
             }}
         >
             <Row gutter={24}>
-                <Col xs={12} md={12}>
-                    <div className="headerNavleftDiv">
-                        <Row>
-                            {/* mobile ni  */}
+                <Col xs={12} sm={12} md={12}>
+                    {width <= 576 && (
+                        <div className="headerNavleftDiv">
+                            <MenuUnfoldOutlined
+                                style={{
+                                    fontSize: 22,
+                                    position: "relative",
+                                    top: 0,
+                                }}
+                                onClick={() =>
+                                    setSideMenuCollapse(!sideMenuCollapse)
+                                }
+                            />
+                            {/* <Row>
                             <Col className="menuCollapseOnopen menu-hide">
                                 <div className="headerNavleftHover">
                                     <span className="headerNavsLeft">
-                                        <MenuUnfoldOutlined
-                                            style={{
-                                                fontSize: 22,
-                                                position: "relative",
-                                                top: 0,
-                                            }}
-                                            onClick={() => onCollapseToggle()}
-                                        />
                                     </span>
                                 </div>
                             </Col>
-                            {/* mobile ni  dri taman*/}
-                        </Row>
-                    </div>
+                        </Row> */}
+                        </div>
+                    )}
                 </Col>
                 <Col
                     xs={12}
+                    sm={12}
                     md={12}
-                    style={{ marginLeft: "-260px" }}
+                    // style={{ marginLeft: "-260px" }}
                     className="colheaderNavs"
                 >
                     <Menu
@@ -116,20 +116,6 @@ export default function Header({ state, toggle }) {
                         }}
                         className="headerNavs headerNavsMobile"
                     >
-                        {/* <Menu.SubMenu
-                            key="notification"
-                            title={
-                                <Badge count={1}>
-                                    <BellOutlined
-                                        className="backgroundColorHeadernavs"
-                                        style={{
-                                            fontSize: "22px",
-                                        }}
-                                    />
-                                </Badge>
-                            }
-                        ></Menu.SubMenu> */}
-
                         <Menu.SubMenu
                             key="img"
                             title={

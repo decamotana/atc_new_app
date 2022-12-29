@@ -9,8 +9,14 @@ import {
 } from "@ant-design/icons";
 import $ from "jquery";
 import imageLogo from "/resources/assets/img/brand/logo_placeholder_dark.png";
+import SidemenuList from "./Components/SidemenuList";
 
-export default function Sidemenu({ history, state }) {
+export default function Sidemenu({
+    history,
+    state,
+    sideMenuCollapse,
+    setSideMenuCollapse,
+}) {
     const { SubMenu } = Menu;
 
     // const [onCollapse, setOnCollapse] = useState(false);
@@ -33,15 +39,15 @@ export default function Sidemenu({ history, state }) {
         console.log("wew", pathname);
     }, []);
 
-    const [sideMenuCollapse, setSideMenuCollapse] = useState(false);
-
     return (
         <>
             <Layout.Sider
                 trigger={null}
                 collapsible={true}
                 collapsed={sideMenuCollapse}
-                className="sidemenuDark scrollbar-2"
+                className={`sidemenuDark scrollbar-2 ${
+                    !sideMenuCollapse ? "" : "ant-layout-sider-collapse"
+                }`}
                 key="desktop"
                 style={{
                     height: "100vh",
@@ -51,6 +57,10 @@ export default function Sidemenu({ history, state }) {
                     bottom: 0,
                     overflowY: "auto",
                     overflowX: "hidden",
+                    width: !sideMenuCollapse ? "240px" : "52px",
+                    maxWidth: !sideMenuCollapse ? "240px" : "52px",
+                    minWidth: !sideMenuCollapse ? "240px" : "52px",
+                    // zIndex: 100,
                 }}
             >
                 <div className="sideMenuLogo">
@@ -69,51 +79,17 @@ export default function Sidemenu({ history, state }) {
                             display: !sideMenuCollapse ? "block" : "none",
                         }}
                     />
-                    <img className="sideMenuLogoImage" src={imageLogo}></img>
+
+                    {!sideMenuCollapse && (
+                        <img
+                            className="sideMenuLogoImage"
+                            src={imageLogo}
+                        ></img>
+                    )}
                 </div>
 
-                {defaultOptionKey != "" && (
-                    <Menu
-                        theme="light"
-                        mode="inline"
-                        defaultSelectedKeys={defaultOptionKey}
-                        defaultOpenKeys={defaultOptionKey}
-                        className="sideMenu"
-                    >
-                        {/* --------------------- */}
-
-                        <Menu.Item
-                            key="dashboard"
-                            icon={<HomeOutlined />}
-                            className="notSub"
-                        >
-                            <Link to="/dashboard">Dashboard</Link>
-                        </Menu.Item>
-
-                        <SubMenu
-                            key="users"
-                            icon={<UsergroupAddOutlined />}
-                            title="Users"
-                        >
-                            <Menu.Item key="create-user">
-                                <Link to="/users/create-user">Create User</Link>
-                            </Menu.Item>
-
-                            <Menu.Item key="current-users">
-                                <Link to="/users/current-users">
-                                    Current Users
-                                </Link>
-                            </Menu.Item>
-                        </SubMenu>
-
-                        {/* <Menu.Item
-                            key="reports"
-                            icon={<FlagOutlined />}
-                            className="notSub"
-                        >
-                            <Link to="/reports">Reports</Link>
-                        </Menu.Item> */}
-                    </Menu>
+                {defaultOptionKey && (
+                    <SidemenuList defaultOptionKey={defaultOptionKey} />
                 )}
             </Layout.Sider>
         </>

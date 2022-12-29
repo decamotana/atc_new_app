@@ -29,11 +29,18 @@
 }
 
 .headerNavleftDiv {
-  background-color: #2f3950;
-  /* change variable
-         */
   height: 100px;
-  float: left;
+  padding-top: 20px;
+  padding-left: 14px;
+}
+
+.headerNavleftDiv .anticon {
+  font-size: 24px !important;
+  color: #2f3950;
+}
+
+.headerNavleftDiv .anticon:hover {
+  color: #f4ba41;
 }
 
 .backgroundColorHeadernavs {
@@ -50,7 +57,7 @@
   padding: 0;
   background: #ffffff;
   text-align: center;
-  padding-left: 15px;
+  padding-left: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -133,11 +140,32 @@
 
 .sidemenuDark {
   background-color: #2f3950;
-  z-index: 99;
+  z-index: 1;
 }
 
 .sideMenu {
   background-color: #2f3950;
+}
+
+.sideMenu .anticon {
+  line-height: 0px !important;
+  margin-top: 7px !important;
+}
+
+.sideMenu .ant-menu-item:active,
+.sideMenu .ant-menu-submenu-title:active {
+  background: #f4ba41 !important;
+}
+
+.sideMenu .ant-menu-item:active .anticon,
+.sideMenu .ant-menu-submenu-title:active .anticon {
+  color: #ffffff;
+}
+
+.ant-layout-sider-collapsed .ant-menu-item .anticon {
+  margin: 0 !important;
+  line-height: 0px !important;
+  margin-top: 7px !important;
 }
 
 .sideMenu .ant-menu-item {
@@ -233,6 +261,16 @@
   padding: 10px;
 }
 
+.ant-menu-inline.ant-menu-root .ant-menu-item,
+.ant-menu-inline.ant-menu-root .ant-menu-submenu-title {
+  display: block !important;
+  -webkit-box-align: none !important;
+      -ms-flex-align: none !important;
+          align-items: none !important;
+  -webkit-transition: none;
+  transition: none;
+}
+
 .ant-menu-vertical .ant-menu-item,
 .ant-menu-vertical-left .ant-menu-item,
 .ant-menu-vertical-right .ant-menu-item,
@@ -241,7 +279,16 @@
 .ant-menu-vertical-left .ant-menu-submenu-title,
 .ant-menu-vertical-right .ant-menu-submenu-title,
 .ant-menu-inline .ant-menu-submenu-title {
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.ant-layout-sider-collapse {
+  width: 52px !important;
+  max-width: 52px !important;
+  min-width: 52px !important;
+  -webkit-box-flex: 0 !important;
+      -ms-flex: 0 0 52px !important;
+          flex: 0 0 52px !important;
 }
 /*# sourceMappingURL=layout.css.map */

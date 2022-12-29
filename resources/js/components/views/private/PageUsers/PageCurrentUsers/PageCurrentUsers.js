@@ -122,11 +122,9 @@ const PageCurrentUsers = ({ permission }) => {
                         loading={isLoadingTblUser || isFetchingTblUser}
                         rowKey={(record) => record.id}
                         onChange={handleTblChangeUser}
-                        pagination={{
-                            total: dataUsers ? dataUsers.data.total : 0,
-                            pageSize: dataUsers ? dataUsers.data.per_page : 0,
-                            showSizeChanger: true,
-                        }}
+                        pagination={false}
+                        bordered={false}
+                        scroll={{ x: "max-content" }}
                     >
                         <Table.Column
                             title="Name"

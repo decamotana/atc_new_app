@@ -25,6 +25,7 @@ export default function Content(props) {
     function capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
+
     useEffect(() => {
         console.log("props", props.children.props.location.pathname);
         let pathname = props.children.props.location.pathname;
@@ -52,28 +53,57 @@ export default function Content(props) {
         console.log(routes);
     }, [props]);
 
+    // const [sideMenuCollapse, setSideMenuCollapse] = useState(false);
+    const [sideMenuCollapse, setSideMenuCollapse] = useState(
+        $(window).width() <= 768 ? true : false
+    );
+    const [width, setWidth] = useState($(window).width());
+    useEffect(() => {
+        function handleResize() {
+            setWidth($(window).width());
+            if ($(window).width() <= 768) {
+                setSideMenuCollapse(true);
+            } else {
+                setSideMenuCollapse(false);
+            }
+        }
+        window.addEventListener("resize", handleResize);
+
+        $(".ant-btn-quick-link-svg-512-448").attr("viewBox", "0 0 512 448");
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, [dataBread]);
+
     return (
         <Layout hasSider>
-            <title> David Invoices </title>
+            <title> {process.env.MIX_APP_NAME} </title>
             {props && (
                 <>
                     <Sidemenu
                         history={history}
                         state={state}
+                        sideMenuCollapse={sideMenuCollapse}
+                        setSideMenuCollapse={setSideMenuCollapse}
                         // permission={props.children.props.permission}
                         // dataPermission={getPermission()}
                     />
                     <Layout
-                        className="site-layout layout-main "
-                        style={{ marginLeft: 240 }}
+                        className="site-layout layout-main"
+                        style={{ marginLeft: !sideMenuCollapse ? 240 : 52 }}
                     >
-                        <Header state={state} toggle={toggle} />
+                        <Header
+                            state={state}
+                            toggle={toggle}
+                            sideMenuCollapse={sideMenuCollapse}
+                            setSideMenuCollapse={setSideMenuCollapse}
+                            width={width}
+                        />
                         {/* {console.log("wew", dataBread)} */}
                         <Breadcrumb
                             style={{
                                 borderBottom: "1px solid #f0f0f0",
                                 marginTop: "100px",
-                                padding: "10px",
+                                padding: "10px 14px",
                             }}
                             className="breadTest"
                         >

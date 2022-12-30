@@ -2,6 +2,7 @@
   font-size: 24px;
   font-weight: 500;
 }
+
 .maintenance-layout .ant-card .warning-logo {
   width: 200px;
 }
@@ -9,6 +10,8 @@
 .divMaintenance {
   height: 100vh;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -29,4 +32,5 @@
 /* Media Query for Tablets Ipads portrait mode */
 /* Media Query for Tablets, Ipads and below  */
 /* Media Query for low resolution  Tablets, Ipads */
-/* Media Query for Mobile Devices *//*# sourceMappingURL=maintenance.css.map */
+/* Media Query for Mobile Devices */
+/*# sourceMappingURL=maintenance.css.map */

@@ -1,1 +1,10 @@
-{"version":3,"sources":["cookie-policy.scss","cookie-policy.css"],"names":[],"mappings":"AAEA,kCAAA;AAIA,yCAAA;AAIA,gDAAA;AAIA,8CAAA;AAIA,mDAAA;AAIA,mCAAA;AAOA;EAEE;IACC,gBAAA;ECvBD;AACF;AD6BA;EAEE;IACC,gBAAA;EC5BD;AACF","file":"cookie-policy.css"}
+{
+    "version": 3,
+    "mappings": "AAEA,mCAAmC;AAInC,0CAA0C;AAI1C,iDAAiD;AAIjD,+CAA+C;AAI/C,oDAAoD;AAIpD,oCAAoC;AAOpC,MAAM,EAAE,SAAS,EAAE,KAAK;EACvB,AACC,mBADkB,CAClB,QAAQ,AAAA,gBAAgB,CAAC;IACxB,UAAU,EAAE,IAAI;GAChB;;;AAMH,MAAM,EAAE,SAAS,EAAE,KAAK;EACvB,AACC,mBADkB,CAClB,QAAQ,AAAA,gBAAgB,CAAC;IACxB,UAAU,EAAE,IAAI;GAChB",
+    "sources": [
+        "cookie-policy.scss",
+        "../../variables/variables.scss"
+    ],
+    "names": [],
+    "file": "cookie-policy.css"
+}

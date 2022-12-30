@@ -283,6 +283,7 @@
   background-color: #027273;
   color: #ffffff;
 }
+
 .card-main > .ant-card-head .ant-card-head-title {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -295,4 +296,5 @@
 
 .card-main-no-border > .ant-card-head {
   border: none;
-}/*# sourceMappingURL=card.css.map */
+}
+/*# sourceMappingURL=card.css.map */

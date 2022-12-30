@@ -4,43 +4,69 @@
   border-bottom: 1px solid #58585a;
   padding: 10px 20px;
 }
+
 .private-layout .ant-page-header .ant-page-header-heading {
   width: 100%;
   display: inherit;
 }
+
 .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left {
   width: 100%;
   display: inherit;
 }
+
 .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 10px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-icon {
   border: 3px solid #358e8f;
   border-radius: 100%;
   width: 70px !important;
   height: 70px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-icon .anticon {
   font-size: 32px;
   color: #358e8f !important;
 }
+
 .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-icon svg {
   font-size: 32px;
 }
+
 .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-icon svg path {
   color: #358e8f;
 }
+
 .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
+
 .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-text .sub-title {
   color: #58585a;
   text-transform: none;
@@ -48,6 +74,7 @@
   font-weight: 500;
   line-height: 1em;
 }
+
 .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-text .title {
   color: #358e8f;
   font-size: 32px;
@@ -64,18 +91,42 @@
   .private-layout .ant-page-header {
     padding: 10px;
   }
-  .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-icon {
+  .private-layout
+.ant-page-header
+.ant-page-header-heading
+.ant-page-header-heading-left
+.ant-page-header-heading-title
+.ant-page-header-icon {
     width: 55px !important;
     height: 55px !important;
     padding: 10px;
   }
-  .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-icon svg {
+  .private-layout
+.ant-page-header
+.ant-page-header-heading
+.ant-page-header-heading-left
+.ant-page-header-heading-title
+.ant-page-header-icon
+svg {
     font-size: 28px;
   }
-  .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-text .sub-title {
+  .private-layout
+.ant-page-header
+.ant-page-header-heading
+.ant-page-header-heading-left
+.ant-page-header-heading-title
+.ant-page-header-text
+.sub-title {
     font-size: 12px;
   }
-  .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-text .title {
+  .private-layout
+.ant-page-header
+.ant-page-header-heading
+.ant-page-header-heading-left
+.ant-page-header-heading-title
+.ant-page-header-text
+.title {
     font-size: 25px;
   }
-}/*# sourceMappingURL=page_header.css.map */
+}
+/*# sourceMappingURL=page_header.css.map */

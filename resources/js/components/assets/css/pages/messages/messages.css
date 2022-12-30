@@ -22,9 +22,11 @@
   position: relative;
   background-color: transparent;
 }
+
 .messagesContainer .ant-layout-sider .ant-layout-sider-children {
   background-color: #fff;
 }
+
 .messagesContainer .ant-layout-sider .ant-layout-sider-trigger {
   position: absolute;
   border-bottom: 1px solid #ddd;
@@ -39,11 +41,16 @@
   max-width: 48px !important;
 }
 
-.messagesContainer .ant-layout-sider.ant-layout-sider-collapsed .ant-layout-sider-children .ant-menu.ant-menu-inline-collapsed {
+.messagesContainer
+.ant-layout-sider.ant-layout-sider-collapsed
+.ant-layout-sider-children
+.ant-menu.ant-menu-inline-collapsed {
   width: 48px !important;
 }
 
-.messagesContainer .ant-layout-sider.ant-layout-sider-collapsed .ant-layout-sider-trigger {
+.messagesContainer
+.ant-layout-sider.ant-layout-sider-collapsed
+.ant-layout-sider-trigger {
   width: 48px !important;
 }
 
@@ -119,9 +126,11 @@
   position: relative;
   background-color: transparent;
 }
+
 .messagesContainer .ant-layout-sider .ant-layout-sider-children {
   background-color: #fff;
 }
+
 .messagesContainer .ant-layout-sider .ant-layout-sider-trigger {
   position: absolute;
   border-bottom: 1px solid #ddd;
@@ -150,7 +159,7 @@
 }
 
 .messageNameDate {
-  color: rgba(0, 0, 0, 0.4509803922);
+  color: #00000073;
 }
 
 .ChatMessageText {
@@ -185,6 +194,7 @@
     font-size: 18px;
   }
 }
+
 /* Media Query for Tablets, Ipads and below  */
 @media (max-width: 768px) {
   .chat-container .chat-users {
@@ -194,10 +204,14 @@
     width: 70%;
   }
 }
+
 /* Media Query for low resolution  Tablets, Ipads */
 @media (min-width: 481px) and (max-width: 767px) {
   .page-message .buttons-action {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .page-message .messagesContainer .ant-layout-sider {
     display: block;
@@ -209,6 +223,7 @@
     width: 40%;
   }
 }
+
 /* Media Query for Mobile Devices */
 @media (max-width: 575px) {
   .page-message .messageSearchName {
@@ -221,14 +236,23 @@
     margin-top: 0px;
   }
 }
+
 @media (max-width: 480px) {
   .page-message .buttons-action {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .page-message .ant-space-message-buttons {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 8px !important;
   }
   .page-message .ant-space-message-buttons .ant-space-item {
@@ -243,4 +267,5 @@
   .chat-container .chat-discussion {
     width: 40%;
   }
-}/*# sourceMappingURL=messages.css.map */
+}
+/*# sourceMappingURL=messages.css.map */

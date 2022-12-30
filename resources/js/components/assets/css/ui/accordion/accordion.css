@@ -105,9 +105,11 @@
   border: 1px solid #027273;
   color: #ffffff;
 }
+
 .main-1-collapse > .ant-collapse-item > .ant-collapse-header span {
   color: white;
 }
+
 .main-1-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-extra {
   color: #ffffff !important;
 }
@@ -119,9 +121,11 @@
   border: 1px solid #13f4f1;
   color: #ffffff;
 }
+
 .main-2-collapse > .ant-collapse-item > .ant-collapse-header span {
   color: #ffffff !important;
 }
+
 .main-2-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-extra {
   color: #ffffff !important;
 }
@@ -133,9 +137,11 @@
   border: 1px solid #028f8d;
   color: #ffffff;
 }
+
 .main-3-collapse > .ant-collapse-item > .ant-collapse-header span {
   color: #ffffff !important;
 }
+
 .main-3-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-extra {
   color: #ffffff !important;
 }
@@ -147,9 +153,11 @@
   border: 1px solid #358e8f;
   color: #ffffff;
 }
+
 .main-4-collapse > .ant-collapse-item > .ant-collapse-header span {
   color: #ffffff !important;
 }
+
 .main-4-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-extra {
   color: #ffffff !important;
 }
@@ -161,13 +169,16 @@
   border: 1px solid #0e5729;
   color: #ffffff;
 }
+
 .main-5-collapse > .ant-collapse-item > .ant-collapse-header span {
   color: #ffffff !important;
 }
+
 .main-5-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-extra {
   color: #ffffff !important;
 }
 
 .ant-collapse-header {
   text-transform: uppercase;
-}/*# sourceMappingURL=accordion.css.map */
+}
+/*# sourceMappingURL=accordion.css.map */

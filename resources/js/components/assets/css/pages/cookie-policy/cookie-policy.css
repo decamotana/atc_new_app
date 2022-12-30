@@ -9,8 +9,10 @@
     margin-top: 20px;
   }
 }
+
 @media (max-width: 341px) {
   .page-cookie-policy .ant-btn.btn-main-invert {
     margin-top: 40px;
   }
-}/*# sourceMappingURL=cookie-policy.css.map */
+}
+/*# sourceMappingURL=cookie-policy.css.map */

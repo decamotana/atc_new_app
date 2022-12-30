@@ -17,7 +17,11 @@
 .ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab,
 .ant-tabs-card.ant-tabs-bottom > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab,
 .ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab,
-.ant-tabs-card.ant-tabs-bottom > div > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab {
+.ant-tabs-card.ant-tabs-bottom
+> div
+> .ant-tabs-nav
+.ant-tabs-tab
++ .ant-tabs-tab {
   margin-left: 0px;
 }
 
@@ -75,13 +79,19 @@
 }
 
 .ant-tabs.ant-tabs-white .ant-tabs-tab-btn div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .ant-tabs.ant-tabs-white .ant-tabs-tab-btn div svg {
   font-size: 18px;
   margin-right: 5px;
 }
+
 .ant-tabs.ant-tabs-white .ant-tabs-tab-btn div span {
   margin-top: 3px;
 }
@@ -130,6 +140,7 @@
 .ant-tabs-nav .ant-tabs-nav-list .ant-tabs-tab {
   background-color: #e5e3e3 !important;
 }
+
 .ant-tabs-nav .ant-tabs-nav-list .ant-tabs-tab .ant-tabs-tab-btn {
   color: #606060;
   font-weight: 500;
@@ -138,6 +149,7 @@
 .ant-tabs-nav .ant-tabs-nav-list .ant-tabs-tab:hover {
   background-color: #e4151f !important;
 }
+
 .ant-tabs-nav .ant-tabs-nav-list .ant-tabs-tab:hover .ant-tabs-tab-btn {
   color: #fff;
   font-weight: 500;
@@ -154,7 +166,8 @@
     font-size: 14px;
   }
   .ant-tabs > .ant-tabs-nav .ant-tabs-nav-operations,
-.ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-operations {
+  .ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-operations {
     display: none;
   }
-}/*# sourceMappingURL=tabs.css.map */
+}
+/*# sourceMappingURL=tabs.css.map */

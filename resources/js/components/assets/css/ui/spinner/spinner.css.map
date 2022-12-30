@@ -1,1 +1,10 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"spinner.css"}
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "spinner.scss",
+        "../../variables/variables.scss"
+    ],
+    "names": [],
+    "file": "spinner.css"
+}

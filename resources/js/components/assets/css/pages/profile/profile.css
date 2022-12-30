@@ -1,7 +1,12 @@
 .page-profile .profilePhoto .ant-upload-list-picture-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .page-profile .profilePhoto .ant-upload-list-picture-card .ant-upload {
   width: 200px;
   height: 200px;
@@ -10,16 +15,19 @@
   -webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
+
 .page-profile .profilePhoto .ant-upload-list-picture-card .ant-upload-list-picture-card-container {
   width: 200px;
   height: 200px;
 }
+
 .page-profile .profilePhoto .ant-upload-list-picture-card .ant-upload-list-picture-card-container .ant-upload-list-item {
   border-color: #e4151f;
   box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
+
 .page-profile .e_signature_canvas {
   border: 1px solid #949599;
   width: 100%;
@@ -32,6 +40,7 @@
 .modal-change-password .float-label .ant-input-affix-wrapper .ant-input {
   border-color: transparent !important;
 }
+
 .modal-change-password .ant-modal-footer {
   text-align: right !important;
 }
@@ -43,18 +52,26 @@
 .page-profile-upgrade-subscription .float-label .ant-input-affix-wrapper .ant-input {
   border-color: transparent !important;
 }
+
 .page-profile-upgrade-subscription .div_up_sub_is_patient {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 15px;
   margin-bottom: 10px;
 }
+
 .page-profile-upgrade-subscription .div_up_sub_is_patient > span {
   font-size: 16px;
 }
+
 .page-profile-upgrade-subscription .div_up_sub_is_patient .ant-radio-group .ant-radio-wrapper span:not(.ant-radio) {
   font-size: 16px;
 }
+
 .page-profile-upgrade-subscription .different_card {
   padding: 10px;
   border: 1px solid #d9d9d9;
@@ -64,18 +81,27 @@
 .private-layout .top-banner-adss {
   text-align: center;
   background-color: #f1f3f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: none;
 }
+
 .private-layout .top-banner-adss.has-data {
   border-top: 1px solid #58585a;
   padding: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .private-layout .top-banner-adss.has-data .top-banner-adss-inner {
   position: relative;
 }
+
 .private-layout .top-banner-adss.has-data .top-banner-adss-inner .icon-close {
   position: absolute;
   right: -5px;
@@ -86,22 +112,33 @@
   cursor: pointer;
   width: 20px;
   height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .private-layout .top-banner-adss.has-data .top-banner-adss-inner .top-banner-adss-inner-image img {
   width: 100%;
 }
+
 .private-layout .right-banner-adss {
   display: none;
 }
+
 .private-layout .right-banner-adss.has-data {
   display: block;
 }
+
 .private-layout .right-banner-adss.has-data .right-banner-adss-inner {
   position: relative;
 }
+
 .private-layout .right-banner-adss.has-data .right-banner-adss-inner .icon-close {
   position: absolute;
   left: -8px;
@@ -112,10 +149,17 @@
   cursor: pointer;
   width: 20px;
   height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .private-layout .right-banner-adss.has-data .right-banner-adss-inner .right-banner-adss-inner-image img {
   width: 100%;
   border: 1px solid #58585a;
@@ -129,6 +173,8 @@
 /* Media Query for Mobile Devices */
 @media (max-width: 375px) {
   .page-profile .btn-2fa {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-bottom: 20px;
   }
@@ -136,4 +182,5 @@
     white-space: break-spaces;
     text-align: left;
   }
-}/*# sourceMappingURL=profile.css.map */
+}
+/*# sourceMappingURL=profile.css.map */

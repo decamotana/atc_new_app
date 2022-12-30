@@ -1,29 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
-import { faChartPie, faChartMixed } from "@fortawesome/pro-light-svg-icons";
-import {
-    faBullhorn,
-    faPaperPlane,
-    faHome,
-    faUsers,
-    faUserCog,
-    faClipboardQuestion,
-    faRectangleAd,
-    faTag,
-} from "@fortawesome/pro-regular-svg-icons";
-import {
-    faLaptopMedical,
-    faDollarSign,
-    faPlay,
-    faBell,
-    faUserEdit,
-    faFileLines,
-    faFileCertificate,
-    faUserTie,
-    faScrewdriverWrench,
-} from "@fortawesome/pro-solid-svg-icons";
-
+import { faHome } from "@fortawesome/pro-regular-svg-icons";
 /** template */
 import PrivateRoute from "../PrivateRoute";
 

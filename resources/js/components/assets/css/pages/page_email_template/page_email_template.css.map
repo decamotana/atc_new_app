@@ -1,1 +1,10 @@
-{"version":3,"sources":["page_email_template.scss","page_email_template.css"],"names":[],"mappings":"AAEC;EACC,oCAAA;ACDF","file":"page_email_template.css"}
+{
+    "version": 3,
+    "mappings": "AACA,AACC,0BADyB,CACzB,YAAY,CAAC,UAAU,CAAC;EACvB,YAAY,EAAE,sBAAsB;CACpC",
+    "sources": [
+        "page_email_template.scss",
+        "../../variables/variables.scss"
+    ],
+    "names": [],
+    "file": "page_email_template.css"
+}

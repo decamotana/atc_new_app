@@ -8,18 +8,21 @@
 }
 
 @supports (zoom: 2) {
-  input[type=radio],
-input[type=checkbox] {
+  input[type="radio"],
+  input[type="checkbox"] {
     zoom: 2;
   }
 }
+
 @supports not (zoom: 2) {
-  input[type=radio],
-input[type=checkbox] {
-    transform: scale(2);
+  input[type="radio"],
+  input[type="checkbox"] {
+    -webkit-transform: scale(2);
+            transform: scale(2);
     margin: 15px;
   }
 }
+
 .ant-input {
   padding-bottom: 0px;
 }
@@ -27,38 +30,47 @@ input[type=checkbox] {
 .float-label {
   position: relative;
 }
-.float-label input[type=password] {
+
+.float-label input[type="password"] {
   height: 45px !important;
   padding-top: 13px !important;
   padding-bottom: 0px;
 }
-.float-label input[type=text] {
+
+.float-label input[type="text"] {
   height: 45px !important;
   padding-top: 13px !important;
   padding-bottom: 0px;
 }
+
 .float-label .input-rate {
   padding-top: 8px !important;
   padding-bottom: 1px;
 }
+
 .float-label .input-rate .ant-input-number-handler-wrap {
   display: none;
 }
+
 .float-label .input-rate .ant-input-number-lg input {
   height: auto;
 }
+
 .float-label .input-date-picker {
   padding-top: 8px !important;
   padding-bottom: 1px;
 }
+
 .float-label .input-date-picker .ant-picker-suffix {
   margin-top: -8px !important;
 }
+
 .float-label .input-text-area {
   padding-top: 19px !important;
   padding-bottom: 5px;
   line-height: 1.1;
 }
+
 .float-label .ant-picker-input input {
   padding-top: 9px !important;
   padding-bottom: 0px;
@@ -75,18 +87,22 @@ input[type=checkbox] {
   background-color: #ffffff;
   padding-right: 5px;
 }
+
 .input-text-area-label textarea.ant-input {
   padding-top: 15px;
 }
 
-.ant-select-show-search.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+.ant-select-show-search.ant-select:not(.ant-select-customize-input)
+.ant-select-selector {
   height: 45px !important;
 }
-.ant-select-show-search.ant-select:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-item {
+
+.ant-select-show-search.ant-select:not(.ant-select-customize-input)
+.ant-select-selector .ant-select-selection-item {
   top: 10px;
 }
 
-.ant-select-selection-search input[type=search] {
+.ant-select-selection-search input[type="search"] {
   padding-top: 13px !important;
   padding-bottom: 0px;
 }
@@ -99,24 +115,32 @@ input[type=checkbox] {
 .float-select-multi {
   padding-bottom: 0px;
 }
+
 .float-select-multi .ant-select-multiple.ant-select-lg .ant-select-selection-item {
   height: 20px;
   line-height: 20px;
   font-size: 16px;
 }
+
 .float-select-multi .ant-select-multiple .ant-select-selection-item-content {
   font-size: 13px;
 }
-.float-select-multi .ant-select-show-search.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+
+.float-select-multi .ant-select-show-search.ant-select:not(.ant-select-customize-input)
+.ant-select-selector {
   height: auto !important;
   padding-top: 0px;
 }
+
 .float-select-multi .ant-select-selection-overflow {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
 .float-select-multi .ant-select-selection-overflow-item {
-  align-self: auto !important;
+  -ms-flex-item-align: auto !important;
+      -ms-grid-row-align: auto !important;
+      align-self: auto !important;
 }
 
 .label {
@@ -125,6 +149,7 @@ input[type=checkbox] {
   pointer-events: none;
   left: 12px;
   top: 12px;
+  -webkit-transition: 0.2s ease all;
   transition: 0.2s ease all;
 }
 
@@ -150,6 +175,7 @@ input[type=checkbox] {
 .form-select-error {
   padding-bottom: 15px;
 }
+
 .form-select-error .ant-form-item-explain-error {
   margin-top: 14px;
   margin-bottom: -14px;
@@ -177,12 +203,19 @@ input[type=checkbox] {
   background-image: none;
   border: 1px solid #d9d9d9;
   border-radius: 2px;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   font-size: 16px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   height: 45px;
-  justify-content: flex-start;
-  align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   /* margin-top: 1px; */
   padding-top: 12px;
   outline: 0;
@@ -217,13 +250,16 @@ input[type=checkbox] {
 .search-dashboard .label {
   text-transform: none !important;
 }
+
 .search-dashboard .as-placeholder {
   top: 4px !important;
 }
+
 .search-dashboard .as-label {
   top: 1px !important;
 }
-.search-dashboard input[type=text] {
+
+.search-dashboard input[type="text"] {
   height: 32px !important;
   padding-top: 13px !important;
   padding-bottom: 0px;
@@ -231,10 +267,18 @@ input[type=checkbox] {
 
 .float-label.has-input-addon-before .ant-input-number.ant-input-number-focused,
 .float-label.has-input-addon-before.role-to-search .ant-input-group-addon,
-.float-label .ant-input-group-wrapper .ant-input-group-addon .ant-select.select-before.ant-select-focused,
-.float-label .ant-input-group-wrapper .ant-input-group-addon .ant-select.select-before.ant-select-focused .ant-select-selector {
+.float-label
+.ant-input-group-wrapper
+.ant-input-group-addon
+.ant-select.select-before.ant-select-focused,
+.float-label
+.ant-input-group-wrapper
+.ant-input-group-addon
+.ant-select.select-before.ant-select-focused
+.ant-select-selector {
   border: 0px !important;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .float-label .ant-input-group-wrapper .ant-input-group-addon .ant-select {
@@ -252,7 +296,8 @@ input[type=checkbox] {
 .float-label.has-input-addon-before .ant-input-number-group-addon,
 .float-label.has-input-addon-before .ant-input-number,
 .float-label.has-input-addon-before .ant-input-group-wrapper,
-.float-label.has-input-addon-before .ant-input:not(.float-label > .ant-input-affix-wrapper) {
+.float-label.has-input-addon-before
+.ant-input:not(.float-label > .ant-input-affix-wrapper) {
   border: 0px !important;
 }
 
@@ -264,4 +309,5 @@ input[type=checkbox] {
 
 .float-label.has-input-addon-before.length-string-1 .label {
   left: 42px;
-}/*# sourceMappingURL=input.css.map */
+}
+/*# sourceMappingURL=input.css.map */

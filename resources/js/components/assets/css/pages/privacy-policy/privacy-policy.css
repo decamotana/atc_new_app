@@ -9,8 +9,10 @@
     margin-top: 20px;
   }
 }
+
 @media (max-width: 341px) {
   .page-privacy-policy .ant-btn.btn-main-invert {
     margin-top: 40px;
   }
-}/*# sourceMappingURL=privacy-policy.css.map */
+}
+/*# sourceMappingURL=privacy-policy.css.map */

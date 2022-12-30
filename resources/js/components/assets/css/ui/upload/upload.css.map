@@ -1,1 +1,10 @@
-{"version":3,"sources":["upload.scss","upload.css"],"names":[],"mappings":"AACA;EACC,UAAA;ACAD","file":"upload.css"}
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,qBAAqB,CAAC,sCAAsC,CAAC;EAC5D,OAAO,EAAE,CAAC;CACV",
+    "sources": [
+        "upload.scss",
+        "../../variables/variables.scss"
+    ],
+    "names": [],
+    "file": "upload.css"
+}

@@ -9,8 +9,10 @@
     margin-top: 20px;
   }
 }
+
 @media (max-width: 341px) {
   .page-terms-conditions .ant-btn.btn-main-invert {
     margin-top: 40px;
   }
-}/*# sourceMappingURL=terms-conditions.css.map */
+}
+/*# sourceMappingURL=terms-conditions.css.map */

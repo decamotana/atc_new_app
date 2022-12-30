@@ -874,35 +874,43 @@
 }
 
 .rotate-45 {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .rotate-90 {
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .rotate-135 {
-  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
 }
 
 .rotate-180 {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .rotate-225 {
-  transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
 }
 
 .rotate-270 {
-  transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
 }
 
 .rotate-315 {
-  transform: rotate(315deg);
+  -webkit-transform: rotate(315deg);
+          transform: rotate(315deg);
 }
 
 .rotate-360 {
-  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 .white {
@@ -966,13 +974,19 @@
 }
 
 .zoom-in-out-box {
-  transition: transform 0.2s; /* Animation */
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  /* Animation */
   margin: 0 auto;
   cursor: pointer;
 }
 
 .zoom-in-out-box:hover {
-  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 .cursor-pointer {
@@ -1004,17 +1018,28 @@
 }
 
 .flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
   display: flex !important;
 }
 
 .ant-space-flex-space-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .ant-space-flex-row-reverse {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row-reverse;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 .ant-space-flex-row-reverse .ant-space-item {
@@ -1026,15 +1051,22 @@
 }
 
 .flex-direction-column {
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .flex-justify-content-center {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .flex-align-items-center {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .gap5 {
@@ -1074,9 +1106,14 @@
 }
 
 .flex-upload .ant-upload-picture-card-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .flex-upload .ant-upload-picture-card-wrapper .ant-upload {
   width: 100%;
   height: auto;
@@ -1112,6 +1149,7 @@
     margin-bottom: 50px;
   }
 }
+
 @media (max-width: 375px) {
   .m-b-mob-resp-5px-375px {
     margin-bottom: 5px;
@@ -1132,6 +1170,7 @@
     margin-bottom: 50px;
   }
 }
+
 @media (max-width: 320px) {
   .m-b-mob-resp-5px-320px {
     margin-bottom: 5px;
@@ -1151,4 +1190,5 @@
   .m-b-mob-resp-50px-320px {
     margin-bottom: 50px;
   }
-}/*# sourceMappingURL=helper.css.map */
+}
+/*# sourceMappingURL=helper.css.map */

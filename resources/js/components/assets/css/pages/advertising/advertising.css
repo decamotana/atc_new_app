@@ -1,15 +1,21 @@
 .page-admin-advertising-form .ant-upload-select-picture-card {
   margin-right: 0px;
 }
+
 .page-admin-advertising-form .flex-upload .ant-upload-picture-card-wrapper .ant-upload {
   min-height: 80px;
 }
+
 .page-admin-advertising-form .float-label .ant-input {
   border-color: transparent !important;
 }
+
 .page-admin-advertising-form .advert_payments .ant-collapse-header {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .page-admin-advertising-form .advert_payments .ant-collapse-header .ant-collapse-extra .ant-btn-icon-only {
   height: auto;
   font-size: inherit;
@@ -27,6 +33,8 @@
     width: 100% !important;
   }
 }
+
 /* Media Query for Tablets, Ipads and below  */
 /* Media Query for low resolution  Tablets, Ipads */
-/* Media Query for Mobile Devices *//*# sourceMappingURL=advertising.css.map */
+/* Media Query for Mobile Devices */
+/*# sourceMappingURL=advertising.css.map */

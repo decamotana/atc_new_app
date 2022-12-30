@@ -1,1 +1,10 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"community-feed.css"}
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "community-feed.scss",
+        "../../variables/variables.scss"
+    ],
+    "names": [],
+    "file": "community-feed.css"
+}

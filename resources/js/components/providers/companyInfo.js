@@ -4,8 +4,8 @@ export const description = process.env.MIX_APP_DESCRIPTION;
 
 export const logo = process.env.MIX_APP_LOGO;
 
-export const fullwidthlogo = process.env.MIX_APP_LOGO;
-export const fullwidthwhitelogo = process.env.MIX_APP_SIDE_LOGO;
+export const fullwidthlogo = process.env.MIX_APP_FULLWIDTH_LOGO;
+export const fullwidthwhitelogo = process.env.MIX_APP_FULLWIDTH_WHITE_LOGO;
 
 export const apiUrl = process.env.MIX_APP_API_URL;
 

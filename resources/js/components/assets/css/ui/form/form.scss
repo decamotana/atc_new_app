@@ -1,0 +1,91 @@
+@import "../../variables/variables";
+
+.form-item-switch {
+	height: 42px;
+}
+.form-item-switch .ant-col:first-child {
+	text-align: left;
+}
+.form-item-switch .ant-col:last-child {
+	text-align: right;
+}
+.div-form-list-option {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+}
+.div-form-list-option > .ant-form-item:first-child {
+	width: 0%;
+}
+.div-form-list-option > .ant-form-item:nth-child(2) {
+	width: 90%;
+}
+.div-form-list-option > .ant-form-item:nth-child(3) {
+	width: 5%;
+}
+.div-form-list-option > .ant-form-item:last-child {
+	width: 5%;
+	.ant-btn {
+		color: $color6;
+	}
+}
+
+.div-form-list-option.div-form-list-option-true-false
+	> .ant-form-item:nth-child(2) {
+	width: 5%;
+}
+
+.form-list-remove-button {
+	padding: 0px;
+	color: $white;
+}
+.form-list-remove-button:hover {
+	color: $color6;
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* Media Query for Tablets, Ipads and below  */
+@media (max-width: 768px) {
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+	.div-form-list-option > .ant-form-item:first-child {
+		width: 0%;
+	}
+	.div-form-list-option > .ant-form-item:nth-child(2) {
+		width: 80%;
+	}
+	.div-form-list-option > .ant-form-item:nth-child(3) {
+		width: 10%;
+	}
+	.div-form-list-option > .ant-form-item:last-child {
+		width: 10%;
+	}
+
+	.div-form-list-option.div-form-list-option-true-false
+		> .ant-form-item:nth-child(2) {
+		width: 15%;
+	}
+}
+
+@media (max-width: 375px) {
+}
+
+@media (max-width: 320px) {
+}

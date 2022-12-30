@@ -1,0 +1,232 @@
+.public-layout.register-layout {
+  height: 100vh;
+  overflow: hidden auto;
+  background: linear-gradient(to bottom, #ffffff 0%, #0f7273 100%);
+}
+.public-layout.register-layout .ant-layout-content {
+  min-height: auto;
+}
+.public-layout.register-layout .ant-row .ant-col {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-image {
+  width: 380px;
+  margin-top: 50px;
+}
+.public-layout.register-layout .ant-row .ant-col .register-sub-title {
+  width: 260px;
+  text-align: center;
+  font-weight: 500;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card {
+  width: 550px;
+  border-radius: 5px;
+  margin-top: 60px;
+  box-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.6);
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body {
+  padding: 35px 60px;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-page-header {
+  background-color: transparent;
+  padding: 0px 0px 20px 0px;
+  margin-bottom: 20px;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-page-header .ant-page-header-heading {
+  width: 100%;
+  display: inherit;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-page-header .ant-page-header-heading .ant-page-header-heading-left {
+  width: 100%;
+  display: inherit;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-icon {
+  border: 2px solid #58585a;
+  border-radius: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-icon .anticon {
+  font-size: 36px;
+  color: #58585a !important;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-icon svg {
+  font-size: 36px;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-icon svg path {
+  color: #58585a;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-text .sub-title {
+  color: #58585a;
+  text-transform: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1em;
+  margin-left: 2px;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-text .title {
+  color: #358e8f;
+  font-size: 36px;
+  font-weight: normal;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-collapse {
+  background: transparent;
+  border: none;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-collapse .ant-collapse-item {
+  border-bottom: none;
+  margin-bottom: 20px;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-collapse .ant-collapse-item .ant-collapse-header {
+  font-size: 21px;
+  padding: 0px;
+  flex-direction: row-reverse;
+  margin-bottom: 25px;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-collapse .ant-collapse-item .ant-collapse-header .ant-collapse-expand-icon {
+  width: 25%;
+  text-align: right;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-collapse .ant-collapse-item .ant-collapse-header .ant-collapse-expand-icon .ant-collapse-arrow {
+  color: #ffffff;
+  font-size: 22px;
+  background-color: #027273;
+  position: inherit;
+  vertical-align: -10px;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-collapse .ant-collapse-item .ant-collapse-header .ant-collapse-header-text {
+  width: 75%;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-collapse .ant-collapse-item .ant-collapse-header .ant-collapse-header-text .title {
+  font-weight: 500;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-collapse .ant-collapse-item .ant-collapse-header .ant-collapse-header-text .sub-title {
+  font-size: 16px;
+  font-weight: 500;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-collapse .ant-collapse-item .ant-collapse-content {
+  background-color: transparent;
+  border: none;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-collapse .ant-collapse-item .ant-collapse-content .ant-collapse-content-box {
+  padding: 0px;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-collapse .ant-collapse-item .ant-collapse-content .ant-collapse-content-box .ant-form .form-title {
+  font-size: 25px;
+  font-weight: 400;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-collapse .ant-collapse-item .ant-collapse-content .ant-collapse-content-box .ant-col > div:nth-child(2) {
+  width: 100%;
+}
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .btn-complete-purchase {
+  height: 48px;
+  font-size: 20px;
+  border-radius: 0;
+}
+.public-layout.register-layout .float-label .ant-input {
+  border-color: transparent;
+}
+.public-layout.register-layout .ant-layout-footer {
+  background-color: transparent;
+  margin-top: 50px;
+}
+
+.register-layout-set-password .ant-row .ant-col > div:nth-child(2) {
+  width: 100%;
+}
+
+.registrationSelect .ant-select-item-option-content p {
+  margin-bottom: 0px;
+}
+
+.div_reg_is_patient {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+.div_reg_is_patient > span {
+  font-size: 16px;
+}
+.div_reg_is_patient .ant-radio-group .ant-radio-wrapper span:not(.ant-radio) {
+  font-size: 16px;
+}
+
+/* Media Query for Large screens */
+/* Media Query for Laptops and Desktops */
+/* Media Query for Tablets Ipads portrait mode */
+/* Media Query for Tablets, Ipads and below  */
+@media (max-width: 768px) {
+  .public-layout.register-layout .ant-row > .ant-col > .ant-card {
+    width: 500px;
+  }
+}
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .public-layout.register-layout .ant-row .ant-col .ant-image {
+    width: 350px;
+  }
+  .public-layout.register-layout .ant-row > .ant-col > .ant-card {
+    width: 450px;
+  }
+  .public-layout.register-layout .ant-row > .ant-col > .ant-card > .ant-card-body {
+    padding: 15px 20px;
+  }
+}
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .public-layout.register-layout .ant-row .ant-col .ant-image {
+    width: 300px;
+  }
+  .public-layout.register-layout .ant-row > .ant-col > .ant-card {
+    width: 400px;
+  }
+  .public-layout.register-layout .ant-row > .ant-col > .ant-card > .ant-card-body {
+    padding: 15px 20px;
+  }
+}
+@media (max-width: 375px) {
+  .public-layout.register-layout .ant-row .ant-col .ant-image {
+    width: 250px;
+  }
+  .public-layout.register-layout .ant-row > .ant-col > .ant-card {
+    width: 350px;
+  }
+}
+@media (max-width: 320px) {
+  .public-layout.register-layout .ant-row .ant-col .ant-image {
+    width: 250px;
+  }
+  .public-layout.register-layout .ant-row > .ant-col > .ant-card {
+    width: 300px;
+  }
+  .public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-icon svg,
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-text .title {
+    font-size: 30px;
+  }
+  .public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-collapse .ant-collapse-item .ant-collapse-content .ant-collapse-content-box .ant-form > h1,
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-collapse .ant-collapse-item .ant-collapse-content .ant-collapse-content-box > .ant-typography,
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-collapse .ant-collapse-item .ant-collapse-content .ant-collapse-content-box .ant-form .form-title,
+.public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-collapse .ant-collapse-item .ant-collapse-header .ant-collapse-header-text .title {
+    font-size: 18px;
+  }
+  .public-layout.register-layout .ant-row .ant-col .ant-card .ant-card-body .ant-collapse .ant-collapse-item .ant-collapse-header .ant-collapse-header-text .sub-title {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=register-layout.css.map */

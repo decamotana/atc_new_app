@@ -1,0 +1,279 @@
+.ant-row-quick-link .ant-btn-quick-link {
+  background-color: #027273;
+  padding: 15px 40px;
+  width: 100%;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-radius: 0px;
+}
+.ant-row-quick-link .ant-btn-quick-link svg {
+  font-size: 50px;
+  color: #13f4f1;
+}
+.ant-row-quick-link .ant-btn-quick-link svg path {
+  stroke: #13f4f1;
+}
+.ant-row-quick-link .ant-btn-quick-link .ant-typography {
+  line-height: 1em;
+  color: #ffffff;
+}
+.ant-row-quick-link .ant-btn-quick-link:hover {
+  background-color: transparent;
+  border: 1px solid #027273;
+}
+.ant-row-quick-link .ant-btn-quick-link:hover svg {
+  font-size: 50px;
+  color: #13f4f1;
+}
+.ant-row-quick-link .ant-btn-quick-link:hover .ant-typography {
+  color: #000000;
+}
+
+.dashboard-caregiver-modal-module {
+  width: 50% !important;
+  padding: 40px !important;
+}
+.dashboard-caregiver-modal-module .ant-modal-close {
+  background: #949599;
+  color: #fff;
+  border-radius: 50%;
+  top: -25px;
+  right: -25px;
+}
+.dashboard-caregiver-modal-module .ant-modal-close .ant-modal-close-x {
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 15px;
+}
+.dashboard-caregiver-modal-module .carousel-control {
+  position: absolute;
+  width: 92%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 3;
+  color: #027273;
+}
+.dashboard-caregiver-modal-module .carousel-control .prev .ant-btn {
+  padding-left: 0px;
+  color: #027273;
+}
+.dashboard-caregiver-modal-module .carousel-control .next .ant-btn {
+  padding-right: 0px;
+  color: #027273;
+}
+.dashboard-caregiver-modal-module .carousel-control .disabled {
+  color: #58585a !important;
+}
+.dashboard-caregiver-modal-module .ant-table-default table tbody.ant-table-tbody td {
+  font-weight: 600;
+}
+.dashboard-caregiver-modal-module .ant-table-default table tbody.ant-table-tbody td .ant-btn svg {
+  font-size: 22px;
+}
+
+.dashboard-careprofessional-modal-module .ant-modal-close {
+  background: #949599;
+  color: #fff;
+  border-radius: 50%;
+  top: -25px;
+  right: -25px;
+}
+.dashboard-careprofessional-modal-module .ant-modal-close .ant-modal-close-x {
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 15px;
+}
+.dashboard-careprofessional-modal-module .carousel-control {
+  position: absolute;
+  width: 92%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 3;
+  color: #027273;
+}
+.dashboard-careprofessional-modal-module .carousel-control .prev .ant-btn {
+  padding-left: 0px;
+  color: #027273;
+}
+.dashboard-careprofessional-modal-module .carousel-control .next .ant-btn {
+  padding-right: 0px;
+  color: #027273;
+}
+.dashboard-careprofessional-modal-module .carousel-control .disabled {
+  color: #58585a !important;
+}
+.dashboard-careprofessional-modal-module .ant-table-default table tbody.ant-table-tbody td {
+  font-weight: 600;
+}
+.dashboard-careprofessional-modal-module .ant-table-default table tbody.ant-table-tbody td .ant-btn svg {
+  font-size: 22px;
+}
+
+.ant-row-modules .ant-btn-modules {
+  padding: 20px 15px 5px 15px;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px;
+}
+.ant-row-modules .ant-btn-modules .ant-btn-modules-icon svg {
+  font-size: 70px;
+}
+.ant-row-modules .ant-btn-modules .ant-typography {
+  line-height: 1em;
+}
+.ant-row-modules .ant-btn-modules .title {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  white-space: break-spaces;
+  font-size: 30px;
+}
+.ant-row-modules .ant-btn-modules .status {
+  margin-top: 0px;
+  font-weight: 500;
+}
+.ant-row-modules .ant-btn-modules .icon-bottom {
+  width: 100%;
+  text-align: right;
+}
+.ant-row-modules .ant-btn-modules .icon-bottom svg {
+  font-size: 22px;
+}
+.ant-row-modules .ant-btn-modules.completed {
+  background-color: #0e5728;
+}
+.ant-row-modules .ant-btn-modules.completed .ant-btn-modules-icon svg {
+  color: #ffffff;
+}
+.ant-row-modules .ant-btn-modules.completed .ant-btn-modules-icon svg path {
+  stroke: #ffffff;
+}
+.ant-row-modules .ant-btn-modules.completed .ant-typography {
+  color: #ffffff;
+}
+.ant-row-modules .ant-btn-modules.completed .icon-bottom svg {
+  color: #ffffff;
+}
+.ant-row-modules .ant-btn-modules.completed:hover {
+  background-color: transparent;
+  border: 1px solid #0e5728;
+}
+.ant-row-modules .ant-btn-modules.completed:hover .ant-btn-modules-icon svg {
+  color: #0e5728;
+}
+.ant-row-modules .ant-btn-modules.completed:hover .ant-btn-modules-icon svg path {
+  stroke: #0e5728;
+}
+.ant-row-modules .ant-btn-modules.completed:hover .ant-typography {
+  color: #58585a;
+}
+.ant-row-modules .ant-btn-modules.completed:hover .icon-bottom svg {
+  color: #58585a;
+}
+.ant-row-modules .ant-btn-modules.in-progress {
+  border: 1px solid #58585a;
+}
+.ant-row-modules .ant-btn-modules.in-progress .ant-btn-modules-icon svg {
+  color: #027273;
+}
+.ant-row-modules .ant-btn-modules.in-progress .ant-btn-modules-icon svg path {
+  stroke: #027273;
+}
+.ant-row-modules .ant-btn-modules.in-progress .ant-typography {
+  color: #58585a;
+}
+.ant-row-modules .ant-btn-modules.in-progress .icon-bottom svg {
+  color: #58585a;
+}
+.ant-row-modules .ant-btn-modules.in-progress:hover {
+  background-color: transparent;
+  border: 1px solid #0e5728;
+}
+.ant-row-modules .ant-btn-modules.in-progress:hover .ant-typography {
+  color: #58585a;
+}
+.ant-row-modules .ant-btn-modules.up-next {
+  border: 1px solid #58585a;
+  background-color: #949599;
+}
+.ant-row-modules .ant-btn-modules.up-next .ant-btn-modules-icon svg {
+  color: #58585a;
+}
+.ant-row-modules .ant-btn-modules.up-next .ant-btn-modules-icon svg path {
+  stroke: #58585a;
+}
+.ant-row-modules .ant-btn-modules.up-next .ant-typography {
+  color: #58585a;
+}
+.ant-row-modules .ant-btn-modules.up-next .icon-bottom svg {
+  color: #58585a;
+}
+
+.page-dashboard-caregiver .ant-table-default table tbody.ant-table-tbody td {
+  font-weight: 600;
+}
+.page-dashboard-caregiver .collapse-recent-invoices .ant-collapse-content .ant-collapse-content-box {
+  padding: 0px 0px 16px 0px;
+}
+
+.page-dashboard-care-professional .ant-table-default table tbody.ant-table-tbody td {
+  font-weight: 600;
+}
+.page-dashboard-care-professional .collapse-recent-invoices .ant-collapse-content .ant-collapse-content-box {
+  padding: 0px 0px 16px 0px;
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+  .dashboard-caregiver-modal-module {
+    width: 60% !important;
+  }
+}
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .dashboard-caregiver-modal-module {
+    width: 70% !important;
+  }
+}
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .dashboard-caregiver-modal-module {
+    width: 85% !important;
+  }
+}
+/* Media Query for Tablets, Ipads and below  */
+@media (max-width: 768px) {
+  .dashboard-caregiver-modal-module {
+    width: 100% !important;
+  }
+}
+/* Media Query for low resolution  Tablets, Ipads */
+/* Media Query for Mobile Devices */
+@media (max-width: 575px) {
+  .dashboard-caregiver-modal-module {
+    width: 100% !important;
+    padding: 5px !important;
+  }
+  .dashboard-caregiver-modal-module .carousel-control .prev .prev-text {
+    display: none;
+  }
+  .dashboard-caregiver-modal-module .carousel-control .next .next-text {
+    display: none;
+  }
+  .dashboard-caregiver-modal-module .ant-modal-close {
+    top: -30px;
+    right: 0px;
+  }
+  .dashboard-caregiver-modal-module .ant-modal-body {
+    padding: 10px;
+  }
+}/*# sourceMappingURL=dashboard.css.map */

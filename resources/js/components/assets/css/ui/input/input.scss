@@ -1,0 +1,373 @@
+@import "../../variables/variables.scss";
+
+.login-input {
+	width: 100% !important;
+	font-size: 14px !important;
+}
+
+.login-select {
+	padding-left: 0px !important;
+}
+
+@supports (zoom: 2) {
+	input[type="radio"],
+	input[type="checkbox"] {
+		zoom: 2;
+	}
+}
+@supports not (zoom: 2) {
+	input[type="radio"],
+	input[type="checkbox"] {
+		transform: scale(2);
+		margin: 15px;
+	}
+}
+
+.ant-input {
+	// height: 45px !important;
+	// padding-top: 13px !important;
+	padding-bottom: 0px;
+}
+
+.float-label {
+	position: relative;
+	input[type="password"] {
+		height: 45px !important;
+		padding-top: 13px !important;
+		padding-bottom: 0px;
+	}
+
+	input[type="text"] {
+		height: 45px !important;
+		padding-top: 13px !important;
+		padding-bottom: 0px;
+	}
+
+	.input-rate {
+		padding-top: 8px !important;
+		padding-bottom: 1px;
+
+		.ant-input-number-handler-wrap {
+			display: none;
+		}
+
+		.ant-input-number-lg input {
+			height: auto;
+		}
+	}
+
+	.input-date-picker {
+		padding-top: 8px !important;
+		padding-bottom: 1px;
+
+		.ant-picker-suffix {
+			margin-top: -8px !important;
+		}
+	}
+
+	.input-text-area {
+		padding-top: 19px !important;
+		padding-bottom: 5px;
+		line-height: 1.1;
+		// .textarea.ant-input {
+		//   padding-top: 17px !important;
+		// }
+	}
+
+	.ant-picker-input {
+		input {
+			padding-top: 9px !important;
+			padding-bottom: 0px;
+			margin-bottom: 1px;
+		}
+	}
+}
+
+.input-number {
+	input {
+		padding-top: 16px !important;
+		padding-bottom: 0px !important;
+		height: 43px;
+	}
+}
+
+.input-text-area-label {
+	.as-label {
+		background-color: $white;
+		padding-right: 5px;
+	}
+
+	textarea.ant-input {
+		padding-top: 15px;
+	}
+}
+
+.ant-select-show-search.ant-select:not(.ant-select-customize-input)
+	.ant-select-selector {
+	height: 45px !important;
+
+	.ant-select-selection-item {
+		top: 10px;
+	}
+}
+.ant-select-selection-search {
+	input[type="search"] {
+		// height: 30px !important;
+		padding-top: 13px !important;
+		padding-bottom: 0px;
+	}
+}
+
+.float-select {
+	height: 30px !important;
+	padding-bottom: 5px !important;
+}
+
+.float-select-multi {
+	// height: 30px !important;
+	// padding-top: 13px !important;
+	padding-bottom: 0px;
+	.ant-select-multiple.ant-select-lg .ant-select-selection-item {
+		height: 20px;
+		line-height: 20px;
+		font-size: 16px;
+	}
+	.ant-select-multiple .ant-select-selection-item-content {
+		font-size: 13px;
+	}
+	.ant-select-show-search.ant-select:not(.ant-select-customize-input)
+		.ant-select-selector {
+		height: auto !important;
+		padding-top: 0px;
+		// padding-bottom: 6px;
+	}
+
+	.ant-select-selection-overflow {
+		margin-top: 5px;
+		margin-bottom: 5px;
+	}
+
+	.ant-select-selection-overflow-item {
+		align-self: auto !important;
+	}
+}
+
+.label {
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 12px;
+	top: 12px;
+	transition: 0.2s ease all;
+}
+
+.as-placeholder {
+	color: gray;
+	z-index: 1;
+}
+
+.as-label {
+	top: 4px;
+	font-size: 10px !important;
+	background: rgba(255, 255, 255, 0);
+	padding: 0 4px;
+	margin-left: -4px;
+	z-index: 1;
+}
+
+.ant-input-affix-wrapper,
+.ant-input-affix-wrapper-lg {
+	padding: 0px 11px 0px 11px;
+}
+
+.form-select-error {
+	padding-bottom: 15px;
+	.ant-form-item-explain-error {
+		margin-top: 14px;
+		margin-bottom: -14px;
+	}
+}
+
+.form-select-error-multi {
+	.ant-form-item-explain-error {
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+}
+
+.capslock {
+	input {
+		text-transform: uppercase;
+	}
+}
+
+.mask-input-antd {
+	position: relative;
+	/* display: inline-block; */
+	width: 100%;
+	min-width: 0;
+	padding: 0px 12px;
+	color: rgba(0, 0, 0, 0.85);
+	font-size: 14px;
+	/* line-height: 8.5715; */
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #d9d9d9;
+	border-radius: 2px;
+	transition: all 0.3s;
+	font-size: 16px;
+	display: inline-flex;
+	height: 45px;
+	justify-content: flex-start;
+	align-items: flex-start;
+	/* margin-top: 1px; */
+	padding-top: 12px;
+	outline: 0;
+}
+.maskhasfeedback {
+	position: absolute;
+	right: 0;
+	margin-right: 12px;
+	top: 9px;
+	font-size: 16px;
+	color: #52c41a;
+}
+.maskhasfeedback-error {
+	position: absolute;
+	right: 0;
+	margin-right: 12px;
+	top: 9px;
+	font-size: 16px;
+	color: #f56900;
+}
+
+// .mask-input-antd-error-border {
+// 	border: 1px solid #f56900;
+// 	border-radius: 3px;
+// }
+// .ant-input-search .ant-input:hover,
+// .ant-input-search .ant-input:focus {
+// 	border-color: $color1;
+// }
+// .ant-input-search .ant-input:focus,
+// .ant-input-search .ant-input-focused,
+// .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input)
+// 	.ant-select-selector,
+// .ant-input:focus,
+// .ant-input-focused,
+// .ant-input-number-affix-wrapper:focus,
+// .ant-input-number-affix-wrapper-focused,
+// .ant-input-affix-wrapper:focus,
+// .ant-input-affix-wrapper-focused,
+// .ant-picker-focused {
+// 	box-shadow: 0 0 0 1px rgb(245, 105, 0 / 20%);
+// }
+// .ant-input-search
+// 	.ant-input:hover
+// 	+ .ant-input-group-addon
+// 	.ant-input-search-button:not(.ant-btn-primary),
+// .ant-input-search
+// 	.ant-input:focus
+// 	+ .ant-input-group-addon
+// 	.ant-input-search-button:not(.ant-btn-primary),
+// .ant-select:not(.ant-select-disabled):hover .ant-select-selector,
+// .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input)
+// 	.ant-select-selector,
+// .ant-input:hover,
+// .ant-input:focus,
+// .ant-input-focused,
+// .ant-input-number-affix-wrapper:not(.ant-input-number-affix-wrapper-disabled):hover,
+// .ant-input-number-affix-wrapper:focus,
+// .ant-input-number-affix-wrapper-focused,
+// .ant-input-number-affix-wrapper:focus,
+// .ant-input-number-affix-wrapper-focused,
+// .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover,
+// .ant-input-affix-wrapper:focus,
+// .ant-input-affix-wrapper-focused,
+// .ant-picker-focused,
+// .ant-picker:hover,
+// .ant-picker-focused,
+// .ant-radio-wrapper .ant-radio {
+// 	border-color: $color1;
+// }
+
+// .ant-radio-wrapper .ant-radio,
+// .ant-select:not(.ant-select-customize-input) .ant-select-selector,
+// .float-label .ant-input,
+// .float-label .mask-input,
+// .float-label .ant-picker,
+// .float-label .ant-input-affix-wrapper-has-feedback,
+// .float-label .ant-input-number-affix-wrapper {
+// 	border: 1px solid $color1;
+// }
+// .quill-input .ant-form-item-control,
+// .quill-input .ant-form-item-control-input-content .ql-toolbar.ql-snow {
+// 	border-bottom: 1px solid $color1;
+// }
+
+.ant-radio-wrapper .ant-radio {
+	border-radius: 50%;
+}
+
+.ant-select-table-pagesize.ant-select-focused .ant-select-arrow {
+	color: $black;
+}
+
+.search-dashboard {
+	.label {
+		text-transform: none !important;
+	}
+
+	.as-placeholder {
+		top: 4px !important;
+	}
+
+	.as-label {
+		top: 1px !important;
+	}
+
+	input[type="text"] {
+		height: 32px !important;
+		padding-top: 13px !important;
+		padding-bottom: 0px;
+	}
+}
+
+.float-label.has-input-addon-before .ant-input-number.ant-input-number-focused,
+.float-label.has-input-addon-before.role-to-search .ant-input-group-addon,
+.float-label
+	.ant-input-group-wrapper
+	.ant-input-group-addon
+	.ant-select.select-before.ant-select-focused,
+.float-label
+	.ant-input-group-wrapper
+	.ant-input-group-addon
+	.ant-select.select-before.ant-select-focused
+	.ant-select-selector {
+	border: 0px !important;
+	box-shadow: none;
+}
+.float-label .ant-input-group-wrapper .ant-input-group-addon .ant-select {
+	margin: 0px;
+}
+.float-label.has-input-addon-before .label {
+	left: 90px;
+}
+.float-label.has-input-addon-before.role-to-search .label {
+	left: 50px;
+}
+.float-label.has-input-addon-before .ant-input-number-group-addon,
+.float-label.has-input-addon-before .ant-input-number,
+.float-label.has-input-addon-before .ant-input-group-wrapper,
+.float-label.has-input-addon-before
+	.ant-input:not(.float-label > .ant-input-affix-wrapper) {
+	border: 0px !important;
+}
+.float-label.has-input-addon-before,
+.float-label.has-input-addon-before:hover,
+.float-label.has-input-addon-before:focus {
+	border: 1px solid #58585a;
+}
+.float-label.has-input-addon-before.length-string-1 .label {
+	left: 42px;
+}

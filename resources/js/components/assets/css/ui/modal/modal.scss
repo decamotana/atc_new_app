@@ -1,0 +1,68 @@
+@import "../../variables/variables.scss";
+
+.ant-modal-mask {
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+.ant-modal {
+	.ant-modal-header {
+		.ant-modal-title {
+			color: $black;
+		}
+	}
+	.ant-modal-footer {
+		// text-align: left;
+		padding: 15px 16px;
+		// .ant-btn {
+		//   background-color: $companyColor1;
+		//   border-color: $companyColor1;
+		// }
+	}
+}
+
+.ant-modal.modal-primary-default {
+	.ant-modal-content {
+		.ant-modal-close {
+			color: $white;
+		}
+
+		.ant-modal-header {
+			background: $color1;
+			.ant-modal-title {
+				color: $white;
+			}
+		}
+	}
+	.ant-modal-footer {
+		text-align: left;
+		padding: 15px 16px;
+		// .ant-btn {
+		// 	background-color: $companyColor1;
+		// 	border-color: $companyColor1;
+		// }
+	}
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+/* Media Query for Tablets, Ipads and below  */
+@media (max-width: 768px) {
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+}

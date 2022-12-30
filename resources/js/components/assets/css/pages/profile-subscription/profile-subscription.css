@@ -1,0 +1,21 @@
+.page-profile-subscription .btn-list {
+  display: flex;
+  gap: 8px;
+}
+
+/* Media Query for Large screens */
+/* Media Query for Laptops and Desktops */
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .page-profile-subscription .btn-list {
+    flex-direction: column;
+  }
+}
+/* Media Query for Tablets, Ipads and below  */
+@media (max-width: 768px) {
+  .page-profile-subscription .btn-list {
+    flex-direction: column;
+  }
+}
+/* Media Query for low resolution  Tablets, Ipads */
+/* Media Query for Mobile Devices *//*# sourceMappingURL=profile-subscription.css.map */

@@ -1,0 +1,81 @@
+.private-layout .ant-page-header {
+  background-color: transparent;
+  border-top: 1px solid #58585a;
+  border-bottom: 1px solid #58585a;
+  padding: 10px 20px;
+}
+.private-layout .ant-page-header .ant-page-header-heading {
+  width: 100%;
+  display: inherit;
+}
+.private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left {
+  width: 100%;
+  display: inherit;
+}
+.private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-icon {
+  border: 3px solid #358e8f;
+  border-radius: 100%;
+  width: 70px !important;
+  height: 70px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-icon .anticon {
+  font-size: 32px;
+  color: #358e8f !important;
+}
+.private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-icon svg {
+  font-size: 32px;
+}
+.private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-icon svg path {
+  color: #358e8f;
+}
+.private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-text .sub-title {
+  color: #58585a;
+  text-transform: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1em;
+}
+.private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-text .title {
+  color: #358e8f;
+  font-size: 32px;
+  font-weight: normal;
+}
+
+/* Media Query for Large screens */
+/* Media Query for Laptops and Desktops */
+/* Media Query for Tablets Ipads portrait mode */
+/* Media Query for Tablets, Ipads and below  */
+/* Media Query for low resolution  Tablets, Ipads */
+/* Media Query for Mobile Devices */
+@media (max-width: 575px) {
+  .private-layout .ant-page-header {
+    padding: 10px;
+  }
+  .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-icon {
+    width: 55px !important;
+    height: 55px !important;
+    padding: 10px;
+  }
+  .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-icon svg {
+    font-size: 28px;
+  }
+  .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-text .sub-title {
+    font-size: 12px;
+  }
+  .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-text .title {
+    font-size: 25px;
+  }
+}/*# sourceMappingURL=page_header.css.map */

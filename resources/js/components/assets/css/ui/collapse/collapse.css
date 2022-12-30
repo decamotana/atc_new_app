@@ -1,0 +1,55 @@
+.ant-collapse-primary {
+  background: transparent;
+  border: none;
+  margin-top: 15px;
+}
+.ant-collapse-primary .ant-collapse-item {
+  border-bottom: none;
+  margin-bottom: 10px;
+}
+.ant-collapse-primary .ant-collapse-item .ant-collapse-header {
+  font-size: 14px;
+  padding: 10px;
+  background-color: #027273;
+  color: #ffffff;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.ant-collapse-primary .ant-collapse-item .ant-collapse-header .ant-collapse-arrow {
+  font-size: 14px;
+}
+.ant-collapse-primary .ant-collapse-item .ant-collapse-header .ant-menu-submenu-arrow {
+  color: #ffffff !important;
+}
+.ant-collapse-primary .ant-collapse-item .ant-collapse-content {
+  background-color: transparent;
+  border: 1px solid #027273;
+  padding: 9px;
+  padding-top: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.ant-collapse-primary .ant-collapse-item .ant-collapse-content .ant-collapse-content-box {
+  padding: 0px;
+}
+
+.ant-collapse > div {
+  padding-top: 0px;
+}
+
+.ant-collapse .ant-menu-submenu-arrow {
+  position: relative !important;
+  right: 0 !important;
+  bottom: 6px !important;
+  width: 10px !important;
+  left: -2px !important;
+  margin-right: 10px !important;
+}
+
+.dashbaord-collapse .ant-collapse-content-box {
+  padding: 0;
+}
+
+.ant-collapse > .ant-collapse-item:last-child > .ant-collapse-header {
+  border-radius: 0px;
+}/*# sourceMappingURL=collapse.css.map */

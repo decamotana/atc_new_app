@@ -1,0 +1,385 @@
+@import "../../variables/variables.scss";
+
+.ant-row-quick-link {
+	.ant-btn-quick-link {
+		background-color: $color1;
+		padding: 15px 40px;
+		width: 100%;
+		height: 130px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 5px;
+		// margin-bottom: 15px;
+		border-radius: 0px;
+
+		svg {
+			font-size: 50px;
+			color: $color2;
+
+			path {
+				stroke: $color2;
+			}
+		}
+
+		.ant-typography {
+			line-height: 1em;
+			color: $white;
+		}
+	}
+
+	.ant-btn-quick-link:hover {
+		background-color: transparent;
+		border: 1px solid $color1;
+
+		svg {
+			font-size: 50px;
+			color: $color2;
+		}
+
+		.ant-typography {
+			color: $black;
+		}
+	}
+}
+
+.dashboard-caregiver-modal-module {
+	width: 50% !important;
+	padding: 40px !important;
+	// overflow: auto !important;
+
+	.ant-modal-close {
+		background: #949599;
+		color: #fff;
+		border-radius: 50%;
+		top: -25px;
+		right: -25px;
+
+		.ant-modal-close-x {
+			width: 25px;
+			height: 25px;
+			line-height: 25px;
+			font-size: 15px;
+		}
+	}
+	.carousel-control {
+		position: absolute;
+		width: 92%;
+		display: flex;
+		justify-content: space-between;
+		z-index: 3;
+		color: $color1;
+
+		.prev .ant-btn {
+			padding-left: 0px;
+			color: $color1;
+		}
+		.next .ant-btn {
+			padding-right: 0px;
+			color: $color1;
+		}
+		.disabled {
+			color: $color7 !important;
+		}
+	}
+	.ant-table-default table tbody.ant-table-tbody td {
+		font-weight: 600;
+
+		.ant-btn svg {
+			font-size: 22px;
+		}
+	}
+}
+.dashboard-careprofessional-modal-module {
+	.ant-modal-close {
+		background: #949599;
+		color: #fff;
+		border-radius: 50%;
+		top: -25px;
+		right: -25px;
+
+		.ant-modal-close-x {
+			width: 25px;
+			height: 25px;
+			line-height: 25px;
+			font-size: 15px;
+		}
+	}
+	.carousel-control {
+		position: absolute;
+		width: 92%;
+		display: flex;
+		justify-content: space-between;
+		z-index: 3;
+		color: $color1;
+
+		.prev .ant-btn {
+			padding-left: 0px;
+			color: $color1;
+		}
+		.next .ant-btn {
+			padding-right: 0px;
+			color: $color1;
+		}
+		.disabled {
+			color: $color7 !important;
+		}
+	}
+	.ant-table-default table tbody.ant-table-tbody td {
+		font-weight: 600;
+
+		.ant-btn svg {
+			font-size: 22px;
+		}
+	}
+}
+
+.ant-row-modules {
+	.ant-btn-modules {
+		padding: 20px 15px 5px 15px;
+		width: 100%;
+		height: 200px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		// gap: 8px;
+		// margin-bottom: 15px;
+		border-radius: 0px;
+
+		.ant-btn-modules-icon {
+			svg {
+				font-size: 70px;
+			}
+		}
+
+		.ant-typography {
+			line-height: 1em;
+		}
+
+		.title {
+			margin-top: 20px;
+			margin-bottom: 0px;
+			white-space: break-spaces;
+			font-size: 30px;
+		}
+
+		.status {
+			margin-top: 0px;
+			font-weight: 500;
+		}
+
+		.icon-bottom {
+			width: 100%;
+			text-align: right;
+
+			svg {
+				font-size: 22px;
+			}
+		}
+	}
+
+	.ant-btn-modules.completed {
+		background-color: $color13;
+
+		.ant-btn-modules-icon {
+			svg {
+				color: $white;
+
+				path {
+					stroke: $white;
+				}
+			}
+		}
+
+		.ant-typography {
+			color: $white;
+		}
+
+		.icon-bottom {
+			svg {
+				color: $white;
+			}
+		}
+	}
+	.ant-btn-modules.completed:hover {
+		background-color: transparent;
+		border: 1px solid $color13;
+
+		.ant-btn-modules-icon {
+			svg {
+				color: $color13;
+
+				path {
+					stroke: $color13;
+				}
+			}
+		}
+
+		.ant-typography {
+			color: $color7;
+		}
+		.icon-bottom {
+			svg {
+				color: $color7;
+			}
+		}
+	}
+
+	.ant-btn-modules.in-progress {
+		border: 1px solid $color7;
+
+		.ant-btn-modules-icon {
+			svg {
+				color: $color1;
+
+				path {
+					stroke: $color1;
+				}
+			}
+		}
+
+		.ant-typography {
+			color: $color7;
+		}
+
+		.icon-bottom {
+			svg {
+				color: $color7;
+			}
+		}
+	}
+	.ant-btn-modules.in-progress:hover {
+		background-color: transparent;
+		border: 1px solid $color13;
+
+		.ant-typography {
+			color: $color7;
+		}
+	}
+
+	.ant-btn-modules.up-next {
+		border: 1px solid $color7;
+		background-color: $color9;
+
+		.ant-btn-modules-icon {
+			svg {
+				color: $color7;
+
+				path {
+					stroke: $color7;
+				}
+			}
+		}
+
+		.ant-typography {
+			color: $color7;
+		}
+
+		.icon-bottom {
+			svg {
+				color: $color7;
+			}
+		}
+	}
+}
+
+.page-dashboard-caregiver {
+	.ant-table-default table tbody.ant-table-tbody td {
+		font-weight: 600;
+	}
+
+	.collapse-recent-invoices {
+		.ant-collapse-content {
+			.ant-collapse-content-box {
+				padding: 0px 0px 16px 0px;
+			}
+		}
+	}
+}
+
+.page-dashboard-care-professional {
+	.ant-table-default table tbody.ant-table-tbody td {
+		font-weight: 600;
+	}
+
+	.collapse-recent-invoices {
+		.ant-collapse-content {
+			.ant-collapse-content-box {
+				padding: 0px 0px 16px 0px;
+			}
+		}
+	}
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+	.dashboard-caregiver-modal-module {
+		width: 60% !important;
+	}
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+	.dashboard-caregiver-modal-module {
+		width: 70% !important;
+	}
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+	.dashboard-caregiver-modal-module {
+		width: 85% !important;
+	}
+}
+
+/* Media Query for Tablets, Ipads and below  */
+@media (max-width: 768px) {
+	.dashboard-caregiver-modal-module {
+		width: 100% !important;
+	}
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 575px) {
+	.dashboard-caregiver-modal-module {
+		width: 100% !important;
+		padding: 5px !important;
+
+		.carousel-control {
+			.prev {
+				.prev-text {
+					display: none;
+				}
+			}
+
+			.next {
+				.next-text {
+					display: none;
+				}
+			}
+		}
+
+		.ant-modal-close {
+			top: -30px;
+			right: 0px;
+		}
+		.ant-modal-body {
+			padding: 10px;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+}
+
+@media (max-width: 375px) {
+}
+
+@media (max-width: 320px) {
+}

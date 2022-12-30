@@ -1,335 +1,412 @@
-import React, { useEffect, useState } from "react";
-
+import React, { useState } from "react";
 import {
-    Layout,
-    Card,
-    Form,
-    Input,
-    Button,
-    Alert,
-    Divider,
-    Row,
-    Col,
-    Modal,
-    message,
-    notification,
-    Image,
+	Layout,
+	Card,
+	Form,
+	Button,
+	Row,
+	Col,
+	Image,
+	Divider,
+	Typography,
+	Alert,
 } from "antd";
-import { UserOutlined, LockOutlined, CloseOutlined } from "@ant-design/icons";
-
-import imageLogo from "/resources/assets/img/brand/logo_placeholder_dark.png";
-
-import useAxiosQuery from "../../../providers/useAxiosQuery";
+import { Link, useHistory } from "react-router-dom";
 import moment from "moment";
-import { DragDropContext } from "react-beautiful-dnd";
-import { Link, useLocation, useHistory } from "react-router-dom";
+import $ from "jquery";
+import {
+	fullwidthlogo,
+	description,
+	encrypt,
+} from "../../../providers/companyInfo";
+import { POST, GET } from "../../../providers/useAxiosQuery";
+import FloatInput from "../../../providers/FloatInput";
+import FloatInputPassword from "../../../providers/FloatInputPassword";
+import FloatInputMask from "../../../providers/FloatInputMask";
 
-const key = "DavidInvoice@2022";
-const encryptor = require("simple-encryptor")(key);
 export default function PageLogin() {
-    let history = useHistory();
-    const [errorMessage, setErrorMessage] = useState();
+	let history = useHistory();
+	const [form] = Form.useForm();
+	const [formPassword] = Form.useForm();
+	const [errorMessageLogin, setErrorMessageLogin] = useState({
+		type: "success",
+		message: "",
+	});
+	const [errorMessageForgot, setErrorMessageForgot] = useState({
+		type: "success",
+		message: "",
+	});
 
-    const [form] = Form.useForm();
-    const [formPassword] = Form.useForm();
+	const { mutate: mutateLogin, isLoading: isLoadingButtonLogin } = POST(
+		"api/v1/login",
+		"login"
+	);
 
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const { mutate: mutateLogin, isLoading: isLoadingButtonLogin } =
-        useAxiosQuery("POST", "api/v1/login", "login");
+	const { mutate: mutateForgot, isLoading: isLoadingForgot } = POST(
+		"api/v1/forgot_password",
+		"forgot_password"
+	);
 
-    useEffect(() => {
-        if (urlParams.get("token")) {
-            let token = urlParams.get("token");
-            let userdata = JSON.parse(urlParams.get("userdata"));
-            userdata.email = userdata.email.replace(" ", "+");
+	const { mutate: mutateVerify2fa, isLoading: isLoadingverify2fa } = POST(
+		"api/v1/verify2fa",
+		`verify2fa`
+	);
 
-            localStorage.token = encryptor.encrypt(token);
-            localStorage.userdata = encryptor.encrypt(userdata);
-            location.href = `${window.location.origin}/welcome`;
-        }
-        return () => {};
-    }, []);
+	const [uId, setUId] = useState(0);
+	const [isGGAuth, setIsGGAuth] = useState(false);
 
-    const onFinish = (values) => {
-        setErrorMessage(undefined);
-        let data = { email: values.email, password: values.password };
-        // console.log(values.password)
-        mutateLogin(data, {
-            onSuccess: (res) => {
-                if (res.token) {
-                    console.log("permission", res);
-                    localStorage.token = encryptor.encrypt(res.token);
-                    localStorage.userdata = encryptor.encrypt(res.data);
-                    if (urlParams.get("redirect")) {
-                        location.href = urlParams.get("redirect");
-                    } else {
-                        location.reload();
-                    }
-                } else {
-                    setErrorMessage("Username or Password is Invalid");
-                }
-            },
-            onError: (err) => {
-                setErrorMessage(err.response.data.error);
-                countDownModal(err.response.data.error);
-            },
-        });
-    };
+	const [errMessage2fa, setErrMessage2fa] = useState({
+		type: "",
+		message: "",
+	});
 
-    function countDownModal(message) {
-        let secondsToGo = 5;
-        const modal = Modal.error({
-            title: message,
-            // content: `This modal will be destroyed after ${secondsToGo} second.`
-        });
-        const timer = setInterval(() => {
-            secondsToGo -= 1;
-            // modal.update({
-            //     content: `This modal will be destroyed after ${secondsToGo} second.`
-            // });
-        }, 1000);
-        setTimeout(() => {
-            clearInterval(timer);
-            modal.destroy();
-        }, secondsToGo * 1000);
-    }
+	const onFinishLogin = (values) => {
+		mutateLogin(values, {
+			onSuccess: (res) => {
+				// console.log("res", res);
+				if (res.data) {
+					if (res.data && res.data.google2fa_enable === 1) {
+						setUId(res.data.id);
+						setIsGGAuth(true);
+					} else {
+						localStorage.userdata = encrypt(res.data);
+						localStorage.token = res.token;
+						window.location.reload();
+					}
+				} else {
+					setErrorMessageLogin({
+						type: "error",
+						message: res.message,
+					});
+				}
+			},
+			onError: (err) => {
+				setErrorMessageLogin({
+					type: "error",
+					message: (
+						<>
+							Unrecognized username or password. <b>Forgot your password?</b>
+						</>
+					),
+				});
+			},
+		});
+	};
 
-    const onFinishPassword = (values) => {
-        console.log("onFinishPassword", values);
-    };
+	const onFinishForgotPassword = (values) => {
+		// console.log("onFinishForgotPassword", values);
 
-    const handleRegistrationLink = () => {
-        history.push("/registration");
-    };
+		let data = {
+			...values,
+			link_origin: window.location.origin,
+		};
+		mutateForgot(data, {
+			onSuccess: (res) => {
+				if (res.success) {
+					setErrorMessageForgot({
+						type: "success",
+						message:
+							"An e-mail has been sent, please check your inbox or your spam folder.",
+					});
+				}
+			},
+			onError: (err) => {
+				setErrorMessageForgot({
+					type: "error",
+					message: "Unrecognized email.",
+				});
+			},
+		});
+	};
 
-    const [showPassword, setShowPassword] = useState(false);
-    const hadleShowPassword = () => {
-        // $('.forgot-password').show()
-        setShowPassword(!showPassword);
-    };
+	const onFinishVerifyCode = (values) => {
+		// console.log("onFinishVerifyCode", values);
 
-    return (
-        <Layout.Content
-            className="login-layout"
-            style={{
-                paddingBottom: "10vh",
-                height: "100vh",
-                // background:
-                //     "linear-gradient(to bottom, #ffffff 0%, #105b7d 100%);",
-            }}
-        >
-            <title> David Invoices </title>
-            <Row>
-                <Col xs={24} sm={4} md={4} lg={6} xl={8} xxl={9}></Col>
-                <Col
-                    xs={24}
-                    sm={16}
-                    md={16}
-                    lg={12}
-                    xl={8}
-                    xxl={6}
-                    style={{ padding: 10 }}
-                >
-                    <Card
-                        style={{
-                            background: "transparent",
-                            border: "0px solid",
-                            textAlign: "center",
-                            height: "auto",
-                        }}
-                        headStyle={{
-                            borderBottom: "none",
-                            background: "transparent!important",
-                        }}
-                        title={
-                            <Image
-                                src={imageLogo}
-                                preview={false}
-                                style={{ marginTop: 20, marginBottom: 20 }}
-                            />
-                        }
-                        className="login"
-                    >
-                        <Row className="flexdirection">
-                            <Col xs={24} md={24}>
-                                <Form
-                                    name="basic"
-                                    layout="vertical"
-                                    className="login-form"
-                                    style={{
-                                        marginTop: "-50px",
-                                    }}
-                                    onFinish={onFinish}
-                                    form={form}
-                                    autoComplete="off"
-                                >
-                                    <br />
-                                    <div style={{ marginBottom: 10 }}>
-                                        Sign In to your account
-                                    </div>
-                                    <Form.Item
-                                        name="email"
-                                        rules={[
-                                            {
-                                                required: true,
-                                                message:
-                                                    "This field field is required.",
-                                            },
-                                        ]}
-                                    >
-                                        <Input
-                                            placeholder="Username / E-mail"
-                                            className="login-input"
-                                            size="large"
-                                        />
-                                    </Form.Item>
-                                    <Form.Item
-                                        name="password"
-                                        rules={[
-                                            {
-                                                required: true,
-                                                message:
-                                                    "This field field is required.",
-                                            },
-                                        ]}
-                                    >
-                                        <Input.Password
-                                            className="login-input"
-                                            size="large"
-                                            placeholder="Password"
-                                        />
-                                    </Form.Item>
-                                    <Button
-                                        type="primary"
-                                        htmlType="submit"
-                                        // loading={isLoadingButtonLogin}
-                                        className="btn-login-outline"
-                                        // onClick={() => {
-                                        //     form.submit();
-                                        // }}
-                                        style={{
-                                            width: "100%",
-                                            marginTop: 10,
-                                            fontSize: "20px",
-                                            height: "45px",
-                                        }}
-                                    >
-                                        SUBMIT
-                                    </Button>
-                                    <br />
-                                    <br />
-                                    <div
-                                        className="forgot text-right"
-                                        style={{
-                                            textAlign: "center",
-                                            color: "#343a40",
-                                            // fontSize: "13px",
-                                        }}
-                                    >
-                                        <Link
-                                            type="link"
-                                            className="login-form-button"
-                                            size="small"
-                                            style={{
-                                                color: "#293a56",
-                                                fontWeight: "bold",
-                                                // fontSize: "13px",
-                                            }}
-                                            to="#"
-                                            onClick={hadleShowPassword}
-                                        >
-                                            Forgot Password ?
-                                        </Link>
-                                    </div>
-                                </Form>
+		var code = values.code.replace(/-/g, "");
 
-                                {showPassword && (
-                                    <Form
-                                        name="basic"
-                                        layout="vertical"
-                                        className="login-form"
-                                        style={{
-                                            marginTop: "-70px",
-                                        }}
-                                        onFinish={onFinishPassword}
-                                        form={formPassword}
-                                        autoComplete="off"
-                                    >
-                                        <br />
-                                        <br />
-                                        <br />
-                                        <br />
-                                        <Form.Item
-                                            name="email"
-                                            rules={[
-                                                {
-                                                    required: true,
-                                                    message:
-                                                        "This field field is required.",
-                                                },
-                                            ]}
-                                        >
-                                            <Input
-                                                placeholder="Enter your e-mail"
-                                                className="login-input"
-                                                size="large"
-                                                type="email"
-                                            />
-                                        </Form.Item>
-                                        <div
-                                            style={{
-                                                textAlign: "left",
-                                                marginTop: "-13px",
-                                                lineHeight: "1",
-                                            }}
-                                        >
-                                            <span
-                                                type="link"
-                                                className="login-form-button"
-                                                size="small"
-                                                style={{
-                                                    color: "#293a56",
-                                                    fontWeight: "bold",
-                                                    fontSize: "13px",
-                                                }}
-                                            >
-                                                Enter your User ID or E-mail
-                                                address and we will email you a
-                                                link to reset your password
-                                            </span>
-                                        </div>
+		mutateVerify2fa(
+			{ code: code, id: uId },
+			{
+				onSuccess: (res) => {
+					if (res.data) {
+						localStorage.userdata = encrypt(res.data);
+						localStorage.token = res.token;
+						window.location.reload();
+					} else {
+						setErrMessage2fa({
+							type: "error",
+							message: "Invalid Authenticator Code, Please try again",
+						});
+					}
+				},
+				onError: (err) => {
+					console.log(err);
+				},
+			}
+		);
+	};
 
-                                        <Button
-                                            type="primary"
-                                            htmlType="submit"
-                                            // loading={isLoadingButtonLogin}
-                                            className="btn-login-outline"
-                                            // onClick={() => {
-                                            //     form.submit();
-                                            // }}
-                                            style={{
-                                                width: "100%",
-                                                marginTop: 10,
-                                                fontSize: "20px",
-                                                height: "45px",
-                                            }}
-                                        >
-                                            SUBMIT
-                                        </Button>
-                                    </Form>
-                                )}
-                                <br />
-                                <br />
-                                <span>
-                                    © {moment().format("YYYY")}. David Invoice.
-                                    All Rights Reserved.
-                                </span>
-                            </Col>
-                        </Row>
-                    </Card>
-                </Col>
-            </Row>
-        </Layout.Content>
-    );
+	const hadleShowPassword = () => {
+		$("#login-form-forget").slideToggle();
+	};
+
+	GET("api/v1/maintenance", "maintenance", (res) => {
+		if (res.success === true) {
+			if (res.data.system_maintenance === 1) {
+				history.push("/maintenance");
+			}
+		}
+	});
+
+	return (
+		<Layout className="public-layout login-layout">
+			<Layout.Content>
+				<Row>
+					<Col xs={24} sm={24} md={24}>
+						<Image
+							className="zoom-in-out-box"
+							src={fullwidthlogo}
+							preview={false}
+						/>
+
+						<div className="login-sub-title">
+							Educating Cancer CareGivers for their wellbeing & improved patient
+							outcomes
+						</div>
+
+						<Card>
+							{!isGGAuth ? (
+								<>
+									<Form
+										layout="vertical"
+										className="login-form"
+										onFinish={onFinishLogin}
+										form={form}
+										autoComplete="off"
+									>
+										<Typography.Title
+											level={3}
+											className="text-center text-create-account"
+										>
+											Create an Account
+										</Typography.Title>
+
+										<Button
+											type="primary"
+											size="large"
+											className="btn-main btn-register-here"
+											onClick={() => history.push("/register")}
+											block
+										>
+											REGISTER HERE
+										</Button>
+
+										<Divider />
+
+										<Typography.Title
+											level={3}
+											className="text-center text-sign-in-here"
+										>
+											Already Have an Account? Sign in Here
+										</Typography.Title>
+										<Form.Item
+											name="email"
+											rules={[
+												{
+													required: true,
+													message: "This field is required.",
+												},
+											]}
+											hasFeedback
+										>
+											<FloatInput
+												label="Username / E-mail"
+												placeholder="Username / E-mail"
+											/>
+										</Form.Item>
+										<Form.Item
+											name="password"
+											rules={[
+												{
+													required: true,
+													message: "This field is required.",
+												},
+											]}
+											hasFeedback
+										>
+											<FloatInputPassword
+												label="Password"
+												placeholder="Password"
+											/>
+										</Form.Item>
+
+										<div>
+											<Typography.Text>
+												This page is protected by reCAPTCHA, and subject to the
+												Google{" "}
+												<Typography.Link
+													href="https://policies.google.com/privacy?hl=en"
+													className="color-1"
+													target="new"
+													style={{ fontWeight: "500" }}
+												>
+													Privacy Policy
+												</Typography.Link>{" "}
+												and{" "}
+												<Typography.Link
+													href="https://policies.google.com/terms?hl=en"
+													className="color-1"
+													target="new"
+													style={{ fontWeight: "500" }}
+												>
+													Terms of Services.
+												</Typography.Link>
+											</Typography.Text>
+										</div>
+
+										<Button
+											type="primary"
+											htmlType="submit"
+											loading={isLoadingButtonLogin}
+											className="btn-main m-t-sm btn-sign-in"
+											block
+											size="large"
+										>
+											SIGN IN
+										</Button>
+
+										{errorMessageLogin.message && (
+											<Alert
+												className="m-t-sm"
+												type={errorMessageLogin.type}
+												message={errorMessageLogin.message}
+											/>
+										)}
+
+										<div className="forgot">
+											<Link
+												type="link"
+												className="login-form-button color-1"
+												size="small"
+												to="#"
+												onClick={hadleShowPassword}
+											>
+												Forgot Password ?
+											</Link>
+										</div>
+									</Form>
+
+									<Form
+										name="basic"
+										layout="vertical"
+										id="login-form-forget"
+										className="login-form m-t-sm"
+										style={{ display: "none" }}
+										onFinish={onFinishForgotPassword}
+										form={formPassword}
+										autoComplete="off"
+									>
+										<Form.Item
+											name="email"
+											rules={[
+												{
+													required: true,
+													message: "This field is required.",
+												},
+												{ type: "email", message: "Invalid email." },
+											]}
+											hasFeedback
+										>
+											<FloatInput
+												label="Enter your e-mail"
+												placeholder="Enter your e-mail"
+											/>
+										</Form.Item>
+
+										<Button
+											type="primary"
+											htmlType="submit"
+											className="btn-main"
+											block
+											size="large"
+											loading={isLoadingForgot}
+										>
+											SUBMIT
+										</Button>
+
+										{errorMessageForgot.message && (
+											<Alert
+												className="m-t-sm"
+												type={errorMessageForgot.type}
+												message={errorMessageForgot.message}
+											/>
+										)}
+									</Form>
+								</>
+							) : (
+								<Form
+									layout="vertical"
+									className="login-form"
+									// style={{
+									//   marginTop: "-50px",
+									// }}
+									onFinish={onFinishVerifyCode}
+									autoComplete="off"
+								>
+									<div style={{ textAlign: "center" }}>
+										{" "}
+										<h3>Two-Factor Authentication Required</h3>
+										<p>Enter Authenticator Code </p>
+									</div>
+
+									<Form.Item
+										name="code"
+										rules={[
+											{
+												required: true,
+												message: "Required",
+											},
+										]}
+										hasFeedback
+									>
+										<FloatInputMask
+											label="Authenticator Code"
+											placeholder="Authenticator Code"
+											maskLabel="code"
+											maskType="999-999"
+										/>
+									</Form.Item>
+
+									<Button
+										type="primary"
+										className="btn-main m-t-sm"
+										block
+										size="large"
+										htmlType="submit"
+										loading={isLoadingverify2fa}
+									>
+										SUBMIT
+									</Button>
+
+									{errMessage2fa.message && (
+										<Alert
+											className="m-t-sm"
+											type={errMessage2fa.type}
+											message={errMessage2fa.message}
+										/>
+									)}
+								</Form>
+							)}
+						</Card>
+					</Col>
+				</Row>
+			</Layout.Content>
+			<Layout.Footer className="text-center m-t-lg">
+				<Typography.Text>
+					© Copyright {moment().format("YYYY")} {description}. All Rights
+					Reserved.
+				</Typography.Text>
+			</Layout.Footer>
+		</Layout>
+	);
 }

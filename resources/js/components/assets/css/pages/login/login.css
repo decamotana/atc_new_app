@@ -1,0 +1,114 @@
+.public-layout.login-layout {
+  height: 100vh;
+  overflow: hidden auto;
+  background: linear-gradient(to bottom, #ffffff 0%, #0f7273 100%);
+}
+.public-layout.login-layout .ant-layout-content {
+  min-height: auto;
+}
+.public-layout.login-layout .ant-row .ant-col {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.public-layout.login-layout .ant-row .ant-col .ant-image {
+  width: 380px;
+  margin-top: 50px;
+}
+.public-layout.login-layout .ant-row .ant-col .login-sub-title {
+  width: 260px;
+  text-align: center;
+  font-weight: 500;
+}
+.public-layout.login-layout .ant-row .ant-col .ant-card {
+  width: 550px;
+  border-radius: 5px;
+  margin-top: 60px;
+  box-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.6);
+}
+.public-layout.login-layout .ant-row .ant-col .ant-card .ant-card-body {
+  padding: 30px 50px;
+}
+.public-layout.login-layout .ant-row .ant-col .ant-card .ant-card-body .btn-register-here,
+.public-layout.login-layout .ant-row .ant-col .ant-card .ant-card-body .btn-sign-in {
+  height: 48px;
+  font-size: 20px;
+  border-radius: 0;
+}
+.public-layout.login-layout .ant-row .ant-col .ant-card .ant-card-body .ant-divider {
+  margin: 0 auto;
+  margin-top: 55px;
+  margin-bottom: 45px;
+  border-top-color: #000000;
+}
+.public-layout.login-layout .ant-row .ant-col .ant-card .text-create-account {
+  font-size: 24px;
+  font-weight: 400;
+}
+.public-layout.login-layout .ant-row .ant-col .ant-card .text-sign-in-here {
+  font-weight: 400;
+  font-size: 24px;
+}
+.public-layout.login-layout .ant-row .ant-col footer {
+  margin-top: 50px;
+  text-align: center;
+}
+.public-layout.login-layout .forgot {
+  margin-top: 10px;
+  font-weight: 500;
+}
+.public-layout.login-layout .ant-layout-footer {
+  background-color: transparent;
+}
+.public-layout.login-layout .float-label .ant-input {
+  border-color: transparent;
+}
+
+/* Media Query for Large screens */
+/* Media Query for Laptops and Desktops */
+/* Media Query for Tablets Ipads portrait mode */
+/* Media Query for Tablets, Ipads and below  */
+@media (max-width: 768px) {
+  .public-layout.login-layout .ant-row > .ant-col > .ant-card {
+    width: 500px;
+  }
+}
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .public-layout.login-layout .ant-row .ant-col .ant-image {
+    width: 350px;
+  }
+  .public-layout.login-layout .ant-row > .ant-col > .ant-card {
+    width: 450px;
+  }
+  .public-layout.login-layout .ant-row > .ant-col > .ant-card > .ant-card-body {
+    padding: 15px 20px;
+  }
+}
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .public-layout.login-layout .ant-row .ant-col .ant-image {
+    width: 300px;
+  }
+  .public-layout.login-layout .ant-row > .ant-col > .ant-card {
+    width: 400px;
+  }
+  .public-layout.login-layout .ant-row > .ant-col > .ant-card > .ant-card-body {
+    padding: 15px 20px;
+  }
+}
+@media (max-width: 375px) {
+  .public-layout.login-layout .ant-row .ant-col .ant-image {
+    width: 250px;
+  }
+  .public-layout.login-layout .ant-row > .ant-col > .ant-card {
+    width: 350px;
+  }
+}
+@media (max-width: 320px) {
+  .public-layout.login-layout .ant-row > .ant-col > .ant-card {
+    width: 300px;
+  }
+}/*# sourceMappingURL=login.css.map */

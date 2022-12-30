@@ -1,0 +1,290 @@
+import { Button, Card, Col, Collapse, Row, Table } from "antd";
+import { useEffect, useState } from "react";
+import $ from "jquery";
+import {
+	TableGlobalInputSearch,
+	TablePageSize,
+	TablePagination,
+	TableShowingEntries,
+} from "../../Components/ComponentTableFilter";
+import { GET } from "../../../../providers/useAxiosQuery";
+import highchartsSetOptions from "../../../../providers/highchartsSetOptions";
+import Highcharts from "highcharts";
+
+export default function PageUsers() {
+	highchartsSetOptions(Highcharts);
+
+	const [tableUserTypeFilter, setTableUserTypeFilter] = useState({
+		page: 1,
+		page_size: 50,
+		search: "",
+		sort_field: "id",
+		sort_order: "desc",
+		status: "Active",
+		role: JSON.stringify(["Cancer Caregiver", "Cancer Care Professional"]),
+	});
+
+	const { data: dataSourceUserType, refetch: refetchSourceUserType } = GET(
+		`api/v1/users?${new URLSearchParams(tableUserTypeFilter)}`,
+		"users_active_user_type_list"
+	);
+
+	const onChangeTableUserType = (pagination, filters, sorter) => {
+		setTableUserTypeFilter({
+			...tableUserTypeFilter,
+			sort_field: sorter.columnKey,
+			sort_order: sorter.order ? sorter.order.replace("end", "") : null,
+			page: 1,
+		});
+	};
+
+	useEffect(() => {
+		if (dataSourceUserType) {
+			refetchSourceUserType();
+		}
+
+		return () => {};
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [tableUserTypeFilter]);
+
+	GET(
+		`api/v1/stats_chart_users`,
+		"stats_chart_users",
+		(res) => {
+			// console.log("res", res);
+			if (res.data) {
+				Highcharts.chart("div_chart_total_users_to_date", {
+					chart: {
+						plotBackgroundColor: null,
+						plotBorderWidth: null,
+						plotShadow: false,
+						type: "pie",
+						height: 330,
+					},
+					title: {
+						text: null,
+					},
+					tooltip: {
+						formatter: function () {
+							console.log("this", this);
+							return `<b>${this.key}: ${Highcharts.numberFormat(
+								this.y,
+								0,
+								"",
+								","
+							)}`;
+						},
+					},
+					plotOptions: {
+						pie: {
+							allowPointSelect: true,
+							cursor: "pointer",
+							dataLabels: {
+								enabled: true,
+								// format: "<b>{point.name}</b><br>{point.y:.0f}",
+								distance: -50,
+								formatter: function () {
+									// console.log("this", this);
+									return `<b style="font-size:16px;">${Highcharts.numberFormat(
+										this.y,
+										0,
+										"",
+										","
+									)}</b>`;
+								},
+							},
+							showInLegend: true,
+						},
+					},
+					series: [
+						{
+							name: "TOTAL USERS TO DATE",
+							data: res.data,
+						},
+					],
+					legend: {
+						align: "center",
+						verticalAlign: "top",
+						layout: "vertical",
+						y: 40,
+					},
+					exporting: {
+						buttons: {
+							contextButton: {
+								align: "center",
+								symbolStroke: "#13f4f1",
+							},
+						},
+					},
+				});
+			}
+		},
+		false
+	);
+
+	const [hasCollapse, setHasCollapse] = useState(false);
+
+	useEffect(() => {
+		$("#btn_sidemenu_collapse_unfold").on("click", function () {
+			setHasCollapse(false);
+			// console.log("btn_sidemenu_collapse_unfold");
+		});
+		$("#btn_sidemenu_collapse_fold").on("click", function () {
+			setHasCollapse(true);
+			// console.log("btn_sidemenu_collapse_fold");
+		});
+
+		return () => {};
+	}, []);
+
+	return (
+		<Card id="PageStatsUsers">
+			<Row gutter={[12, 12]}>
+				<Col xs={24} sm={24} md={24} lg={hasCollapse ? 16 : 24} xl={16}>
+					<Collapse
+						className="main-1-collapse border-none"
+						expandIcon={({ isActive }) =>
+							isActive ? (
+								<span
+									className="ant-menu-submenu-arrow"
+									style={{ color: "#FFF", transform: "rotate(270deg)" }}
+								></span>
+							) : (
+								<span
+									className="ant-menu-submenu-arrow"
+									style={{ color: "#FFF", transform: "rotate(90deg)" }}
+								></span>
+							)
+						}
+						defaultActiveKey={["1"]}
+						expandIconPosition="start"
+					>
+						<Collapse.Panel
+							header="USERS"
+							key="1"
+							className="accordion bg-darkgray-form m-b-md border "
+						>
+							<Row gutter={12}>
+								<Col xs={24} sm={24} md={24}>
+									<div className="ant-space-flex-space-between table-size-table-search">
+										<div>
+											<TablePageSize
+												tableFilter={tableUserTypeFilter}
+												setTableFilter={setTableUserTypeFilter}
+											/>
+										</div>
+										<div>
+											<TableGlobalInputSearch
+												tableFilter={tableUserTypeFilter}
+												setTableFilter={setTableUserTypeFilter}
+											/>
+										</div>
+									</div>
+								</Col>
+
+								<Col xs={24} sm={24} md={24} className="m-t-sm m-b-sm">
+									<Table
+										className="ant-table-default ant-table-striped"
+										dataSource={
+											dataSourceUserType && dataSourceUserType.data.data
+										}
+										rowKey={(record) => record.id}
+										pagination={false}
+										bordered={false}
+										// rowSelection={{
+										//   type: selectionType,
+										//   ...rowSelection,
+										// }}
+										onChange={onChangeTableUserType}
+										scroll={{ x: "max-content" }}
+									>
+										<Table.Column
+											title="Last Name"
+											key="lastname"
+											dataIndex="lastname"
+											sorter={true}
+											render={(text, record) => {
+												return (
+													<Button type="link" className="color-1 cursor-auto">
+														{text}
+													</Button>
+												);
+											}}
+										/>
+										<Table.Column
+											title="First Name"
+											key="firstname"
+											dataIndex="firstname"
+											sorter={true}
+											render={(text, record) => {
+												return (
+													<Button type="link" className="color-1 cursor-auto">
+														{text}
+													</Button>
+												);
+											}}
+										/>
+										<Table.Column
+											title="Type"
+											key="role"
+											dataIndex="role"
+											sorter={true}
+										/>
+									</Table>
+								</Col>
+								<Col xs={24} sm={24} md={24}>
+									<div className="ant-space-flex-space-between table-entries-table-pagination">
+										<TableShowingEntries />
+										<TablePagination
+											tableFilter={tableUserTypeFilter}
+											setTableFilter={setTableUserTypeFilter}
+											setPaginationTotal={dataSourceUserType?.data.total}
+											showLessItems={true}
+											showSizeChanger={false}
+										/>
+									</div>
+								</Col>
+							</Row>
+						</Collapse.Panel>
+					</Collapse>
+				</Col>
+
+				<Col xs={24} sm={24} md={24} lg={hasCollapse ? 8 : 24} xl={8}>
+					<Collapse
+						className="main-1-collapse border-none"
+						expandIcon={({ isActive }) =>
+							isActive ? (
+								<span
+									className="ant-menu-submenu-arrow"
+									style={{ color: "#FFF", transform: "rotate(270deg)" }}
+								></span>
+							) : (
+								<span
+									className="ant-menu-submenu-arrow"
+									style={{ color: "#FFF", transform: "rotate(90deg)" }}
+								></span>
+							)
+						}
+						defaultActiveKey={["1"]}
+						expandIconPosition="start"
+					>
+						<Collapse.Panel
+							header="TOTAL USERS TO DATE"
+							key="1"
+							className="accordion bg-darkgray-form m-b-md border "
+						>
+							<Row gutter={12}>
+								<Col xs={24} sm={24} md={24}>
+									<div
+										id="div_chart_total_users_to_date"
+										className="highchart-responsive"
+									/>
+								</Col>
+							</Row>
+						</Collapse.Panel>
+					</Collapse>
+				</Col>
+			</Row>
+		</Card>
+	);
+}

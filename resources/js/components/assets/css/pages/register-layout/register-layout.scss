@@ -1,0 +1,373 @@
+@import "../../variables/variables.scss";
+
+.public-layout.register-layout {
+	height: 100vh;
+	overflow: hidden auto;
+	background: linear-gradient(to bottom, #ffffff 0%, #0f7273 100%);
+
+	.ant-layout-content {
+		min-height: auto;
+	}
+
+	.ant-row {
+		.ant-col {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+
+			.ant-image {
+				width: 380px;
+				margin-top: 50px;
+			}
+
+			.register-sub-title {
+				width: 260px;
+				text-align: center;
+				font-weight: 500;
+			}
+
+			.ant-card {
+				width: 550px;
+				border-radius: 5px;
+				margin-top: 60px;
+				box-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.6);
+				-webkit-box-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.6);
+				-moz-box-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.6);
+
+				.ant-card-body {
+					padding: 35px 60px;
+
+					.ant-page-header {
+						background-color: $pageHeaderPublicBackground;
+						padding: 0px 0px 20px 0px;
+						margin-bottom: 20px;
+
+						.ant-page-header-heading {
+							width: 100%;
+							display: inherit;
+
+							.ant-page-header-heading-left {
+								width: 100%;
+								display: inherit;
+
+								.ant-page-header-heading-title {
+									display: flex;
+									gap: 10px;
+									align-items: center;
+
+									.ant-page-header-icon {
+										border: 2px solid $pageHeaderPublicIconBorderColor;
+										border-radius: 100%;
+										padding: 15px;
+										display: flex;
+										justify-content: center;
+										align-items: center;
+
+										.anticon {
+											font-size: 36px;
+											color: $pageHeaderPublicIconColor !important;
+										}
+
+										svg {
+											font-size: 36px;
+
+											path {
+												color: $pageHeaderPublicIconColor;
+											}
+										}
+									}
+
+									.ant-page-header-text {
+										display: flex;
+										flex-direction: column;
+										align-items: flex-start;
+
+										.sub-title {
+											color: $pageHeaderPublicColorSubTitle;
+											text-transform: none;
+											font-size: 16px;
+											font-weight: 500;
+											line-height: 1em;
+											margin-left: 2px;
+										}
+										.title {
+											color: $pageHeaderPublicColorTitle;
+											font-size: 36px;
+											font-weight: normal;
+										}
+									}
+								}
+							}
+						}
+					}
+
+					.ant-collapse {
+						background: transparent;
+						border: none;
+
+						.ant-collapse-item {
+							border-bottom: none;
+							margin-bottom: 20px;
+
+							.ant-collapse-header {
+								font-size: 21px;
+								padding: 0px;
+								flex-direction: row-reverse;
+								margin-bottom: 25px;
+
+								.ant-collapse-expand-icon {
+									width: 25%;
+									text-align: right;
+
+									.ant-collapse-arrow {
+										color: $white;
+										font-size: 22px;
+										background-color: $color1;
+										position: inherit;
+										vertical-align: -10px;
+									}
+								}
+
+								.ant-collapse-header-text {
+									width: 75%;
+
+									.title {
+										font-weight: 500;
+									}
+									.sub-title {
+										font-size: 16px;
+										font-weight: 500;
+									}
+								}
+							}
+
+							.ant-collapse-content {
+								background-color: transparent;
+								border: none;
+
+								.ant-collapse-content-box {
+									padding: 0px;
+
+									.ant-form .form-title {
+										font-size: 25px;
+										font-weight: 400;
+									}
+
+									.ant-col > div:nth-child(2) {
+										width: 100%;
+									}
+								}
+							}
+						}
+					}
+
+					.btn-complete-purchase {
+						height: 48px;
+						font-size: 20px;
+						border-radius: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.float-label .ant-input {
+		border-color: transparent;
+	}
+
+	.ant-layout-footer {
+		background-color: transparent;
+		margin-top: 50px;
+	}
+}
+
+.register-layout-set-password {
+	.ant-row {
+		.ant-col > div:nth-child(2) {
+			width: 100%;
+		}
+	}
+}
+
+.registrationSelect {
+	.ant-select-item-option-content {
+		p {
+			margin-bottom: 0px;
+		}
+	}
+}
+
+.div_reg_is_patient {
+	display: flex;
+	align-items: flex-start;
+	gap: 15px;
+	margin-bottom: 10px;
+
+	> span {
+		font-size: 16px;
+	}
+
+	.ant-radio-group {
+		.ant-radio-wrapper {
+			span:not(.ant-radio) {
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* Media Query for Tablets, Ipads and below  */
+@media (max-width: 768px) {
+	.public-layout.register-layout .ant-row > .ant-col > .ant-card {
+		width: 500px;
+	}
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+	.public-layout.register-layout .ant-row .ant-col .ant-image {
+		width: 350px;
+	}
+	.public-layout.register-layout .ant-row > .ant-col > .ant-card {
+		width: 450px;
+	}
+	.public-layout.register-layout
+		.ant-row
+		> .ant-col
+		> .ant-card
+		> .ant-card-body {
+		padding: 15px 20px;
+	}
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+	.public-layout.register-layout .ant-row .ant-col .ant-image {
+		width: 300px;
+	}
+
+	.public-layout.register-layout .ant-row > .ant-col > .ant-card {
+		width: 400px;
+	}
+
+	.public-layout.register-layout
+		.ant-row
+		> .ant-col
+		> .ant-card
+		> .ant-card-body {
+		padding: 15px 20px;
+	}
+}
+
+@media (max-width: 375px) {
+	.public-layout.register-layout .ant-row .ant-col .ant-image {
+		width: 250px;
+	}
+
+	.public-layout.register-layout .ant-row > .ant-col > .ant-card {
+		width: 350px;
+	}
+}
+
+@media (max-width: 320px) {
+	.public-layout.register-layout .ant-row .ant-col .ant-image {
+		width: 250px;
+	}
+	.public-layout.register-layout .ant-row > .ant-col > .ant-card {
+		width: 300px;
+	}
+
+	.public-layout.register-layout
+		.ant-row
+		.ant-col
+		.ant-card
+		.ant-card-body
+		.ant-page-header
+		.ant-page-header-heading
+		.ant-page-header-heading-left
+		.ant-page-header-heading-title
+		.ant-page-header-icon
+		svg,
+	.public-layout.register-layout
+		.ant-row
+		.ant-col
+		.ant-card
+		.ant-card-body
+		.ant-page-header
+		.ant-page-header-heading
+		.ant-page-header-heading-left
+		.ant-page-header-heading-title
+		.ant-page-header-text
+		.title {
+		font-size: 30px;
+	}
+
+	.public-layout.register-layout
+		.ant-row
+		.ant-col
+		.ant-card
+		.ant-card-body
+		.ant-collapse
+		.ant-collapse-item
+		.ant-collapse-content
+		.ant-collapse-content-box
+		.ant-form
+		> h1,
+	.public-layout.register-layout
+		.ant-row
+		.ant-col
+		.ant-card
+		.ant-card-body
+		.ant-collapse
+		.ant-collapse-item
+		.ant-collapse-content
+		.ant-collapse-content-box
+		> .ant-typography,
+	.public-layout.register-layout
+		.ant-row
+		.ant-col
+		.ant-card
+		.ant-card-body
+		.ant-collapse
+		.ant-collapse-item
+		.ant-collapse-content
+		.ant-collapse-content-box
+		.ant-form
+		.form-title,
+	.public-layout.register-layout
+		.ant-row
+		.ant-col
+		.ant-card
+		.ant-card-body
+		.ant-collapse
+		.ant-collapse-item
+		.ant-collapse-header
+		.ant-collapse-header-text
+		.title {
+		font-size: 18px;
+	}
+	.public-layout.register-layout
+		.ant-row
+		.ant-col
+		.ant-card
+		.ant-card-body
+		.ant-collapse
+		.ant-collapse-item
+		.ant-collapse-header
+		.ant-collapse-header-text
+		.sub-title {
+		font-size: 12px;
+	}
+}

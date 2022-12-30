@@ -1,0 +1,198 @@
+@import "../../variables/variables.scss";
+.page-admin-revenue {
+	.collapse-result-total {
+		.ant-collapse-item {
+			.ant-collapse-content {
+				border-top: 0px;
+			}
+			.ant-collapse-content > .ant-collapse-content-box {
+				padding: 0px;
+			}
+		}
+	}
+
+	// .revenue_report_wrapper {
+	// 	width: 100%;
+	// 	padding: 10px;
+
+	// 	.info_wrapper {
+	// 		display: flex;
+	// 		align-items: center;
+	// 		gap: 8px;
+
+	// 		.logo {
+	// 			width: 40%;
+	// 			text-align: center;
+	// 		}
+	// 		.info {
+	// 			width: 60%;
+
+	// 			.revenue_report_info {
+	// 				.head {
+	// 					text-align: center;
+	// 					background-color: #d9d9d9;
+	// 					color: #000;
+	// 					padding: 5px;
+	// 					font-size: 15px;
+	// 					font-weight: 700;
+
+	// 					border: 1px solid rgba(241, 224, 224, 0.1);
+	// 					box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.2);
+	// 				}
+	// 				.body {
+	// 					background: #f7faf9;
+	// 					border: 1px solid #d9d9d9;
+	// 					box-shadow: 0px 4px 3px 3px rgba(0, 0, 0, 0.1);
+	// 					margin-top: 5px;
+
+	// 					display: flex;
+	// 					flex-direction: column;
+
+	// 					padding: 20px;
+
+	// 					> div {
+	// 						display: flex;
+	// 						> div {
+	// 							width: 50%;
+	// 						}
+	// 					}
+	// 				}
+	// 			}
+	// 		}
+	// 	}
+
+	// 	.chart_revenue_output {
+	// 		border: 1px solid #d9d9d9;
+	// 		box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.1);
+	// 	}
+	// }
+}
+
+.modal-customer-invoice {
+	width: 600px !important;
+
+	.ant-modal-close {
+		background: #949599;
+		color: #fff;
+		border-radius: 50%;
+		top: -25px;
+		right: -25px;
+
+		.ant-modal-close-x {
+			width: 25px;
+			height: 25px;
+			line-height: 25px;
+			font-size: 15px;
+		}
+	}
+
+	.ant-modal-body {
+		padding: 30px 24px;
+
+		.app-name {
+			color: $color1;
+			font-weight: 600;
+			font-size: 18px;
+		}
+
+		.modal-invoice-title-cont {
+			text-align: right;
+		}
+		.modal-invoice-title {
+			color: $color10;
+			font-weight: 600;
+			font-size: 50px;
+			line-height: 1;
+		}
+
+		.invoice-info-title,
+		.invoice-to-title {
+			color: $color1;
+			font-size: 15px;
+			font-weight: 600;
+		}
+		.invoice-info-invoice-no-cont,
+		.invoice-to-name-cont {
+			margin-top: 15px;
+		}
+		.invoice-to-name {
+			font-weight: 600;
+			font-size: 18px;
+			color: $color7;
+		}
+		.invoice-info-invoice-no-cont,
+		.invoice-info-date-cont {
+			display: flex;
+			justify-content: space-between;
+
+			div:first-child {
+				width: 65%;
+			}
+			div:last-child {
+				width: 35%;
+			}
+		}
+		.invoice-plan-data {
+			font-weight: 600;
+		}
+	}
+}
+
+.modal-revenue-report {
+	width: 800px !important;
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* Media Query for Tablets, Ipads and below  */
+@media (max-width: 768px) {
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+	.modal-customer-invoice {
+		.ant-modal-body {
+			.modal-invoice-title {
+				font-size: 40px;
+			}
+		}
+	}
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 575px) {
+	.modal-customer-invoice {
+		width: 350px !important;
+		.ant-modal-body {
+			.modal-invoice-title-cont {
+				text-align: left;
+				margin-bottom: 25px;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+}
+
+@media (max-width: 375px) {
+	.modal-customer-invoice {
+		width: 300px !important;
+	}
+}
+
+@media (max-width: 320px) {
+	.modal-customer-invoice {
+		width: 260px !important;
+	}
+}

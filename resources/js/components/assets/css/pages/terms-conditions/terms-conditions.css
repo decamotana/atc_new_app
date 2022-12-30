@@ -1,0 +1,16 @@
+/* Media Query for Large screens */
+/* Media Query for Laptops and Desktops */
+/* Media Query for Tablets Ipads portrait mode */
+/* Media Query for Tablets, Ipads and below  */
+/* Media Query for low resolution  Tablets, Ipads */
+/* Media Query for Mobile Devices */
+@media (max-width: 468px) {
+  .page-terms-conditions .ant-btn.btn-main-invert {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 341px) {
+  .page-terms-conditions .ant-btn.btn-main-invert {
+    margin-top: 40px;
+  }
+}/*# sourceMappingURL=terms-conditions.css.map */

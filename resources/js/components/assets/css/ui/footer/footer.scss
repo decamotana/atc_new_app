@@ -1,0 +1,100 @@
+@import "../../variables/variables.scss";
+
+.private-layout {
+	.ant-layout-footer {
+		padding: 15px 20px;
+
+		.links {
+			text-align: right;
+		}
+
+		.ant-typography {
+			color: $color14 !important;
+		}
+
+		a {
+			color: $color14 !important;
+		}
+		.ant-space-item-split {
+			.ant-divider.ant-divider-vertical {
+				border-left: 1px solid $color7;
+			}
+		}
+
+		.ant-space.ant-space-vertical > .ant-space-item:last-child {
+			margin-top: 10px;
+			font-size: 13px;
+		}
+	}
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+	.ant-layout-footer {
+		.ant-row {
+			.ant-col {
+				text-align: center !important;
+			}
+		}
+	}
+}
+
+/* Media Query for Tablets, Ipads and below  */
+@media (max-width: 768px) {
+	.ant-layout-footer {
+		.ant-row {
+			.ant-col {
+				text-align: center !important;
+
+				// .footer-links {
+				// 	gap: 0px !important;
+				// }
+			}
+		}
+	}
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+	.private-layout .ant-layout-footer {
+		padding: 10px;
+	}
+}
+
+@media (max-width: 379px) {
+	.ant-layout-footer {
+		.ant-row {
+			.ant-col {
+				text-align: center !important;
+
+				.footer-links {
+					margin-top: 20px;
+					flex-direction: column;
+
+					.ant-divider.ant-divider-horizontal {
+						border: 2px solid #58585a;
+						margin: 0px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 375px) {
+}
+
+@media (max-width: 320px) {
+}

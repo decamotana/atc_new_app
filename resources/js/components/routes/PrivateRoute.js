@@ -1,44 +1,44 @@
-import React, { useEffect } from "react";
-import {
-    BrowserRouter as Router,
-    Route,
-    Switch,
-    Redirect,
-} from "react-router-dom";
-// import PrivateContent from "../layouts/private/admins/Content";
-import Content from "../layouts/private/Content";
-// import PrivateMerchantLayout from "../layouts/private/merchant/Content";
-// import PrivateMerchantTicketsOnlyLayout from "../layouts/private/merchantTicketsOnly/Content";
-// import PrivateGiftOnlyLayout from "../layouts/private/gift/Content";
-// import getUserData from "../providers/getUserData";
-// const userdata = getUserData();
+import React from "react";
+import { Route, Redirect } from "react-router-dom";
+import Private from "../layouts/private/Private";
 
-const PrivateRoute = ({
-    path: path,
-    component: Component,
-    permission: Permission,
-    ...rest
-}) => {
-    // console.log('permission', Permission)
-    let isLoggedIn = localStorage.getItem("token");
+let isLoggedIn = localStorage.getItem("token");
 
-    // useEffect(() => {
-    //     console.log('isLoggedIn', isLoggedIn)
-    // }, [])
-    return (
-        <Route
-            {...rest}
-            render={(props) =>
-                isLoggedIn ? (
-                    <Content>
-                        <Component permission={Permission} {...props} />
-                    </Content>
-                ) : (
-                    <Redirect to={{ pathname: "/*" }} />
-                )
-            }
-        />
-    );
+const PrivateRoute = (props) => {
+	const {
+		path: Path,
+		component: Component,
+		title: Title,
+		subtitle: SubTitle,
+		breadcrumb: Breadcrumb,
+		pageHeaderIcon: PageHeaderIcon,
+		...rest
+	} = props;
+
+	return (
+		<Route
+			{...rest}
+			render={(props) =>
+				isLoggedIn ? (
+					<Private
+						title={Title}
+						subtitle={SubTitle}
+						pageHeaderIcon={PageHeaderIcon}
+						breadcrumb={Breadcrumb}
+					>
+						<Component
+							title={Title}
+							subtitle={SubTitle}
+							pageHeaderIcon={PageHeaderIcon}
+							{...props}
+						/>
+					</Private>
+				) : (
+					<Redirect to={{ pathname: "/" }} />
+				)
+			}
+		/>
+	);
 };
 
 export default PrivateRoute;

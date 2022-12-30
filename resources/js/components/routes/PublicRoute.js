@@ -1,36 +1,25 @@
-import React, { useEffect } from "react";
-import {
-    BrowserRouter as Router,
-    Route,
-    Switch,
-    Redirect,
-} from "react-router-dom";
-import PublicLayout from "../layouts/public";
-import getUserData from "../providers/getUserData";
+import React from "react";
+import { Route, Redirect } from "react-router-dom";
+import PublicLayout from "../layouts/public/Public";
+// import getUserData from "../providers/getUserData";
 
 const isLoggedIn = localStorage.getItem("token");
-const userdata = getUserData();
-const PublicRoute = ({ component: Component, ...rest }) => {
-    return (
-        <div>
-            <Route
-                {...rest}
-                render={(props) =>
-                    !isLoggedIn ||
-                    props.match.path.split("/")[1] == "logout" ||
-                    props.match.path.split("/")[1] == "error" ? (
-                        <PublicLayout>
-                            <Component {...props} />
-                        </PublicLayout>
-                    ) : (
-                        <div>
-                            <Redirect to={{ pathname: "/dashboard" }} />
-                        </div>
-                    )
-                }
-            />
-        </div>
-    );
+
+const PublicRoute = ({ component: Component, title: Title, ...rest }) => {
+	return (
+		<Route
+			{...rest}
+			render={(props) =>
+				!isLoggedIn ? (
+					<PublicLayout title={Title}>
+						<Component title={Title} {...props} />
+					</PublicLayout>
+				) : (
+					<Redirect to={{ pathname: "/dashboard" }} />
+				)
+			}
+		/>
+	);
 };
 
 export default PublicRoute;

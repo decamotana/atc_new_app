@@ -1,0 +1,1276 @@
+@import "../../variables/variables.scss";
+.page-admin-training-module {
+	.ant-collapse-content {
+		.ant-collapse-content-box {
+			padding: 0px;
+			.table {
+				margin-bottom: 0px;
+			}
+		}
+	}
+	.ant-collapse-header-text {
+		width: 100%;
+	}
+	.ant-collapse-header-text > div {
+		display: flex;
+		width: 100%;
+		gap: 12px;
+
+		div:first-child {
+			width: 30%;
+		}
+		div:nth-child(2) {
+			width: 60%;
+		}
+		div:last-child {
+			width: 10%;
+		}
+	}
+
+	.ant-collapse-content-box {
+		overflow-x: auto !important;
+		width: 100% !important;
+
+		.table tbody tr {
+			td:first-child {
+				width: 30%;
+				padding-left: 38px;
+			}
+			td:nth-child(2) {
+				width: 55%;
+				padding-left: 25px;
+			}
+			td:last-child {
+				width: 15%;
+			}
+		}
+	}
+}
+
+.modal-admin-edit-module {
+	.float-label .ant-input {
+		border-color: transparent !important;
+	}
+}
+
+.page-admin-training-module-add {
+	.btn-select-role {
+		display: flex;
+		margin-top: 20px;
+		text-align: center;
+		grid-gap: 8px;
+		gap: 8px;
+		justify-content: center;
+	}
+}
+
+.page-caregiver-training-module {
+	.ant-row-modules {
+		.ant-btn-modules {
+			.status {
+				font-size: 18px;
+			}
+		}
+
+		.ant-btn-modules.completed {
+			background-color: $color13;
+
+			.ant-btn-modules-icon {
+				svg {
+					color: $white;
+
+					path {
+						stroke: $white;
+					}
+				}
+			}
+
+			.ant-typography {
+				color: $white;
+			}
+
+			.icon-bottom {
+				svg {
+					color: $white;
+				}
+			}
+		}
+		.ant-btn-modules.completed:hover {
+			background-color: transparent;
+			border: 1px solid $color13;
+
+			.ant-btn-modules-icon {
+				svg {
+					color: $color13;
+
+					path {
+						stroke: $color13;
+					}
+				}
+			}
+
+			.ant-typography {
+				color: $color7;
+			}
+			.icon-bottom {
+				svg {
+					color: $color7;
+				}
+			}
+		}
+
+		.ant-btn-modules.in-progress {
+			border: 1px solid $color7;
+
+			.ant-btn-modules-icon {
+				svg {
+					color: $color1;
+
+					path {
+						stroke: $color1;
+					}
+				}
+			}
+
+			.ant-typography {
+				color: $color7;
+			}
+
+			.icon-bottom {
+				svg {
+					color: $color7;
+				}
+			}
+		}
+		.ant-btn-modules.in-progress:hover {
+			background-color: transparent;
+			border: 1px solid $color13;
+
+			.ant-typography {
+				color: $color7;
+			}
+		}
+
+		.ant-btn-modules.completed-disabled {
+			border: 1px solid $color7;
+			background-color: $color9;
+
+			.ant-btn-modules-icon {
+				svg {
+					color: $color7;
+
+					path {
+						stroke: $color7;
+					}
+				}
+			}
+
+			.ant-typography {
+				color: $color7;
+			}
+
+			.icon-bottom {
+				svg {
+					color: $color7;
+				}
+			}
+		}
+	}
+
+	.card-document {
+		.ant-card-body {
+			padding: 0px;
+		}
+		ol {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+			li {
+				padding: 10px 15px;
+				cursor: pointer;
+
+				.icon {
+					color: $color6 !important;
+				}
+				.text {
+					color: $color1 !important;
+				}
+			}
+			li:nth-child(even) {
+				background-color: $color10 !important;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.card-audio {
+		.ant-card-body {
+			padding: 10px;
+
+			audio {
+				height: 30px;
+			}
+		}
+	}
+	.card-main > .ant-card-head {
+		font-size: 12px;
+		min-height: auto;
+		border-radius: 0px;
+	}
+
+	.card-main > .ant-card-head .ant-card-head-title {
+		padding-top: 10px;
+		padding-bottom: 8px;
+	}
+
+	.collapse-step {
+		.ant-collapse-header {
+			flex-direction: row-reverse;
+			padding-right: 6px;
+			.ant-collapse-header-text {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				gap: 10px;
+
+				.step-icon {
+					// padding: 0px 5px;
+					color: #317072;
+					border-radius: 50%;
+					background-color: #71f0ef;
+					// font-size: 14px;
+					width: 20px;
+					height: 20px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding: 12px;
+
+					svg {
+						font-size: 12px !important;
+					}
+				}
+				.step-text {
+					color: $color12;
+				}
+			}
+		}
+	}
+
+	.collapse-step-3 {
+		.step3-questionaire-carousel {
+			.question-step {
+				padding: 5px 10px;
+				display: flex;
+				align-items: center;
+
+				.out-of-number-question {
+					width: 20% !important;
+				}
+				.ant-progress-wrapper {
+					margin-top: 0px;
+					width: 80% !important;
+				}
+
+				.ant-progress {
+					width: 100%;
+					.ant-progress-outer {
+						width: 100%;
+						padding-right: 0px;
+					}
+					.ant-progress-text {
+						display: none !important;
+					}
+				}
+			}
+
+			.row-questions {
+				.content {
+					min-height: 50px;
+				}
+			}
+
+			.control {
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.btn-main-invert-disabled-question {
+				color: $color7;
+			}
+		}
+	}
+
+	.ant-range-wrapper {
+		display: flex;
+		justify-content: center;
+		margin-top: 10px;
+
+		.ant-range {
+			-webkit-appearance: none;
+			width: 70%;
+			height: 5px;
+			background: rgba(2, 114, 115, 0.6);
+			background-image: linear-gradient($color1, $color1);
+			background-size: 0%;
+			background-repeat: no-repeat;
+		}
+
+		.ant-range::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			height: 15px;
+			width: 15px;
+			border-radius: 50%;
+			background-color: $color1;
+			box-shadow: 0 0 2px 0 #555;
+			cursor: pointer;
+			transition: background 0.3s ease-in-out;
+		}
+		.ant-range::-moz-range-thumb {
+			-webkit-appearance: none;
+			height: 15px;
+			width: 15px;
+			border-radius: 50%;
+			background: $color1;
+			cursor: ew-resize;
+			box-shadow: 0 0 2px 0 #555;
+			transition: background 0.3s ease-in-out;
+		}
+
+		.ant-range::-ms-thumb {
+			-webkit-appearance: none;
+			height: 15px;
+			width: 15px;
+			border-radius: 50%;
+			background: $color1;
+			cursor: ew-resize;
+			box-shadow: 0 0 2px 0 #555;
+			transition: background 0.3s ease-in-out;
+		}
+
+		.ant-range::-webkit-slider-thumb:hover {
+			background: $color1;
+		}
+
+		.ant-range::-moz-range-thumb:hover {
+			background: $color1;
+		}
+
+		.ant-range::-ms-thumb:hover {
+			background: $color1;
+		}
+
+		/* Input Track */
+		.ant-range::-webkit-slider-runnable-track {
+			-webkit-appearance: none;
+			box-shadow: none;
+			border: none;
+			background: transparent;
+		}
+
+		.ant-range::-moz-range-track {
+			-webkit-appearance: none;
+			box-shadow: none;
+			border: none;
+			background: transparent;
+		}
+
+		.ant-range::-ms-track {
+			-webkit-appearance: none;
+			box-shadow: none;
+			border: none;
+			background: transparent;
+		}
+	}
+
+	.react-player-video-wrapper {
+		width: auto; // Reset width
+		height: auto; // Reset height
+	}
+	.react-player-video {
+		position: relative; // Set to relative
+		margin: 0 auto;
+	}
+
+	.react-player-video > div {
+		position: absolute; // Scaling will occur since parent is relative now
+		top: 0;
+		object-fit: fill;
+	}
+
+	.btn-radio-group-rating {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 3px;
+
+		.ant-radio-button-wrapper:hover {
+			color: rgba(0, 0, 0, 0.85);
+			border: 1px solid $color1;
+		}
+
+		.ant-radio-button-wrapper:not(:first-child)::before {
+			background-color: transparent;
+		}
+		.ant-radio-button-wrapper {
+			border-left-width: 1px;
+		}
+
+		.ant-radio-button-wrapper-checked:not(
+				[class*=" ant-radio-button-wrapper-disabled"]
+			).ant-radio-button-wrapper:first-child {
+			border-right-color: $color1;
+		}
+		.ant-radio-button-wrapper-checked:not(
+				.ant-radio-button-wrapper-disabled
+			):first-child {
+			border-color: $color1;
+		}
+
+		.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+			color: $white;
+			background-color: $color1;
+		}
+	}
+
+	.previous-lesson,
+	.next-lesson {
+		.ant-anchor-ink::before {
+			background-color: transparent;
+		}
+	}
+
+	.space-video-buttons {
+		background: $color16;
+		border-radius: 3px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+.page-admin-training-module-lesson-edit {
+	.div-form-list-option-rating {
+		margin-bottom: 24px;
+		.wrap-input-rating {
+			display: flex;
+			align-items: center;
+			border: 1px solid #58585a;
+
+			.number {
+				font-size: 22px;
+				padding: 5px 15px;
+				background: #fafafa;
+			}
+			.float-label {
+				width: 100%;
+				border-left: 0px;
+
+				.ant-input {
+					border: 0px;
+					border-top-left-radius: 0px;
+					border-bottom-left-radius: 0px;
+				}
+			}
+		}
+	}
+
+	.upload-hide-remove-icon {
+		.ant-upload-list-item-card-actions {
+			display: none;
+		}
+	}
+
+	.input_question_number {
+		.float-label .ant-input-affix-wrapper .ant-input {
+			border-color: transparent !important;
+		}
+	}
+}
+
+.page-admin-training-module-lesson-edit
+	.div-form-list-option-rating
+	.ant-form-item-dynamic-delete-button:last-child {
+	justify-content: center;
+	margin: 0px;
+}
+
+.modal-clone-lesson {
+	.ant-modal-close-x {
+		width: 35px;
+		height: 35px;
+		line-height: 35px;
+		font-size: 20px;
+	}
+}
+
+.modal-training-module-video-fullscreen {
+	width: 50% !important;
+
+	.ant-modal-content {
+		background-color: transparent;
+		box-shadow: none;
+	}
+	.ant-modal-body {
+		padding: 0px;
+
+		.ant-range-wrapper {
+			display: flex;
+			justify-content: center;
+			margin-top: 10px;
+
+			.ant-range {
+				-webkit-appearance: none;
+				width: 70%;
+				height: 5px;
+				background: rgba(37, 228, 225, 0.6);
+				background-image: linear-gradient(#25e4e1, #25e4e1);
+				background-size: 0%;
+				background-repeat: no-repeat;
+			}
+			.ant-range::-webkit-slider-thumb {
+				-webkit-appearance: none;
+				height: 15px;
+				width: 15px;
+				border-radius: 50%;
+				background-color: #25e4e1;
+				box-shadow: 0 0 2px 0 #555;
+				transition: background 0.3s ease-in-out;
+			}
+			.ant-range::-moz-range-thumb {
+				-webkit-appearance: none;
+				height: 15px;
+				width: 15px;
+				border-radius: 50%;
+				background: #25e4e1;
+				cursor: ew-resize;
+				box-shadow: 0 0 2px 0 #555;
+				transition: background 0.3s ease-in-out;
+			}
+
+			.ant-range::-ms-thumb {
+				-webkit-appearance: none;
+				height: 15px;
+				width: 15px;
+				border-radius: 50%;
+				background: #25e4e1;
+				cursor: ew-resize;
+				box-shadow: 0 0 2px 0 #555;
+				transition: background 0.3s ease-in-out;
+			}
+
+			.ant-range::-webkit-slider-thumb:hover {
+				background: #25e4e1;
+			}
+
+			.ant-range::-moz-range-thumb:hover {
+				background: #25e4e1;
+			}
+
+			.ant-range::-ms-thumb:hover {
+				background: #25e4e1;
+			}
+
+			/* Input Track */
+			.ant-range::-webkit-slider-runnable-track {
+				-webkit-appearance: none;
+				box-shadow: none;
+				border: none;
+				background: transparent;
+			}
+
+			.ant-range::-moz-range-track {
+				-webkit-appearance: none;
+				box-shadow: none;
+				border: none;
+				background: transparent;
+			}
+
+			.ant-range::-ms-track {
+				-webkit-appearance: none;
+				box-shadow: none;
+				border: none;
+				background: transparent;
+			}
+		}
+
+		.react-player-modal-video-fullscreen-wrapper {
+			width: auto; // Reset width
+			height: auto; // Reset height
+		}
+		.react-player-modal-video-fullscreen {
+			height: 420px !important;
+			position: relative; // Set to relative
+			margin: 0 auto;
+		}
+
+		.react-player-modal-video-fullscreen > div {
+			position: absolute; // Scaling will occur since parent is relative now
+			top: 0;
+			object-fit: fill;
+		}
+
+		.space-video-buttons {
+			background: $color19;
+			border-radius: 3px;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+	.ant-modal-close {
+		background: #949599;
+		color: #fff;
+		border-radius: 50%;
+		top: -30px;
+		right: 0px;
+
+		.ant-modal-close-x {
+			width: 25px;
+			height: 25px;
+			line-height: 25px;
+			font-size: 15px;
+		}
+	}
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+	.modal-training-module-video-fullscreen
+		.ant-modal-body
+		.react-player-modal-video-fullscreen
+		iframe {
+		height: 415px !important;
+	}
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+	.page-caregiver-training-module {
+		.embed-video-iframe {
+			iframe {
+				width: 100%;
+				height: 330px;
+			}
+		}
+	}
+
+	// .modal-training-module-video-fullscreen
+	// 	.ant-modal-body
+	// 	.react-player-modal-video-fullscreen
+	// 	iframe {
+	// 	height: 350px !important;
+	// }
+
+	.modal-training-module-video-fullscreen {
+		width: 100% !important;
+
+		.ant-modal-body {
+			.react-player-modal-video-fullscreen-wrapper {
+				width: auto; // Reset width
+				height: auto; // Reset height
+			}
+			.react-player-modal-video-fullscreen {
+				position: relative; // Set to relative
+				margin: 0 auto;
+				height: auto !important;
+			}
+
+			.react-player-modal-video-fullscreen > div {
+				position: inherit; // Scaling will occur since parent is relative now
+				top: 0;
+				object-fit: fill;
+
+				iframe {
+					height: 400px !important;
+				}
+			}
+		}
+	}
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+	.page-admin-training-module {
+		.ant-collapse-header-text > div {
+			div:first-child {
+				width: 30%;
+			}
+			div:nth-child(2) {
+				width: 60%;
+			}
+			div:last-child {
+				width: 10%;
+			}
+		}
+
+		.ant-collapse-content-box {
+			.table tbody tr {
+				td:first-child {
+					width: 30% !important;
+				}
+				td:nth-child(2) {
+					width: 55% !important;
+				}
+			}
+		}
+	}
+
+	.page-caregiver-training-module {
+		.ant-progress-wrapper {
+			.ant-slider {
+				width: 100%;
+			}
+		}
+	}
+
+	.modal-training-module-video-fullscreen {
+		width: 80% !important;
+	}
+
+	// .modal-training-module-video-fullscreen
+	// 	.ant-modal-body
+	// 	.react-player-modal-video-fullscreen
+	// 	iframe {
+	// 	height: 340px !important;
+	// }
+
+	.modal-training-module-video-fullscreen {
+		width: 100% !important;
+
+		.ant-modal-body {
+			.react-player-modal-video-fullscreen-wrapper {
+				width: auto; // Reset width
+				height: auto; // Reset height
+			}
+			.react-player-modal-video-fullscreen {
+				position: relative; // Set to relative
+				margin: 0 auto;
+				height: auto !important;
+			}
+
+			.react-player-modal-video-fullscreen > div {
+				position: inherit; // Scaling will occur since parent is relative now
+				top: 0;
+				object-fit: fill;
+
+				iframe {
+					height: 370px !important;
+				}
+			}
+		}
+	}
+}
+
+/* Media Query for Tablets, Ipads and below  */
+@media (max-width: 768px) {
+	.page-admin-training-module {
+		.ant-collapse-header-text > div {
+			div:first-child {
+				width: 30%;
+			}
+			div:nth-child(2) {
+				width: 60%;
+			}
+			div:last-child {
+				width: 10%;
+			}
+		}
+
+		.ant-collapse-content-box {
+			.table tbody tr {
+				td:first-child {
+					width: 30% !important;
+				}
+				td:nth-child(2) {
+					width: 55% !important;
+				}
+			}
+		}
+	}
+
+	.page-caregiver-training-module {
+		.ant-progress-wrapper {
+			.ant-slider {
+				width: 100%;
+			}
+		}
+	}
+
+	.modal-training-module-video-fullscreen {
+		width: 80% !important;
+	}
+
+	// .modal-training-module-video-fullscreen
+	// 	.ant-modal-body
+	// 	.react-player-modal-video-fullscreen
+	// 	iframe {
+	// 	height: 350px !important;
+	// }
+
+	.modal-training-module-video-fullscreen {
+		width: 100% !important;
+
+		.ant-modal-body {
+			.react-player-modal-video-fullscreen-wrapper {
+				width: auto; // Reset width
+				height: auto; // Reset height
+			}
+			.react-player-modal-video-fullscreen {
+				position: relative; // Set to relative
+				margin: 0 auto;
+				height: auto !important;
+			}
+
+			.react-player-modal-video-fullscreen > div {
+				position: inherit; // Scaling will occur since parent is relative now
+				top: 0;
+				object-fit: fill;
+
+				iframe {
+					height: 370px !important;
+				}
+			}
+		}
+	}
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+	.page-admin-training-module {
+		.ant-collapse-header-text > div {
+			div:first-child {
+				width: 30%;
+			}
+			div:nth-child(2) {
+				width: 60%;
+			}
+			div:last-child {
+				width: 10%;
+			}
+		}
+
+		.ant-collapse-content-box {
+			.table tbody tr {
+				td:first-child {
+					width: 30% !important;
+				}
+				td:nth-child(2) {
+					width: 55% !important;
+				}
+			}
+		}
+	}
+
+	// .page-caregiver-training-module {
+	// 	.react-player-video {
+	// 		aspect-ratio: 1/1;
+	// 	}
+	// }
+
+	.modal-training-module-video-fullscreen {
+		width: 90% !important;
+	}
+
+	// .modal-training-module-video-fullscreen
+	// 	.ant-modal-body
+	// 	.react-player-modal-video-fullscreen
+	// 	iframe {
+	// 	height: 350px !important;
+	// }
+
+	.modal-training-module-video-fullscreen {
+		width: 100% !important;
+
+		.ant-modal-body {
+			.react-player-modal-video-fullscreen-wrapper {
+				width: auto; // Reset width
+				height: auto; // Reset height
+			}
+			.react-player-modal-video-fullscreen {
+				position: relative; // Set to relative
+				margin: 0 auto;
+				height: auto !important;
+			}
+
+			.react-player-modal-video-fullscreen > div {
+				position: inherit; // Scaling will occur since parent is relative now
+				top: 0;
+				object-fit: fill;
+
+				iframe {
+					height: 330px !important;
+				}
+			}
+		}
+	}
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 575px) {
+	.page-caregiver-training-module {
+		.react-player-video {
+			height: 202px !important;
+		}
+
+		.collapse-step-3 {
+			.step3-questionaire-carousel {
+				.question-step {
+					flex-direction: column;
+					align-items: flex-start !important;
+
+					.ant-progress-wrapper {
+						width: 100% !important;
+					}
+				}
+			}
+		}
+	}
+
+	.modal-training-module-video-fullscreen {
+		width: 100% !important;
+
+		.ant-modal-body {
+			.react-player-modal-video-fullscreen-wrapper {
+				width: auto; // Reset width
+				height: auto; // Reset height
+			}
+			.react-player-modal-video-fullscreen {
+				position: relative; // Set to relative
+				margin: 0 auto;
+				height: auto !important;
+			}
+
+			.react-player-modal-video-fullscreen > div {
+				position: inherit; // Scaling will occur since parent is relative now
+				top: 0;
+				object-fit: fill;
+			}
+		}
+	}
+
+	// .modal-training-module-video-fullscreen
+	// 	.ant-modal-body
+	// 	.react-player-modal-video-fullscreen
+	// 	iframe {
+	// 	height: 300px !important;
+	// }
+
+	.modal-training-module-video-fullscreen {
+		width: 100% !important;
+
+		.ant-modal-body {
+			.react-player-modal-video-fullscreen-wrapper {
+				width: auto; // Reset width
+				height: auto; // Reset height
+			}
+			.react-player-modal-video-fullscreen {
+				position: relative; // Set to relative
+				margin: 0 auto;
+				height: auto !important;
+			}
+
+			.react-player-modal-video-fullscreen > div {
+				position: inherit; // Scaling will occur since parent is relative now
+				top: 0;
+				object-fit: fill;
+
+				iframe {
+					height: 270px !important;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.page-admin-training-module {
+		// .ant-collapse-content {
+		// 	.ant-collapse-content-box {
+		// 		padding: 0px;
+		// 		.table {
+		// 			margin-bottom: 0px;
+		// 		}
+		// 	}
+		// }
+		// .ant-collapse-header-text {
+		// 	width: 100%;
+		// }
+		.ant-collapse-header-text > div {
+			display: flex;
+			width: 100%;
+			// flex-direction: column;
+
+			div:first-child {
+				width: 30%;
+			}
+			div:nth-child(2) {
+				width: 60%;
+			}
+			div:last-child {
+				width: 10%;
+			}
+		}
+		.ant-collapse-header-text > div div:last-child {
+			text-align: left !important;
+		}
+
+		.ant-collapse-content-box {
+			.table tbody tr {
+				td:first-child {
+					width: 30% !important;
+				}
+				td:nth-child(2) {
+					width: 55% !important;
+				}
+				td:last-child {
+					width: 15%;
+				}
+			}
+		}
+	}
+
+	.page-admin-training-module-add {
+		.btn-select-role {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	.page-admin-training-module-lesson-edit {
+		.show_hide_option {
+			.ant-form-item {
+				.ant-col {
+					flex: 0 0 50%;
+				}
+				.ant-col.ant-form-item-control {
+					align-items: flex-end;
+				}
+			}
+		}
+	}
+
+	.page-caregiver-training-module {
+		.embed-video-iframe {
+			iframe {
+				width: 100%;
+				height: 197px;
+			}
+		}
+
+		.question-step > div:first-child {
+			width: 50%;
+		}
+
+		.question-step > div:last-child {
+			width: 50%;
+		}
+
+		.previous-lesson,
+		.next-lesson {
+			.ant-anchor-ink::before {
+				background-color: transparent;
+			}
+
+			.ant-btn {
+				font-size: 12px;
+				padding: 4px 10px;
+			}
+		}
+	}
+
+	// .modal-training-module-video-fullscreen
+	// 	.ant-modal-body
+	// 	.react-player-modal-video-fullscreen
+	// 	iframe {
+	// 	height: 220px !important;
+	// }
+}
+
+@media (max-width: 375px) {
+	.page-admin-training-module {
+		// .ant-collapse-content {
+		// 	.ant-collapse-content-box {
+		// 		padding: 0px;
+		// 		.table {
+		// 			margin-bottom: 0px;
+		// 		}
+		// 	}
+		// }
+		// .ant-collapse-header-text {
+		// 	width: 100%;
+		// }
+		.ant-collapse-header-text > div {
+			display: flex;
+			width: 100%;
+			// flex-direction: column;
+
+			div:first-child {
+				width: 40%;
+			}
+			div:nth-child(2) {
+				width: 50%;
+			}
+			div:last-child {
+				width: 10%;
+			}
+		}
+		.ant-collapse-header-text > div div:last-child {
+			text-align: left !important;
+		}
+
+		.ant-collapse-content-box {
+			.table tbody tr {
+				td:first-child {
+					width: 40% !important;
+				}
+				td:nth-child(2) {
+					width: 45% !important;
+				}
+				td:last-child {
+					width: 15%;
+				}
+			}
+		}
+	}
+
+	.page-caregiver-training-module {
+		.embed-video-iframe {
+			iframe {
+				width: 100%;
+				height: 171px;
+			}
+		}
+	}
+
+	// .modal-training-module-video-fullscreen
+	// 	.ant-modal-body
+	// 	.react-player-modal-video-fullscreen
+	// 	iframe {
+	// 	height: 200px !important;
+	// }
+
+	.modal-training-module-video-fullscreen {
+		width: 100% !important;
+
+		.ant-modal-body {
+			.react-player-modal-video-fullscreen-wrapper {
+				width: auto; // Reset width
+				height: auto; // Reset height
+			}
+			.react-player-modal-video-fullscreen {
+				position: relative; // Set to relative
+				margin: 0 auto;
+				height: auto !important;
+			}
+
+			.react-player-modal-video-fullscreen > div {
+				position: inherit; // Scaling will occur since parent is relative now
+				top: 0;
+				object-fit: fill;
+
+				iframe {
+					height: 200px !important;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.page-admin-training-module {
+		// .ant-collapse-content {
+		// 	.ant-collapse-content-box {
+		// 		padding: 0px;
+		// 		.table {
+		// 			margin-bottom: 0px;
+		// 		}
+		// 	}
+		// }
+		// .ant-collapse-header-text {
+		// 	width: 100%;
+		// }
+		.ant-collapse-header-text > div {
+			display: flex;
+			width: 100%;
+			// flex-direction: column;
+
+			div:first-child {
+				width: 40%;
+			}
+			div:nth-child(2) {
+				width: 50%;
+			}
+			div:last-child {
+				width: 10%;
+			}
+		}
+		.ant-collapse-header-text > div div:last-child {
+			text-align: left !important;
+		}
+
+		.ant-collapse-content-box {
+			.table tbody tr {
+				td:first-child {
+					width: 40% !important;
+				}
+				td:nth-child(2) {
+					width: 45% !important;
+				}
+				td:last-child {
+					width: 15%;
+				}
+			}
+		}
+	}
+
+	.page-admin-training-module-lesson-edit {
+		.div-form-list-option-rating {
+			.wrap-input-rating {
+				.number {
+					padding: 5px;
+				}
+			}
+		}
+	}
+
+	.page-caregiver-training-module {
+		.embed-video-iframe {
+			iframe {
+				width: 100%;
+				height: 159px;
+			}
+		}
+	}
+
+	// .modal-training-module-video-fullscreen
+	// 	.ant-modal-body
+	// 	.react-player-modal-video-fullscreen
+	// 	iframe {
+	// 	height: 180px !important;
+	// }
+
+	.modal-training-module-video-fullscreen {
+		width: 100% !important;
+
+		.ant-modal-body {
+			.react-player-modal-video-fullscreen-wrapper {
+				width: auto; // Reset width
+				height: auto; // Reset height
+			}
+			.react-player-modal-video-fullscreen {
+				position: relative; // Set to relative
+				margin: 0 auto;
+				height: auto !important;
+			}
+
+			.react-player-modal-video-fullscreen > div {
+				position: inherit; // Scaling will occur since parent is relative now
+				top: 0;
+				object-fit: fill;
+
+				iframe {
+					height: 180px !important;
+				}
+			}
+		}
+	}
+}

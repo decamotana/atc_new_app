@@ -1,0 +1,12 @@
+.static-tooltip {
+  min-width: 30px;
+  min-height: 32px;
+  padding: 6px 8px;
+  color: #fff;
+  text-align: left;
+  text-decoration: none;
+  word-wrap: break-word;
+  background-color: #0e0e0e;
+  border-radius: 2px;
+  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.1215686275), 0 6px 16px rgba(0, 0, 0, 0.0784313725), 0 9px 28px 8px rgba(0, 0, 0, 0.0509803922);
+}/*# sourceMappingURL=tooltip.css.map */

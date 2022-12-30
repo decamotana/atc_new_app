@@ -1,201 +1,275 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Layout, Menu, Badge, Row, Col, Divider, Image } from "antd";
+import { Layout, Menu, Badge, Image, Typography, Dropdown } from "antd";
+import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
+import { userData, role, apiUrl } from "../../providers/companyInfo";
+import NotificationsAlert from "./Components/NotificationsAlert";
+import MessagesAlert from "./Components/MessagesAlert";
+import defaultImage from "../../assets/img/default.png";
+// import { GET } from "../../../../providers/useAxiosQuery";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    LogoutOutlined,
-    SettingOutlined,
-    BellOutlined,
-    InboxOutlined,
-    FolderOutlined,
-    ScheduleOutlined,
-    EditOutlined,
-    DownloadOutlined,
-    StarOutlined,
-    MenuUnfoldOutlined,
-    AppstoreOutlined,
-    CalendarOutlined,
-    TeamOutlined,
-    BankOutlined,
-    SelectOutlined,
-} from "@ant-design/icons";
-import $ from "jquery";
+	faBell,
+	faCommentDots,
+	faEdit,
+	faPowerOff,
+	faTableCellsLarge,
+} from "@fortawesome/pro-regular-svg-icons";
+import { faFileInvoiceDollar } from "@fortawesome/pro-solid-svg-icons";
 
-import getUserData from "../../providers/getUserData";
-import useAxiosQuery from "../../providers/useAxiosQuery";
+import { GET } from "../../providers/useAxiosQuery";
 
-export default function Header({
-    state,
-    toggle,
-    sideMenuCollapse,
-    setSideMenuCollapse,
-    width,
-}) {
-    const userdata = getUserData();
+import {
+	menuLeft as adminHeaderMenuLeft,
+	dropDownMenuLeft as adminHeaderDropDownMenuLeft,
+} from "./RoleMenu/admin/AdminHeader";
+import {
+	menuLeft as careGiverHeaderMenuLeft,
+	dropDownMenuLeft as careGiverHeaderDropDownMenuLeft,
+} from "./RoleMenu/caregivers/CaregiverHeader";
+import {
+	menuLeft as careProfessionalHeaderMenuLeft,
+	dropDownMenuLeft as careProfessionalHeaderDropDownMenuLeft,
+} from "./RoleMenu/careprofessional/CareProfessionalHeader";
 
-    const handleLogout = (e) => {
-        mutateLogout(
-            { user_id: userdata.id },
-            {
-                onSuccess: (res) => {
-                    if (res.success) {
-                        if (e) {
-                            e.preventDefault();
-                        }
-                        localStorage.viewas = false;
-                        localStorage.removeItem("token");
-                        localStorage.removeItem("userdata");
-                        localStorage.removeItem("viewas");
-                        location.href = window.location.origin;
-                    }
-                },
-            }
-        );
-    };
+// import { GET } from "../../providers/useAxiosQuery";
 
-    const { mutate: mutateLogout, isLoading: isLoadingLogout } = useAxiosQuery(
-        "POST",
-        "api/v1/logout",
-        "logout"
-    );
+export default function Header(props) {
+	const { width, sideMenuCollapse, setSideMenuCollapse } = props;
 
-    const onCollapseToggle = () => {
-        $(".sidemenuDark").removeClass("transitionhide");
-        $(".layout-main").removeClass("transtionGrow");
-        $(".menuCollapseOnopen").addClass("menu-hide");
-        $(".colheaderNavs").removeClass("noMarginLeft");
-        $(".ant-layout-content").addClass("mobileWidthContent");
-    };
+	const [menuLeft, setMenuLeft] = useState(null);
+	const [dropDownMenuLeft, setDropDownMenuLeft] = useState(null);
 
-    return (
-        <Layout.Header
-            className="site-layout-background c-layout-header"
-            style={{
-                padding: 0,
-                padding: "0px 12px 0px 0px",
-                zIndex: 1,
-                width: "100%",
-                boxShadow: "0px 0px 11px 0px rgba(105 107 112 / 60%)",
-            }}
-        >
-            <Row gutter={24}>
-                <Col xs={12} sm={12} md={12}>
-                    {width <= 576 && (
-                        <div className="headerNavleftDiv">
-                            <MenuUnfoldOutlined
-                                style={{
-                                    fontSize: 22,
-                                    position: "relative",
-                                    top: 0,
-                                }}
-                                onClick={() =>
-                                    setSideMenuCollapse(!sideMenuCollapse)
-                                }
-                            />
-                            {/* <Row>
-                            <Col className="menuCollapseOnopen menu-hide">
-                                <div className="headerNavleftHover">
-                                    <span className="headerNavsLeft">
-                                    </span>
-                                </div>
-                            </Col>
-                        </Row> */}
-                        </div>
-                    )}
-                </Col>
-                <Col
-                    xs={12}
-                    sm={12}
-                    md={12}
-                    // style={{ marginLeft: "-260px" }}
-                    className="colheaderNavs"
-                >
-                    <Menu
-                        mode="horizontal"
-                        style={{
-                            float: "right",
-                        }}
-                        className="headerNavs headerNavsMobile"
-                    >
-                        <Menu.SubMenu
-                            key="img"
-                            title={
-                                <Image
-                                    src={`${window.origin}/${userdata.profile_picture}`}
-                                    style={{
-                                        width: "60px",
-                                        height: "60px",
-                                        borderRadius: "50%",
-                                        marginBottom: "7px",
-                                        marginLeft: "5px",
-                                    }}
-                                    preview={false}
-                                />
-                            }
-                            className="profilePop"
-                        >
-                            <div
-                                style={{
-                                    width: 250,
-                                    padding: 15,
-                                }}
-                            >
-                                <Row gutter={2}>
-                                    <Col md={8}>
-                                        <div>
-                                            <Image
-                                                src={`${window.origin}/${userdata.profile_picture}`}
-                                                style={{
-                                                    width: "50px",
-                                                    height: "50px",
-                                                    borderRadius: "50%",
-                                                    marginBottom: "7px",
-                                                    marginLeft: "5px",
-                                                }}
-                                                preview={false}
-                                            />
-                                        </div>
-                                    </Col>
-                                    <Col md={16}>
-                                        <div
-                                            style={{
-                                                marginTop: "15px",
-                                            }}
-                                        >
-                                            {`${userdata.first_name} ${userdata.last_name}`}
-                                        </div>
-                                        <div
-                                            style={{
-                                                marginTop: "20px",
-                                                fontSize: 12,
-                                            }}
-                                        >
-                                            {userdata.title}
-                                        </div>
-                                    </Col>
-                                </Row>
-                            </div>
-                            <Divider style={{ padding: 0, margin: 0 }} />
-                            <Menu.Item
-                                key="edit_profile"
-                                icon={<EditOutlined />}
-                                className="profile_hover"
-                            >
-                                <Link to="#">Edit Profile</Link>
-                            </Menu.Item>
+	useEffect(() => {
+		if (role() === "Admin" || role() === "Super Admin") {
+			setMenuLeft(adminHeaderMenuLeft);
+			setDropDownMenuLeft(adminHeaderDropDownMenuLeft);
+		} else if (role() === "Cancer Caregiver") {
+			setMenuLeft(careGiverHeaderMenuLeft);
+			setDropDownMenuLeft(careGiverHeaderDropDownMenuLeft);
+		} else if (role() === "Cancer Care Professional") {
+			setMenuLeft(careProfessionalHeaderMenuLeft);
+			setDropDownMenuLeft(careProfessionalHeaderDropDownMenuLeft);
+		}
+	}, []);
 
-                            <Menu.Item
-                                icon={<LogoutOutlined />}
-                                key="/logout"
-                                className="profile_hover"
-                            >
-                                <Link to="#" onClick={handleLogout}>
-                                    Logout
-                                </Link>
-                            </Menu.Item>
-                        </Menu.SubMenu>
-                    </Menu>
-                </Col>
-            </Row>
-        </Layout.Header>
-    );
+	const handleLogout = () => {
+		localStorage.removeItem("userdata");
+		localStorage.removeItem("token");
+		localStorage.removeItem("viewas");
+		window.location.replace("/");
+	};
+
+	const [unreadMessages, setUnreadMessages] = useState(0);
+	const [messages, setMessages] = useState([]);
+
+	const { refetch: refetchMessages } = GET(
+		"api/v1/get_messages_alert",
+		"get_messages_alert",
+		(res) => {
+			if (res.success) {
+				// console.log("dataMessages", res);
+				setMessages(res.data);
+				setUnreadMessages(res.unread);
+			}
+		},
+		false
+	);
+
+	const [notification, setNotification] = useState({
+		count: 0,
+		data: [],
+	});
+	const { refetch: refetchNotification } = GET(
+		"api/v1/get_notification_alert",
+		"get_notification_alert",
+		(res) => {
+			if (res.success) {
+				setNotification({
+					data: res.data,
+					count: res.unread,
+				});
+			}
+		},
+		false
+	);
+
+	const [imageProfile, setImageProfile] = useState(defaultImage);
+
+	GET(
+		`api/v1/users/${userData().id}`,
+		"update_profile",
+		(res) => {
+			if (res.success) {
+				if (res.data.profile_image) {
+					let avatarImage = res.data.profile_image.split("/");
+					if (avatarImage[0] === "https:") {
+						setImageProfile(res.data.profile_image);
+					} else {
+						setImageProfile(apiUrl + res.data.profile_image);
+					}
+				}
+			}
+		},
+		false
+	);
+
+	const onClickMenuProfile = (e) => {
+		// console.log("e", e);
+	};
+
+	const menuProfile = () => {
+		const items = [
+			{
+				key: "/profile/details",
+				className: "ant-menu-item-profile-details",
+				label: (
+					<div className="ant-menu-item-child ant-menu-item-profile">
+						<Image
+							src={imageProfile}
+							style={{
+								width: parseInt(userData().photo_crop) === 2 ? "55px" : "50px",
+							}}
+							preview={false}
+						/>
+
+						<Typography.Text>
+							<Typography.Text className="ant-typography-profile-details-name-info">
+								{userData().firstname} {userData().lastname}
+							</Typography.Text>
+							<br />
+							<Typography.Text>{role()}</Typography.Text>
+						</Typography.Text>
+					</div>
+				),
+			}, // remember to pass the key prop
+			{
+				key: "/profile/account",
+				icon: <FontAwesomeIcon icon={faEdit} />,
+				label: <Link to="/profile/account">Edit Account Profile</Link>,
+			}, // which is required
+		];
+
+		if (
+			role() === "Cancer Caregiver" ||
+			role() === "Cancer Care Professional"
+		) {
+			items.push({
+				key: "/profile/account/payment-and-invoices",
+				icon: <FontAwesomeIcon icon={faFileInvoiceDollar} />,
+				label: (
+					<Link to="/profile/account/payment-and-invoices">
+						Invoices & Account
+					</Link>
+				),
+			});
+		}
+
+		items.push({
+			key: "/profile/signout",
+			className: "ant-menu-item-logout",
+			icon: <FontAwesomeIcon icon={faPowerOff} />,
+			label: <Typography.Link onClick={handleLogout}>Sign Out</Typography.Link>,
+		});
+
+		return <Menu items={items} onClick={onClickMenuProfile} />;
+	};
+
+	return (
+		<Layout.Header>
+			<div className="ant-header-left-menu">
+				{width <= 767 && (
+					<div className="ant-menu-left-icon ant-menu-left-icon-menu-collapse-on-close">
+						{sideMenuCollapse ? (
+							<MenuUnfoldOutlined
+								onClick={() => setSideMenuCollapse(false)}
+								className="menuCollapseOnClose"
+							/>
+						) : (
+							<MenuFoldOutlined
+								onClick={() => setSideMenuCollapse(true)}
+								className="menuCollapseOnClose"
+							/>
+						)}
+					</div>
+				)}
+
+				{width <= 575 && (
+					<Dropdown
+						overlay={dropDownMenuLeft}
+						placement="bottomRight"
+						overlayClassName="ant-menu-submenu-left-menus-popup"
+					>
+						<div className="ant-menu-left-icon ant-menu-submenu-left-menus">
+							<FontAwesomeIcon icon={faTableCellsLarge} />
+						</div>
+					</Dropdown>
+				)}
+
+				{width >= 768 && menuLeft !== null ? menuLeft : null}
+			</div>
+			<div className="ant-header-right-menu">
+				<Dropdown
+					overlay={menuProfile}
+					placement="bottomRight"
+					overlayClassName="ant-menu-submenu-profile-popup"
+				>
+					<Image
+						className="ant-menu-submenu-profile"
+						src={imageProfile}
+						style={{
+							width: parseInt(userData().photo_crop) === 2 ? "55px" : "50px",
+						}}
+						preview={false}
+					/>
+				</Dropdown>
+
+				<Dropdown
+					overlay={
+						<NotificationsAlert
+							notification={notification.data}
+							refetch={refetchNotification}
+						/>
+					}
+					placement="bottomRight"
+					overlayClassName="ant-menu-submenu-notification-popup"
+				>
+					<Badge
+						count={notification.count < 99 ? notification.count : "99+"}
+						className="ant-menu-submenu-notification"
+					>
+						<FontAwesomeIcon icon={faBell} />
+					</Badge>
+				</Dropdown>
+
+				<Dropdown
+					overlay={
+						<MessagesAlert messages={messages} refetch={refetchMessages} />
+					}
+					placement="bottomRight"
+					overlayClassName="ant-menu-submenu-message-alert-popup scrollbar-2"
+				>
+					<Badge
+						count={unreadMessages < 99 ? unreadMessages : "99+"}
+						className="ant-menu-submenu-message-alert"
+					>
+						<FontAwesomeIcon icon={faCommentDots} />
+					</Badge>
+				</Dropdown>
+
+				{width < 768 && width > 575 && dropDownMenuLeft !== null ? (
+					<Dropdown
+						overlay={dropDownMenuLeft}
+						placement="bottomRight"
+						overlayClassName="ant-menu-submenu-left-menus-popup"
+					>
+						<span className="ant-menu-submenu-left-menus">
+							<FontAwesomeIcon icon={faTableCellsLarge} />
+						</span>
+					</Dropdown>
+				) : null}
+			</div>
+		</Layout.Header>
+	);
 }

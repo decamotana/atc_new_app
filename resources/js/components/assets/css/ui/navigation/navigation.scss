@@ -1,0 +1,199 @@
+@import "../../variables/variables.scss";
+
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected::after {
+	border-bottom: 0px solid transparent !important;
+}
+
+.nav-basic {
+	background: transparent;
+	border: 1px solid $basicNavBorder;
+	height: auto !important;
+	padding: 0px;
+}
+
+.nav-primary {
+	background: $primary !important;
+	border: 1px solid $primary;
+	height: auto !important;
+	padding: 0px;
+}
+
+.nav-primary > .ant-menu {
+	background: $primary !important;
+	border: 1px solid $primary;
+	height: auto !important;
+	padding: 0px;
+	color: white;
+}
+
+.nav-secondary {
+	background: $secondary !important;
+	border: 1px solid $secondary;
+	height: auto !important;
+	padding: 0px;
+}
+
+.nav-secondary > .ant-menu {
+	background: $secondary !important;
+	border: 1px solid $secondary;
+	height: auto !important;
+	padding: 0px;
+	color: white;
+}
+
+.nav-success {
+	background: $success !important;
+	border: 1px solid $success;
+	height: auto !important;
+	padding: 0px;
+}
+
+.nav-success > .ant-menu {
+	background: $success !important;
+	border: 1px solid $success;
+	height: auto !important;
+	padding: 0px;
+	color: white;
+}
+
+.nav-warning {
+	background: $warning !important;
+	border: 1px solid $warning;
+	height: auto !important;
+	padding: 0px;
+}
+
+.nav-warning > .ant-menu {
+	background: $warning !important;
+	border: 1px solid $warning;
+	height: auto !important;
+	padding: 0px;
+	color: white;
+}
+
+.nav-danger {
+	background: $danger !important;
+	border: 1px solid $danger;
+	height: auto !important;
+	padding: 0px;
+}
+
+.nav-danger > .ant-menu {
+	background: $danger !important;
+	border: 1px solid $danger;
+	height: auto !important;
+	padding: 0px;
+	color: white;
+}
+
+.nav-info {
+	background: $info !important;
+	border: 1px solid $info;
+	height: auto !important;
+	padding: 0px;
+}
+
+.nav-info > .ant-menu {
+	background: $info !important;
+	border: 1px solid $info;
+	height: auto !important;
+	padding: 0px;
+	color: white;
+}
+
+.nav-indigo {
+	background: $indigo !important;
+	border: 1px solid $indigo;
+	height: auto !important;
+	padding: 0px;
+}
+
+.nav-indigo > .ant-menu {
+	background: $indigo !important;
+	border: 1px solid $indigo;
+	height: auto !important;
+	padding: 0px;
+	color: white;
+}
+
+.nav-purple {
+	background: $purple !important;
+	border: 1px solid $purple;
+	height: auto !important;
+	padding: 0px;
+}
+
+.nav-purple > .ant-menu {
+	background: $purple !important;
+	border: 1px solid $purple;
+	height: auto !important;
+	padding: 0px;
+	color: white;
+}
+
+.nav-pink {
+	background: $pink !important;
+	border: 1px solid $pink;
+	height: auto !important;
+	padding: 0px;
+}
+
+.nav-pink > .ant-menu {
+	background: $pink !important;
+	border: 1px solid $pink;
+	height: auto !important;
+	padding: 0px;
+	color: white;
+}
+
+.nav-teal {
+	background: $teal !important;
+	border: 1px solid $teal;
+	height: auto !important;
+	padding: 0px;
+}
+
+.nav-teal > .ant-menu {
+	background: $teal !important;
+	border: 1px solid $teal;
+	height: auto !important;
+	padding: 0px;
+	color: white;
+}
+
+.nav-dark {
+	background: $dark !important;
+	border: 1px solid $dark;
+	height: auto !important;
+	padding: 0px;
+}
+
+.nav-dark > .ant-menu {
+	background: $dark !important;
+	border: 1px solid $dark;
+	height: auto !important;
+	padding: 0px;
+	color: white;
+}
+
+.nav-orange {
+	background: $orange !important;
+	border: 1px solid $orange;
+	height: auto !important;
+	padding: 0px;
+}
+
+.nav-orange > .ant-menu {
+	background: $orange !important;
+	border: 1px solid $orange;
+	height: auto !important;
+	padding: 0px;
+	color: white;
+}

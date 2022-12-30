@@ -1,0 +1,132 @@
+@import "../../variables/variables.scss";
+.invoices-account-template {
+	border: 2px solid $color8;
+	padding: 20px;
+
+	.ant-typography {
+		color: $color7;
+	}
+
+	.ant-col:first-child {
+		.invoice-text {
+			font-size: 52px;
+		}
+	}
+
+	.ant-col:first-child > div {
+		display: flex;
+		justify-content: space-between;
+
+		div:first-child {
+			width: 60%;
+		}
+		div:last-child {
+			width: 40%;
+			text-align: right;
+		}
+	}
+
+	.ant-col:nth-child(3) {
+		.invoiced-information {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+}
+
+.page-payment-and-invoices {
+	.collapse-recent-invoices {
+		.ant-collapse-content {
+			.ant-collapse-content-box {
+				padding: 0px 0px 16px 0px;
+			}
+		}
+	}
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+	.invoice-text {
+		font-size: 62px;
+		margin-bottom: 0.2em !important;
+	}
+
+	.invoices-account-template {
+		.ant-col:first-child div {
+			flex-direction: column-reverse;
+
+			div:first-child,
+			div:last-child {
+				width: 100%;
+				text-align: left;
+			}
+		}
+		.ant-col:nth-child(3) {
+			.invoiced-information {
+				width: 100% !important;
+				flex-direction: row;
+			}
+			.invoiced-information span {
+				width: 50% !important;
+			}
+		}
+	}
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+	.invoices-account-template {
+		.invoice-text {
+			font-size: 62px;
+			margin-bottom: 0.2em !important;
+		}
+		.ant-col:first-child div {
+			flex-direction: column-reverse;
+
+			div:first-child,
+			div:last-child {
+				width: 100%;
+				text-align: left;
+			}
+		}
+		.ant-col:nth-child(3) {
+			.invoiced-information {
+				width: 100% !important;
+				flex-direction: row;
+			}
+			.invoiced-information span {
+				width: 50% !important;
+			}
+		}
+	}
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* Media Query for Tablets, Ipads and below  */
+@media (max-width: 768px) {
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+}
+
+@media (max-width: 375px) {
+}
+
+@media (max-width: 320px) {
+}

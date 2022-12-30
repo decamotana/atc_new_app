@@ -1,0 +1,27 @@
+@import "../../variables/variables.scss";
+
+.ant-checkbox-checked .ant-checkbox-inner {
+	background-color: $color1 !important;
+	border: 2px solid $color1;
+}
+.ant-checkbox-wrapper .ant-checkbox-inner {
+	border: 2px solid #525252;
+}
+
+.ant-checkbox-red.ant-checkbox-wrapper .ant-checkbox-inner {
+	border: 2px solid #525252;
+}
+
+.ant-checkbox-wrapper.ant-checkbox-red:hover .ant-checkbox-inner,
+.ant-checkbox-wrapper.ant-checkbox-red:hover
+	.ant-checkbox-checked
+	.ant-checkbox-inner {
+	border: 2px solid $color6;
+}
+
+.ant-checkbox-wrapper.ant-checkbox-red
+	.ant-checkbox-checked
+	.ant-checkbox-inner {
+	background-color: $color6 !important;
+	border: 2px solid $color6;
+}

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AACC,yBADwB,CACxB,YAAY,CAAC,wBAAwB,CAAC,UAAU,CAAC;EAChD,MAAM,EAAE,GAAG;CACX",
+    "sources": [
+        "page_notification.scss",
+        "../../variables/variables.scss"
+    ],
+    "names": [],
+    "file": "page_notification.css"
+}

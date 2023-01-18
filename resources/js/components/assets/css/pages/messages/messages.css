@@ -1,0 +1,271 @@
+.messagesContainer .messageText .ant-input.ant-input-lg {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+
+.messagesContainer {
+  height: 65vh;
+  border: 1px solid #ddd;
+}
+
+.messagesContainer .site-layout-background {
+  padding: 0px;
+  min-height: 280px;
+  position: relative;
+  overflow: hidden;
+}
+
+.messagesContainer .ant-layout-sider {
+  border-right: 1px solid #ddd;
+  position: inherit;
+  z-index: 1;
+  position: relative;
+  background-color: transparent;
+}
+
+.messagesContainer .ant-layout-sider .ant-layout-sider-children {
+  background-color: #fff;
+}
+
+.messagesContainer .ant-layout-sider .ant-layout-sider-trigger {
+  position: absolute;
+  border-bottom: 1px solid #ddd;
+  height: 37px;
+  line-height: 37px;
+  top: 0;
+}
+
+.messagesContainer .ant-layout-sider.ant-layout-sider-collapsed {
+  width: 48px !important;
+  min-width: 48px !important;
+  max-width: 48px !important;
+}
+
+.messagesContainer
+.ant-layout-sider.ant-layout-sider-collapsed
+.ant-layout-sider-children
+.ant-menu.ant-menu-inline-collapsed {
+  width: 48px !important;
+}
+
+.messagesContainer
+.ant-layout-sider.ant-layout-sider-collapsed
+.ant-layout-sider-trigger {
+  width: 48px !important;
+}
+
+.messagesMenu .ant-menu-item-selected {
+  background-color: #f49917;
+  color: #fff;
+}
+
+.messagesMenu .ant-menu-item-selected:hover {
+  color: #fff;
+}
+
+.messagesMenu .ant-menu-item:not(.ant-menu-item-selected):hover {
+  color: #fff;
+}
+
+.messagesMenu .ant-menu-item {
+  padding-left: 12px !important;
+}
+
+.messageRight {
+  margin-top: 10px;
+  padding: 10px;
+  word-wrap: break-word;
+  border-radius: 18px;
+  clear: both;
+}
+
+.messageLeft {
+  margin-top: 10px;
+  padding: 10px;
+  max-width: 400px;
+  word-wrap: break-word;
+  border-radius: 18px;
+  clear: both;
+}
+
+.messagesContainer .messageText .ant-input.ant-input-lg {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+
+.messagesUserRow {
+  cursor: pointer;
+}
+
+.messagesUserRow:hover {
+  background: #ddd;
+}
+
+.messageConvoContainer {
+  padding: 10px;
+  padding-bottom: 45px;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.messagesContainer {
+  height: 65vh;
+  border: 1px solid #ddd;
+}
+
+.messagesContainer .site-layout-background {
+  padding: 0px;
+  min-height: 280px;
+  position: relative;
+}
+
+.messagesContainer .ant-layout-sider {
+  border-right: 1px solid #ddd;
+  position: inherit;
+  z-index: 1;
+  position: relative;
+  background-color: transparent;
+}
+
+.messagesContainer .ant-layout-sider .ant-layout-sider-children {
+  background-color: #fff;
+}
+
+.messagesContainer .ant-layout-sider .ant-layout-sider-trigger {
+  position: absolute;
+  border-bottom: 1px solid #ddd;
+  height: 37px;
+  line-height: 37px;
+  top: 0;
+}
+
+.messagesUserRowDiv {
+  position: absolute;
+  background: #eee;
+  width: 98%;
+  z-index: 2;
+}
+
+.messagesMenu .ant-menu-item.ant-menu-item-selected {
+  background-color: gray !important;
+}
+
+.messagesMenu .ant-menu-item:hover {
+  background-color: gray !important;
+}
+
+.messagesMenu .ant-menu-item::after {
+  border-right: none !important;
+}
+
+.messageNameDate {
+  color: #00000073;
+}
+
+.ChatMessageText {
+  padding: 15px;
+  margin-bottom: -10px;
+}
+
+.chatTrigger {
+  gap: 100% !important;
+}
+
+.gapButtonsMessages {
+  gap: 15px !important;
+}
+
+.messagesUserRowDiv {
+  position: absolute;
+  background: #eee;
+  width: 98%;
+  z-index: 2;
+}
+
+.rowMessageSearch {
+  margin-top: 20px;
+}
+
+/* Media Query for Large screens */
+/* Media Query for Laptops and Desktops */
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .page-message .ChatMessageText > .ant-row .ant-col > .ant-typography {
+    font-size: 18px;
+  }
+}
+
+/* Media Query for Tablets, Ipads and below  */
+@media (max-width: 768px) {
+  .chat-container .chat-users {
+    width: 30%;
+  }
+  .chat-container .chat-discussion {
+    width: 70%;
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .page-message .buttons-action {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .page-message .messagesContainer .ant-layout-sider {
+    display: block;
+  }
+  .chat-container .chat-users {
+    width: 60%;
+  }
+  .chat-container .chat-discussion {
+    width: 40%;
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 575px) {
+  .page-message .messageSearchName {
+    margin-top: 25px;
+  }
+  .page-message .messagesContainer .ant-layout-sider {
+    display: block;
+  }
+  .messagesContainer .ant-layout-sider {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-message .buttons-action {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .page-message .ant-space-message-buttons {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 8px !important;
+  }
+  .page-message .ant-space-message-buttons .ant-space-item {
+    width: 100%;
+  }
+  .page-message .ant-space-message-buttons .ant-space-item .ant-btn {
+    width: 100%;
+  }
+  .chat-container .chat-users {
+    width: 60%;
+  }
+  .chat-container .chat-discussion {
+    width: 40%;
+  }
+}
+/*# sourceMappingURL=messages.css.map */

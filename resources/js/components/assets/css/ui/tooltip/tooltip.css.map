@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,eAAe,CAAC;EACf,SAAS,EAAE,IAAI;EACf,UAAU,EAAE,IAAI;EAChB,OAAO,EAAE,OAAO;EAChB,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,IAAI;EAChB,eAAe,EAAE,IAAI;EACrB,SAAS,EAAE,UAAU;EACrB,gBAAgB,EAAE,OAAO;EACzB,aAAa,EAAE,GAAG;EAClB,UAAU,EAAE,yEACa;CACzB",
+    "sources": [
+        "tooltip.scss",
+        "../../variables/variables.scss"
+    ],
+    "names": [],
+    "file": "tooltip.css"
+}

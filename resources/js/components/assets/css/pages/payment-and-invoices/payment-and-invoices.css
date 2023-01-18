@@ -1,0 +1,109 @@
+.invoices-account-template {
+  border: 2px solid #808285;
+  padding: 20px;
+}
+
+.invoices-account-template .ant-typography {
+  color: #58585a;
+}
+
+.invoices-account-template .ant-col:first-child .invoice-text {
+  font-size: 52px;
+}
+
+.invoices-account-template .ant-col:first-child > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.invoices-account-template .ant-col:first-child > div div:first-child {
+  width: 60%;
+}
+
+.invoices-account-template .ant-col:first-child > div div:last-child {
+  width: 40%;
+  text-align: right;
+}
+
+.invoices-account-template .ant-col:nth-child(3) .invoiced-information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.page-payment-and-invoices .collapse-recent-invoices .ant-collapse-content .ant-collapse-content-box {
+  padding: 0px 0px 16px 0px;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .invoice-text {
+    font-size: 62px;
+    margin-bottom: 0.2em !important;
+  }
+  .invoices-account-template .ant-col:first-child div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .invoices-account-template .ant-col:first-child div div:first-child,
+  .invoices-account-template .ant-col:first-child div div:last-child {
+    width: 100%;
+    text-align: left;
+  }
+  .invoices-account-template .ant-col:nth-child(3) .invoiced-information {
+    width: 100% !important;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .invoices-account-template .ant-col:nth-child(3) .invoiced-information span {
+    width: 50% !important;
+  }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .invoices-account-template .invoice-text {
+    font-size: 62px;
+    margin-bottom: 0.2em !important;
+  }
+  .invoices-account-template .ant-col:first-child div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .invoices-account-template .ant-col:first-child div div:first-child,
+  .invoices-account-template .ant-col:first-child div div:last-child {
+    width: 100%;
+    text-align: left;
+  }
+  .invoices-account-template .ant-col:nth-child(3) .invoiced-information {
+    width: 100% !important;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .invoices-account-template .ant-col:nth-child(3) .invoiced-information span {
+    width: 50% !important;
+  }
+}
+
+/* Media Query for Large screens */
+/* Media Query for Laptops and Desktops */
+/* Media Query for Tablets Ipads portrait mode */
+/* Media Query for Tablets, Ipads and below  */
+/* Media Query for low resolution  Tablets, Ipads */
+/* Media Query for Mobile Devices */
+/*# sourceMappingURL=payment-and-invoices.css.map */

@@ -1,0 +1,81 @@
+.form-item-switch {
+  height: 42px;
+}
+
+.form-item-switch .ant-col:first-child {
+  text-align: left;
+}
+
+.form-item-switch .ant-col:last-child {
+  text-align: right;
+}
+
+.div-form-list-option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.div-form-list-option > .ant-form-item:first-child {
+  width: 0%;
+}
+
+.div-form-list-option > .ant-form-item:nth-child(2) {
+  width: 90%;
+}
+
+.div-form-list-option > .ant-form-item:nth-child(3) {
+  width: 5%;
+}
+
+.div-form-list-option > .ant-form-item:last-child {
+  width: 5%;
+}
+
+.div-form-list-option > .ant-form-item:last-child .ant-btn {
+  color: #e4151f;
+}
+
+.div-form-list-option.div-form-list-option-true-false
+> .ant-form-item:nth-child(2) {
+  width: 5%;
+}
+
+.form-list-remove-button {
+  padding: 0px;
+  color: #ffffff;
+}
+
+.form-list-remove-button:hover {
+  color: #e4151f;
+}
+
+/* Media Query for Large screens */
+/* Media Query for Laptops and Desktops */
+/* Media Query for Tablets Ipads portrait mode */
+/* Media Query for Tablets, Ipads and below  */
+/* Media Query for low resolution  Tablets, Ipads */
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .div-form-list-option > .ant-form-item:first-child {
+    width: 0%;
+  }
+  .div-form-list-option > .ant-form-item:nth-child(2) {
+    width: 80%;
+  }
+  .div-form-list-option > .ant-form-item:nth-child(3) {
+    width: 10%;
+  }
+  .div-form-list-option > .ant-form-item:last-child {
+    width: 10%;
+  }
+  .div-form-list-option.div-form-list-option-true-false
+> .ant-form-item:nth-child(2) {
+    width: 15%;
+  }
+}
+/*# sourceMappingURL=form.css.map */

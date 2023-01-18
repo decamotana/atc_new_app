@@ -1,0 +1,12 @@
+.page-admin-account-type .float-label .ant-input {
+  border-color: transparent !important;
+}
+
+.modal-admin-account-plan-form .float-label .ant-input-affix-wrapper .ant-input {
+  border-color: transparent !important;
+}
+
+.modal-admin-faq .float-label .ant-input-affix-wrapper .ant-input {
+  border-color: transparent !important;
+}
+/*# sourceMappingURL=page-account-type.css.map */

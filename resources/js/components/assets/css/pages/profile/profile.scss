@@ -1,0 +1,203 @@
+@import "../../variables/variables.scss";
+.page-profile {
+	.profilePhoto {
+		.ant-upload-list-picture-card {
+			display: flex;
+			justify-content: center;
+
+			.ant-upload {
+				width: 200px;
+				height: 200px;
+				border-color: $color6;
+				box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+				-webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+				-moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+			}
+
+			.ant-upload-list-picture-card-container {
+				width: 200px;
+				height: 200px;
+
+				.ant-upload-list-item {
+					border-color: $color6;
+					box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+					-webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+					-moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+				}
+			}
+		}
+	}
+
+	.e_signature_canvas {
+		border: 1px solid $color9;
+		width: 100%;
+	}
+
+	// .float-label .ant-input,
+	// .float-label .mask-input {
+	// 	border-color: transparent;
+	// }
+}
+
+.modal-account-deactivate {
+	.ant-modal-footer {
+		text-align: right !important;
+	}
+}
+
+.modal-change-password {
+	.float-label .ant-input-affix-wrapper .ant-input {
+		border-color: transparent !important;
+	}
+	.ant-modal-footer {
+		text-align: right !important;
+	}
+}
+
+.modal-change-2-factor-authentication {
+	.ant-modal-footer {
+		text-align: right !important;
+	}
+}
+.page-profile-upgrade-subscription {
+	.float-label .ant-input-affix-wrapper .ant-input {
+		border-color: transparent !important;
+	}
+
+	.div_up_sub_is_patient {
+		display: flex;
+		align-items: flex-start;
+		gap: 15px;
+		margin-bottom: 10px;
+
+		> span {
+			font-size: 16px;
+		}
+
+		.ant-radio-group {
+			.ant-radio-wrapper {
+				span:not(.ant-radio) {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+
+	.different_card {
+		padding: 10px;
+		border: 1px solid #d9d9d9;
+		background: #f5f5f5;
+	}
+}
+.private-layout {
+	.top-banner-adss {
+		text-align: center;
+		background-color: #f1f3f2;
+		display: flex;
+		justify-content: center;
+		display: none;
+	}
+	.top-banner-adss.has-data {
+		border-top: 1px solid $pageHeaderBorderColor;
+		padding: 10px 0px;
+		display: flex;
+
+		.top-banner-adss-inner {
+			position: relative;
+
+			.icon-close {
+				position: absolute;
+				right: -5px;
+				top: -10px;
+				background-color: $color9;
+				color: $color12;
+				border-radius: 50%;
+				cursor: pointer;
+				width: 20px;
+				height: 20px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.top-banner-adss-inner-image {
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+	.right-banner-adss {
+		display: none;
+	}
+	.right-banner-adss.has-data {
+		display: block;
+		.right-banner-adss-inner {
+			position: relative;
+			.icon-close {
+				position: absolute;
+				left: -8px;
+				top: -10px;
+				background-color: $color9;
+				color: $color12;
+				border-radius: 50%;
+				cursor: pointer;
+				width: 20px;
+				height: 20px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.right-banner-adss-inner-image {
+				img {
+					width: 100%;
+					border: 1px solid $pageHeaderBorderColor;
+				}
+			}
+		}
+	}
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* Media Query for Tablets, Ipads and below  */
+@media (max-width: 768px) {
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 575px) {
+}
+
+@media (max-width: 480px) {
+}
+
+@media (max-width: 375px) {
+	.page-profile {
+		.btn-2fa {
+			display: flex;
+			margin-bottom: 20px;
+		}
+
+		.btn-2fa > span:last-child {
+			white-space: break-spaces;
+			text-align: left;
+		}
+	}
+}
+
+@media (max-width: 320px) {
+}

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AACC,+BAD8B,CAC9B,YAAY,CAAC,wBAAwB,CAAC,UAAU,CAAC;EAChD,YAAY,EAAE,sBAAsB;CACpC",
+    "sources": [
+        "advertisement-type.scss",
+        "../../variables/variables.scss"
+    ],
+    "names": [],
+    "file": "advertisement-type.css"
+}

@@ -1,0 +1,184 @@
+.primary-collapse > .ant-collapse-item > .ant-collapse-header {
+  background-color: #dee2e6;
+  outline: none;
+  background-color: #0866c6;
+  border: 1px solid #0866c6;
+  color: #ffffff;
+}
+
+.secondary-collapse > .ant-collapse-item > .ant-collapse-header {
+  background-color: #dee2e6;
+  outline: none;
+  background-color: #868e96;
+  border: 1px solid #868e96;
+  color: #ffffff;
+}
+
+.success-collapse > .ant-collapse-item > .ant-collapse-header {
+  background-color: #dee2e6;
+  outline: none;
+  background-color: #23bf08;
+  border: 1px solid #23bf08;
+  color: #ffffff;
+}
+
+.warning-collapse > .ant-collapse-item > .ant-collapse-header {
+  background-color: #dee2e6;
+  outline: none;
+  background-color: #f49917;
+  border: 1px solid #f49917;
+  color: #ffffff;
+}
+
+.danger-collapse > .ant-collapse-item > .ant-collapse-header {
+  background-color: #dee2e6;
+  outline: none;
+  background-color: #dc3545;
+  border: 1px solid #dc3545;
+  color: #ffffff;
+}
+
+.info-collapse > .ant-collapse-item > .ant-collapse-header {
+  background-color: #dee2e6;
+  outline: none;
+  background-color: #5b93d3;
+  border: 1px solid #5b93d3;
+  color: #ffffff;
+}
+
+.indigo-collapse > .ant-collapse-item > .ant-collapse-header {
+  background-color: #dee2e6;
+  outline: none;
+  background-color: #6610f2;
+  border: 1px solid #6610f2;
+  color: #ffffff;
+}
+
+.purple-collapse > .ant-collapse-item > .ant-collapse-header {
+  background-color: #dee2e6;
+  outline: none;
+  background-color: #6f42c1;
+  border: 1px solid #6f42c1;
+  color: #ffffff;
+}
+
+.pink-collapse > .ant-collapse-item > .ant-collapse-header {
+  background-color: #dee2e6;
+  outline: none;
+  background-color: #e83e8c;
+  border: 1px solid #e83e8c;
+  color: #ffffff;
+}
+
+.teal-collapse > .ant-collapse-item > .ant-collapse-header {
+  background-color: #dee2e6;
+  outline: none;
+  background-color: #1caf9a;
+  border: 1px solid #1caf9a;
+  color: #ffffff;
+}
+
+.dark-collapse > .ant-collapse-item > .ant-collapse-header {
+  background-color: #dee2e6;
+  outline: none;
+  background-color: #343a40;
+  border: 1px solid #343a40;
+  color: #ffffff;
+}
+
+.orange-collapse > .ant-collapse-item > .ant-collapse-header {
+  background-color: #dee2e6;
+  outline: none;
+  background-color: #f27510;
+  border: 1px solid #f27510;
+  color: #ffffff;
+}
+
+.ant-collapse-header {
+  text-transform: uppercase;
+}
+
+.main-1-collapse > .ant-collapse-item > .ant-collapse-header {
+  background-color: #dee2e6;
+  outline: none;
+  background-color: #027273;
+  border: 1px solid #027273;
+  color: #ffffff;
+}
+
+.main-1-collapse > .ant-collapse-item > .ant-collapse-header span {
+  color: white;
+}
+
+.main-1-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-extra {
+  color: #ffffff !important;
+}
+
+.main-2-collapse > .ant-collapse-item > .ant-collapse-header {
+  background-color: #dee2e6;
+  outline: none;
+  background-color: #13f4f1;
+  border: 1px solid #13f4f1;
+  color: #ffffff;
+}
+
+.main-2-collapse > .ant-collapse-item > .ant-collapse-header span {
+  color: #ffffff !important;
+}
+
+.main-2-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-extra {
+  color: #ffffff !important;
+}
+
+.main-3-collapse > .ant-collapse-item > .ant-collapse-header {
+  background-color: #dee2e6;
+  outline: none;
+  background-color: #028f8d;
+  border: 1px solid #028f8d;
+  color: #ffffff;
+}
+
+.main-3-collapse > .ant-collapse-item > .ant-collapse-header span {
+  color: #ffffff !important;
+}
+
+.main-3-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-extra {
+  color: #ffffff !important;
+}
+
+.main-4-collapse > .ant-collapse-item > .ant-collapse-header {
+  background-color: #dee2e6;
+  outline: none;
+  background-color: #358e8f;
+  border: 1px solid #358e8f;
+  color: #ffffff;
+}
+
+.main-4-collapse > .ant-collapse-item > .ant-collapse-header span {
+  color: #ffffff !important;
+}
+
+.main-4-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-extra {
+  color: #ffffff !important;
+}
+
+.main-5-collapse > .ant-collapse-item > .ant-collapse-header {
+  background-color: #dee2e6;
+  outline: none;
+  background-color: #0e5729;
+  border: 1px solid #0e5729;
+  color: #ffffff;
+}
+
+.main-5-collapse > .ant-collapse-item > .ant-collapse-header span {
+  color: #ffffff !important;
+}
+
+.main-5-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-extra {
+  color: #ffffff !important;
+}
+
+.ant-collapse-header {
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=accordion.css.map */

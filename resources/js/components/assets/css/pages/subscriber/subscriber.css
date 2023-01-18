@@ -1,0 +1,100 @@
+.page-admin-subscriber-edit .profilePhoto .ant-upload-list-picture-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page-admin-subscriber-edit .profilePhoto .ant-upload-list-picture-card .ant-upload {
+  width: 200px;
+  height: 200px;
+  border-color: #e4151f;
+  box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.page-admin-subscriber-edit .profilePhoto .ant-upload-list-picture-card .ant-upload-list-picture-card-container {
+  width: 200px;
+  height: 200px;
+}
+
+.page-admin-subscriber-edit .profilePhoto .ant-upload-list-picture-card .ant-upload-list-picture-card-container .ant-upload-list-item {
+  border-color: #e4151f;
+  box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.page-admin-subscriber-edit .training-module-progress-bar .ant-progress-show-info .ant-progress-outer {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.page-admin-subscriber-edit .training-module-progress-bar .percent-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.page-form-subscriber .float-label .ant-input-affix-wrapper .ant-input {
+  border-color: transparent !important;
+}
+
+.page-form-subscriber .input-coupon-code .ant-input-group-wrapper {
+  border: 1px solid #58585a;
+}
+
+.page-form-subscriber .input-coupon-code .ant-input-group-wrapper .ant-input {
+  border: 0px !important;
+  height: 43px !important;
+}
+
+.page-form-subscriber .input-coupon-code .ant-input-group-wrapper .ant-input-group-addon {
+  border: 0px;
+  border-left: 1px solid #58585a;
+}
+
+.page-form-subscriber .input-coupon-code .ant-input-group-wrapper .ant-input-group-addon .ant-btn {
+  border: 0px;
+  background-color: #027273;
+  color: #ffffff;
+  height: 43px;
+  border-radius: 0px;
+}
+
+.page-form-subscriber .input-coupon-code.coupon-success .ant-input-group-wrapper {
+  border-color: #027273;
+}
+
+.page-form-subscriber .input-coupon-code.coupon-error .ant-input-group-wrapper {
+  border-color: #e4151f;
+}
+
+.page-careprofessional-subscriber-current-completed .ant-table table .ant-table-thead th {
+  background-color: #027273;
+  color: #ffffff;
+}
+
+.page-careprofessional-subscriber-current-completed .ant-table table .ant-table-thead th .ant-table-column-sorter
+.ant-table-column-sorter-inner
+.anticon:not(.active) {
+  color: #ffffff;
+}
+
+.page-careprofessional-subscriber-current-completed .ant-row-modules .ant-btn-modules {
+  height: 210px;
+}
+
+/* Media Query for Large screens */
+/* Media Query for Laptops and Desktops */
+/* Media Query for Tablets Ipads portrait mode */
+/* Media Query for Tablets, Ipads and below  */
+/* Media Query for low resolution  Tablets, Ipads */
+/* Media Query for Mobile Devices */
+/*# sourceMappingURL=subscriber.css.map */

@@ -1,7 +1,7 @@
 $opacity: 0.6;
 
-$primary: #2f3950;
-$primaryActive: #2f3950;
+$primary: #0866c6;
+$primaryActive: #0753a1;
 
 $secondary: #868e96;
 $secondaryActive: #727b84;
@@ -9,10 +9,10 @@ $secondaryActive: #727b84;
 $success: #23bf08;
 $successActive: #1c9a06;
 
-$warning: #f4ba41;
+$warning: #f49917;
 $warningActive: #da850a;
 
-$danger: #c82a1c;
+$danger: #dc3545;
 $dangerActive: #c82333;
 
 $info: #5b93d3;
@@ -36,24 +36,118 @@ $darkActive: #23272b;
 $orange: #f27510;
 $orangeActive: #d16a17;
 
-$login: #2f3950;
-$loginActive: #2f3950;
+// layout
+$layoutBackground: #027273;
+$textColor: #ffffff;
+$iconColor: #009999;
+$textColorActive: #ffffff;
+$iconColorActive: #ffffff;
 
-// colors
-$layoutBackground: #212529;
+// layout side menu
+$sideBarBackground: #027273;
+$sideBarBackgroundSelectedMenu: #358e8f;
+$sideBarBorderColor: #f0e3ca;
+$sideBarTextColor: #ffffff;
+$sideBarIconColor: #13f4f1;
+$sideBarTextColorActive: #ffffff;
+$sideBarIconColorActive: #13f4f1;
+
+// layout header
+$headerBackground: #027273;
+$headerBackgroundSelectedMenu: #358e8f;
+$headerTextColor: #bdbec0;
+$headerLeftIconColor: #13f4f1;
+$headerRightIconColor: #ffffff;
+$headerTextColorActive: #13f4f1;
+$headerIconColorActive: #13f4f1;
+$headerProfileColor: #13f4f1;
+
+// layout header dropdown
+$headerDropdownBackgroundSelectedMenu: #358e8f;
+$headerDropdownTextColor: #58585a;
+$headerDropdownIconColor: #027273;
+$headerDropdownTextColorActive: #027273;
+$headerDropdownIconColorActive: #58585a;
+$headerDropdownTitleColor: #027273;
+$headerDropdownImgBorderColor: #13f4f1;
+$headerDropdownBorderColor: #949599;
+
+// page header
+$pageHeaderBackground: transparent;
+$pageHeaderBorderColor: #58585a;
+$pageHeaderColorTitle: #358e8f;
+$pageHeaderColorSubTitle: #58585a;
+$pageHeaderIconColor: #358e8f;
+$pageHeaderIconBorderColor: #358e8f;
+
+// page header public
+$pageHeaderPublicBackground: transparent;
+$pageHeaderPublicBorderColor: #58585a;
+$pageHeaderPublicColorTitle: #358e8f;
+$pageHeaderPublicColorSubTitle: #58585a;
+$pageHeaderPublicIconColor: #58585a;
+$pageHeaderPublicIconBorderColor: #58585a;
+
+// accordion
 $accordionBorder: #dee2e6;
 $basicNavBorder: #d9d9d9;
 
-$font: "Roboto", "Helvetica Neue", Arial, sans-serif;
+// collapse nav
+$collapseIconColor: rgba(255, 255, 255, 0.5);
+$collapseIconColorHover: #ffffff;
+$collapseIconColorActive: #ffffff;
+
+// breadcrumColor
+$breadcrumColor: transparent;
+$breadcrumTextColor: #027273;
+$breadcrumIconColor: #027273;
+$breadcrumLastTextColor: #e4151f;
+
+// Floating
+$FloatAsLabel: #918f8ffa;
+$FloatAsPlaceholder: #918f8ffa;
+
+$font: montserrat regular, Sans-Serif;
 
 $white: #ffffff;
-$cdarkgray: #2f3950;
-$clightorange: #f4ba41;
+$black: #000000;
 
-// SideMenu
-$sideMenuTopIconColor: #2f3950;
-$sideMenuTopIconColorHover: #f4ba41;
+$main: #027273;
+$mainText: #ffffff;
+$mainActive: #e4151f;
+$mainTextActive: #ffffff;
+$mainInvert: #e4151f;
+$mainInvertText: #ffffff;
+$mainInvertActive: #ffffff;
+$mainInvertBorderActive: #e4151f;
+$mainInvertTextActive: #e4151f;
 
-// $white: env('APP_HEADER_BACKGROUND_COLOR');
-// $cdarkgray: env('APP_SIDEBAR_BACKGROUND_COLOR');
-// $clightorange: env('APP_HEADER_COLOR');
+$color1: #027273;
+$color2: #13f4f1;
+$color3: #028f8d;
+$color4: #358e8f;
+$color5: #0e5729;
+$color6: #e4151f;
+$color7: #58585a;
+$color8: #808285;
+$color9: #949599;
+$color10: #bdbec0;
+$color11: #137702;
+$color12: #ddfeff;
+$color13: #0e5728;
+$color14: #6c6c6c;
+$color15: #606060;
+$color16: #f1f3f4;
+$color17: #f58d13;
+$color18: #f2f2f2;
+$color19: #e5e3e3;
+$color20: #a7a9ac;
+
+$tooltip-success: #d9f1d1;
+$tooltip-primary: #e0e9f5;
+$tooltip-warning: #faecd4;
+$tooltip-danger: #f3d8da;
+$tooltip-success-text: #2e611a;
+$tooltip-primary-text: #354b6b;
+$tooltip-warning-text: #78521e;
+$tooltip-danger-text: #692326;

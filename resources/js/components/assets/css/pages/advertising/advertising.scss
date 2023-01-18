@@ -1,0 +1,68 @@
+@import "../../variables/variables.scss";
+
+.page-admin-advertising-form {
+	.ant-upload-select-picture-card {
+		margin-right: 0px;
+	}
+
+	.flex-upload .ant-upload-picture-card-wrapper .ant-upload {
+		min-height: 80px;
+	}
+
+	.float-label .ant-input {
+		border-color: transparent !important;
+	}
+	.advert_payments {
+		.ant-collapse-header {
+			align-items: center;
+
+			.ant-collapse-extra {
+				.ant-btn-icon-only {
+					height: auto;
+					font-size: inherit;
+				}
+			}
+		}
+	}
+}
+.modal-advertising-graph {
+	width: 50% !important;
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+@media (max-width: 1024px) {
+	.modal-advertising-graph {
+		width: 100% !important;
+	}
+}
+/* Media Query for Tablets, Ipads and below  */
+@media (max-width: 768px) {
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 575px) {
+}
+
+@media (max-width: 480px) {
+}
+
+@media (max-width: 375px) {
+}
+
+@media (max-width: 320px) {
+}

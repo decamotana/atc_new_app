@@ -1,0 +1,198 @@
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected::after {
+  border-bottom: 0px solid transparent !important;
+}
+
+.nav-basic {
+  background: transparent;
+  border: 1px solid #d9d9d9;
+  height: auto !important;
+  padding: 0px;
+}
+
+.nav-primary {
+  background: #0866c6 !important;
+  border: 1px solid #0866c6;
+  height: auto !important;
+  padding: 0px;
+}
+
+.nav-primary > .ant-menu {
+  background: #0866c6 !important;
+  border: 1px solid #0866c6;
+  height: auto !important;
+  padding: 0px;
+  color: white;
+}
+
+.nav-secondary {
+  background: #868e96 !important;
+  border: 1px solid #868e96;
+  height: auto !important;
+  padding: 0px;
+}
+
+.nav-secondary > .ant-menu {
+  background: #868e96 !important;
+  border: 1px solid #868e96;
+  height: auto !important;
+  padding: 0px;
+  color: white;
+}
+
+.nav-success {
+  background: #23bf08 !important;
+  border: 1px solid #23bf08;
+  height: auto !important;
+  padding: 0px;
+}
+
+.nav-success > .ant-menu {
+  background: #23bf08 !important;
+  border: 1px solid #23bf08;
+  height: auto !important;
+  padding: 0px;
+  color: white;
+}
+
+.nav-warning {
+  background: #f49917 !important;
+  border: 1px solid #f49917;
+  height: auto !important;
+  padding: 0px;
+}
+
+.nav-warning > .ant-menu {
+  background: #f49917 !important;
+  border: 1px solid #f49917;
+  height: auto !important;
+  padding: 0px;
+  color: white;
+}
+
+.nav-danger {
+  background: #dc3545 !important;
+  border: 1px solid #dc3545;
+  height: auto !important;
+  padding: 0px;
+}
+
+.nav-danger > .ant-menu {
+  background: #dc3545 !important;
+  border: 1px solid #dc3545;
+  height: auto !important;
+  padding: 0px;
+  color: white;
+}
+
+.nav-info {
+  background: #5b93d3 !important;
+  border: 1px solid #5b93d3;
+  height: auto !important;
+  padding: 0px;
+}
+
+.nav-info > .ant-menu {
+  background: #5b93d3 !important;
+  border: 1px solid #5b93d3;
+  height: auto !important;
+  padding: 0px;
+  color: white;
+}
+
+.nav-indigo {
+  background: #6610f2 !important;
+  border: 1px solid #6610f2;
+  height: auto !important;
+  padding: 0px;
+}
+
+.nav-indigo > .ant-menu {
+  background: #6610f2 !important;
+  border: 1px solid #6610f2;
+  height: auto !important;
+  padding: 0px;
+  color: white;
+}
+
+.nav-purple {
+  background: #6f42c1 !important;
+  border: 1px solid #6f42c1;
+  height: auto !important;
+  padding: 0px;
+}
+
+.nav-purple > .ant-menu {
+  background: #6f42c1 !important;
+  border: 1px solid #6f42c1;
+  height: auto !important;
+  padding: 0px;
+  color: white;
+}
+
+.nav-pink {
+  background: #e83e8c !important;
+  border: 1px solid #e83e8c;
+  height: auto !important;
+  padding: 0px;
+}
+
+.nav-pink > .ant-menu {
+  background: #e83e8c !important;
+  border: 1px solid #e83e8c;
+  height: auto !important;
+  padding: 0px;
+  color: white;
+}
+
+.nav-teal {
+  background: #1caf9a !important;
+  border: 1px solid #1caf9a;
+  height: auto !important;
+  padding: 0px;
+}
+
+.nav-teal > .ant-menu {
+  background: #1caf9a !important;
+  border: 1px solid #1caf9a;
+  height: auto !important;
+  padding: 0px;
+  color: white;
+}
+
+.nav-dark {
+  background: #343a40 !important;
+  border: 1px solid #343a40;
+  height: auto !important;
+  padding: 0px;
+}
+
+.nav-dark > .ant-menu {
+  background: #343a40 !important;
+  border: 1px solid #343a40;
+  height: auto !important;
+  padding: 0px;
+  color: white;
+}
+
+.nav-orange {
+  background: #f27510 !important;
+  border: 1px solid #f27510;
+  height: auto !important;
+  padding: 0px;
+}
+
+.nav-orange > .ant-menu {
+  background: #f27510 !important;
+  border: 1px solid #f27510;
+  height: auto !important;
+  padding: 0px;
+  color: white;
+}
+/*# sourceMappingURL=navigation.css.map */

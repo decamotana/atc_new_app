@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,AACE,0BADwB,CACxB,SAAS,CAAC;EACR,OAAO,EAAE,IAAI;EACb,GAAG,EAAE,GAAG;CACT;;AAGH,mCAAmC;AAInC,0CAA0C;AAI1C,iDAAiD;AACjD,MAAM,EAAE,SAAS,EAAE,KAAK,OAAO,SAAS,EAAE,MAAM;EAC9C,AACE,0BADwB,CACxB,SAAS,CAAC;IACR,cAAc,EAAE,MAAM;GACvB;;;AAIL,+CAA+C;AAC/C,MAAM,EAAE,SAAS,EAAE,KAAK;EACtB,AACE,0BADwB,CACxB,SAAS,CAAC;IACR,cAAc,EAAE,MAAM;GACvB;;;AAIL,oDAAoD;AAOpD,oCAAoC",
+    "sources": [
+        "profile-subscription.scss",
+        "../../variables/variables.scss"
+    ],
+    "names": [],
+    "file": "profile-subscription.css"
+}

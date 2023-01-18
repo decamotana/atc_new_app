@@ -1,0 +1,310 @@
+@import "../../variables/variables";
+
+// primary
+.card-primary {
+	background-color: $primary;
+	color: $white;
+}
+
+.card-primary-head > .ant-card-head {
+	background-color: $primary;
+	color: $white;
+}
+
+.card-primary-border {
+	border-color: $primary;
+	border-radius: 4px;
+}
+
+.card-primary-no-border > .ant-card-head {
+	border: none;
+}
+
+// secondary
+.card-secondary {
+	background-color: $secondary;
+	color: $white;
+}
+
+.card-secondary-border {
+	border-color: $secondary;
+	border-radius: 4px;
+}
+
+.card-secondary-head > .ant-card-head {
+	background-color: $secondary;
+	color: $white;
+}
+
+.card-secondary-no-border > .ant-card-head {
+	border: none;
+}
+
+// success
+.card-success {
+	background-color: $success;
+	color: $white;
+}
+
+.card-success-border {
+	border-color: $success;
+	border-radius: 4px;
+}
+
+.card-success-head > .ant-card-head {
+	background-color: $success;
+	color: $white;
+}
+
+.card-success-no-border > .ant-card-head {
+	border: none;
+}
+
+// warning
+.card-warning {
+	background-color: $warning;
+	color: $white;
+}
+
+.card-warning-border {
+	border-color: $warning;
+	border-radius: 4px;
+}
+
+.card-warning-head > .ant-card-head {
+	background-color: $warning;
+	color: $white;
+}
+
+.card-warning-no-border > .ant-card-head {
+	border: none;
+}
+
+// danger
+.card-danger {
+	background-color: $danger;
+	color: $white;
+}
+
+.card-danger-border {
+	border-color: $danger;
+	border-radius: 4px;
+}
+
+.card-danger-head > .ant-card-head {
+	background-color: $danger;
+	color: $white;
+}
+
+.card-danger-no-border > .ant-card-head {
+	border: none;
+}
+
+// info
+.card-info {
+	background-color: $info;
+	color: $white;
+}
+
+.card-info-border {
+	border-color: $info;
+	border-radius: 4px;
+}
+
+.card-info-head > .ant-card-head {
+	background-color: $info;
+	color: $white;
+}
+
+.card-info-no-border > .ant-card-head {
+	border: none;
+}
+
+// indigo
+.card-indigo {
+	background-color: $indigo;
+	color: $white;
+}
+
+.card-indigo-border {
+	border-color: $indigo;
+	border-radius: 4px;
+}
+
+.card-indigo-head > .ant-card-head {
+	background-color: $indigo;
+	color: $white;
+}
+
+.card-indigo-no-border > .ant-card-head {
+	border: none;
+}
+
+// purple
+.card-purple {
+	background-color: $purple;
+	color: $white;
+}
+
+.card-purple-border {
+	border-color: $purple;
+	border-radius: 4px;
+}
+
+.card-purple-head > .ant-card-head {
+	background-color: $purple;
+	color: $white;
+}
+
+.card-purple-no-border > .ant-card-head {
+	border: none;
+}
+
+// pink
+.card-pink {
+	background-color: $pink;
+	color: $white;
+}
+
+.card-pink-border {
+	border-color: $pink;
+	border-radius: 4px;
+}
+
+.card-pink-head > .ant-card-head {
+	background-color: $pink;
+	color: $white;
+}
+
+.card-pink-no-border > .ant-card-head {
+	border: none;
+}
+
+// teal
+.card-teal {
+	background-color: $teal;
+	color: $white;
+}
+
+.card-teal-border {
+	border-color: $teal;
+	border-radius: 4px;
+}
+
+.card-teal-head > .ant-card-head {
+	background-color: $teal;
+	color: $white;
+}
+
+.card-teal-no-border > .ant-card-head {
+	border: none;
+}
+
+// dark
+.card-dark {
+	background-color: $dark;
+	color: $white;
+}
+
+.card-dark-border {
+	border-color: $dark;
+	border-radius: 4px;
+}
+
+.card-dark-no-border > .ant-card-head {
+	border: none;
+}
+
+.card-dark-head > .ant-card-head {
+	color: $white;
+}
+
+.card-dark-head > .ant-card-head .ant-card-extra {
+	font-size: 20px;
+	padding: 10px 0;
+}
+.card-dark-head > .ant-card-head .ant-card-head-title {
+	padding: 10px 0;
+}
+
+.card-transparent-head > .ant-card-head {
+	background-color: transparent;
+}
+.card-transparent-head > .ant-card-head .ant-card-extra {
+	font-size: 20px;
+	padding: 10px 0;
+}
+.card-transparent-head > .ant-card-head .ant-card-head-title {
+	padding: 10px 0;
+}
+.card-transparent-head.border-bottom-none > .ant-card-head {
+	border-bottom: none;
+}
+.card-transparent-head.p-none > .ant-card-head {
+	padding: 0px;
+}
+
+// orange
+.card-orange {
+	background-color: $orange;
+	color: $white;
+}
+
+.card-orange-border {
+	border-color: $orange;
+	border-radius: 4px;
+}
+
+.card-orange-no-border > .ant-card-head {
+	border: none;
+}
+
+.card-orange-head > .ant-card-head {
+	background-color: $orange;
+	color: $white !important;
+}
+
+// transparent
+.card-white {
+	background-color: $white !important;
+	color: $white !important;
+}
+
+.card-white-border {
+	border-color: $white !important;
+	border-radius: 4px;
+}
+
+.card-white-no-border > .ant-card-head {
+	border: none !important;
+}
+
+.card-white-head > .ant-card-head {
+	background-color: $white !important;
+	color: $dark !important;
+}
+
+// card-main
+.card-main {
+	background-color: transparent;
+	color: $white;
+}
+
+.card-main > .ant-card-head {
+	background-color: $color1;
+	color: $white;
+
+	.ant-card-head-title {
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+}
+
+.card-main-border {
+	border-color: $color9;
+	border-radius: 4px;
+}
+
+.card-main-no-border > .ant-card-head {
+	border: none;
+}

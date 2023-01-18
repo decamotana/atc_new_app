@@ -1,0 +1,47 @@
+.page-course-status .cert-incomplete {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  width: 100%;
+}
+
+.page-course-status .cert-complete-container {
+  position: relative;
+}
+
+.page-course-status .cert-complete {
+  position: relative;
+}
+
+.page-course-status .cert-complete .cert-complete-img {
+  width: 100%;
+}
+
+.page-course-status .cert-complete .cert-complete-name {
+  font-size: 25px;
+  color: #58585a;
+  position: absolute;
+  top: 325px;
+}
+
+.page-course-status .cert-complete .cert-complete-signature {
+  width: 180px;
+  position: absolute;
+  bottom: 220px;
+  left: 200px;
+}
+
+.page-course-status .cert-complete .cert-complete-date {
+  font-size: 14px;
+  color: #58585a;
+  position: absolute;
+  bottom: 235px;
+  right: 318px;
+}
+
+/* Media Query for Large screens */
+/* Media Query for Laptops and Desktops */
+/* Media Query for Tablets Ipads portrait mode */
+/* Media Query for Tablets, Ipads and below  */
+/* Media Query for low resolution  Tablets, Ipads */
+/* Media Query for Mobile Devices */
+/*# sourceMappingURL=page-course-status.css.map */

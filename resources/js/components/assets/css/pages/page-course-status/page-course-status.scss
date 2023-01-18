@@ -1,0 +1,70 @@
+@import "../../variables/variables.scss";
+
+.page-course-status {
+	.cert-incomplete {
+		filter: grayscale(100%);
+		width: 100%;
+	}
+	.cert-complete-container {
+		position: relative;
+	}
+	.cert-complete {
+		position: relative;
+
+		.cert-complete-img {
+			width: 100%;
+		}
+
+		.cert-complete-name {
+			font-size: 25px;
+			color: $color7;
+			position: absolute;
+			top: 325px;
+		}
+
+		.cert-complete-signature {
+			width: 180px;
+			position: absolute;
+			bottom: 220px;
+			left: 200px;
+		}
+
+		.cert-complete-date {
+			font-size: 14px;
+			color: $color7;
+			position: absolute;
+			bottom: 235px;
+			right: 318px;
+		}
+	}
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* Media Query for Tablets, Ipads and below  */
+@media (max-width: 768px) {
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+}
+
+@media (max-width: 375px) {
+}
+
+@media (max-width: 320px) {
+}

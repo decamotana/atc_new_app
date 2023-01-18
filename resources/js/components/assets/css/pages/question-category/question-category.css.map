@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AACC,8BAD6B,CAC7B,YAAY,CAAC,UAAU,CAAC;EACvB,YAAY,EAAE,sBAAsB;CACpC",
+    "sources": [
+        "question-category.scss",
+        "../../variables/variables.scss"
+    ],
+    "names": [],
+    "file": "question-category.css"
+}

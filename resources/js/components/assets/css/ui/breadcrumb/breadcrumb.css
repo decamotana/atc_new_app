@@ -1,0 +1,27 @@
+.private-layout .ant-breadcrumb {
+  padding: 12px 10px 12px 20px;
+  background-color: transparent;
+}
+
+.private-layout .ant-breadcrumb .ant-breadcrumb-link a,
+.private-layout .ant-breadcrumb .breadcrumb-item-text {
+  font-size: 14px !important;
+  color: #027273;
+}
+
+.private-layout .ant-breadcrumb .ant-breadcrumb-link a svg {
+  font-size: 16px !important;
+}
+
+.ant-breadcrumb-link svg {
+  color: #027273;
+}
+
+.ant-breadcrumb-separator svg {
+  color: #027273;
+}
+
+.breadcrumb-item-text-last {
+  color: #e4151f !important;
+}
+/*# sourceMappingURL=breadcrumb.css.map */

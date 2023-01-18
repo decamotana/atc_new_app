@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "spinner.scss",
+        "../../variables/variables.scss"
+    ],
+    "names": [],
+    "file": "spinner.css"
+}

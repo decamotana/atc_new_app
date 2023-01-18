@@ -1,168 +1,206 @@
-import React, { useState } from "react";
-import $ from "jquery";
+import React, { useState, useEffect } from "react";
 import {
-    Layout,
-    Card,
-    Form,
-    Input,
-    Button,
-    Row,
-    Col,
-    Image,
-    Divider,
+	Layout,
+	Card,
+	Form,
+	Button,
+	Row,
+	Col,
+	Image,
+	Typography,
+	Alert,
 } from "antd";
+import { useHistory } from "react-router-dom";
+import moment from "moment";
+import { apiUrl, description, encrypt } from "../../../providers/companyInfo";
+import axios from "axios";
+import { fullwidthlogo } from "../../../providers/companyInfo";
+import FloatInputPasswordStrength from "../../../providers/FloatInputPasswordStrength";
 
-import { Link, useHistory } from "react-router-dom";
-import imageLogo from "../../../assets/img/logo.png";
-import { PasswordInput } from "antd-password-input-strength";
+export default function PageForgotPassword({ match }) {
+	let history = useHistory();
+	let token = match.params.token;
+	const [form] = Form.useForm();
+	const [isLoadingChangePass, setIsLoadingChangePass] = useState(false);
 
-export default function PageForgotPassword() {
-    let history = useHistory();
+	useEffect(() => {
+		axios
+			.post(
+				`${apiUrl}api/v1/check_auth`,
+				{},
+				{
+					headers: {
+						Authorization: "Bearer " + token,
+					},
+				}
+			)
+			.then((res) => {
+				console.log("success");
+			})
+			.catch((err) => {
+				if (err.response.status === 401) {
+					history.push("/error-500");
+				}
+			});
+	}, [token, history]);
 
-    const [form] = Form.useForm();
-    const [formPassword] = Form.useForm();
+	const [errorMessageLogin, setErrorMessageLogin] = useState({
+		type: "success",
+		message: "",
+	});
 
-    const onFinish = (values) => {};
+	const onFinishLogin = (values) => {
+		let data = {
+			...values,
+			link_origin: window.location.origin,
+		};
 
-    return (
-        <Layout.Content
-            className="login-layout"
-            style={{
-                paddingBottom: "18vh",
-                background: "linear-gradient(180deg, white 0%, #e2c991 80%)",
-                height: "100%",
-            }}
-        >
-            <Row>
-                <Col xs={24} sm={4} md={4} lg={6} xl={8} xxl={9}></Col>
-                <Col
-                    xs={24}
-                    sm={16}
-                    md={16}
-                    lg={12}
-                    xl={8}
-                    xxl={6}
-                    style={{ padding: 10 }}
-                >
-                    <Card
-                        style={{
-                            background: "transparent",
-                            border: "0px solid",
-                            textAlign: "center",
-                            height: "auto",
-                        }}
-                        headStyle={{
-                            borderBottom: "none",
-                            background: "transparent!important",
-                        }}
-                        title={<Image src={imageLogo} preview={false} />}
-                        className="login"
-                    >
-                        <Row className="flexdirection">
-                            <Col xs={24} md={24}>
-                                <Form
-                                    name="basic"
-                                    layout="vertical"
-                                    className="login-form"
-                                    style={{
-                                        marginTop: "-50px",
-                                    }}
-                                    onFinish={onFinish}
-                                    form={form}
-                                    autoComplete="off"
-                                >
-                                    <span style={{ fontSize: "20px" }}>
-                                        Create Your Membership Account
-                                    </span>
-                                    <br />
-                                    <span>
-                                        Your password must be at least 8
-                                        characters and contain at least one
-                                        number, one uppercase letter and one
-                                        special character.
-                                    </span>
-                                    <br />
-                                    <br />
+		setIsLoadingChangePass(true);
 
-                                    <Form.Item
-                                        name="password"
-                                        rules={[
-                                            {
-                                                required: true,
-                                                message:
-                                                    "Please input your password!",
-                                            },
-                                            // { validator: validatePassword }
-                                        ]}
-                                        hasFeedback
-                                    >
-                                        <PasswordInput
-                                            placeholder="Password"
-                                            size="large"
-                                        />
-                                    </Form.Item>
+		axios
+			.post(`${apiUrl}api/v1/forgot_password_set_password`, data, {
+				headers: {
+					Authorization: "Bearer " + token,
+				},
+			})
+			.then((res) => {
+				console.log("res", res);
+				if (res.data.success) {
+					localStorage.userdata = encrypt(res.data.data);
+					localStorage.token = res.data.token;
 
-                                    <Form.Item
-                                        name="confirm"
-                                        dependencies={["password"]}
-                                        hasFeedback
-                                        rules={[
-                                            {
-                                                required: true,
-                                                message:
-                                                    "Please confirm your password!",
-                                            },
-                                            ({ getFieldValue }) => ({
-                                                validator(_, value) {
-                                                    if (
-                                                        !value ||
-                                                        getFieldValue(
-                                                            "password"
-                                                        ) === value
-                                                    ) {
-                                                        return Promise.resolve();
-                                                    }
-                                                    return Promise.reject(
-                                                        new Error(
-                                                            "The two passwords that you entered do not match!"
-                                                        )
-                                                    );
-                                                },
-                                            }),
-                                        ]}
-                                    >
-                                        <PasswordInput
-                                            placeholder="Confirm Password"
-                                            size="large"
-                                        />
-                                    </Form.Item>
+					setErrorMessageLogin({
+						type: "success",
+						message: "Successfully updated",
+					});
 
-                                    <Button
-                                        type="primary"
-                                        htmlType="submit"
-                                        // loading={isLoadingButtonLogin}
-                                        className="btn-login-outline"
-                                        style={{
-                                            width: "100%",
-                                            fontSize: "20px",
-                                            height: "45px",
-                                        }}
-                                    >
-                                        SUBMIT
-                                    </Button>
-                                </Form>
+					setTimeout(() => {
+						window.location.reload();
+					}, 1000);
+				} else {
+					setErrorMessageLogin({
+						type: "error",
+						message: "This email already verified!",
+					});
+				}
+				setIsLoadingChangePass(false);
+			});
+	};
 
-                                <br />
-                                <br />
-                                <span>
-                                    © {moment().format("YYYY")} CE.LIYA. All
-                                    Rights Reserved.
-                                </span>
-                            </Col>
-                        </Row>
-                    </Card>
-                </Col>
-            </Row>
-        </Layout.Content>
-    );
+	return (
+		<Layout className="public-layout login-layout">
+			<Layout.Content>
+				<Row>
+					<Col span={24}>
+						<Image
+							className="zoom-in-out-box"
+							onClick={() => history.push("/")}
+							src={fullwidthlogo}
+							preview={false}
+						/>
+
+						<div className="register-sub-title">
+							Educating Cancer CareGivers for their wellbeing & improved patient
+							outcomes
+						</div>
+
+						<Card>
+							<Form
+								layout="vertical"
+								name="new-password-form"
+								className="new-password-form"
+								onFinish={onFinishLogin}
+								form={form}
+								autoComplete="off"
+							>
+								<Typography.Title
+									level={3}
+									className="text-center text-create-user-account"
+								>
+									Create a New Password
+									<br />
+									<small>
+										Your password must be at least 8 characters long and contain
+										at least one number and one character.
+									</small>
+								</Typography.Title>
+								<Form.Item
+									name="new_password"
+									rules={[
+										{
+											required: true,
+											message: "This field field is required.",
+										},
+										{
+											pattern:
+												/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,64}$/,
+											message: "Invalid Password",
+										},
+									]}
+									hasFeedback
+									className="m-b-sm"
+								>
+									<FloatInputPasswordStrength
+										label="Password"
+										placeholder="Password"
+									/>
+								</Form.Item>
+								<Form.Item
+									name="new_password_confirm"
+									rules={[
+										{
+											required: true,
+											message: "This field field is required.",
+										},
+										({ getFieldValue }) => ({
+											validator(_, value) {
+												if (!value || getFieldValue("new_password") === value) {
+													return Promise.resolve();
+												}
+												return Promise.reject(
+													new Error(
+														"The two passwords that you entered do not match!"
+													)
+												);
+											},
+										}),
+									]}
+									hasFeedback
+								>
+									<FloatInputPasswordStrength
+										label="Confirm Password"
+										placeholder="Confirm Password"
+									/>
+								</Form.Item>
+
+								<Button
+									type="primary"
+									htmlType="submit"
+									loading={isLoadingChangePass}
+									className="btn-primary-default m-t-sm"
+									block
+									size="large"
+								>
+									Submit
+								</Button>
+
+								{errorMessageLogin.message && (
+									<Alert
+										className="m-t-sm"
+										type={errorMessageLogin.type}
+										message={errorMessageLogin.message}
+									/>
+								)}
+							</Form>
+						</Card>
+
+						<footer>
+							© Copyright {moment().format("YYYY")} {description}. All Rights
+							Reserved.
+						</footer>
+					</Col>
+				</Row>
+			</Layout.Content>
+		</Layout>
+	);
 }

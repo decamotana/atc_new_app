@@ -1,0 +1,89 @@
+@import "../../variables/variables.scss";
+
+.private-layout {
+	position: relative;
+	overflow: hidden;
+	min-height: 100vh;
+	background: $layoutBackground;
+
+	.ant-layout.ant-layout-has-sider:not(.messagesContainer) > .ant-layout,
+	.ant-layout.ant-layout-has-sider:not(.messagesContainer)
+		> .ant-layout-content {
+		width: 100%;
+	}
+
+	.ant-input-padding-inherit .ant-input {
+		padding: 6.5px 11px;
+	}
+}
+.private-layout > .ant-layout {
+	background-color: #ffffff;
+	max-width: 100%;
+	margin-left: 240px;
+}
+.private-layout > .ant-layout.ant-layout-has-collapse {
+	margin-left: 55px;
+	max-width: 100%;
+}
+.private-layout > .ant-layout > .ant-layout-content > .ant-card {
+	background-color: transparent;
+	height: 100%;
+}
+.private-layout
+	> .ant-layout
+	> .ant-layout-content
+	> .ant-card
+	> .ant-card-body {
+	padding: 20px;
+	background-color: transparent;
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* Media Query for Tablets, Ipads and below  */
+@media (max-width: 768px) {
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+	.private-layout .ant-layout,
+	.private-layout > .ant-layout.ant-layout-has-collapse {
+		margin-left: 0px;
+		max-width: 100%;
+	}
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+	.private-layout .ant-layout,
+	.private-layout > .ant-layout.ant-layout-has-collapse {
+		margin-left: 0px;
+		max-width: 100%;
+	}
+	.private-layout .ant-breadcrumb {
+		padding-left: 10px;
+	}
+	.private-layout
+		> .ant-layout
+		> .ant-layout-content
+		> .ant-card
+		> .ant-card-body {
+		padding: 10px;
+	}
+}
+
+@media (max-width: 375px) {
+}
+
+@media (max-width: 320px) {
+}

@@ -1,0 +1,32 @@
+.quill {
+  height: 150px;
+  margin-bottom: 41px;
+}
+
+.quill .ql-editor {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.ticket-quill {
+  margin-bottom: 47px;
+}
+
+@media screen and (min-device-width: 377px) and (max-device-width: 1199px) and (-webkit-min-device-pixel-ratio: 1) {
+  .ticket-quill {
+    margin-bottom: 70px;
+  }
+}
+
+@media screen and (min-device-width: 376px) and (max-device-width: 376px) and (-webkit-min-device-pixel-ratio: 1) {
+  .ticket-quill {
+    margin-bottom: 95px;
+  }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 375px) and (-webkit-min-device-pixel-ratio: 1) {
+  .ticket-quill {
+    margin-bottom: 119px;
+  }
+}
+/*# sourceMappingURL=quill.css.map */

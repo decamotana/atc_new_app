@@ -1,0 +1,170 @@
+@import "../../variables/variables";
+.ant-tabs {
+	.ant-tabs-nav,
+	.ant-tabs-tab {
+		background-color: $color1 !important;
+	}
+}
+.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-tab {
+	border-radius: 0px;
+}
+.ant-tabs-card > .ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-card > div > .ant-tabs-nav .ant-tabs-tab {
+	border: none;
+	border-left: 1px solid #f0f0f0;
+}
+.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab,
+.ant-tabs-card.ant-tabs-bottom > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab,
+.ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab,
+.ant-tabs-card.ant-tabs-bottom
+	> div
+	> .ant-tabs-nav
+	.ant-tabs-tab
+	+ .ant-tabs-tab {
+	margin-left: 0px;
+}
+.ant-tabs-top > .ant-tabs-nav::before,
+.ant-tabs-bottom > .ant-tabs-nav::before,
+.ant-tabs-top > div > .ant-tabs-nav::before,
+.ant-tabs-bottom > div > .ant-tabs-nav::before {
+	border-bottom: none;
+}
+.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab-active,
+.ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-tab-active,
+.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab:hover {
+	background-color: $color1 !important;
+}
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn,
+.ant-tabs-tab .ant-tabs-tab-btn:hover {
+	color: #fff !important;
+}
+.ant-tabs-tab .ant-tabs-tab-btn .ant-typography,
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn .ant-typography {
+	color: #fff !important;
+}
+.ant-tabs-tab .ant-tabs-tab-btn:hover .ant-typography {
+	color: #fff !important;
+}
+.ant-tabs-top > .ant-tabs-nav,
+.ant-tabs-bottom > .ant-tabs-nav,
+.ant-tabs-top > div > .ant-tabs-nav,
+.ant-tabs-bottom > div > .ant-tabs-nav {
+	margin: 0px;
+}
+.ant-tabs-content-holder {
+	padding: 10px 0px;
+	// border: 1px solid $companycolor2 !important;
+}
+
+.ant-tabs.ant-tabs-white .ant-tabs-nav,
+.ant-tabs.ant-tabs-white .ant-tabs-tab {
+	background-color: transparent !important;
+}
+.ant-tabs.ant-tabs-white .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn,
+.ant-tabs.ant-tabs-white .ant-tabs-tab .ant-tabs-tab-btn:hover,
+.ant-tabs.ant-tabs-white .ant-tabs-tab:hover {
+	color: $color1 !important;
+}
+.ant-tabs.ant-tabs-white .ant-tabs-ink-bar {
+	background: $color1;
+}
+.ant-tabs.ant-tabs-white .ant-tabs-tab-btn div {
+	display: flex;
+	align-items: center;
+	svg {
+		font-size: 18px;
+		margin-right: 5px;
+	}
+	span {
+		margin-top: 3px;
+	}
+}
+.ant-tabs.ant-tabs-white .ant-tabs-tab:nth-child(2) .ant-tabs-tab-btn div {
+	svg {
+		font-size: 24px;
+		margin-right: 5px;
+	}
+}
+.ant-tabs-tab-btn {
+	color: #ffffff;
+}
+.ant-tabs .ant-tabs-tab {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.ant-tabs .ant-tabs-tab.ant-tabs-tab-active,
+.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab-active,
+.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab:hover {
+	background-color: $color6 !important;
+}
+.ant-tabs .ant-tabs-ink-bar {
+	background: transparent;
+}
+.ant-tabs-tab + .ant-tabs-tab {
+	margin-left: 0px;
+}
+
+.ant-tabs .ant-tabs-nav,
+.ant-tabs .ant-tabs-tab {
+	background-color: transparent !important;
+}
+.ant-tabs-nav .ant-tabs-nav-list {
+	gap: 4px;
+}
+
+.ant-tabs-nav .ant-tabs-nav-list .ant-tabs-tab.ant-tabs-tab-active {
+	background-color: $color6 !important;
+}
+.ant-tabs-nav .ant-tabs-nav-list .ant-tabs-tab {
+	background-color: $color19 !important;
+	.ant-tabs-tab-btn {
+		color: $color15;
+		font-weight: 500;
+	}
+}
+.ant-tabs-nav .ant-tabs-nav-list .ant-tabs-tab:hover {
+	background-color: $color6 !important;
+	.ant-tabs-tab-btn {
+		color: #fff;
+		font-weight: 500;
+	}
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* Media Query for Tablets, Ipads and below  */
+@media (max-width: 768px) {
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+}
+
+@media (max-width: 375px) {
+	.ant-tabs-nav .ant-tabs-nav-list .ant-tabs-tab .ant-tabs-tab-btn {
+		font-size: 14px;
+	}
+	.ant-tabs > .ant-tabs-nav .ant-tabs-nav-operations,
+	.ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-operations {
+		display: none;
+	}
+}
+
+@media (max-width: 320px) {
+}

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AACC,mBADkB,CAClB,YAAY,CAAC,wBAAwB,CAAC,UAAU,CAAC;EAChD,YAAY,EAAE,sBAAsB;CACpC",
+    "sources": [
+        "coupon.scss",
+        "../../variables/variables.scss"
+    ],
+    "names": [],
+    "file": "coupon.css"
+}

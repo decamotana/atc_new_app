@@ -1,0 +1,27 @@
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #027273 !important;
+  border: 2px solid #027273;
+}
+
+.ant-checkbox-wrapper .ant-checkbox-inner {
+  border: 2px solid #525252;
+}
+
+.ant-checkbox-red.ant-checkbox-wrapper .ant-checkbox-inner {
+  border: 2px solid #525252;
+}
+
+.ant-checkbox-wrapper.ant-checkbox-red:hover .ant-checkbox-inner,
+.ant-checkbox-wrapper.ant-checkbox-red:hover
+.ant-checkbox-checked
+.ant-checkbox-inner {
+  border: 2px solid #e4151f;
+}
+
+.ant-checkbox-wrapper.ant-checkbox-red
+.ant-checkbox-checked
+.ant-checkbox-inner {
+  background-color: #e4151f !important;
+  border: 2px solid #e4151f;
+}
+/*# sourceMappingURL=checkbox.css.map */

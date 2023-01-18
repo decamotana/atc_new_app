@@ -1,0 +1,36 @@
+.maintenance-layout .ant-card .text-site-maintenance {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.maintenance-layout .ant-card .warning-logo {
+  width: 200px;
+}
+
+.divMaintenance {
+  height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.divMaintenanceChild {
+  margin: auto auto;
+}
+
+.divMaintenance .anticon svg {
+  font-size: 250px;
+}
+
+.divMaintenanceChild .ant-result {
+  max-width: 700px;
+}
+
+/* Media Query for Large screens */
+/* Media Query for Laptops and Desktops */
+/* Media Query for Tablets Ipads portrait mode */
+/* Media Query for Tablets, Ipads and below  */
+/* Media Query for low resolution  Tablets, Ipads */
+/* Media Query for Mobile Devices */
+/*# sourceMappingURL=maintenance.css.map */

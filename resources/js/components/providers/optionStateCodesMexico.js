@@ -1,0 +1,38 @@
+export default function optionStateCodesMexico() {
+  const optionStateCodesMexico = [
+    { value: "AG", label: "Aguascalientes (AG)" },
+    { value: "BC", label: "Baja California (BC)" },
+    { value: "BS", label: "Baja California Sur (BS)" },
+    { value: "CH", label: "Coahuila (CH)" },
+    { value: "CI", label: "Chihuahua (CI)" },
+    { value: "CL", label: "Colima (CL)" },
+    { value: "CP", label: "Campeche (CP)" },
+    { value: "CS", label: "Chiapas (CS)" },
+    { value: "CDMX", label: "Mexico City (CDMX)" },
+    { value: "DG", label: "Durango (DG)" },
+    { value: "GE", label: "Guerrero (GE)" },
+    { value: "GJ", label: "Guanajuato (GJ)" },
+    { value: "HD", label: "Hidalgo (HD)" },
+    { value: "JA", label: "Jalisco (JA)" },
+    { value: "MC", label: "Michoacan (MC)" },
+    { value: "MR", label: "Morelos (MR)" },
+    { value: "MX", label: "Mexico (MX)" },
+    { value: "NA", label: "Nayarit (NA)" },
+    { value: "NL", label: "Nuevo Leon (NL)" },
+    { value: "OA", label: "Oaxaca (OA)" },
+    { value: "PU", label: "Puebla (PU)" },
+    { value: "QE", label: "Queretaro (QE)" },
+    { value: "QI", label: "Quintana Roo (QI)" },
+    { value: "SI", label: "Sinaloa (SI)" },
+    { value: "SL", label: "San Luis Potosi (SL)" },
+    { value: "SO", label: "Sonora (SO)" },
+    { value: "TA", label: "Tamaulipas (TA)" },
+    { value: "TB", label: "Tabasco (TB)" },
+    { value: "TL", label: "Tlaxcala (TL)" },
+    { value: "VC", label: "Veracruz (VC)" },
+    { value: "YU", label: "Yucatan (YU)" },
+    { value: "ZA", label: "Zacatecas (ZA)" },
+  ];
+
+  return optionStateCodesMexico;
+}

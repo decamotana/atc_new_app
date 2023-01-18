@@ -1,0 +1,36 @@
+.ant-modal-mask {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.ant-modal .ant-modal-header .ant-modal-title {
+  color: #000000;
+}
+
+.ant-modal .ant-modal-footer {
+  padding: 15px 16px;
+}
+
+.ant-modal.modal-primary-default .ant-modal-content .ant-modal-close {
+  color: #ffffff;
+}
+
+.ant-modal.modal-primary-default .ant-modal-content .ant-modal-header {
+  background: #027273;
+}
+
+.ant-modal.modal-primary-default .ant-modal-content .ant-modal-header .ant-modal-title {
+  color: #ffffff;
+}
+
+.ant-modal.modal-primary-default .ant-modal-footer {
+  text-align: left;
+  padding: 15px 16px;
+}
+
+/* Media Query for Mobile Devices */
+/* Media Query for low resolution  Tablets, Ipads */
+/* Media Query for Tablets, Ipads and below  */
+/* Media Query for Tablets Ipads portrait mode */
+/* Media Query for Laptops and Desktops */
+/* Media Query for Large screens */
+/*# sourceMappingURL=modal.css.map */

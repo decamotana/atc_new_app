@@ -1,0 +1,300 @@
+.card-primary {
+  background-color: #0866c6;
+  color: #ffffff;
+}
+
+.card-primary-head > .ant-card-head {
+  background-color: #0866c6;
+  color: #ffffff;
+}
+
+.card-primary-border {
+  border-color: #0866c6;
+  border-radius: 4px;
+}
+
+.card-primary-no-border > .ant-card-head {
+  border: none;
+}
+
+.card-secondary {
+  background-color: #868e96;
+  color: #ffffff;
+}
+
+.card-secondary-border {
+  border-color: #868e96;
+  border-radius: 4px;
+}
+
+.card-secondary-head > .ant-card-head {
+  background-color: #868e96;
+  color: #ffffff;
+}
+
+.card-secondary-no-border > .ant-card-head {
+  border: none;
+}
+
+.card-success {
+  background-color: #23bf08;
+  color: #ffffff;
+}
+
+.card-success-border {
+  border-color: #23bf08;
+  border-radius: 4px;
+}
+
+.card-success-head > .ant-card-head {
+  background-color: #23bf08;
+  color: #ffffff;
+}
+
+.card-success-no-border > .ant-card-head {
+  border: none;
+}
+
+.card-warning {
+  background-color: #f49917;
+  color: #ffffff;
+}
+
+.card-warning-border {
+  border-color: #f49917;
+  border-radius: 4px;
+}
+
+.card-warning-head > .ant-card-head {
+  background-color: #f49917;
+  color: #ffffff;
+}
+
+.card-warning-no-border > .ant-card-head {
+  border: none;
+}
+
+.card-danger {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+.card-danger-border {
+  border-color: #dc3545;
+  border-radius: 4px;
+}
+
+.card-danger-head > .ant-card-head {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+.card-danger-no-border > .ant-card-head {
+  border: none;
+}
+
+.card-info {
+  background-color: #5b93d3;
+  color: #ffffff;
+}
+
+.card-info-border {
+  border-color: #5b93d3;
+  border-radius: 4px;
+}
+
+.card-info-head > .ant-card-head {
+  background-color: #5b93d3;
+  color: #ffffff;
+}
+
+.card-info-no-border > .ant-card-head {
+  border: none;
+}
+
+.card-indigo {
+  background-color: #6610f2;
+  color: #ffffff;
+}
+
+.card-indigo-border {
+  border-color: #6610f2;
+  border-radius: 4px;
+}
+
+.card-indigo-head > .ant-card-head {
+  background-color: #6610f2;
+  color: #ffffff;
+}
+
+.card-indigo-no-border > .ant-card-head {
+  border: none;
+}
+
+.card-purple {
+  background-color: #6f42c1;
+  color: #ffffff;
+}
+
+.card-purple-border {
+  border-color: #6f42c1;
+  border-radius: 4px;
+}
+
+.card-purple-head > .ant-card-head {
+  background-color: #6f42c1;
+  color: #ffffff;
+}
+
+.card-purple-no-border > .ant-card-head {
+  border: none;
+}
+
+.card-pink {
+  background-color: #e83e8c;
+  color: #ffffff;
+}
+
+.card-pink-border {
+  border-color: #e83e8c;
+  border-radius: 4px;
+}
+
+.card-pink-head > .ant-card-head {
+  background-color: #e83e8c;
+  color: #ffffff;
+}
+
+.card-pink-no-border > .ant-card-head {
+  border: none;
+}
+
+.card-teal {
+  background-color: #1caf9a;
+  color: #ffffff;
+}
+
+.card-teal-border {
+  border-color: #1caf9a;
+  border-radius: 4px;
+}
+
+.card-teal-head > .ant-card-head {
+  background-color: #1caf9a;
+  color: #ffffff;
+}
+
+.card-teal-no-border > .ant-card-head {
+  border: none;
+}
+
+.card-dark {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+.card-dark-border {
+  border-color: #343a40;
+  border-radius: 4px;
+}
+
+.card-dark-no-border > .ant-card-head {
+  border: none;
+}
+
+.card-dark-head > .ant-card-head {
+  color: #ffffff;
+}
+
+.card-dark-head > .ant-card-head .ant-card-extra {
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.card-dark-head > .ant-card-head .ant-card-head-title {
+  padding: 10px 0;
+}
+
+.card-transparent-head > .ant-card-head {
+  background-color: transparent;
+}
+
+.card-transparent-head > .ant-card-head .ant-card-extra {
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+.card-transparent-head > .ant-card-head .ant-card-head-title {
+  padding: 10px 0;
+}
+
+.card-transparent-head.border-bottom-none > .ant-card-head {
+  border-bottom: none;
+}
+
+.card-transparent-head.p-none > .ant-card-head {
+  padding: 0px;
+}
+
+.card-orange {
+  background-color: #f27510;
+  color: #ffffff;
+}
+
+.card-orange-border {
+  border-color: #f27510;
+  border-radius: 4px;
+}
+
+.card-orange-no-border > .ant-card-head {
+  border: none;
+}
+
+.card-orange-head > .ant-card-head {
+  background-color: #f27510;
+  color: #ffffff !important;
+}
+
+.card-white {
+  background-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+.card-white-border {
+  border-color: #ffffff !important;
+  border-radius: 4px;
+}
+
+.card-white-no-border > .ant-card-head {
+  border: none !important;
+}
+
+.card-white-head > .ant-card-head {
+  background-color: #ffffff !important;
+  color: #343a40 !important;
+}
+
+.card-main {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.card-main > .ant-card-head {
+  background-color: #027273;
+  color: #ffffff;
+}
+
+.card-main > .ant-card-head .ant-card-head-title {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.card-main-border {
+  border-color: #949599;
+  border-radius: 4px;
+}
+
+.card-main-no-border > .ant-card-head {
+  border: none;
+}
+/*# sourceMappingURL=card.css.map */

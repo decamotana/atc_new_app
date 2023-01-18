@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.text-align-center {
+  text-align: center;
+}
+
+.tx-light {
+  font-weight: 300 !important;
+}
+
+.tx-normal {
+  font-weight: 400 !important;
+}
+
+.tx-medium {
+  font-weight: 500 !important;
+}
+
+.tx-bold {
+  font-weight: 700 !important;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.c-secondary {
+  color: #868e96;
+}
+
+.blockquote {
+  margin-bottom: 1rem;
+  line-height: 0.5;
+}
+
+.fs-15 {
+  font-size: 13px !important;
+}
+
+.ta-center {
+  text-align: center !important;
+}
+
+.c-21572c strong {
+  color: #21572c !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+/*# sourceMappingURL=typography.css.map */

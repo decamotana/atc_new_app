@@ -1,0 +1,19 @@
+.date-picker-dropdown-in-modal {
+  z-index: 3;
+}
+
+.ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
+  border-color: #027273;
+}
+
+.ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner {
+  background-color: #027273;
+}
+
+.ant-picker-today-btn,
+.ant-picker-today-btn:hover {
+  color: #027273;
+}
+/*# sourceMappingURL=datepicker.css.map */

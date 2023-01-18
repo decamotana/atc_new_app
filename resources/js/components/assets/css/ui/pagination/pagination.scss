@@ -1,0 +1,36 @@
+@import "../../variables/variables.scss";
+.ant-pagination {
+	.ant-pagination-prev,
+	.ant-pagination-jump-prev,
+	.ant-pagination-jump-next,
+	.ant-pagination-item {
+		margin-right: 5px;
+	}
+	.ant-btn:hover,
+	.ant-btn:focus,
+	.ant-pagination-item:hover,
+	.ant-pagination-item-active {
+		color: $white;
+		border-color: $color1;
+		background-color: $color1;
+	}
+
+	.ant-pagination-jump-prev
+		.ant-pagination-item-container
+		.ant-pagination-item-link-icon,
+	.ant-pagination-jump-next
+		.ant-pagination-item-container
+		.ant-pagination-item-link-icon {
+		color: $color1;
+	}
+
+	.ant-pagination-item-active a,
+	.ant-pagination-item-active:hover a,
+	.ant-pagination-item:hover a {
+		color: $white;
+	}
+
+	.ant-pagination-item a {
+		display: inline;
+	}
+}

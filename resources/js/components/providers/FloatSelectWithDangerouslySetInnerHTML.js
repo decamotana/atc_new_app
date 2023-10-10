@@ -36,7 +36,7 @@ const FloatSelectWithDangerouslySetInnerHTML = (props) => {
 		>
 			<Select
 				style={{ width: "100%" }}
-				// defaultValue={value}
+				defaultValue={value}
 				value={value}
 				// onChange={props.onChange}
 				onChange={(e, option) => props.onChange(e, option)}
@@ -50,7 +50,7 @@ const FloatSelectWithDangerouslySetInnerHTML = (props) => {
 					// console.log("option", option);
 					return option.label.toLowerCase().indexOf(input.toLowerCase()) >= 0;
 				}}
-				popupClassName="registrationSelect"
+				dropdownClassName="registrationSelect"
 			>
 				{options.map((item, key) => {
 					// console.log("options", item.label.substring(0, 1));

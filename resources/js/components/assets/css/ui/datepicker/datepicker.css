@@ -3,17 +3,16 @@
 }
 
 .ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
-  border-color: #027273;
+  border-color: #4169e1;
 }
 
 .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner,
 .ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
 .ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner {
-  background-color: #027273;
+  background-color: #4169e1;
 }
 
 .ant-picker-today-btn,
 .ant-picker-today-btn:hover {
-  color: #027273;
-}
-/*# sourceMappingURL=datepicker.css.map */
+  color: #4169e1;
+}/*# sourceMappingURL=datepicker.css.map */

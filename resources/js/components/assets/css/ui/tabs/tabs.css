@@ -1,6 +1,6 @@
 .ant-tabs .ant-tabs-nav,
 .ant-tabs .ant-tabs-tab {
-  background-color: #027273 !important;
+  background-color: #4169e1 !important;
 }
 
 .ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab,
@@ -17,11 +17,7 @@
 .ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab,
 .ant-tabs-card.ant-tabs-bottom > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab,
 .ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab,
-.ant-tabs-card.ant-tabs-bottom
-> div
-> .ant-tabs-nav
-.ant-tabs-tab
-+ .ant-tabs-tab {
+.ant-tabs-card.ant-tabs-bottom > div > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab {
   margin-left: 0px;
 }
 
@@ -35,7 +31,7 @@
 .ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab-active,
 .ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-tab-active,
 .ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab:hover {
-  background-color: #027273 !important;
+  background-color: #4169e1 !important;
 }
 
 .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn,
@@ -71,27 +67,21 @@
 .ant-tabs.ant-tabs-white .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn,
 .ant-tabs.ant-tabs-white .ant-tabs-tab .ant-tabs-tab-btn:hover,
 .ant-tabs.ant-tabs-white .ant-tabs-tab:hover {
-  color: #027273 !important;
+  color: #4169e1 !important;
 }
 
 .ant-tabs.ant-tabs-white .ant-tabs-ink-bar {
-  background: #027273;
+  background: #4169e1;
 }
 
 .ant-tabs.ant-tabs-white .ant-tabs-tab-btn div {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .ant-tabs.ant-tabs-white .ant-tabs-tab-btn div svg {
   font-size: 18px;
   margin-right: 5px;
 }
-
 .ant-tabs.ant-tabs-white .ant-tabs-tab-btn div span {
   margin-top: 3px;
 }
@@ -110,10 +100,8 @@
   padding-right: 10px;
 }
 
-.ant-tabs .ant-tabs-tab.ant-tabs-tab-active,
-.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab-active,
-.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab:hover {
-  background-color: #e4151f !important;
+.ant-tabs .ant-tabs-tab.ant-tabs-tab-active {
+  background-color: #4169e1 !important;
 }
 
 .ant-tabs .ant-tabs-ink-bar {
@@ -122,52 +110,4 @@
 
 .ant-tabs-tab + .ant-tabs-tab {
   margin-left: 0px;
-}
-
-.ant-tabs .ant-tabs-nav,
-.ant-tabs .ant-tabs-tab {
-  background-color: transparent !important;
-}
-
-.ant-tabs-nav .ant-tabs-nav-list {
-  gap: 4px;
-}
-
-.ant-tabs-nav .ant-tabs-nav-list .ant-tabs-tab.ant-tabs-tab-active {
-  background-color: #e4151f !important;
-}
-
-.ant-tabs-nav .ant-tabs-nav-list .ant-tabs-tab {
-  background-color: #e5e3e3 !important;
-}
-
-.ant-tabs-nav .ant-tabs-nav-list .ant-tabs-tab .ant-tabs-tab-btn {
-  color: #606060;
-  font-weight: 500;
-}
-
-.ant-tabs-nav .ant-tabs-nav-list .ant-tabs-tab:hover {
-  background-color: #e4151f !important;
-}
-
-.ant-tabs-nav .ant-tabs-nav-list .ant-tabs-tab:hover .ant-tabs-tab-btn {
-  color: #fff;
-  font-weight: 500;
-}
-
-/* Media Query for Large screens */
-/* Media Query for Laptops and Desktops */
-/* Media Query for Tablets Ipads portrait mode */
-/* Media Query for Tablets, Ipads and below  */
-/* Media Query for low resolution  Tablets, Ipads */
-/* Media Query for Mobile Devices */
-@media (max-width: 375px) {
-  .ant-tabs-nav .ant-tabs-nav-list .ant-tabs-tab .ant-tabs-tab-btn {
-    font-size: 14px;
-  }
-  .ant-tabs > .ant-tabs-nav .ant-tabs-nav-operations,
-  .ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-operations {
-    display: none;
-  }
-}
-/*# sourceMappingURL=tabs.css.map */
+}/*# sourceMappingURL=tabs.css.map */

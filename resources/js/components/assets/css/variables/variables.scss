@@ -1,15 +1,54 @@
+@mixin atExtraSmall {
+  @media (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin atSmall {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin atMedium {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin atLarge {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin at1380 {
+  @media (min-width: 1028px) and (max-width: 1380px) {
+    @content;
+  }
+}
+
+@mixin atExtraLarge {
+  @media (min-width: 1100px) {
+    @content;
+  }
+}
 $opacity: 0.6;
 
-$primary: #0866c6;
+$primary: #325db8;
 $primaryActive: #0753a1;
+
+$pending: #f87400;
+$upcoming : #8612d0;
+
 
 $secondary: #868e96;
 $secondaryActive: #727b84;
 
-$success: #23bf08;
+$success: #239904;
 $successActive: #1c9a06;
 
-$warning: #f49917;
+$warning: #a90505;
 $warningActive: #da850a;
 
 $danger: #dc3545;
@@ -37,53 +76,54 @@ $orange: #f27510;
 $orangeActive: #d16a17;
 
 // layout
-$layoutBackground: #027273;
+$layoutBackground: #3f5fac;
 $textColor: #ffffff;
 $iconColor: #009999;
 $textColorActive: #ffffff;
 $iconColorActive: #ffffff;
+$primaryBackground: #fbfbfb;
 
 // layout side menu
-$sideBarBackground: #027273;
-$sideBarBackgroundSelectedMenu: #358e8f;
+$sideBarBackground: #f2f2f2;
+$sideBarBackgroundSelectedMenu: #789df9;
 $sideBarBorderColor: #f0e3ca;
 $sideBarTextColor: #ffffff;
-$sideBarIconColor: #13f4f1;
-$sideBarTextColorActive: #ffffff;
-$sideBarIconColorActive: #13f4f1;
+$sideBarIconColor: #ffffff;
+$sideBarTextColorActive: #3f5fac;
+$sideBarIconColorActive: #ffffff;
 
 // layout header
-$headerBackground: #027273;
-$headerBackgroundSelectedMenu: #358e8f;
+$headerBackground: #f2f2f2;
+$headerBackgroundSelectedMenu: #365293;
 $headerTextColor: #bdbec0;
-$headerLeftIconColor: #13f4f1;
+$headerLeftIconColor: #ffffff;
 $headerRightIconColor: #ffffff;
 $headerTextColorActive: #13f4f1;
 $headerIconColorActive: #13f4f1;
 $headerProfileColor: #13f4f1;
 
 // layout header dropdown
-$headerDropdownBackgroundSelectedMenu: #358e8f;
+$headerDropdownBackgroundSelectedMenu: #3f5fac;
 $headerDropdownTextColor: #58585a;
-$headerDropdownIconColor: #027273;
-$headerDropdownTextColorActive: #027273;
+$headerDropdownIconColor: #3f5fac;
+$headerDropdownTextColorActive: #3f5fac;
 $headerDropdownIconColorActive: #58585a;
-$headerDropdownTitleColor: #027273;
-$headerDropdownImgBorderColor: #13f4f1;
+$headerDropdownTitleColor: #3f5fac;
+$headerDropdownImgBorderColor: #3f5fac;
 $headerDropdownBorderColor: #949599;
 
 // page header
 $pageHeaderBackground: transparent;
 $pageHeaderBorderColor: #58585a;
-$pageHeaderColorTitle: #358e8f;
+$pageHeaderColorTitle: #3f5fac;
 $pageHeaderColorSubTitle: #58585a;
-$pageHeaderIconColor: #358e8f;
-$pageHeaderIconBorderColor: #358e8f;
+$pageHeaderIconColor: #252525;
+$pageHeaderIconBorderColor: #252525;
 
 // page header public
 $pageHeaderPublicBackground: transparent;
 $pageHeaderPublicBorderColor: #58585a;
-$pageHeaderPublicColorTitle: #358e8f;
+$pageHeaderPublicColorTitle: #4169e1;
 $pageHeaderPublicColorSubTitle: #58585a;
 $pageHeaderPublicIconColor: #58585a;
 $pageHeaderPublicIconBorderColor: #58585a;
@@ -99,22 +139,22 @@ $collapseIconColorActive: #ffffff;
 
 // breadcrumColor
 $breadcrumColor: transparent;
-$breadcrumTextColor: #027273;
-$breadcrumIconColor: #027273;
+$breadcrumTextColor: #252525;
+$breadcrumIconColor: #252525;
 $breadcrumLastTextColor: #e4151f;
 
 // Floating
 $FloatAsLabel: #918f8ffa;
 $FloatAsPlaceholder: #918f8ffa;
 
-$font: montserrat regular, Sans-Serif;
+$font: "montserrat", Sans-serif;
 
 $white: #ffffff;
 $black: #000000;
 
-$main: #027273;
+$main: #79390f;
 $mainText: #ffffff;
-$mainActive: #e4151f;
+$mainActive: #3f5fac;
 $mainTextActive: #ffffff;
 $mainInvert: #e4151f;
 $mainInvertText: #ffffff;
@@ -122,7 +162,9 @@ $mainInvertActive: #ffffff;
 $mainInvertBorderActive: #e4151f;
 $mainInvertTextActive: #e4151f;
 
-$color1: #027273;
+$warningColor: #ffcc00;
+
+$color1: #4169e1;
 $color2: #13f4f1;
 $color3: #028f8d;
 $color4: #358e8f;
@@ -137,17 +179,14 @@ $color12: #ddfeff;
 $color13: #0e5728;
 $color14: #6c6c6c;
 $color15: #606060;
-$color16: #f1f3f4;
-$color17: #f58d13;
-$color18: #f2f2f2;
-$color19: #e5e3e3;
-$color20: #a7a9ac;
 
-$tooltip-success: #d9f1d1;
-$tooltip-primary: #e0e9f5;
-$tooltip-warning: #faecd4;
-$tooltip-danger: #f3d8da;
-$tooltip-success-text: #2e611a;
-$tooltip-primary-text: #354b6b;
-$tooltip-warning-text: #78521e;
-$tooltip-danger-text: #692326;
+$color16: #3f5fac;
+$color17: #365293;
+$sideMenuIcon: #6c97ff;
+
+$new-success: #058d08;
+
+$mainIcon: #783b19;
+$newTableHeaderColor: #fbfbfb;
+$newTitleColor: #1b1b1b;
+$newTextColor: #313131;

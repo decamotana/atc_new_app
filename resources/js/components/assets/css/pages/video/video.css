@@ -1,0 +1,16 @@
+@media (min-width: 576px) {
+  .player {
+    height: 0px;
+  }
+}
+
+.page-video-iframe iframe {
+  height: 362px !important;
+  margin-top: 0px !important;
+}
+
+@media (min-width: 768px) {
+  .page-video-iframe iframe {
+    height: 382px !important;
+  }
+}/*# sourceMappingURL=video.css.map */

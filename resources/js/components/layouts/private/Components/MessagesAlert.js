@@ -1,10 +1,11 @@
 import React from "react";
 import { Avatar, Menu, Typography } from "antd";
-// import { GoPrimitiveDot } from "react-icons/go";
-import { Link } from "react-router-dom";
-import { apiUrl, userData } from "../../../providers/companyInfo";
+import { GoPrimitiveDot } from "react-icons/go";
+import { Link, useHistory } from "react-router-dom";
+import { userData } from "../../../providers/companyInfo";
 
 const MessagesAlert = ({ messages, refetch }) => {
+    let history = useHistory();
     // const { mutate: mutateRead, isLoading: isLoadingRead } = POST(
     // 	"api/v1/read",
     // 	"get_message_convo"
@@ -26,22 +27,20 @@ const MessagesAlert = ({ messages, refetch }) => {
             messages.map((item, index) => {
                 let user;
 
-                if (userData().id === item.to_id) {
+                if (userData.id === item.to_id) {
                     user = item.from;
                 }
-                if (userData().id === item.from_id) {
+                if (userData.id === item.from_id) {
                     user = item.to;
                 }
 
-                // console.log("user", user);
-
-                let image = user?.profile_image;
+                let image = user.upload;
                 if (image) {
                     image = image.includes("gravatar")
                         ? image
-                        : `${apiUrl}${image}`;
+                        : `${process.env.MIX_APP_API_URL}storage/${image}`;
                 } else {
-                    image = `${apiUrl}images/default.png`;
+                    image = `${process.env.MIX_APP_API_URL}images/default.png`;
                 }
 
                 items.push({
@@ -50,10 +49,17 @@ const MessagesAlert = ({ messages, refetch }) => {
                         <Avatar src={image} style={{ width: 40, height: 40 }} />
                     ),
                     label: (
-                        <>
+                        <span
+                            onClick={() =>
+                                history.push(
+                                    "/admin/messages?message_id=" +
+                                        item.message_id
+                                )
+                            }
+                        >
                             <Link to="#">
                                 <Typography.Text strong>
-                                    {user?.firstname} {user?.lastname}
+                                    {user.first_name} {user.last_name}
                                 </Typography.Text>
                                 <Typography.Paragraph ellipsis={{ rows: 2 }}>
                                     {item.message}
@@ -62,17 +68,11 @@ const MessagesAlert = ({ messages, refetch }) => {
 
                             {item.unread === 1 ? (
                                 <span className="ant-status-container">
-                                    {/* <GoPrimitiveDot /> */}
+                                    <GoPrimitiveDot />
                                 </span>
                             ) : null}
-                        </>
+                        </span>
                     ),
-                    onClick: () =>
-                        window.location.replace(
-                            window.location.origin +
-                                "/message?message_id=" +
-                                item.message_id
-                        ),
                 });
 
                 return "";
@@ -80,7 +80,7 @@ const MessagesAlert = ({ messages, refetch }) => {
         } else {
             items.push({
                 key: "no-message",
-                className: "li-no-message",
+                className: "text-center",
                 label: <Typography.Text>No Messages</Typography.Text>,
             });
         }

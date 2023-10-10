@@ -1,0 +1,23 @@
+@media (min-width: 576px) {
+  .ant-space-flex-space-between {
+    justify-content: center;
+  }
+}
+
+.scrollable-notification::-webkit-scrollbar {
+  width: 3px;
+}
+
+.modal-send-email-notifiaction .ant-modal-content .ant-modal-body .float-select-multi .ant-select-show-search.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  height: 47px !important;
+  padding-top: 0px;
+  overflow-y: scroll !important;
+}
+.modal-send-email-notifiaction .ant-modal-content .ant-modal-body .float-select-multi .ant-select-show-search.ant-select:not(.ant-select-customize-input) .ant-select-selector::-webkit-scrollbar {
+  width: 5px !important;
+}
+.modal-send-email-notifiaction .ant-modal-content .ant-modal-body .float-select-multi .ant-select-show-search.ant-select:not(.ant-select-customize-input) .ant-select-selector::-webkit-scrollbar-thumb {
+  background-color: #3f5fac;
+  width: 5px !important;
+  border-radius: 5px;
+}/*# sourceMappingURL=notification.css.map */

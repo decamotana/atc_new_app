@@ -1,65 +1,63 @@
 import React from "react";
+import { faEnvelopesBulk } from "@fortawesome/pro-light-svg-icons";
 import {
-    faChartPie,
-    faHome,
-    faUsdCircle,
-    faChartMixed,
-    faBooks,
     faBell,
-    faPaperPlane,
-    faCogs,
-    faBullhorn,
+    faCalendarDays,
+    faChartNetwork,
+    faTableColumns,
+    faUser,
     faUsers,
-    faFileCertificate,
-    faTicket,
-    faTag,
-    faScrewdriverWrench,
-    faCommentDots,
-    faUserTie,
-    faQuestion,
-    // faNewspaper,
-} from "@fortawesome/pro-light-svg-icons";
+    faCalendarTimes,
+    faClockRotateLeft,
+} from "@fortawesome/pro-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { role } from "../../../../providers/companyInfo";
-import { faBook } from "@fortawesome/pro-regular-svg-icons";
 
 const AdminSideMenu = [
     {
         title: "Dashboard",
         path: "/dashboard",
-        icon: <FontAwesomeIcon icon={faHome} />,
+        icon: <FontAwesomeIcon icon={faChartNetwork} />,
     },
-
     {
-        title: "References",
-        path: "/references",
-        icon: <FontAwesomeIcon icon={faBook} />,
-        children: [
-            {
-                title: "Question Category",
-                path: "/references/question-category",
-            },
-            {
-                title: "Advertisement Type",
-                path: "/references/advertisement-type",
-            },
-        ],
+        title: "Clients",
+        path: "/clients",
+        icon: <FontAwesomeIcon icon={faUser} />,
+    },
+    {
+        title: "Consultants",
+        path: "/consultants",
+        icon: <FontAwesomeIcon icon={faUsers} />,
+    },
+    {
+        title: "Calendar",
+        path: "/calendar",
+        icon: <FontAwesomeIcon icon={faCalendarDays} />,
+    },
+    {
+        title: "Email Templates",
+        path: "/emailtemplate",
+        icon: <FontAwesomeIcon icon={faEnvelopesBulk} />,
+    },
+    {
+        title: "Stages",
+        path: "/stages",
+        icon: <FontAwesomeIcon icon={faTableColumns} />,
+    },
+    {
+        title: "Notifications",
+        path: "/notification",
+        icon: <FontAwesomeIcon icon={faBell} />,
+    },
+    {
+        title: "Cancelled Appt.",
+        path: "/cancelled-appointments",
+        icon: <FontAwesomeIcon icon={faCalendarTimes} />,
+    },
+    {
+        title: "History Log",
+        path: "/history/all",
+        icon: <FontAwesomeIcon icon={faClockRotateLeft} />,
     },
 ];
-
-if (role() === "Super Admin") {
-    AdminSideMenu.push({
-        title: "Admin",
-        path: "/admin",
-        icon: <FontAwesomeIcon icon={faUserTie} />,
-        // permission: "Ticketing",
-    });
-    AdminSideMenu.push({
-        title: "Maintenance",
-        path: "/maintenance-configuration",
-        icon: <FontAwesomeIcon icon={faScrewdriverWrench} />,
-        // permission: "Ticketing",
-    });
-}
 
 export default AdminSideMenu;

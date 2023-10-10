@@ -1,6 +1,6 @@
 export default function termsAndCondition() {
   const string =
-    "erms & Conditions\n" +
+    "Terms & Conditions\n" +
     "\n" +
     "Last updated: July 14, 2021\n" +
     "\n" +
@@ -144,7 +144,7 @@ export default function termsAndCondition() {
     "\n" +
     "CHANGES TO TERMS. The Company reserves the right, in its sole discretion, to change the Terms under which the Website is offered. The most current version of the Terms will supersede all previous versions. The Company encourages you to periodically review the Terms to stay informed of our updates.\n" +
     "\n" +
-    "HOW TO CONTACT US. Please contact us at info@celiya.com with any question or comments regarding the Terms.  ";
+    "HOW TO CONTACT US. Please contact us at info@celiya.com with any question or comments regarding the Terms. ";
 
   return string;
 }

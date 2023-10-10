@@ -1,66 +1,68 @@
 .private-layout .ant-layout-footer {
   padding: 15px 20px;
+  background-color: #ffffff;
 }
-
 .private-layout .ant-layout-footer .links {
   text-align: right;
 }
-
 .private-layout .ant-layout-footer .ant-typography {
   color: #6c6c6c !important;
 }
-
 .private-layout .ant-layout-footer a {
   color: #6c6c6c !important;
 }
-
 .private-layout .ant-layout-footer .ant-space-item-split .ant-divider.ant-divider-vertical {
   border-left: 1px solid #58585a;
 }
-
 .private-layout .ant-layout-footer .ant-space.ant-space-vertical > .ant-space-item:last-child {
   margin-top: 10px;
   font-size: 13px;
 }
 
-/* Media Query for Large screens */
-/* Media Query for Laptops and Desktops */
-/* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .ant-layout-footer .ant-row .ant-col {
-    text-align: center !important;
+.atc-footer {
+  font-size: 0.7rem;
+}
+@media (min-width: 576px) {
+  .atc-footer {
+    font-size: 0.8rem;
   }
 }
 
-/* Media Query for Tablets, Ipads and below  */
-@media (max-width: 768px) {
-  .ant-layout-footer .ant-row .ant-col {
-    text-align: center !important;
-  }
+.ant-modal-confirm-btns {
+  display: flex;
+  justify-content: right;
 }
 
-/* Media Query for low resolution  Tablets, Ipads */
+.ant-modal-confirm-btns :nth-child(1) {
+  order: 2;
+}
+
+.ant-modal-confirm-btns :nth-child(2) {
+  order: 1;
+  margin-right: 0.7rem;
+}
+
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
   .private-layout .ant-layout-footer {
     padding: 10px;
   }
 }
-
-@media (max-width: 379px) {
+@media (max-width: 320px) {
+  .atc-footer {
+    font-size: 0.6rem;
+  }
+}
+/* Media Query for low resolution  Tablets, Ipads */
+/* Media Query for Tablets, Ipads  */
+@media (max-width: 768px) {
   .ant-layout-footer .ant-row .ant-col {
     text-align: center !important;
   }
   .ant-layout-footer .ant-row .ant-col .footer-links {
-    margin-top: 20px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .ant-layout-footer .ant-row .ant-col .footer-links .ant-divider.ant-divider-horizontal {
-    border: 2px solid #58585a;
-    margin: 0px;
+    gap: 0px !important;
   }
 }
-/*# sourceMappingURL=footer.css.map */
+/* Media Query for Tablets Ipads portrait mode */
+/* Media Query for Laptops and Desktops */
+/* Media Query for Large screens *//*# sourceMappingURL=footer.css.map */

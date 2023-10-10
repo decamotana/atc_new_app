@@ -1,0 +1,267 @@
+.fc-button-primary {
+  background: #3f5fac !important;
+}
+
+.fc-next-button {
+  margin-left: 0.5px !important;
+}
+
+.fc-button-active,
+.fc-button-primary:hover {
+  background: #783b19 !important;
+}
+
+.modal-appointment {
+  width: 400px !important;
+}
+.modal-appointment .btn-modal {
+  font-size: 16px;
+}
+.modal-appointment .app-modal-name {
+  font-size: 16px;
+}
+.modal-appointment .event-title-container {
+  display: flex !important;
+  align-items: center;
+  font-size: 16px;
+  justify-content: center;
+}
+.modal-appointment .event-title-container .box {
+  height: 8px;
+  width: 8px;
+  padding: 2px;
+  background: #2ead2e;
+}
+
+.modal-consultant-schedule .event-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+.modal-consultant-schedule .event-title-container .box {
+  height: 8px;
+  width: 8px;
+  padding: 2px;
+  background: #2ead2e;
+}
+.modal-consultant-schedule .event-schedule-container {
+  margin-left: 18px;
+  font-size: small;
+}
+
+@media (min-width: 1440px) {
+  .fc-daygrid-event .fc-event-time {
+    font-size: 12px !important;
+  }
+}
+
+.fc-toolbar-chunk:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5px;
+  width: 300px;
+}
+@media (min-width: 480px) {
+  .fc-toolbar-chunk:nth-child(3) {
+    width: 350px;
+  }
+}
+.fc-toolbar-chunk:nth-child(3) .fc-button-primary {
+  margin-left: 0px !important;
+  width: 100%;
+}
+.fc-toolbar-chunk:nth-child(3) .fc-button-group {
+  margin-left: 0px !important;
+}
+
+.fc .fc-daygrid-day-number,
+.fc .fc-col-header-cell-cushion {
+  color: #3f5fac;
+}
+
+.fc-dayGridMonth-button,
+.fc-timeGridDay-button,
+.fc-timeGridWeek-button {
+  text-transform: capitalize !important;
+}
+
+.fc-direction-ltr .fc-button-group > .fc-button:not(:last-child) {
+  margin-right: 2px;
+}
+
+.fc-toolbar .fc-button {
+  min-height: 30px;
+}
+
+.calendar-book .fc-header-toolbar {
+  flex-direction: column;
+  font-size: 0.75rem;
+}
+@media (min-width: 992px) {
+  .calendar-book .fc-header-toolbar {
+    flex-direction: row;
+    font-size: 1rem;
+  }
+}
+.calendar-book .fc-toolbar-chunk:nth-child(1) {
+  order: 3;
+}
+@media (min-width: 992px) {
+  .calendar-book .fc-toolbar-chunk:nth-child(1) {
+    order: 1;
+  }
+}
+.calendar-book .fc-toolbar-chunk:nth-child(2) {
+  order: 1;
+}
+@media (min-width: 992px) {
+  .calendar-book .fc-toolbar-chunk:nth-child(2) {
+    order: 2;
+  }
+}
+.calendar-book .fc-toolbar-chunk:nth-child(3) {
+  order: 2;
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 992px) {
+  .calendar-book .fc-toolbar-chunk:nth-child(3) {
+    order: 3;
+    margin-bottom: 0;
+  }
+}
+.calendar-book .fc-daygrid-event {
+  border: none;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
+@media (min-width: 1100px) {
+  .calendar-book .fc-daygrid-event {
+    height: auto;
+    width: auto;
+    border-radius: 2px;
+  }
+}
+@media (min-width: 425px) {
+  .calendar-book .fc-event-title {
+    display: none !important;
+  }
+}
+@media (min-width: 1100px) {
+  .calendar-book .fc-event-title {
+    display: block !important;
+  }
+}
+.calendar-book .fc-col-header-cell-cushion {
+  font-size: 0.6rem;
+}
+@media (min-width: 768px) {
+  .calendar-book .fc-col-header-cell-cushion {
+    font-size: 0.8rem;
+  }
+}
+.calendar-book .fc-scrollgrid-shrink-cushion {
+  font-size: 0.8rem;
+}
+@media (min-width: 768px) {
+  .calendar-book .fc-scrollgrid-shrink-cushion {
+    font-size: 0.8rem;
+  }
+}
+
+.calendar-schedule .fc-header-toolbar {
+  flex-direction: column;
+  font-size: 0.75rem;
+}
+@media (min-width: 992px) {
+  .calendar-schedule .fc-header-toolbar {
+    flex-direction: row;
+    font-size: 1rem;
+  }
+}
+.calendar-schedule .fc-toolbar-chunk:nth-child(1) {
+  order: 3;
+}
+@media (min-width: 992px) {
+  .calendar-schedule .fc-toolbar-chunk:nth-child(1) {
+    order: 1;
+  }
+}
+.calendar-schedule .fc-toolbar-chunk:nth-child(2) {
+  order: 1;
+}
+@media (min-width: 992px) {
+  .calendar-schedule .fc-toolbar-chunk:nth-child(2) {
+    order: 2;
+  }
+}
+.calendar-schedule .fc-toolbar-chunk:nth-child(3) {
+  order: 2;
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 992px) {
+  .calendar-schedule .fc-toolbar-chunk:nth-child(3) {
+    order: 3;
+    margin-bottom: 0;
+  }
+}
+.calendar-schedule .fc-col-header-cell-cushion {
+  font-size: 0.6rem;
+}
+@media (min-width: 768px) {
+  .calendar-schedule .fc-col-header-cell-cushion {
+    font-size: 0.8rem;
+  }
+}
+.calendar-schedule .fc-scrollgrid-shrink-cushion {
+  font-size: 0.8rem;
+}
+@media (min-width: 768px) {
+  .calendar-schedule .fc-scrollgrid-shrink-cushion {
+    font-size: 0.8rem;
+  }
+}
+
+.fc-daygrid-event {
+  justify-content: flex-start;
+}
+.fc-daygrid-event .fc-event-time {
+  display: none;
+}
+@media (min-width: 1100px) {
+  .fc-daygrid-event .fc-event-time {
+    display: block;
+  }
+}
+.fc-daygrid-event .fc-event-title {
+  display: none;
+}
+@media (min-width: 1100px) {
+  .fc-daygrid-event .fc-event-title {
+    display: block;
+  }
+}
+
+.event-showed .fc-daygrid-event-dot {
+  border-color: green;
+}
+
+.event-cancelled .fc-daygrid-event-dot {
+  border-color: #783b19;
+}
+
+.event-confirmed .fc-daygrid-event-dot {
+  border-color: #3f5fac;
+}
+
+.event-noshow .fc-daygrid-event-dot {
+  border-color: gray;
+}
+
+.modal-send-email-notifiaction {
+  height: auto !important;
+}
+.modal-send-email-notifiaction .ant-modal-footer {
+  padding: 15px;
+}/*# sourceMappingURL=appointment.css.map */

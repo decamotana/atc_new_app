@@ -30,7 +30,7 @@
         }
 
     </style>
-    @laravelPWA
+    {{-- @laravelPWA --}}
 
 </head>
 <body>

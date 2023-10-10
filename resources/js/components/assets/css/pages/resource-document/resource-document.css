@@ -1,0 +1,30 @@
+.page-caregiver-resource-document .resource-document-list .ant-list-header {
+  border-bottom: 0px;
+}
+.page-caregiver-resource-document .resource-document-list .ant-list-header .ant-typography {
+  font-size: 52px;
+  margin-bottom: 0px;
+  line-height: 0.5;
+  font-weight: normal;
+}
+.page-caregiver-resource-document .resource-document-list .ant-list-items .title {
+  color: #028f8d;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 0px;
+}
+.page-caregiver-resource-document .resource-document-list .ant-list-items .date {
+  margin-top: 5px;
+}
+.page-caregiver-resource-document .resource-document-list .ant-list-items .description {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.page-caregiver-resource-document .resource-document-list .ant-list-item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.page-caregiver-resource-document .resource-document-list .ant-list-item,
+.page-caregiver-resource-document .resource-document-list .ant-list-item:last-child {
+  border-bottom: 1px solid #bdbec0;
+}/*# sourceMappingURL=resource-document.css.map */

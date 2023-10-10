@@ -12,9 +12,11 @@
         "ashiina/socket.io-emitter": "^0.8.0",
         "authorizenet/authorizenet": "^2.0",
         "babenkoivan/scout-elasticsearch-driver": "^4.2",
+        "bacon/bacon-qr-code": "^2.0",
         "barryvdh/laravel-dompdf": "^0.8.6",
         "beyondcode/laravel-websockets": "^1.9",
         "darkaonline/l5-swagger": "^8.0",
+        "dcblogdev/laravel-dropbox": "^3.0",
         "ddeboer/imap": "^1.10",
         "doctrine/dbal": "^2.0",
         "fideloper/proxy": "^4.2",
@@ -29,11 +31,14 @@
         "lcobucci/jwt": "3.3.3",
         "league/omnipay": "^3",
         "nyholm/psr7": "^1.4",
+        "pragmarx/google2fa": "^8.0",
+        "pragmarx/google2fa-laravel": "^2.0",
         "pusher/pusher-php-server": "~3.0",
         "shetabit/visitor": "^3.1",
-        "silviolleite/laravelpwa": "^2.0",
         "spatie/pdf-to-text": "^1.4",
+        "spipu/html2pdf": "^5.2",
         "staudenmeir/laravel-upsert": "^1.0",
+        "stripe/stripe-php": "^8.10",
         "symfony/http-client": "^5.4",
         "wisembly/elephant.io": "^3.3",
         "zircote/swagger-php": "^3.1"
@@ -49,7 +54,10 @@
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true,
-        "platform-check": false
+        "platform-check": false,
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
     },
     "extra": {
         "laravel": {

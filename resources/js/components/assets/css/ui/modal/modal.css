@@ -2,29 +2,102 @@
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-.ant-modal .ant-modal-header .ant-modal-title {
-  color: #000000;
+.ant-modal .ant-modal-confirm-btns .ant-btn-default {
+  color: #3f5fac;
+  border-color: #3f5fac;
 }
-
+.ant-modal .ant-modal-confirm-btns .ant-btn-default:hover {
+  background-color: #3f5fac;
+  color: #ffffff;
+}
+.ant-modal .ant-modal-confirm-btns .ant-btn-primary {
+  background-color: #79390f;
+  border: none;
+}
+.ant-modal .ant-modal-confirm-btns .ant-btn-primary:hover {
+  background-color: #3f5fac;
+  color: #ffffff;
+}
+.ant-modal .ant-modal-header {
+  background-color: #325db8;
+}
+.ant-modal .ant-modal-header .ant-modal-title {
+  color: #ffffff;
+}
+.ant-modal .ant-modal-close-x {
+  color: #ffffff;
+}
 .ant-modal .ant-modal-footer {
   padding: 15px 16px;
 }
 
 .ant-modal.modal-primary-default .ant-modal-content .ant-modal-close {
-  color: #ffffff;
+  color: #000000;
 }
-
 .ant-modal.modal-primary-default .ant-modal-content .ant-modal-header {
-  background: #027273;
+  background: #ffffff;
 }
-
 .ant-modal.modal-primary-default .ant-modal-content .ant-modal-header .ant-modal-title {
-  color: #ffffff;
+  color: #000000;
 }
-
 .ant-modal.modal-primary-default .ant-modal-footer {
   text-align: left;
   padding: 15px 16px;
+}
+
+.ant-picker {
+  margin-bottom: 10px;
+}
+
+.modal-fdt > .ant-form-item {
+  margin-bottom: 0px !important;
+}
+
+.modal-login .ant-modal-footer {
+  padding: 50px 25px 40px 16px;
+}
+.modal-login .ant-space.ant-space-horizontal.ant-space-align-center .ant-space-item:first-child {
+  order: 2;
+}
+.modal-login .form-select-error {
+  padding-bottom: 0;
+}
+
+.modal-appointment .ant-modal-close-x {
+  color: black !important;
+  display: block;
+  width: 42px;
+  height: 54px;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 41px;
+  text-align: center;
+  text-transform: none;
+  text-rendering: auto;
+}
+.modal-appointment .venue-images .ant-upload {
+  margin-top: 5px;
+}
+.modal-appointment .venue-images .ant-btn {
+  font-size: 10px !important;
+}
+.modal-appointment .ant-result-title,
+.modal-appointment .ant-result-subtitle {
+  color: black !important;
+}
+
+.modal-notif .form-select-error,
+.modal-email-template .form-select-error {
+  margin-bottom: 20px !important;
+}
+.modal-notif .form-select-error .ant-form-item-explain-error,
+.modal-email-template .form-select-error .ant-form-item-explain-error {
+  margin-bottom: -14px;
+}
+
+.modal-notif .form-select-error .ant-form-item-explain-error,
+.modal-email-template .form-select-error .ant-form-item-explain-error {
+  margin-top: 0;
 }
 
 /* Media Query for Mobile Devices */
@@ -32,5 +105,4 @@
 /* Media Query for Tablets, Ipads and below  */
 /* Media Query for Tablets Ipads portrait mode */
 /* Media Query for Laptops and Desktops */
-/* Media Query for Large screens */
-/*# sourceMappingURL=modal.css.map */
+/* Media Query for Large screens *//*# sourceMappingURL=modal.css.map */

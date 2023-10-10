@@ -1,203 +1,326 @@
 @import "../../variables/variables.scss";
-.page-profile {
-	.profilePhoto {
-		.ant-upload-list-picture-card {
-			display: flex;
-			justify-content: center;
+.page-admin-profile {
+  .profilePhoto {
+    .ant-upload-list-picture-card {
+      display: flex;
+      justify-content: center;
+    }
+  }
 
-			.ant-upload {
-				width: 200px;
-				height: 200px;
-				border-color: $color6;
-				box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
-				-webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
-				-moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
-			}
+  & .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-item {
+    line-height: 55px;
+  }
 
-			.ant-upload-list-picture-card-container {
-				width: 200px;
-				height: 200px;
+  & .ant-collapse-content-box {
+    min-height: 0;
+  }
 
-				.ant-upload-list-item {
-					border-color: $color6;
-					box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
-					-webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
-					-moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
-				}
-			}
-		}
-	}
+  &-modal {
+    background-color: #3f5fac;
+  }
 
-	.e_signature_canvas {
-		border: 1px solid $color9;
-		width: 100%;
-	}
+  // & .m-t-md.m-b-md {
+  //   overflow: hidden;
+  //   border: 1px solid #949544 !important;
+  // }
 
-	// .float-label .ant-input,
-	// .float-label .mask-input {
-	// 	border-color: transparent;
-	// }
+  // & canvas {
+  //   border: 0 !important;
+  // }
+
+  .e_signature_canvas {
+    border: 1px solid $color9;
+  }
+
+  .ant-collapse {
+    font-size: 16px;
+  }
 }
 
 .modal-account-deactivate {
-	.ant-modal-footer {
-		text-align: right !important;
-	}
+  .ant-modal-footer {
+    text-align: right !important;
+  }
 }
 
 .modal-change-password {
-	.float-label .ant-input-affix-wrapper .ant-input {
-		border-color: transparent !important;
-	}
-	.ant-modal-footer {
-		text-align: right !important;
-	}
+  .ant-modal-footer {
+    text-align: right !important;
+  }
+
+  & .ant-modal-content .ant-modal-header {
+    background: #3f5fac !important;
+
+    & .ant-modal-title {
+      color: white !important;
+    }
+  }
+
+  & .ant-modal-close {
+    color: white !important;
+  }
+}
+
+.modal-for-appointment {
+  .ant-modal-footer {
+    text-align: right !important;
+  }
+
+  & .ant-modal-content .ant-modal-header {
+    background: #3f5fac !important;
+
+    & .ant-modal-title {
+      color: white !important;
+    }
+  }
+
+  & .ant-modal-close {
+    color: white !important;
+  }
+}
+
+.modal-set-up-pass {
+  & .ant-modal-body {
+    padding: 24px 17px;
+  }
+  & .ant-row {
+    display: block;
+  }
 }
 
 .modal-change-2-factor-authentication {
-	.ant-modal-footer {
-		text-align: right !important;
-	}
-}
-.page-profile-upgrade-subscription {
-	.float-label .ant-input-affix-wrapper .ant-input {
-		border-color: transparent !important;
-	}
+  .ant-modal-footer {
+    text-align: right !important;
+  }
 
-	.div_up_sub_is_patient {
-		display: flex;
-		align-items: flex-start;
-		gap: 15px;
-		margin-bottom: 10px;
+  & .ant-modal-content .ant-modal-header {
+    background: #3f5fac !important;
 
-		> span {
-			font-size: 16px;
-		}
+    & .ant-modal-title {
+      color: white !important;
+      text-align: center !important;
+    }
+  }
 
-		.ant-radio-group {
-			.ant-radio-wrapper {
-				span:not(.ant-radio) {
-					font-size: 16px;
-				}
-			}
-		}
-	}
-
-	.different_card {
-		padding: 10px;
-		border: 1px solid #d9d9d9;
-		background: #f5f5f5;
-	}
-}
-.private-layout {
-	.top-banner-adss {
-		text-align: center;
-		background-color: #f1f3f2;
-		display: flex;
-		justify-content: center;
-		display: none;
-	}
-	.top-banner-adss.has-data {
-		border-top: 1px solid $pageHeaderBorderColor;
-		padding: 10px 0px;
-		display: flex;
-
-		.top-banner-adss-inner {
-			position: relative;
-
-			.icon-close {
-				position: absolute;
-				right: -5px;
-				top: -10px;
-				background-color: $color9;
-				color: $color12;
-				border-radius: 50%;
-				cursor: pointer;
-				width: 20px;
-				height: 20px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
-			.top-banner-adss-inner-image {
-				img {
-					width: 100%;
-				}
-			}
-		}
-	}
-	.right-banner-adss {
-		display: none;
-	}
-	.right-banner-adss.has-data {
-		display: block;
-		.right-banner-adss-inner {
-			position: relative;
-			.icon-close {
-				position: absolute;
-				left: -8px;
-				top: -10px;
-				background-color: $color9;
-				color: $color12;
-				border-radius: 50%;
-				cursor: pointer;
-				width: 20px;
-				height: 20px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
-
-			.right-banner-adss-inner-image {
-				img {
-					width: 100%;
-					border: 1px solid $pageHeaderBorderColor;
-				}
-			}
-		}
-	}
+  & .ant-modal-close-x {
+    color: white !important;
+  }
 }
 
-/* Media Query for Large screens */
-@media (min-width: 1281px) {
+.ant-switch-checked {
+  background: #2ead2e;
 }
 
-/* Media Query for Laptops and Desktops */
-@media (min-width: 1025px) and (max-width: 1280px) {
+.ant-switch {
+  margin-left: 20px;
 }
 
-/* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px) {
+.modal-account-deactivate {
+  .ant-modal-header {
+    background: $color16 !important;
+    border-radius: 5px 5px 0px 0px !important;
+  }
+
+  .ant-modal-title,
+  .ant-modal-close-x {
+    color: $mainTextActive !important;
+  }
+
+  .ant-modal-content {
+    border-radius: 5px 5px 0px 0px !important;
+  }
 }
 
-/* Media Query for Tablets, Ipads and below  */
-@media (max-width: 768px) {
+.enable-text {
+  text-transform: capitalize;
+}
+
+.two-factor-text {
+  @media (max-width: 375px) {
+    display: flex;
+    align-items: center;
+    font-size: 14px !important;
+  }
+}
+
+.twofa-modal {
+  & .ant-form-item {
+    margin-bottom: 19px;
+  }
+  & button {
+    margin-bottom: 7px;
+  }
+
+  & .ant-modal-title {
+    font-size: 14px;
+
+    @include atSmall {
+      font-size: 16px;
+    }
+  }
+}
+
+.email-templates-fields {
+  & .ticket-quill {
+    margin-bottom: 0 !important;
+  }
+
+  & .quill {
+    margin-bottom: 0 !important;
+    height: auto !important;
+    @include atLarge {
+    }
+
+    & .ql-editor.ql-blank {
+      height: 250px;
+    }
+  }
+
+  & .ant-form-item.m-b-sm.form-select-error {
+    margin-bottom: 16px !important;
+  }
+
+  & .form-select-error {
+    & .ant-form-item-explain-error {
+      position: relative;
+      top: -13px;
+    }
+  }
+
+  & .ant-collapse-content-box div.ant-form-item:nth-child(4) .ant-form-item-explain-error {
+    position: relative;
+    top: 12px;
+  }
+}
+
+.new-password-input {
+  .ant-form-item-explain-error {
+    margin-top: 5px !important;
+  }
+}
+
+.profile-username .ant-form-item {
+  margin-bottom: 5px;
+}
+
+.personal-info-1 .phone .ant-form-item {
+  margin-bottom: 5px;
+}
+
+.personal-info-1 .email .ant-form-item {
+  margin-bottom: 24px;
+
+  @include atMedium {
+    margin-bottom: 5px;
+  }
+}
+
+.personal-info-1 .two-factor {
+  .ant-btn {
+    white-space: normal;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 1rem;
+
+    @include atSmall {
+      margin-bottom: 0;
+    }
+    & > span {
+      display: inline;
+    }
+  }
+}
+
+.personal-info-2 .city .ant-form-item,
+.personal-info-2 .state .ant-form-item {
+  margin-bottom: 24px;
+  @include atMedium {
+    margin-bottom: 5px;
+  }
+}
+
+.personal-info-2 .zip-code .ant-form-item {
+  margin-bottom: 5px;
+}
+
+.font-red {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.form-create-password span.ant-typography {
+  padding-bottom: 2rem !important;
+}
+
+.img-crop-modal {
+  .ant-modal-content {
+    .ant-btn-primary {
+      background: #3f5fac !important;
+      border-color: #3f5fac !important;
+      color: white;
+
+      &:hover {
+        color: white;
+        background-color: #783b19 !important;
+        border-color: #783b19 !important;
+      }
+
+      &:focus {
+        color: white;
+      }
+    }
+  }
+}
+
+.client-note {
+  .ant-collapse-content-box {
+    min-height: fit-content;
+  }
+
+  @media (max-width: 569px) and (min-width: 320px) {
+    .ant-collapse-content-box {
+      padding: 19px !important;
+    }
+  }
+}
+
+.view-user-tags {
+  font-size: 9.7px;
+
+  @include atExtraSmall {
+    font-size: 12px;
+  }
+}
+
+// .personal-info-2 .address1 .ant-form-item,
+// .personal-info-2 .address2 .ant-form-item {
+//   margin-top: 0;
+
+//   @include atMedium {
+//     margin-top: 13px;
+//   }
+// }
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
 }
 
 /* Media Query for low resolution  Tablets, Ipads */
 @media (min-width: 481px) and (max-width: 767px) {
 }
 
-/* Media Query for Mobile Devices */
-@media (max-width: 575px) {
+/* Media Query for Tablets, Ipads and below  */
+@media (max-width: 768px) {
 }
 
-@media (max-width: 480px) {
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
 }
 
-@media (max-width: 375px) {
-	.page-profile {
-		.btn-2fa {
-			display: flex;
-			margin-bottom: 20px;
-		}
-
-		.btn-2fa > span:last-child {
-			white-space: break-spaces;
-			text-align: left;
-		}
-	}
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
 }
 
-@media (max-width: 320px) {
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
 }

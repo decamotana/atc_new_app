@@ -12,7 +12,7 @@ const ModalAlerMobileViewing = ({
 		<>
 			<Modal
 				closeIcon={<FontAwesomeIcon icon={faTimes} />}
-				open={showModalMobileViewing}
+				visible={showModalMobileViewing}
 				onCancel={() => {
 					setShowModalMobileViewing(false);
 				}}

@@ -1,31 +1,62 @@
 @import "../../variables/variables.scss";
 
 .quill {
-	height: 150px;
-	margin-bottom: 41px;
+  height: 150px;
+  margin-bottom: 41px;
 
-	.ql-editor {
-		padding-top: 10px;
-		padding-bottom: 10px;
-	}
+  .ql-editor {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .ticket-quill {
-	margin-bottom: 47px;
+  margin-bottom: 47px;
 }
 
 @media screen and (min-device-width: 377px) and (max-device-width: 1199px) and (-webkit-min-device-pixel-ratio: 1) {
-	.ticket-quill {
-		margin-bottom: 70px;
-	}
+  .ticket-quill {
+    margin-bottom: 70px;
+  }
 }
 @media screen and (min-device-width: 376px) and (max-device-width: 376px) and (-webkit-min-device-pixel-ratio: 1) {
-	.ticket-quill {
-		margin-bottom: 95px;
-	}
+  .ticket-quill {
+    margin-bottom: 95px;
+  }
 }
 @media screen and (min-device-width: 320px) and (max-device-width: 375px) and (-webkit-min-device-pixel-ratio: 1) {
-	.ticket-quill {
-		margin-bottom: 119px;
-	}
+  .ticket-quill {
+    margin-bottom: 119px;
+  }
+}
+// notif-modal-quill
+@media (min-width: 351px) and (-webkit-min-device-pixel-ratio: 1) {
+  .notif-modal-quill {
+    margin-bottom: 62px;
+  }
+}
+
+@media (min-width: 350px) and (max-width: 350px) and (-webkit-min-device-pixel-ratio: 1) {
+  .notif-modal-quill {
+    margin-bottom: 86px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 349px) and (-webkit-min-device-pixel-ratio: 1) {
+  .notif-modal-quill {
+    margin-bottom: 109px;
+  }
+}
+
+.ql-snow {
+  .ql-picker {
+    &.ql-size {
+      .ql-picker-label,
+      .ql-picker-item {
+        &::before {
+          content: attr(data-value) !important;
+        }
+      }
+    }
+  }
 }

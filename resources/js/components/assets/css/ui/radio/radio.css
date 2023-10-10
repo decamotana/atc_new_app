@@ -3,10 +3,9 @@
 .ant-radio-input:focus + .ant-radio-inner,
 .ant-radio-checked::after,
 .ant-radio-checked .ant-radio-inner {
-  border-color: #027273;
+  border-color: #4169e1;
 }
 
 .ant-radio-inner::after {
-  background-color: #027273;
-}
-/*# sourceMappingURL=radio.css.map */
+  background-color: #4169e1;
+}/*# sourceMappingURL=radio.css.map */

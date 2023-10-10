@@ -1,0 +1,37 @@
+@import "../../variables/variables.scss";
+
+.ant-space-flex-space-between {
+  @include atSmall {
+    justify-content: center;
+  }
+}
+
+// .scrollable-notification {
+//   //   overflow-y: scroll;
+//   height: 300px;
+// }
+
+.scrollable-notification::-webkit-scrollbar {
+  width: 3px;
+}
+
+.modal-send-email-notifiaction {
+  .ant-modal-content {
+    .ant-modal-body {
+      .float-select-multi .ant-select-show-search.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+        height: 47px !important;
+        padding-top: 0px;
+        overflow-y: scroll !important;
+      }
+
+      .float-select-multi .ant-select-show-search.ant-select:not(.ant-select-customize-input) .ant-select-selector::-webkit-scrollbar {
+        width: 5px !important;
+      }
+      .float-select-multi .ant-select-show-search.ant-select:not(.ant-select-customize-input) .ant-select-selector::-webkit-scrollbar-thumb {
+        background-color: #3f5fac;
+        width: 5px !important;
+        border-radius: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,173 @@
+.upload-submit-btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.document-upload-title {
+  font-size: 20px;
+  color: #325db8;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.upload-btn {
+  width: 100%;
+  color: #606060;
+  border-color: #606060;
+  height: auto;
+  padding: 50px 30px 50px 30px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px !important;
+  white-space: normal;
+}
+.upload-btn-description h2 {
+  font-size: 1.3rem;
+  color: #3f5fac;
+  margin-top: 1rem;
+}
+@media (min-width: 576px) {
+  .upload-btn-description h2 {
+    font-size: 1.6rem;
+  }
+}
+
+.upload-btn-description .upload-title {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  color: #325db8 !important;
+}
+
+.upload-btn:hover .upload-btn-description h2,
+.upload-btn:hover .ant-upload-text svg {
+  color: #1890ff !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.upload-btn:hover .upload-title {
+  color: #1890ff !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.upload-pagination {
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .upload-pagination {
+    align-items: left;
+  }
+}
+
+.document-upload-icon {
+  width: 32px !important;
+  height: 32px !important;
+  color: #3f5fac;
+  font-weight: bold;
+}
+
+.upload-card .venue-images .ant-btn {
+  white-space: break-spaces !important;
+}
+
+.upload-instruction {
+  color: #606060;
+}
+
+.ant-table-column-sorters .ant-table-column-title {
+  margin-left: 5px;
+  order: 2;
+}
+.ant-table-column-sorters .ant-table-column-sorter {
+  order: 1;
+}
+
+.margin-bottom-0 {
+  margin-bottom: 0;
+}
+
+.venue-images .ant-upload-select-picture {
+  height: unset !important;
+}
+
+@media (max-width: 1024px) {
+  .venue-images {
+    width: 100%;
+  }
+  .ant-upload-list-item-list-type-picture {
+    width: 100%;
+  }
+}
+@media (max-width: 416px) and (min-width: 320px) {
+  .document-upload-title {
+    font-size: 20px;
+  }
+  .btn-submit-row .ant-col {
+    width: 100%;
+  }
+  .ant-upload {
+    width: 100%;
+  }
+}
+@media (max-width: 589px) and (min-width: 385px) {
+  .upload-btn {
+    min-height: 300px !important;
+  }
+  .upload-doc-row .ant-col-md-10 {
+    flex: unset;
+    max-width: 100% !important;
+  }
+  .ant-upload {
+    width: 100% !important;
+  }
+  .btn-submit-row .ant-col {
+    width: 100%;
+  }
+}
+@media (max-width: 994px) and (min-width: 590px) {
+  .upload-doc-row .ant-col-md-10 {
+    flex: unset;
+    max-width: 100% !important;
+    width: 100%;
+  }
+  .ant-upload {
+    width: 100% !important;
+  }
+  .btn-submit-row .ant-col {
+    width: 100%;
+  }
+}
+@media (max-width: 2679px) and (min-width: 994px) {
+  .upload-doc-row .ant-col-md-10 {
+    flex: unset;
+    max-width: 560px !important;
+  }
+  .upload-tbl-cont {
+    max-width: 760px !important;
+  }
+  .ant-upload {
+    width: 100% !important;
+  }
+  .btn-submit-row .ant-col {
+    width: 250px !important;
+  }
+}
+@media (min-width: 992px) {
+  .btn-submit-row button {
+    width: 506px !important;
+  }
+}
+
+.ant-layout.ant-layout-has-sider.private-layout:has(#Page2fa) .ant-page-header .ant-page-header-heading .ant-page-header-heading-title .ant-page-header-text .title {
+  font-size: 18px;
+}
+@media (min-width: 576px) {
+  .ant-layout.ant-layout-has-sider.private-layout:has(#Page2fa) .ant-page-header .ant-page-header-heading .ant-page-header-heading-title .ant-page-header-text .title {
+    font-size: 22px;
+  }
+}
+
+.card-upload {
+  max-width: 500px;
+}/*# sourceMappingURL=documents.css.map */

@@ -1,65 +1,97 @@
 @import "../../variables/variables.scss";
 
+.client-info-collapse {
+  .ant-collapse-header {
+    display: flex !important;
+    align-content: center !important;
+
+    .ant-collapse-header-text {
+      margin-top: 8px;
+    }
+    .ant-collapse-expand-icon {
+      margin-top: 10px;
+    }
+  }
+}
+
 .ant-collapse-primary {
-	background: transparent;
-	border: none;
-	margin-top: 15px;
+  background: transparent;
+  border: none;
+  margin-top: 15px;
 
-	.ant-collapse-item {
-		border-bottom: none;
-		margin-bottom: 10px;
+  .ant-collapse-item {
+    border-bottom: none;
+    margin-bottom: 10px;
 
-		.ant-collapse-header {
-			font-size: 14px;
-			padding: 10px;
-			background-color: $color1;
-			color: $white;
-			padding-left: 15px;
-			padding-right: 15px;
+    .ant-collapse-header {
+      font-size: 14px;
+      padding: 10px;
+      background-color: $color1;
+      color: $white;
+      padding-left: 15px;
+      padding-right: 15px;
 
-			.ant-collapse-arrow {
-				font-size: 14px;
-			}
+      .ant-collapse-arrow {
+        font-size: 14px;
+      }
 
-			.ant-menu-submenu-arrow {
-				color: $white !important;
-			}
-		}
+      .ant-menu-submenu-arrow {
+        color: $white !important;
+      }
+    }
 
-		.ant-collapse-content {
-			background-color: transparent;
-			border: 1px solid $color1;
-			padding: 9px;
-			padding-top: 25px;
-			padding-left: 15px;
-			padding-right: 15px;
+    .ant-collapse-content {
+      background-color: transparent;
+      border: 1px solid $color1;
+      padding: 9px;
+      padding-top: 25px;
+      padding-left: 15px;
+      padding-right: 15px;
 
-			.ant-collapse-content-box {
-				padding: 0px;
-			}
-		}
-	}
+      .ant-collapse-content-box {
+        padding: 0px;
+      }
+    }
+  }
 }
-.ant-collapse > div {
-	padding-top: 0px;
-}
+
 .ant-collapse {
-	.ant-menu-submenu-arrow {
-		position: relative !important;
-		// top: 50%;
-		right: 0 !important;
-		bottom: 6px !important;
-		width: 10px !important;
-		left: -2px !important;
-		margin-right: 10px !important;
-	}
+  div {
+    padding-top: 0px;
+  }
+  .ant-menu-submenu-arrow {
+    position: relative !important;
+    // top: 50%;
+    right: 0 !important;
+    bottom: 6px !important;
+    width: 10px !important;
+    left: -2px !important;
+    margin-right: 10px !important;
+  }
+
+  .ant-collapse-header-text {
+    font-size: 18px !important;
+  }
+
+  @media (min-width: 768px) {
+    .ant-collapse-header-text {
+      font-size: 14px !important;
+      text-overflow: ellipsis !important;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .ant-collapse-header-text {
+      font-size: 16px !important;
+      text-overflow: ellipsis !important;
+    }
+  }
+
+  //
 }
 
 .dashbaord-collapse {
-	.ant-collapse-content-box {
-		padding: 0;
-	}
-}
-.ant-collapse > .ant-collapse-item:last-child > .ant-collapse-header {
-	border-radius: 0px;
+  .ant-collapse-content-box {
+    padding: 0;
+  }
 }

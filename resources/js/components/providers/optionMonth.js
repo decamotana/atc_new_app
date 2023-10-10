@@ -1,52 +1,52 @@
-const optionvalue = [
-	{
-		label: "January",
-		value: "01",
-	},
-	{
-		label: "February",
-		value: "02",
-	},
-	{
-		label: "March",
-		value: "03",
-	},
-	{
-		label: "April",
-		value: "04",
-	},
-	{
-		label: "May",
-		value: "05",
-	},
-	{
-		label: "June",
-		value: "06",
-	},
-	{
-		label: "July",
-		value: "07",
-	},
-	{
-		label: "August",
-		value: "08",
-	},
-	{
-		label: "September",
-		value: "09",
-	},
-	{
-		label: "October",
-		value: "10",
-	},
-	{
-		label: "November",
-		value: "11",
-	},
-	{
-		label: "December",
-		value: "12",
-	},
+const optionMonth = [
+  {
+    label: "January",
+    month: "01",
+  },
+  {
+    label: "February",
+    month: "02",
+  },
+  {
+    label: "March",
+    month: "03",
+  },
+  {
+    label: "April",
+    month: "04",
+  },
+  {
+    label: "May",
+    month: "05",
+  },
+  {
+    label: "June",
+    month: "06",
+  },
+  {
+    label: "July",
+    month: "07",
+  },
+  {
+    label: "August",
+    month: "08",
+  },
+  {
+    label: "September",
+    month: "09",
+  },
+  {
+    label: "October",
+    month: "10",
+  },
+  {
+    label: "November",
+    month: "11",
+  },
+  {
+    label: "December",
+    month: "12",
+  },
 ];
 
-export default optionvalue;
+export default optionMonth;

@@ -1,0 +1,20 @@
+@import "../../variables/variables.scss";
+
+.player{
+    @include atSmall{
+        height: 0px;
+    }
+}
+
+.page-video-iframe iframe{
+    height: 362px !important;
+    margin-top: 0px !important;
+}
+
+
+
+@media (min-width: 768px) {
+    .page-video-iframe iframe {
+        height: 382px !important;
+    }
+}

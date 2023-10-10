@@ -1,186 +1,239 @@
-.page-profile .profilePhoto .ant-upload-list-picture-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.page-admin-profile .profilePhoto .ant-upload-list-picture-card {
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
-.page-profile .profilePhoto .ant-upload-list-picture-card .ant-upload {
-  width: 200px;
-  height: 200px;
-  border-color: #e4151f;
-  box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+.page-admin-profile .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-item {
+  line-height: 55px;
 }
-
-.page-profile .profilePhoto .ant-upload-list-picture-card .ant-upload-list-picture-card-container {
-  width: 200px;
-  height: 200px;
+.page-admin-profile .ant-collapse-content-box {
+  min-height: 0;
 }
-
-.page-profile .profilePhoto .ant-upload-list-picture-card .ant-upload-list-picture-card-container .ant-upload-list-item {
-  border-color: #e4151f;
-  box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
+.page-admin-profile-modal {
+  background-color: #3f5fac;
 }
-
-.page-profile .e_signature_canvas {
+.page-admin-profile .e_signature_canvas {
   border: 1px solid #949599;
-  width: 100%;
+}
+.page-admin-profile .ant-collapse {
+  font-size: 16px;
 }
 
 .modal-account-deactivate .ant-modal-footer {
   text-align: right !important;
 }
 
-.modal-change-password .float-label .ant-input-affix-wrapper .ant-input {
-  border-color: transparent !important;
-}
-
 .modal-change-password .ant-modal-footer {
   text-align: right !important;
+}
+.modal-change-password .ant-modal-content .ant-modal-header {
+  background: #3f5fac !important;
+}
+.modal-change-password .ant-modal-content .ant-modal-header .ant-modal-title {
+  color: white !important;
+}
+.modal-change-password .ant-modal-close {
+  color: white !important;
+}
+
+.modal-for-appointment .ant-modal-footer {
+  text-align: right !important;
+}
+.modal-for-appointment .ant-modal-content .ant-modal-header {
+  background: #3f5fac !important;
+}
+.modal-for-appointment .ant-modal-content .ant-modal-header .ant-modal-title {
+  color: white !important;
+}
+.modal-for-appointment .ant-modal-close {
+  color: white !important;
+}
+
+.modal-set-up-pass .ant-modal-body {
+  padding: 24px 17px;
+}
+.modal-set-up-pass .ant-row {
+  display: block;
 }
 
 .modal-change-2-factor-authentication .ant-modal-footer {
   text-align: right !important;
 }
-
-.page-profile-upgrade-subscription .float-label .ant-input-affix-wrapper .ant-input {
-  border-color: transparent !important;
+.modal-change-2-factor-authentication .ant-modal-content .ant-modal-header {
+  background: #3f5fac !important;
+}
+.modal-change-2-factor-authentication .ant-modal-content .ant-modal-header .ant-modal-title {
+  color: white !important;
+  text-align: center !important;
+}
+.modal-change-2-factor-authentication .ant-modal-close-x {
+  color: white !important;
 }
 
-.page-profile-upgrade-subscription .div_up_sub_is_patient {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  gap: 15px;
-  margin-bottom: 10px;
+.ant-switch-checked {
+  background: #2ead2e;
 }
 
-.page-profile-upgrade-subscription .div_up_sub_is_patient > span {
-  font-size: 16px;
+.ant-switch {
+  margin-left: 20px;
 }
 
-.page-profile-upgrade-subscription .div_up_sub_is_patient .ant-radio-group .ant-radio-wrapper span:not(.ant-radio) {
-  font-size: 16px;
+.modal-account-deactivate .ant-modal-header {
+  background: #3f5fac !important;
+  border-radius: 5px 5px 0px 0px !important;
+}
+.modal-account-deactivate .ant-modal-title,
+.modal-account-deactivate .ant-modal-close-x {
+  color: #ffffff !important;
+}
+.modal-account-deactivate .ant-modal-content {
+  border-radius: 5px 5px 0px 0px !important;
 }
 
-.page-profile-upgrade-subscription .different_card {
-  padding: 10px;
-  border: 1px solid #d9d9d9;
-  background: #f5f5f5;
+.enable-text {
+  text-transform: capitalize;
 }
 
-.private-layout .top-banner-adss {
-  text-align: center;
-  background-color: #f1f3f2;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: none;
-}
-
-.private-layout .top-banner-adss.has-data {
-  border-top: 1px solid #58585a;
-  padding: 10px 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.private-layout .top-banner-adss.has-data .top-banner-adss-inner {
-  position: relative;
-}
-
-.private-layout .top-banner-adss.has-data .top-banner-adss-inner .icon-close {
-  position: absolute;
-  right: -5px;
-  top: -10px;
-  background-color: #949599;
-  color: #ddfeff;
-  border-radius: 50%;
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.private-layout .top-banner-adss.has-data .top-banner-adss-inner .top-banner-adss-inner-image img {
-  width: 100%;
-}
-
-.private-layout .right-banner-adss {
-  display: none;
-}
-
-.private-layout .right-banner-adss.has-data {
-  display: block;
-}
-
-.private-layout .right-banner-adss.has-data .right-banner-adss-inner {
-  position: relative;
-}
-
-.private-layout .right-banner-adss.has-data .right-banner-adss-inner .icon-close {
-  position: absolute;
-  left: -8px;
-  top: -10px;
-  background-color: #949599;
-  color: #ddfeff;
-  border-radius: 50%;
-  cursor: pointer;
-  width: 20px;
-  height: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.private-layout .right-banner-adss.has-data .right-banner-adss-inner .right-banner-adss-inner-image img {
-  width: 100%;
-  border: 1px solid #58585a;
-}
-
-/* Media Query for Large screens */
-/* Media Query for Laptops and Desktops */
-/* Media Query for Tablets Ipads portrait mode */
-/* Media Query for Tablets, Ipads and below  */
-/* Media Query for low resolution  Tablets, Ipads */
-/* Media Query for Mobile Devices */
 @media (max-width: 375px) {
-  .page-profile .btn-2fa {
-    display: -webkit-box;
-    display: -ms-flexbox;
+  .two-factor-text {
     display: flex;
-    margin-bottom: 20px;
-  }
-  .page-profile .btn-2fa > span:last-child {
-    white-space: break-spaces;
-    text-align: left;
+    align-items: center;
+    font-size: 14px !important;
   }
 }
-/*# sourceMappingURL=profile.css.map */
+
+.twofa-modal .ant-form-item {
+  margin-bottom: 19px;
+}
+.twofa-modal button {
+  margin-bottom: 7px;
+}
+.twofa-modal .ant-modal-title {
+  font-size: 14px;
+}
+@media (min-width: 576px) {
+  .twofa-modal .ant-modal-title {
+    font-size: 16px;
+  }
+}
+
+.email-templates-fields .ticket-quill {
+  margin-bottom: 0 !important;
+}
+.email-templates-fields .quill {
+  margin-bottom: 0 !important;
+  height: auto !important;
+}
+.email-templates-fields .quill .ql-editor.ql-blank {
+  height: 250px;
+}
+.email-templates-fields .ant-form-item.m-b-sm.form-select-error {
+  margin-bottom: 16px !important;
+}
+.email-templates-fields .form-select-error .ant-form-item-explain-error {
+  position: relative;
+  top: -13px;
+}
+.email-templates-fields .ant-collapse-content-box div.ant-form-item:nth-child(4) .ant-form-item-explain-error {
+  position: relative;
+  top: 12px;
+}
+
+.new-password-input .ant-form-item-explain-error {
+  margin-top: 5px !important;
+}
+
+.profile-username .ant-form-item {
+  margin-bottom: 5px;
+}
+
+.personal-info-1 .phone .ant-form-item {
+  margin-bottom: 5px;
+}
+
+.personal-info-1 .email .ant-form-item {
+  margin-bottom: 24px;
+}
+@media (min-width: 768px) {
+  .personal-info-1 .email .ant-form-item {
+    margin-bottom: 5px;
+  }
+}
+
+.personal-info-1 .two-factor .ant-btn {
+  white-space: normal;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 1rem;
+}
+@media (min-width: 576px) {
+  .personal-info-1 .two-factor .ant-btn {
+    margin-bottom: 0;
+  }
+}
+.personal-info-1 .two-factor .ant-btn > span {
+  display: inline;
+}
+
+.personal-info-2 .city .ant-form-item,
+.personal-info-2 .state .ant-form-item {
+  margin-bottom: 24px;
+}
+@media (min-width: 768px) {
+  .personal-info-2 .city .ant-form-item,
+  .personal-info-2 .state .ant-form-item {
+    margin-bottom: 5px;
+  }
+}
+
+.personal-info-2 .zip-code .ant-form-item {
+  margin-bottom: 5px;
+}
+
+.font-red {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.form-create-password span.ant-typography {
+  padding-bottom: 2rem !important;
+}
+
+.img-crop-modal .ant-modal-content .ant-btn-primary {
+  background: #3f5fac !important;
+  border-color: #3f5fac !important;
+  color: white;
+}
+.img-crop-modal .ant-modal-content .ant-btn-primary:hover {
+  color: white;
+  background-color: #783b19 !important;
+  border-color: #783b19 !important;
+}
+.img-crop-modal .ant-modal-content .ant-btn-primary:focus {
+  color: white;
+}
+
+.client-note .ant-collapse-content-box {
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+}
+@media (max-width: 569px) and (min-width: 320px) {
+  .client-note .ant-collapse-content-box {
+    padding: 19px !important;
+  }
+}
+
+.view-user-tags {
+  font-size: 9.7px;
+}
+@media (min-width: 480px) {
+  .view-user-tags {
+    font-size: 12px;
+  }
+}
+
+/* Media Query for Mobile Devices */
+/* Media Query for low resolution  Tablets, Ipads */
+/* Media Query for Tablets, Ipads and below  */
+/* Media Query for Tablets Ipads portrait mode */
+/* Media Query for Laptops and Desktops */
+/* Media Query for Large screens *//*# sourceMappingURL=profile.css.map */

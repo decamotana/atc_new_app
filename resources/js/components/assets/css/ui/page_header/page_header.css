@@ -1,132 +1,77 @@
 .private-layout .ant-page-header {
   background-color: transparent;
-  border-top: 1px solid #58585a;
-  border-bottom: 1px solid #58585a;
   padding: 10px 20px;
+  display: none;
 }
-
+@media (min-width: 768px) {
+  .private-layout .ant-page-header {
+    display: block;
+  }
+}
 .private-layout .ant-page-header .ant-page-header-heading {
   width: 100%;
   display: inherit;
 }
-
 .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left {
   width: 100%;
   display: inherit;
 }
-
 .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-icon {
-  border: 3px solid #358e8f;
+  border: 3px solid #783b19;
   border-radius: 100%;
   width: 70px !important;
+  min-width: 70px !important;
   height: 70px !important;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-icon .anticon {
   font-size: 32px;
-  color: #358e8f !important;
+  color: #783b19 !important;
 }
-
 .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-icon svg {
   font-size: 32px;
 }
-
 .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-icon svg path {
-  color: #358e8f;
+  color: #783b19;
 }
-
 .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
 }
-
 .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-text .sub-title {
-  color: #58585a;
+  color: #3f5fac;
   text-transform: none;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 500;
   line-height: 1em;
+  margin-left: 2px;
 }
-
 .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-text .title {
-  color: #358e8f;
-  font-size: 32px;
+  color: #783b19;
+  font-size: 22px;
   font-weight: normal;
 }
+@media (min-width: 480px) {
+  .private-layout .ant-page-header .ant-page-header-heading .ant-page-header-heading-left .ant-page-header-heading-title .ant-page-header-text .title {
+    font-size: 32px;
+  }
+}
 
-/* Media Query for Large screens */
-/* Media Query for Laptops and Desktops */
-/* Media Query for Tablets Ipads portrait mode */
-/* Media Query for Tablets, Ipads and below  */
-/* Media Query for low resolution  Tablets, Ipads */
 /* Media Query for Mobile Devices */
-@media (max-width: 575px) {
+@media (max-width: 480px) {
   .private-layout .ant-page-header {
     padding: 10px;
   }
-  .private-layout
-.ant-page-header
-.ant-page-header-heading
-.ant-page-header-heading-left
-.ant-page-header-heading-title
-.ant-page-header-icon {
-    width: 55px !important;
-    height: 55px !important;
-    padding: 10px;
-  }
-  .private-layout
-.ant-page-header
-.ant-page-header-heading
-.ant-page-header-heading-left
-.ant-page-header-heading-title
-.ant-page-header-icon
-svg {
-    font-size: 28px;
-  }
-  .private-layout
-.ant-page-header
-.ant-page-header-heading
-.ant-page-header-heading-left
-.ant-page-header-heading-title
-.ant-page-header-text
-.sub-title {
-    font-size: 12px;
-  }
-  .private-layout
-.ant-page-header
-.ant-page-header-heading
-.ant-page-header-heading-left
-.ant-page-header-heading-title
-.ant-page-header-text
-.title {
-    font-size: 25px;
-  }
 }
-/*# sourceMappingURL=page_header.css.map */
+/* Media Query for low resolution  Tablets, Ipads */
+/* Media Query for Tablets Ipads portrait mode */
+/* Media Query for Laptops and Desktops */
+/* Media Query for Large screens *//*# sourceMappingURL=page_header.css.map */

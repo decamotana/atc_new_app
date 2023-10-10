@@ -1,149 +1,159 @@
 @import "../../variables/variables.scss";
 
 .public-layout.login-layout {
-	height: 100vh;
-	overflow: hidden auto;
-	background: linear-gradient(to bottom, #ffffff 0%, #0f7273 100%);
+    height: 100vh;
+    overflow: hidden auto;
+    background: linear-gradient(to bottom, #ffffff 0%, #4169e1 100%);
 
-	.ant-layout-content {
-		min-height: auto;
-	}
+    .ant-layout-content {
+        min-height: auto;
+    }
 
-	.ant-row {
-		.ant-col {
-			display: flex;
-			align-items: center;
-			flex-direction: column;
+    .ant-row {
+        .ant-col {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
 
-			.ant-image {
-				width: 380px;
-				margin-top: 50px;
-			}
+            //   .ant-form-item {
+            //     .ant-row {
+            //       .ant-col {
+            //         display: flex;
+            //         align-items: start;
+            //         flex-direction: column;
+            //       }
+            //     }
+            //   }
 
-			.login-sub-title {
-				width: 260px;
-				text-align: center;
-				font-weight: 500;
-			}
+            .ant-image {
+                width: 250px;
+                margin-top: 50px;
+                @include atExtraSmall {
+                    width: 380px;
+                }
+            }
 
-			.ant-card {
-				width: 550px;
-				border-radius: 5px;
-				margin-top: 60px;
-				box-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.6);
-				-webkit-box-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.6);
-				-moz-box-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.6);
+            .login-sub-title {
+                width: 260px;
+                text-align: center;
+                font-weight: 500;
+            }
 
-				.ant-card-body {
-					padding: 30px 50px;
+            .ant-card {
+                width: 550px;
+                border-radius: 5px;
+                margin-top: 60px;
+                box-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.6);
+                -webkit-box-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.6);
+                -moz-box-shadow: 0px 0px 20px -2px rgba(0, 0, 0, 0.6);
 
-					.btn-register-here,
-					.btn-sign-in {
-						height: 48px;
-						font-size: 20px;
-						border-radius: 0;
-					}
+                .ant-card-body {
+                    padding: 30px 15px;
 
-					.ant-divider {
-						margin: 0 auto;
-						margin-top: 55px;
-						margin-bottom: 45px;
-						border-top-color: $black;
-					}
-				}
+                    @include atExtraSmall {
+                        padding: 30px 50px;
+                    }
 
-				.text-create-account {
-					font-size: 24px;
-					font-weight: 400;
-				}
+                    .btn-register-here,
+                    .btn-sign-in {
+                        height: 48px;
+                        font-size: 20px;
+                        border-radius: 0;
+                    }
 
-				.text-sign-in-here {
-					font-weight: 400;
-					font-size: 24px;
-				}
-			}
+                    .btn-register-here:hover {
+                        background: $color16 !important;
+                    }
 
-			footer {
-				margin-top: 50px;
-				text-align: center;
-			}
-		}
-	}
+                    .btn-sign-in:hover {
+                        background: $mainIcon !important;
+                        border-color: $mainIcon !important;
+                    }
 
-	.forgot {
-		margin-top: 10px;
-		font-weight: 500;
-	}
+                    .ant-divider {
+                        margin: 0 auto;
+                        margin-top: 40px;
+                        margin-bottom: 40px;
+                        border-top-color: $black;
+                        @include atExtraSmall {
+                            margin: 0 auto;
+                            margin-top: 55px;
+                            margin-bottom: 45px;
+                            border-top-color: $black;
+                        }
+                    }
+                }
 
-	.ant-layout-footer {
-		background-color: transparent;
-	}
+                .text-create-account {
+                    font-weight: 400;
+                    font-size: 18px;
+                    @include atExtraSmall {
+                        font-size: 22px;
+                    }
+                }
 
-	.float-label .ant-input {
-		border-color: transparent;
-	}
+                .text-sign-in-here {
+                    font-weight: 400;
+                    font-size: 18px;
+                    @include atExtraSmall {
+                        font-size: 22px;
+                    }
+                }
+            }
+
+            footer {
+                margin-top: 50px;
+                text-align: center;
+            }
+        }
+    }
+    .ant-form {
+        .btn-register-submit:hover {
+            background: $color16 !important;
+        }
+    }
+
+    .forgot {
+        margin-top: 10px;
+        font-weight: 500;
+    }
+
+    .ant-layout-footer {
+        background-color: transparent;
+    }
 }
 
-/* Media Query for Large screens */
-@media (min-width: 1281px) {
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .card--public-body {
+        width: 96% !important;
+        // margin-left: 15px !important;
+        // margin-right: 15px !important;
+
+        // @include atExtraSmall {
+        //   max-width: 750px !important;
+        //   margin-left: auto !important;
+        //   margin-right: auto !important;
+        // }
+    }
 }
 
-/* Media Query for Laptops and Desktops */
-@media (min-width: 1025px) and (max-width: 1280px) {
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+/* Media Query for Tablets, Ipads and below  */
+@media (max-width: 768px) {
 }
 
 /* Media Query for Tablets Ipads portrait mode */
 @media (min-width: 768px) and (max-width: 1024px) {
 }
 
-/* Media Query for Tablets, Ipads and below  */
-@media (max-width: 768px) {
-	.public-layout.login-layout .ant-row > .ant-col > .ant-card {
-		width: 500px;
-	}
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
 }
 
-/* Media Query for low resolution  Tablets, Ipads */
-@media (min-width: 481px) and (max-width: 767px) {
-	.public-layout.login-layout .ant-row .ant-col .ant-image {
-		width: 350px;
-	}
-
-	.public-layout.login-layout .ant-row > .ant-col > .ant-card {
-		width: 450px;
-	}
-	.public-layout.login-layout .ant-row > .ant-col > .ant-card > .ant-card-body {
-		padding: 15px 20px;
-	}
-}
-
-/* Media Query for Mobile Devices */
-@media (max-width: 480px) {
-	.public-layout.login-layout .ant-row .ant-col .ant-image {
-		width: 300px;
-	}
-
-	.public-layout.login-layout .ant-row > .ant-col > .ant-card {
-		width: 400px;
-	}
-
-	.public-layout.login-layout .ant-row > .ant-col > .ant-card > .ant-card-body {
-		padding: 15px 20px;
-	}
-}
-
-@media (max-width: 375px) {
-	.public-layout.login-layout .ant-row .ant-col .ant-image {
-		width: 250px;
-	}
-
-	.public-layout.login-layout .ant-row > .ant-col > .ant-card {
-		width: 350px;
-	}
-}
-
-@media (max-width: 320px) {
-	.public-layout.login-layout .ant-row > .ant-col > .ant-card {
-		width: 300px;
-	}
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
 }

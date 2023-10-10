@@ -19,7 +19,7 @@ const FloatInputNumber = (props) => {
 
 	return (
 		<div
-			className={"float-label input-number " + (props.className ?? "")}
+			className="float-label input-number"
 			onBlur={() => setFocus(false)}
 			onFocus={() => setFocus(true)}
 		>
@@ -29,7 +29,6 @@ const FloatInputNumber = (props) => {
 				value={value ?? ""}
 				size="large"
 				style={{ width: "100%" }}
-				addonBefore={props.addonBefore ?? ""}
 			/>
 			<label className={labelClass}>
 				{isOccupied ? label : placeholder} {requiredMark}

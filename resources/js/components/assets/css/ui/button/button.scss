@@ -2,1589 +2,2084 @@
 
 // main
 .btn-main {
-	color: $mainText;
-	background-color: $main;
-	border-color: $main;
+  color: $mainText;
+  background-color: $main;
+  border-color: $main;
 }
 
 .btn-main:hover {
-	color: $mainTextActive;
-	background-color: $mainActive;
-	border-color: $mainActive;
+  color: $mainTextActive;
+  background-color: $mainActive;
+  border-color: $mainActive;
+}
+
+.ant-upload-drag-icon {
+  height: 10%;
+}
+.ant-upload-select-picture {
+  min-height: 200px;
 }
 
 .btn-main:focus {
-	color: $mainTextActive;
-	background-color: $mainActive;
-	border-color: $mainActive;
+  color: $mainTextActive;
+  background-color: $mainActive;
+  border-color: $mainActive;
 }
 
 .btn-main-active {
-	color: $mainTextActive;
-	background-color: $mainActive;
-	border-color: $mainActive;
+  color: $mainTextActive;
+  background-color: $mainActive;
+  border-color: $mainActive;
 }
 
 .btn-main-active:hover {
-	color: $mainTextActive;
-	background-color: $mainActive;
-	border-color: $mainActive;
+  color: $mainTextActive;
+  background-color: $mainActive;
+  border-color: $mainActive;
 }
 
 .btn-main-active:focus {
-	color: $mainTextActive;
-	background-color: $mainActive;
-	border-color: $mainActive;
+  color: $mainTextActive;
+  background-color: $mainActive;
+  border-color: $mainActive;
 }
 
 .btn-main-disabled {
-	color: #ffffff;
-	background-color: $mainActive;
-	border-color: $mainActive;
-	opacity: $opacity;
+  color: #ffffff;
+  background-color: $mainActive;
+  border-color: $mainActive;
+  opacity: $opacity;
 }
 
 .btn-main-disabled:hover {
-	color: #fff;
-	background-color: $mainActive;
-	border-color: $mainActive;
-	opacity: $opacity;
+  color: #fff;
+  background-color: $mainActive;
+  border-color: $mainActive;
+  opacity: $opacity;
+}
+
+.btn-main-3 {
+  color: $color4;
+  background-color: transparent;
+  border-color: $color4;
+}
+
+.btn-main-3:hover {
+  color: $mainText;
+  background-color: $color4;
+  border-color: $color4;
+}
+
+.btn-main-3:focus {
+  color: $mainText;
+  background-color: $color4;
+  border-color: $color4;
+}
+
+.btn-main-4 {
+  color: $mainText;
+  background-color: $color4;
+  border-color: $color4;
+}
+
+.btn-main-4:hover {
+  color: $mainText;
+  background-color: $color5;
+  border-color: $color4;
+}
+
+.btn-main-4:focus {
+  color: $mainText;
+  background-color: $color4;
+  border-color: $color4;
 }
 
 .btn-main-2 {
-	color: $main;
-	background-color: transparent;
-	border-color: $main;
+  color: $main;
+  background-color: transparent;
+  border-color: $main;
+}
+
+.slot-btn:active,
+.slot-btn:focus {
+  background: #3f5fac;
+  color: $white;
 }
 
 .btn-main-2:hover {
-	color: $mainText;
-	background-color: $main;
-	border-color: $main;
+  color: $mainText;
+  background-color: $main;
+  border-color: $main;
 }
 
 .btn-main-2:focus {
-	color: $mainText;
-	background-color: $main;
-	border-color: $main;
-}
-.btn-main-2-active {
-	color: $white;
-	background-color: rgba($main, 0.8);
-	border-color: rgba($main, 0.8);
-}
-
-.btn-main-2-active:hover {
-	color: $white;
-	background-color: $main;
-	border-color: $main;
-}
-
-.btn-main-2-active:focus {
-	color: $white;
-	background-color: $main;
-	border-color: $main;
+  color: $mainText;
+  background-color: $main;
+  border-color: $main;
 }
 
 /** invert */
 .btn-main-invert {
-	color: $mainInvertText;
-	background-color: $mainInvert;
-	border-color: $mainInvert;
+  color: $mainInvertText;
+  background-color: $mainInvert;
+  border-color: $mainInvert;
 }
 
 .btn-main-invert:hover {
-	color: $mainInvertTextActive;
-	background-color: $mainInvertActive;
-	border-color: $mainInvertBorderActive;
+  color: $mainInvertTextActive;
+  background-color: $mainInvertActive;
+  border-color: $mainInvertBorderActive;
 }
 
 .btn-main-invert:focus {
-	color: $mainInvertTextActive;
-	background-color: $mainInvertActive;
-	border-color: $mainInvertBorderActive;
+  color: $mainInvertTextActive;
+  background-color: $mainInvertActive;
+  border-color: $mainInvertBorderActive;
 }
 
 .btn-main-invert-active {
-	color: $mainInvertText;
-	background-color: rgba($mainInvert, 0.8);
-	border-color: rgba($mainInvert, 0.8);
+  color: $mainInvertText;
+  background-color: $mainInvert;
+  border-color: $mainInvert;
 }
 
 .btn-main-invert-active:hover {
-	color: $white;
-	background-color: $mainInvert;
-	border-color: $mainInvert;
+  color: $mainInvertTextActive;
+  background-color: $mainInvertActive;
+  border-color: $mainInvertBorderActive;
 }
 
 .btn-main-invert-active:focus {
-	color: $white;
-	background-color: $mainInvert;
-	border-color: $mainInvert;
+  color: $mainInvertTextActive;
+  background-color: $mainInvertActive;
+  border-color: $mainInvertBorderActive;
 }
 
 .btn-main-invert-disabled {
-	color: $mainInvertText;
-	background-color: $mainInvert;
-	border-color: $mainInvert;
-	opacity: $opacity;
+  color: $mainInvertText;
+  background-color: $mainInvert;
+  border-color: $mainInvert;
+  opacity: $opacity;
 }
 
 .btn-main-invert-disabled:hover {
-	color: $mainInvertText;
-	background-color: $mainInvert;
-	border-color: $mainInvert;
-	opacity: $opacity;
+  color: $mainInvertText;
+  background-color: $mainInvert;
+  border-color: $mainInvert;
+  opacity: $opacity;
 }
 
 /** ========================== */
 
+.btn-task-card {
+  // color: $white;
+  // background-color: $primary;
+  // border-color: $primary;
+
+  span {
+    margin-left: 10px !important;
+    font-size: 20px;
+  }
+}
+
+// .btn-task-card:hover {
+//   color: $primary;
+//   background-color: $white;
+//   border-color: $primary;
+// }
+
 // primary
 .btn-primary {
-	color: $white;
-	background-color: $primary;
-	border-color: $primary;
+  color: $white;
+  background-color: $primary;
+  border-color: $primary;
 }
 
 .btn-primary:hover {
-	color: $white;
-	background-color: $primaryActive;
-	border-color: $primaryActive;
+  color: $white;
+  background-color: $primaryActive;
+  border-color: $primaryActive;
 }
 
 .btn-primary:focus {
-	color: $white;
-	background-color: $primaryActive;
-	border-color: $primaryActive;
+  color: $white;
+  background-color: $primaryActive;
+  border-color: $primaryActive;
 }
 
 .btn-primary-active {
-	color: $white;
-	background-color: $primaryActive;
-	border-color: $primaryActive;
+  color: $white;
+  background-color: $primaryActive;
+  border-color: $primaryActive;
 }
 
 .btn-primary-active:hover {
-	color: $white;
-	background-color: $primaryActive;
-	border-color: $primaryActive;
+  color: $white;
+  background-color: $primaryActive;
+  border-color: $primaryActive;
 }
 
 .btn-primary-active:focus {
-	color: $white;
-	background-color: $primaryActive;
-	border-color: $primaryActive;
+  color: $white;
+  background-color: $primaryActive;
+  border-color: $primaryActive;
 }
 
 .btn-primary-disabled {
-	color: $white;
-	background-color: $primaryActive;
-	border-color: $primaryActive;
-	opacity: $opacity;
+  color: $white;
+  background-color: $primaryActive;
+  border-color: $primaryActive;
+  opacity: $opacity;
 }
 
 .btn-primary-disabled:hover {
-	color: #fff;
-	background-color: $primaryActive;
-	border-color: $primaryActive;
-	opacity: $opacity;
+  color: #fff;
+  background-color: $primaryActive;
+  border-color: $primaryActive;
+  opacity: $opacity;
 }
 
 .btn-primary-disabled:focus {
-	color: #fff;
-	background-color: $primaryActive;
-	border-color: $primaryActive;
-	opacity: $opacity;
+  color: #fff;
+  background-color: $primaryActive;
+  border-color: $primaryActive;
+  opacity: $opacity;
 }
 
 // secondary
 .btn-secondary {
-	color: $white;
-	background-color: $secondary;
-	border-color: $secondary;
+  color: $white;
+  background-color: $secondary;
+  border-color: $secondary;
 }
 
 .btn-secondary:hover {
-	color: $white;
-	background-color: $secondaryActive;
-	border-color: $secondaryActive;
+  color: $white;
+  background-color: $secondaryActive;
+  border-color: $secondaryActive;
 }
 
 .btn-secondary:focus {
-	color: $white;
-	background-color: $secondaryActive;
-	border-color: $secondaryActive;
+  color: $white;
+  background-color: $secondaryActive;
+  border-color: $secondaryActive;
 }
 
 .btn-secondary-active {
-	color: $white;
-	background-color: $secondaryActive;
-	border-color: $secondaryActive;
+  color: $white;
+  background-color: $secondaryActive;
+  border-color: $secondaryActive;
 }
 
 .btn-secondary-active:hover {
-	color: $white;
-	background-color: $secondaryActive;
-	border-color: $secondaryActive;
+  color: $white;
+  background-color: $secondaryActive;
+  border-color: $secondaryActive;
 }
 
 .btn-secondary-active:focus {
-	color: $white;
-	background-color: $secondaryActive;
-	border-color: $secondaryActive;
+  color: $white;
+  background-color: $secondaryActive;
+  border-color: $secondaryActive;
 }
 
 .btn-secondary-disabled {
-	color: $white;
-	background-color: $secondaryActive;
-	border-color: $secondaryActive;
-	opacity: $opacity;
+  color: $white;
+  background-color: $secondaryActive;
+  border-color: $secondaryActive;
+  opacity: $opacity;
 }
 
 .btn-secondary-disabled:hover {
-	color: #fff;
-	background-color: $secondaryActive;
-	border-color: $secondaryActive;
-	opacity: $opacity;
+  color: #fff;
+  background-color: $secondaryActive;
+  border-color: $secondaryActive;
+  opacity: $opacity;
 }
 
 .btn-secondary-disabled:focus {
-	color: #fff;
-	background-color: $secondaryActive;
-	border-color: $secondaryActive;
-	opacity: $opacity;
+  color: #fff;
+  background-color: $secondaryActive;
+  border-color: $secondaryActive;
+  opacity: $opacity;
 }
 
 // success
 .btn-success {
-	color: $white;
-	background-color: $success;
-	border-color: $success;
+  color: $white;
+  background-color: $success;
+  border-color: $success;
 }
 
 .btn-success:hover {
-	color: $white;
-	background-color: $successActive;
-	border-color: $successActive;
+  color: $white;
+  background-color: $successActive;
+  border-color: $successActive;
 }
 
 .btn-success:focus {
-	color: $white;
-	background-color: $successActive;
-	border-color: $successActive;
+  color: $white;
+  background-color: $successActive;
+  border-color: $successActive;
 }
 
 .btn-success-active {
-	color: $white;
-	background-color: $successActive;
-	border-color: $successActive;
+  color: $white;
+  background-color: $successActive;
+  border-color: $successActive;
 }
 
 .btn-success-active:hover {
-	color: $white;
-	background-color: $successActive;
-	border-color: $successActive;
+  color: $white;
+  background-color: $successActive;
+  border-color: $successActive;
 }
 
 .btn-success-active:focus {
-	color: $white;
-	background-color: $successActive;
-	border-color: $successActive;
+  color: $white;
+  background-color: $successActive;
+  border-color: $successActive;
 }
 
 .btn-success-disabled {
-	color: $white;
-	background-color: $successActive;
-	border-color: $successActive;
-	opacity: $opacity;
+  color: $white;
+  background-color: $successActive;
+  border-color: $successActive;
+  opacity: $opacity;
 }
 
 .btn-success-disabled:hover {
-	color: #fff;
-	background-color: $successActive;
-	border-color: $successActive;
-	opacity: $opacity;
+  color: #fff;
+  background-color: $successActive;
+  border-color: $successActive;
+  opacity: $opacity;
 }
 
 .btn-success-disabled:focus {
-	color: #fff;
-	background-color: $successActive;
-	border-color: $successActive;
-	opacity: $opacity;
+  color: #fff;
+  background-color: $successActive;
+  border-color: $successActive;
+  opacity: $opacity;
 }
 
 // warning
 .btn-warning {
-	color: $white;
-	background-color: $warning;
-	border-color: $warning;
+  color: $white;
+  background-color: $warning;
+  border-color: $warning;
 }
 
 .btn-warning:hover {
-	color: $white;
-	background-color: $warningActive;
-	border-color: $warningActive;
+  color: $warning;
+  background-color: $white;
+  border-color: $warning;
 }
 
 .btn-warning:focus {
-	color: $white;
-	background-color: $warningActive;
-	border-color: $warningActive;
+  color: $warning;
+  background-color: $white;
+  border-color: $warning;
 }
 
 .btn-warning-active {
-	color: $white;
-	background-color: $warningActive;
-	border-color: $warningActive;
+  color: $warning;
+  background-color: $white;
+  border-color: $warning;
 }
 
 .btn-warning-active:hover {
-	color: $white;
-	background-color: $warningActive;
-	border-color: $warningActive;
+  color: $white;
+  background-color: $warningActive;
+  border-color: $warningActive;
 }
 
 .btn-warning-active:focus {
-	color: $white;
-	background-color: $warningActive;
-	border-color: $warningActive;
+  color: $white;
+  background-color: $warningActive;
+  border-color: $warningActive;
 }
 
 .btn-warning-disabled {
-	color: $white;
-	background-color: $warningActive;
-	border-color: $warningActive;
-	opacity: $opacity;
+  color: $white;
+  background-color: $warningActive;
+  border-color: $warningActive;
+  opacity: $opacity;
 }
 
 .btn-warning-disabled:hover {
-	color: #fff;
-	background-color: $warningActive;
-	border-color: $warningActive;
-	opacity: $opacity;
+  color: #fff;
+  background-color: $warningActive;
+  border-color: $warningActive;
+  opacity: $opacity;
 }
 
 .btn-warning-disabled:focus {
-	color: #fff;
-	background-color: $warningActive;
-	border-color: $warningActive;
-	opacity: $opacity;
+  color: #fff;
+  background-color: $warningActive;
+  border-color: $warningActive;
+  opacity: $opacity;
 }
 
 // danger
 .btn-danger {
-	color: $white;
-	background-color: $danger;
-	border-color: $danger;
+  color: $white;
+  background-color: $danger;
+  border-color: $danger;
 }
 
 .btn-danger:hover {
-	color: $white;
-	background-color: $dangerActive;
-	border-color: $dangerActive;
+  color: $white;
+  background-color: $dangerActive;
+  border-color: $dangerActive;
 }
 
 .btn-danger:focus {
-	color: $white;
-	background-color: $dangerActive;
-	border-color: $dangerActive;
+  color: $white;
+  background-color: $dangerActive;
+  border-color: $dangerActive;
 }
 
 .btn-danger-active {
-	color: $white;
-	background-color: $dangerActive;
-	border-color: $dangerActive;
+  color: $white;
+  background-color: $dangerActive;
+  border-color: $dangerActive;
 }
 
 .btn-danger-active:hover {
-	color: $white;
-	background-color: $dangerActive;
-	border-color: $dangerActive;
+  color: $white;
+  background-color: $dangerActive;
+  border-color: $dangerActive;
 }
 
 .btn-danger-active:focus {
-	color: $white;
-	background-color: $dangerActive;
-	border-color: $dangerActive;
+  color: $white;
+  background-color: $dangerActive;
+  border-color: $dangerActive;
 }
 
 .btn-danger-disabled {
-	color: $white;
-	background-color: $dangerActive;
-	border-color: $dangerActive;
-	opacity: $opacity;
+  color: $white;
+  background-color: $dangerActive;
+  border-color: $dangerActive;
+  opacity: $opacity;
 }
 
 .btn-danger-disabled:hover {
-	color: #fff;
-	background-color: $dangerActive;
-	border-color: $dangerActive;
-	opacity: $opacity;
+  color: #fff;
+  background-color: $dangerActive;
+  border-color: $dangerActive;
+  opacity: $opacity;
 }
 
 .btn-danger-disabled:focus {
-	color: #fff;
-	background-color: $dangerActive;
-	border-color: $dangerActive;
-	opacity: $opacity;
+  color: #fff;
+  background-color: $dangerActive;
+  border-color: $dangerActive;
+  opacity: $opacity;
 }
 
 // info
 .btn-info {
-	color: $white;
-	background-color: $info;
-	border-color: $info;
+  color: $white;
+  background-color: $info;
+  border-color: $info;
 }
 
 .btn-info:hover {
-	color: $white;
-	background-color: $infoActive;
-	border-color: $infoActive;
+  color: $white;
+  background-color: $infoActive;
+  border-color: $infoActive;
 }
 
 .btn-info:focus {
-	color: $white;
-	background-color: $infoActive;
-	border-color: $infoActive;
+  color: $white;
+  background-color: $infoActive;
+  border-color: $infoActive;
 }
 
 .btn-info-active {
-	color: $white;
-	background-color: $infoActive;
-	border-color: $infoActive;
+  color: $white;
+  background-color: $infoActive;
+  border-color: $infoActive;
 }
 
 .btn-info-active:hover {
-	color: $white;
-	background-color: $infoActive;
-	border-color: $infoActive;
+  color: $white;
+  background-color: $infoActive;
+  border-color: $infoActive;
 }
 
 .btn-info-active:focus {
-	color: $white;
-	background-color: $infoActive;
-	border-color: $infoActive;
+  color: $white;
+  background-color: $infoActive;
+  border-color: $infoActive;
 }
 
 .btn-info-disabled {
-	color: $white;
-	background-color: $infoActive;
-	border-color: $infoActive;
-	opacity: $opacity;
+  color: $white;
+  background-color: $infoActive;
+  border-color: $infoActive;
+  opacity: $opacity;
 }
 
 .btn-info-disabled:hover {
-	color: #fff;
-	background-color: $infoActive;
-	border-color: $infoActive;
-	opacity: $opacity;
+  color: #fff;
+  background-color: $infoActive;
+  border-color: $infoActive;
+  opacity: $opacity;
 }
 
 .btn-info-disabled:focus {
-	color: #fff;
-	background-color: $infoActive;
-	border-color: $infoActive;
-	opacity: $opacity;
+  color: #fff;
+  background-color: $infoActive;
+  border-color: $infoActive;
+  opacity: $opacity;
 }
 
 // indigo
 .btn-indigo {
-	color: $white;
-	background-color: $indigo;
-	border-color: $indigo;
+  color: $white;
+  background-color: $indigo;
+  border-color: $indigo;
 }
 
 .btn-indigo:hover {
-	color: $white;
-	background-color: $indigoActive;
-	border-color: $indigoActive;
+  color: $white;
+  background-color: $indigoActive;
+  border-color: $indigoActive;
 }
 
 .btn-indigo:focus {
-	color: $white;
-	background-color: $indigoActive;
-	border-color: $indigoActive;
+  color: $white;
+  background-color: $indigoActive;
+  border-color: $indigoActive;
 }
 
 .btn-indigo-active {
-	color: $white;
-	background-color: $indigoActive;
-	border-color: $indigoActive;
+  color: $white;
+  background-color: $indigoActive;
+  border-color: $indigoActive;
 }
 
 .btn-indigo-active:hover {
-	color: $white;
-	background-color: $indigoActive;
-	border-color: $indigoActive;
+  color: $white;
+  background-color: $indigoActive;
+  border-color: $indigoActive;
 }
 
 .btn-indigo-active:focus {
-	color: $white;
-	background-color: $indigoActive;
-	border-color: $indigoActive;
+  color: $white;
+  background-color: $indigoActive;
+  border-color: $indigoActive;
 }
 
 .btn-indigo-disabled {
-	color: $white;
-	background-color: $indigoActive;
-	border-color: $indigoActive;
-	opacity: $opacity;
+  color: $white;
+  background-color: $indigoActive;
+  border-color: $indigoActive;
+  opacity: $opacity;
 }
 
 .btn-indigo-disabled:hover {
-	color: #fff;
-	background-color: $indigoActive;
-	border-color: $indigoActive;
-	opacity: $opacity;
+  color: #fff;
+  background-color: $indigoActive;
+  border-color: $indigoActive;
+  opacity: $opacity;
 }
 
 .btn-indigo-disabled:focus {
-	color: #fff;
-	background-color: $indigoActive;
-	border-color: $indigoActive;
-	opacity: $opacity;
+  color: #fff;
+  background-color: $indigoActive;
+  border-color: $indigoActive;
+  opacity: $opacity;
 }
 
 // purple
 .btn-purple {
-	color: $white;
-	background-color: $purple;
-	border-color: $purple;
+  color: $white;
+  background-color: $purple;
+  border-color: $purple;
 }
 
 .btn-purple:hover {
-	color: $white;
-	background-color: $purpleActive;
-	border-color: $purpleActive;
+  color: $white;
+  background-color: $purpleActive;
+  border-color: $purpleActive;
 }
 
 .btn-purple:focus {
-	color: $white;
-	background-color: $purpleActive;
-	border-color: $purpleActive;
+  color: $white;
+  background-color: $purpleActive;
+  border-color: $purpleActive;
 }
 
 .btn-purple-active {
-	color: $white;
-	background-color: $purpleActive;
-	border-color: $purpleActive;
+  color: $white;
+  background-color: $purpleActive;
+  border-color: $purpleActive;
 }
 
 .btn-purple-active:hover {
-	color: $white;
-	background-color: $purpleActive;
-	border-color: $purpleActive;
+  color: $white;
+  background-color: $purpleActive;
+  border-color: $purpleActive;
 }
 
 .btn-purple-active:focus {
-	color: $white;
-	background-color: $purpleActive;
-	border-color: $purpleActive;
+  color: $white;
+  background-color: $purpleActive;
+  border-color: $purpleActive;
 }
 
 .btn-purple-disabled {
-	color: $white;
-	background-color: $purpleActive;
-	border-color: $purpleActive;
-	opacity: $opacity;
+  color: $white;
+  background-color: $purpleActive;
+  border-color: $purpleActive;
+  opacity: $opacity;
 }
 
 .btn-purple-disabled:hover {
-	color: #fff;
-	background-color: $purpleActive;
-	border-color: $purpleActive;
-	opacity: $opacity;
+  color: #fff;
+  background-color: $purpleActive;
+  border-color: $purpleActive;
+  opacity: $opacity;
 }
 
 .btn-purple-disabled:focus {
-	color: #fff;
-	background-color: $purpleActive;
-	border-color: $purpleActive;
-	opacity: $opacity;
+  color: #fff;
+  background-color: $purpleActive;
+  border-color: $purpleActive;
+  opacity: $opacity;
 }
 
 // pink
 .btn-pink {
-	color: $white;
-	background-color: $pink;
-	border-color: $pink;
+  color: $white;
+  background-color: $pink;
+  border-color: $pink;
 }
 
 .btn-pink:hover {
-	color: $white;
-	background-color: $pinkActive;
-	border-color: $pinkActive;
+  color: $white;
+  background-color: $pinkActive;
+  border-color: $pinkActive;
 }
 
 .btn-pink:focus {
-	color: $white;
-	background-color: $pinkActive;
-	border-color: $pinkActive;
+  color: $white;
+  background-color: $pinkActive;
+  border-color: $pinkActive;
 }
 
 .btn-pink-active {
-	color: $white;
-	background-color: $pinkActive;
-	border-color: $pinkActive;
+  color: $white;
+  background-color: $pinkActive;
+  border-color: $pinkActive;
 }
 
 .btn-pink-active:hover {
-	color: $white;
-	background-color: $pinkActive;
-	border-color: $pinkActive;
+  color: $white;
+  background-color: $pinkActive;
+  border-color: $pinkActive;
 }
 
 .btn-pink-active:focus {
-	color: $white;
-	background-color: $pinkActive;
-	border-color: $pinkActive;
+  color: $white;
+  background-color: $pinkActive;
+  border-color: $pinkActive;
 }
 
 .btn-pink-disabled {
-	color: $white;
-	background-color: $pinkActive;
-	border-color: $pinkActive;
-	opacity: $opacity;
+  color: $white;
+  background-color: $pinkActive;
+  border-color: $pinkActive;
+  opacity: $opacity;
 }
 
 .btn-pink-disabled:hover {
-	color: #fff;
-	background-color: $pinkActive;
-	border-color: $pinkActive;
-	opacity: $opacity;
+  color: #fff;
+  background-color: $pinkActive;
+  border-color: $pinkActive;
+  opacity: $opacity;
 }
 
 .btn-pink-disabled:focus {
-	color: #fff;
-	background-color: $pinkActive;
-	border-color: $pinkActive;
-	opacity: $opacity;
+  color: #fff;
+  background-color: $pinkActive;
+  border-color: $pinkActive;
+  opacity: $opacity;
 }
 
 // teal
 .btn-teal {
-	color: $white;
-	background-color: $teal;
-	border-color: $teal;
+  color: $white;
+  background-color: $teal;
+  border-color: $teal;
 }
 
 .btn-teal:hover {
-	color: $white;
-	background-color: $tealActive;
-	border-color: $tealActive;
+  color: $white;
+  background-color: $tealActive;
+  border-color: $tealActive;
 }
 
 .btn-teal:focus {
-	color: $white;
-	background-color: $tealActive;
-	border-color: $tealActive;
+  color: $white;
+  background-color: $tealActive;
+  border-color: $tealActive;
 }
 
 .btn-teal-active {
-	color: $white;
-	background-color: $tealActive;
-	border-color: $tealActive;
+  color: $white;
+  background-color: $tealActive;
+  border-color: $tealActive;
 }
 
 .btn-teal-active:hover {
-	color: $white;
-	background-color: $tealActive;
-	border-color: $tealActive;
+  color: $white;
+  background-color: $tealActive;
+  border-color: $tealActive;
 }
 
 .btn-teal-active:focus {
-	color: $white;
-	background-color: $tealActive;
-	border-color: $tealActive;
+  color: $white;
+  background-color: $tealActive;
+  border-color: $tealActive;
 }
 
 .btn-teal-disabled {
-	color: $white;
-	background-color: $tealActive;
-	border-color: $tealActive;
-	opacity: $opacity;
+  color: $white;
+  background-color: $tealActive;
+  border-color: $tealActive;
+  opacity: $opacity;
 }
 
 .btn-teal-disabled:hover {
-	color: #fff;
-	background-color: $tealActive;
-	border-color: $tealActive;
-	opacity: $opacity;
+  color: #fff;
+  background-color: $tealActive;
+  border-color: $tealActive;
+  opacity: $opacity;
 }
 
 .btn-teal-disabled:focus {
-	color: #fff;
-	background-color: $tealActive;
-	border-color: $tealActive;
-	opacity: $opacity;
+  color: #fff;
+  background-color: $tealActive;
+  border-color: $tealActive;
+  opacity: $opacity;
 }
 
 // dark
 .btn-dark {
-	color: $white;
-	background-color: $dark;
-	border-color: $dark;
+  color: $white;
+  background-color: $dark;
+  border-color: $dark;
 }
 
 .btn-dark:hover {
-	color: $white;
-	background-color: $darkActive;
-	border-color: $darkActive;
+  color: $white;
+  background-color: $darkActive;
+  border-color: $darkActive;
 }
 
 .btn-dark:focus {
-	color: $white;
-	background-color: $darkActive;
-	border-color: $darkActive;
+  color: $white;
+  background-color: $darkActive;
+  border-color: $darkActive;
 }
 
 .btn-dark-active {
-	color: $white;
-	background-color: $darkActive;
-	border-color: $darkActive;
+  color: $white;
+  background-color: $darkActive;
+  border-color: $darkActive;
 }
 
 .btn-dark-active:hover {
-	color: $white;
-	background-color: $darkActive;
-	border-color: $darkActive;
+  color: $white;
+  background-color: $darkActive;
+  border-color: $darkActive;
 }
 
 .btn-dark-active:focus {
-	color: $white;
-	background-color: $darkActive;
-	border-color: $darkActive;
+  color: $white;
+  background-color: $darkActive;
+  border-color: $darkActive;
 }
 
 .btn-dark-disabled {
-	color: $white;
-	background-color: $darkActive;
-	border-color: $darkActive;
-	opacity: $opacity;
+  color: $white;
+  background-color: $darkActive;
+  border-color: $darkActive;
+  opacity: $opacity;
 }
 
 .btn-dark-disabled:hover {
-	color: #fff;
-	background-color: $darkActive;
-	border-color: $darkActive;
-	opacity: $opacity;
+  color: #fff;
+  background-color: $darkActive;
+  border-color: $darkActive;
+  opacity: $opacity;
 }
 
 .btn-dark-disabled:focus {
-	color: #fff;
-	background-color: $darkActive;
-	border-color: $darkActive;
-	opacity: $opacity;
+  color: #fff;
+  background-color: $darkActive;
+  border-color: $darkActive;
+  opacity: $opacity;
 }
 
 /** outline */
 
 /* primary-outline */
 .btn-primary-outline {
-	color: $white;
-	background-color: $primary;
-	border-color: $primary;
+  color: $white;
+  background-color: $primary;
+  border-color: $primary;
 }
 
 .btn-primary-outline:hover {
-	color: $primary;
-	background-color: $white;
-	border-color: $primary;
+  color: $primary;
+  background-color: $white;
+  border-color: $primary;
 }
 
 .btn-primary-outline:focus {
-	color: $primary;
-	background-color: $white;
-	border-color: $primary;
+  color: $primary;
+  background-color: $white;
+  border-color: $primary;
 }
 
 .btn-primary-outline-active {
-	color: $primary;
-	background-color: $white;
-	border-color: $primary;
+  color: $primary;
+  background-color: $white;
+  border-color: $primary;
 }
 
 .btn-primary-outline-active:hover {
-	color: $primary;
-	background-color: $white;
-	border-color: $primary;
+  color: $primary;
+  background-color: $white;
+  border-color: $primary;
 }
 
 .btn-primary-outline-active:focus {
-	color: $primary;
-	background-color: $white;
-	border-color: $primary;
+  color: $primary;
+  background-color: $white;
+  border-color: $primary;
 }
 
 .btn-primary-outline-disabled {
-	color: $white;
-	background-color: $primary;
-	border-color: $primary;
-	opacity: 0.6;
+  color: $white;
+  background-color: $primary;
+  border-color: $primary;
+  opacity: 0.6;
 }
 
 .btn-primary-outline-disabled:hover {
-	color: $primary;
-	background-color: $white;
-	border-color: $primary;
-	opacity: 0.6;
+  color: $primary;
+  background-color: $white;
+  border-color: $primary;
+  opacity: 0.6;
 }
 
 .btn-primary-outline-disabled:focus {
-	color: $primary;
-	background-color: $white;
-	border-color: $primary;
-	opacity: 0.6;
+  color: $primary;
+  background-color: $white;
+  border-color: $primary;
+  opacity: 0.6;
 }
 
 /* secondary-outline */
 .btn-secondary-outline {
-	color: $white;
-	background-color: $secondary;
-	border-color: $secondary;
+  color: $white;
+  background-color: $secondary;
+  border-color: $secondary;
 }
 
 .btn-secondary-outline:hover {
-	color: $secondary;
-	background-color: $white;
-	border-color: $secondary;
+  color: $secondary;
+  background-color: $white;
+  border-color: $secondary;
 }
 
 .btn-secondary-outline:focus {
-	color: $secondary;
-	background-color: $white;
-	border-color: $secondary;
+  color: $secondary;
+  background-color: $white;
+  border-color: $secondary;
 }
 
 .btn-secondary-outline-active {
-	color: $secondary;
-	background-color: $white;
-	border-color: $secondary;
+  color: $secondary;
+  background-color: $white;
+  border-color: $secondary;
 }
 
 .btn-secondary-outline-active:hover {
-	color: $secondary;
-	background-color: $white;
-	border-color: $secondary;
+  color: $secondary;
+  background-color: $white;
+  border-color: $secondary;
 }
 
 .btn-secondary-outline-active:focus {
-	color: $secondary;
-	background-color: $white;
-	border-color: $secondary;
+  color: $secondary;
+  background-color: $white;
+  border-color: $secondary;
 }
 
 .btn-secondary-outline-disabled {
-	color: $white;
-	background-color: $secondary;
-	border-color: $secondary;
-	opacity: 0.6;
+  color: $white;
+  background-color: $secondary;
+  border-color: $secondary;
+  opacity: 0.6;
 }
 
 .btn-secondary-outline-disabled:hover {
-	color: $secondary;
-	background-color: $white;
-	border-color: $secondary;
-	opacity: 0.6;
+  color: $secondary;
+  background-color: $white;
+  border-color: $secondary;
+  opacity: 0.6;
 }
 
 .btn-secondary-outline-disabled:focus {
-	color: $secondary;
-	background-color: $white;
-	border-color: $secondary;
-	opacity: 0.6;
+  color: $secondary;
+  background-color: $white;
+  border-color: $secondary;
+  opacity: 0.6;
 }
 
 /* success-outline */
 .btn-success-outline {
-	color: $white;
-	background-color: $success;
-	border-color: $success;
+  color: $white;
+  background-color: $success;
+  border-color: $success;
 }
 
 .btn-success-outline:hover {
-	color: $success;
-	background-color: $white;
-	border-color: $success;
+  color: $success;
+  background-color: $white;
+  border-color: $success;
 }
 
 .btn-success-outline:focus {
-	color: $success;
-	background-color: $white;
-	border-color: $success;
+  color: $success;
+  background-color: $white;
+  border-color: $success;
 }
 
 .btn-success-outline-active {
-	color: $success;
-	background-color: $white;
-	border-color: $success;
+  color: $success;
+  background-color: $white;
+  border-color: $success;
 }
 
 .btn-success-outline-active:hover {
-	color: $success;
-	background-color: $white;
-	border-color: $success;
+  color: $success;
+  background-color: $white;
+  border-color: $success;
 }
 
 .btn-success-outline-active:focus {
-	color: $success;
-	background-color: $white;
-	border-color: $success;
+  color: $success;
+  background-color: $white;
+  border-color: $success;
 }
 
 .btn-success-outline-disabled {
-	color: $white;
-	background-color: $success;
-	border-color: $success;
-	opacity: 0.6;
+  color: $white;
+  background-color: $success;
+  border-color: $success;
+  opacity: 0.6;
 }
 
 .btn-success-outline-disabled:hover {
-	color: $success;
-	background-color: $white;
-	border-color: $success;
-	opacity: 0.6;
+  color: $success;
+  background-color: $white;
+  border-color: $success;
+  opacity: 0.6;
 }
 
 .btn-success-outline-disabled:focus {
-	color: $success;
-	background-color: $white;
-	border-color: $success;
-	opacity: 0.6;
+  color: $success;
+  background-color: $white;
+  border-color: $success;
+  opacity: 0.6;
 }
 
 /* warning-outline */
 .btn-warning-outline {
-	color: $white;
-	background-color: $warning;
-	border-color: $warning;
+  color: $white;
+  background-color: $warning;
+  border-color: $warning;
 }
 
 .btn-warning-outline:hover {
-	color: $warning;
-	background-color: $white;
-	border-color: $warning;
+  color: $warning;
+  background-color: $white;
+  border-color: $warning;
 }
 
 .btn-warning-outline:focus {
-	color: $warning;
-	background-color: $white;
-	border-color: $warning;
+  color: $warning;
+  background-color: $white;
+  border-color: $warning;
 }
 
 .btn-warning-outline-active {
-	color: $warning;
-	background-color: $white;
-	border-color: $warning;
+  color: $warning;
+  background-color: $white;
+  border-color: $warning;
 }
 
 .btn-warning-outline-active:hover {
-	color: $warning;
-	background-color: $white;
-	border-color: $warning;
+  color: $warning;
+  background-color: $white;
+  border-color: $warning;
 }
 
 .btn-warning-outline-active:focus {
-	color: $warning;
-	background-color: $white;
-	border-color: $warning;
+  color: $warning;
+  background-color: $white;
+  border-color: $warning;
 }
 
 .btn-warning-outline-disabled {
-	color: $white;
-	background-color: $warning;
-	border-color: $warning;
-	opacity: 0.6;
+  color: $white;
+  background-color: $warning;
+  border-color: $warning;
+  opacity: 0.6;
 }
 
 .btn-warning-outline-disabled:hover {
-	color: $warning;
-	background-color: $white;
-	border-color: $warning;
-	opacity: 0.6;
+  color: $warning;
+  background-color: $white;
+  border-color: $warning;
+  opacity: 0.6;
 }
 
 .btn-warning-outline-disabled:focus {
-	color: $warning;
-	background-color: $white;
-	border-color: $warning;
-	opacity: 0.6;
+  color: $warning;
+  background-color: $white;
+  border-color: $warning;
+  opacity: 0.6;
 }
 
 /* danger-outline */
 .btn-danger-outline {
-	color: $white;
-	background-color: $danger;
-	border-color: $danger;
+  color: $white;
+  background-color: $danger;
+  border-color: $danger;
 }
 
 .btn-danger-outline:hover {
-	color: $danger;
-	background-color: $white;
-	border-color: $danger;
+  color: $danger;
+  background-color: $white;
+  border-color: $danger;
 }
 
 .btn-danger-outline:focus {
-	color: $danger;
-	background-color: $white;
-	border-color: $danger;
+  color: $danger;
+  background-color: $white;
+  border-color: $danger;
 }
 
 .btn-danger-outline-active {
-	color: $danger;
-	background-color: $white;
-	border-color: $danger;
+  color: $danger;
+  background-color: $white;
+  border-color: $danger;
 }
 
 .btn-danger-outline-active:hover {
-	color: $danger;
-	background-color: $white;
-	border-color: $danger;
+  color: $danger;
+  background-color: $white;
+  border-color: $danger;
 }
 
 .btn-danger-outline-active:focus {
-	color: $danger;
-	background-color: $white;
-	border-color: $danger;
+  color: $danger;
+  background-color: $white;
+  border-color: $danger;
 }
 
 .btn-danger-outline-disabled {
-	color: $white;
-	background-color: $danger;
-	border-color: $danger;
-	opacity: 0.6;
+  color: $white;
+  background-color: $danger;
+  border-color: $danger;
+  opacity: 0.6;
 }
 
 .btn-danger-outline-disabled:hover {
-	color: $danger;
-	background-color: $white;
-	border-color: $danger;
-	opacity: 0.6;
+  color: $danger;
+  background-color: $white;
+  border-color: $danger;
+  opacity: 0.6;
 }
 
 .btn-danger-outline-disabled:focus {
-	color: $danger;
-	background-color: $white;
-	border-color: $danger;
-	opacity: 0.6;
+  color: $danger;
+  background-color: $white;
+  border-color: $danger;
+  opacity: 0.6;
 }
 
 /* info-outline */
 .btn-info-outline {
-	color: $white;
-	background-color: $info;
-	border-color: $info;
+  color: $white;
+  background-color: $info;
+  border-color: $info;
 }
 
 .btn-info-outline:hover {
-	color: $info;
-	background-color: $white;
-	border-color: $info;
+  color: $info;
+  background-color: $white;
+  border-color: $info;
 }
 
 .btn-info-outline:focus {
-	color: $info;
-	background-color: $white;
-	border-color: $info;
+  color: $info;
+  background-color: $white;
+  border-color: $info;
 }
 
 .btn-info-outline-active {
-	color: $info;
-	background-color: $white;
-	border-color: $info;
+  color: $info;
+  background-color: $white;
+  border-color: $info;
 }
 
 .btn-info-outline-active:hover {
-	color: $info;
-	background-color: $white;
-	border-color: $info;
+  color: $info;
+  background-color: $white;
+  border-color: $info;
 }
 
 .btn-info-outline-active:focus {
-	color: $info;
-	background-color: $white;
-	border-color: $info;
+  color: $info;
+  background-color: $white;
+  border-color: $info;
 }
 
 .btn-info-outline-disabled {
-	color: $white;
-	background-color: $info;
-	border-color: $info;
-	opacity: 0.6;
+  color: $white;
+  background-color: $info;
+  border-color: $info;
+  opacity: 0.6;
 }
 
 .btn-info-outline-disabled:hover {
-	color: $info;
-	background-color: $white;
-	border-color: $info;
-	opacity: 0.6;
+  color: $info;
+  background-color: $white;
+  border-color: $info;
+  opacity: 0.6;
 }
 
 .btn-info-outline-disabled:focus {
-	color: $info;
-	background-color: $white;
-	border-color: $info;
-	opacity: 0.6;
+  color: $info;
+  background-color: $white;
+  border-color: $info;
+  opacity: 0.6;
 }
 
 /* indigo-outline */
 .btn-indigo-outline {
-	color: $white;
-	background-color: $indigo;
-	border-color: $indigo;
+  color: $white;
+  background-color: $indigo;
+  border-color: $indigo;
 }
 
 .btn-indigo-outline:hover {
-	color: $indigo;
-	background-color: $white;
-	border-color: $indigo;
+  color: $indigo;
+  background-color: $white;
+  border-color: $indigo;
 }
 
 .btn-indigo-outline:focus {
-	color: $indigo;
-	background-color: $white;
-	border-color: $indigo;
+  color: $indigo;
+  background-color: $white;
+  border-color: $indigo;
 }
 
 .btn-indigo-outline-active {
-	color: $indigo;
-	background-color: $white;
-	border-color: $indigo;
+  color: $indigo;
+  background-color: $white;
+  border-color: $indigo;
 }
 
 .btn-indigo-outline-active:hover {
-	color: $indigo;
-	background-color: $white;
-	border-color: $indigo;
+  color: $indigo;
+  background-color: $white;
+  border-color: $indigo;
 }
 
 .btn-indigo-outline-active:focus {
-	color: $indigo;
-	background-color: $white;
-	border-color: $indigo;
+  color: $indigo;
+  background-color: $white;
+  border-color: $indigo;
 }
 
 .btn-indigo-outline-disabled {
-	color: $white;
-	background-color: $indigo;
-	border-color: $indigo;
-	opacity: 0.6;
+  color: $white;
+  background-color: $indigo;
+  border-color: $indigo;
+  opacity: 0.6;
 }
 
 .btn-indigo-outline-disabled:hover {
-	color: $indigo;
-	background-color: $white;
-	border-color: $indigo;
-	opacity: 0.6;
+  color: $indigo;
+  background-color: $white;
+  border-color: $indigo;
+  opacity: 0.6;
 }
 
 .btn-indigo-outline-disabled:focus {
-	color: $indigo;
-	background-color: $white;
-	border-color: $indigo;
-	opacity: 0.6;
+  color: $indigo;
+  background-color: $white;
+  border-color: $indigo;
+  opacity: 0.6;
 }
 
 /* purple-outline */
 .btn-purple-outline {
-	color: $white;
-	background-color: $purple;
-	border-color: $purple;
+  color: $white;
+  background-color: $purple;
+  border-color: $purple;
 }
 
 .btn-purple-outline:hover {
-	color: $purple;
-	background-color: $white;
-	border-color: $purple;
+  color: $purple;
+  background-color: $white;
+  border-color: $purple;
 }
 
 .btn-purple-outline:focus {
-	color: $purple;
-	background-color: $white;
-	border-color: $purple;
+  color: $purple;
+  background-color: $white;
+  border-color: $purple;
 }
 
 .btn-purple-outline-active {
-	color: $purple;
-	background-color: $white;
-	border-color: $purple;
+  color: $purple;
+  background-color: $white;
+  border-color: $purple;
 }
 
 .btn-purple-outline-active:hover {
-	color: $purple;
-	background-color: $white;
-	border-color: $purple;
+  color: $purple;
+  background-color: $white;
+  border-color: $purple;
 }
 
 .btn-purple-outline-active:focus {
-	color: $purple;
-	background-color: $white;
-	border-color: $purple;
+  color: $purple;
+  background-color: $white;
+  border-color: $purple;
 }
 
 .btn-purple-outline-disabled {
-	color: $white;
-	background-color: $purple;
-	border-color: $purple;
-	opacity: 0.6;
+  color: $white;
+  background-color: $purple;
+  border-color: $purple;
+  opacity: 0.6;
 }
 
 .btn-purple-outline-disabled:hover {
-	color: $purple;
-	background-color: $white;
-	border-color: $purple;
-	opacity: 0.6;
+  color: $purple;
+  background-color: $white;
+  border-color: $purple;
+  opacity: 0.6;
 }
 
 .btn-purple-outline-disabled:focus {
-	color: $purple;
-	background-color: $white;
-	border-color: $purple;
-	opacity: 0.6;
+  color: $purple;
+  background-color: $white;
+  border-color: $purple;
+  opacity: 0.6;
 }
 
 /* pink-outline */
 .btn-pink-outline {
-	color: $white;
-	background-color: $pink;
-	border-color: $pink;
+  color: $white;
+  background-color: $pink;
+  border-color: $pink;
 }
 
 .btn-pink-outline:hover {
-	color: $pink;
-	background-color: $white;
-	border-color: $pink;
+  color: $pink;
+  background-color: $white;
+  border-color: $pink;
 }
 
 .btn-pink-outline:focus {
-	color: $pink;
-	background-color: $white;
-	border-color: $pink;
+  color: $pink;
+  background-color: $white;
+  border-color: $pink;
 }
 
 .btn-pink-outline-active {
-	color: $pink;
-	background-color: $white;
-	border-color: $pink;
+  color: $pink;
+  background-color: $white;
+  border-color: $pink;
 }
 
 .btn-pink-outline-active:hover {
-	color: $pink;
-	background-color: $white;
-	border-color: $pink;
+  color: $pink;
+  background-color: $white;
+  border-color: $pink;
 }
 
 .btn-pink-outline-active:focus {
-	color: $pink;
-	background-color: $white;
-	border-color: $pink;
+  color: $pink;
+  background-color: $white;
+  border-color: $pink;
 }
 
 .btn-pink-outline-disabled {
-	color: $white;
-	background-color: $pink;
-	border-color: $pink;
-	opacity: 0.6;
+  color: $white;
+  background-color: $pink;
+  border-color: $pink;
+  opacity: 0.6;
 }
 
 .btn-pink-outline-disabled:hover {
-	color: $pink;
-	background-color: $white;
-	border-color: $pink;
-	opacity: 0.6;
+  color: $pink;
+  background-color: $white;
+  border-color: $pink;
+  opacity: 0.6;
 }
 
 .btn-pink-outline-disabled:focus {
-	color: $pink;
-	background-color: $white;
-	border-color: $pink;
-	opacity: 0.6;
+  color: $pink;
+  background-color: $white;
+  border-color: $pink;
+  opacity: 0.6;
 }
 
 /* teal-outline */
 .btn-teal-outline {
-	color: $white;
-	background-color: $teal;
-	border-color: $teal;
+  color: $white;
+  background-color: $teal;
+  border-color: $teal;
 }
 
 .btn-teal-outline:hover {
-	color: $teal;
-	background-color: $white;
-	border-color: $teal;
+  color: $teal;
+  background-color: $white;
+  border-color: $teal;
 }
 
 .btn-teal-outline:focus {
-	color: $teal;
-	background-color: $white;
-	border-color: $teal;
+  color: $teal;
+  background-color: $white;
+  border-color: $teal;
 }
 
 .btn-teal-outline-active {
-	color: $teal;
-	background-color: $white;
-	border-color: $teal;
+  color: $teal;
+  background-color: $white;
+  border-color: $teal;
 }
 
 .btn-teal-outline-active:hover {
-	color: $teal;
-	background-color: $white;
-	border-color: $teal;
+  color: $teal;
+  background-color: $white;
+  border-color: $teal;
 }
 
 .btn-teal-outline-active:focus {
-	color: $teal;
-	background-color: $white;
-	border-color: $teal;
+  color: $teal;
+  background-color: $white;
+  border-color: $teal;
 }
 
 .btn-teal-outline-disabled {
-	color: $white;
-	background-color: $teal;
-	border-color: $teal;
-	opacity: 0.6;
+  color: $white;
+  background-color: $teal;
+  border-color: $teal;
+  opacity: 0.6;
 }
 
 .btn-teal-outline-disabled:hover {
-	color: $teal;
-	background-color: $white;
-	border-color: $teal;
-	opacity: 0.6;
+  color: $teal;
+  background-color: $white;
+  border-color: $teal;
+  opacity: 0.6;
 }
 
 .btn-teal-outline-disabled:focus {
-	color: $teal;
-	background-color: $white;
-	border-color: $teal;
-	opacity: 0.6;
+  color: $teal;
+  background-color: $white;
+  border-color: $teal;
+  opacity: 0.6;
 }
 
 /* dark-outline */
 .btn-dark-outline {
-	color: $white;
-	background-color: $dark;
-	border-color: $dark;
+  color: $white;
+  background-color: $dark;
+  border-color: $dark;
 }
 
 .btn-dark-outline:hover {
-	color: $dark;
-	background-color: $white;
-	border-color: $dark;
+  color: $dark;
+  background-color: $white;
+  border-color: $dark;
 }
 
 .btn-dark-outline:focus {
-	color: $dark;
-	background-color: $white;
-	border-color: $dark;
+  color: $dark;
+  background-color: $white;
+  border-color: $dark;
 }
 
 .btn-dark-outline-active {
-	color: $dark;
-	background-color: $white;
-	border-color: $dark;
+  color: $dark;
+  background-color: $white;
+  border-color: $dark;
 }
 
 .btn-dark-outline-active:hover {
-	color: $dark;
-	background-color: $white;
-	border-color: $dark;
+  color: $dark;
+  background-color: $white;
+  border-color: $dark;
 }
 
 .btn-dark-outline-active:focus {
-	color: $dark;
-	background-color: $white;
-	border-color: $dark;
+  color: $dark;
+  background-color: $white;
+  border-color: $dark;
 }
 
 .btn-dark-outline-disabled {
-	color: $white;
-	background-color: $dark;
-	border-color: $dark;
-	opacity: 0.6;
+  color: $white;
+  background-color: $dark;
+  border-color: $dark;
+  opacity: 0.6;
 }
 
 .btn-dark-outline-disabled:hover {
-	color: $dark;
-	background-color: $white;
-	border-color: $dark;
-	opacity: 0.6;
+  color: $dark;
+  background-color: $white;
+  border-color: $dark;
+  opacity: 0.6;
 }
 
 .btn-dark-outline-disabled:focus {
-	color: $dark;
-	background-color: $white;
-	border-color: $dark;
-	opacity: 0.6;
+  color: $dark;
+  background-color: $white;
+  border-color: $dark;
+  opacity: 0.6;
 }
 
 /* main-outline */
 .btn-main-outline {
-	color: $white;
-	background-color: $main;
-	border-color: $main;
+  color: $white;
+  background-color: $main;
+  border-color: $main;
 }
 
 .btn-main-outline:hover {
-	color: $main;
-	background-color: $white;
-	border-color: $main;
+  color: $main;
+  background-color: $white;
+  border-color: $main;
 }
 
 .btn-main-outline:focus {
-	color: $main;
-	background-color: $white;
-	border-color: $main;
+  color: $main;
+  background-color: $white;
+  border-color: $main;
 }
 
 .btn-main-outline-active {
-	color: $main;
-	background-color: $white;
-	border-color: $main;
+  color: $main;
+  background-color: $white;
+  border-color: $main;
 }
 
 .btn-main-outline-active:hover {
-	color: $main;
-	background-color: $white;
-	border-color: $main;
+  color: $main;
+  background-color: $white;
+  border-color: $main;
 }
 
 .btn-main-outline-active:focus {
-	color: $main;
-	background-color: $white;
-	border-color: $main;
+  color: $main;
+  background-color: $white;
+  border-color: $main;
 }
 
 .btn-main-outline-disabled {
-	color: $white;
-	background-color: $main;
-	border-color: $main;
-	opacity: 0.6;
+  color: $white;
+  background-color: $main;
+  border-color: $main;
+  opacity: 0.6;
 }
 
 .btn-main-outline-disabled:hover {
-	color: $main;
-	background-color: $white;
-	border-color: $main;
-	opacity: 0.6;
+  color: $main;
+  background-color: $white;
+  border-color: $main;
+  opacity: 0.6;
 }
 
 .btn-main-outline-disabled:focus {
-	color: $main;
-	background-color: $white;
-	border-color: $main;
-	opacity: 0.6;
+  color: $main;
+  background-color: $white;
+  border-color: $main;
+  opacity: 0.6;
 }
 
 /* invert-outline */
 .btn-main-invert-outline {
-	color: $white;
-	background-color: $mainInvert;
-	border-color: $mainInvert;
+  color: $white;
+  background-color: $mainInvert;
+  border-color: $mainInvert;
 }
 
 .btn-main-invert-outline:hover {
-	color: $mainInvert;
-	background-color: transparent;
-	border-color: $mainInvert;
+  color: $mainInvert;
+  background-color: transparent;
+  border-color: $mainInvert;
 }
 
 .btn-main-invert-outline:focus {
-	color: $mainInvert;
-	background-color: transparent;
-	border-color: $mainInvert;
+  color: $mainInvert;
+  background-color: transparent;
+  border-color: $mainInvert;
 }
 
 .btn-main-invert-outline-active {
-	color: $mainInvert;
-	background-color: transparent;
-	border-color: $mainInvert;
+  color: $mainInvert;
+  background-color: transparent;
+  border-color: $mainInvert;
 }
 
 .btn-main-invert-outline-active:hover {
-	color: $mainInvert;
-	background-color: transparent;
-	border-color: $mainInvert;
+  color: $mainInvert;
+  background-color: transparent;
+  border-color: $mainInvert;
 }
 
 .btn-main-invert-outline-active:focus {
-	color: $mainInvert;
-	background-color: transparent;
-	border-color: $mainInvert;
+  color: $mainInvert;
+  background-color: transparent;
+  border-color: $mainInvert;
 }
 
 .btn-main-invert-outline-active-disabled {
-	color: $mainInvert;
-	background-color: transparent;
-	border-color: $mainInvert;
-	opacity: 0.6;
+  color: $mainInvert;
+  background-color: transparent;
+  border-color: $mainInvert;
+  opacity: 0.6;
 }
 
 .btn-main-invert-outline-active-disabled:hover {
-	color: $mainInvert;
-	background-color: transparent;
-	border-color: $mainInvert;
-	opacity: 0.6;
+  color: $mainInvert;
+  background-color: transparent;
+  border-color: $mainInvert;
+  opacity: 0.6;
 }
 
 .btn-main-invert-outline-active-disabled:focus {
-	color: $mainInvert;
-	background-color: transparent;
-	border-color: $mainInvert;
-	opacity: 0.6;
+  color: $mainInvert;
+  background-color: transparent;
+  border-color: $mainInvert;
+  opacity: 0.6;
 }
 
 .btn-main-invert-outline-disabled {
-	color: $white;
-	background-color: $mainInvert;
-	border-color: $mainInvert;
-	opacity: 0.6;
+  color: $white;
+  background-color: $mainInvert;
+  border-color: $mainInvert;
+  opacity: 0.6;
 }
 
 .btn-main-invert-outline-disabled:hover {
-	color: $mainInvert;
-	background-color: $white;
-	border-color: $mainInvert;
-	opacity: 0.6;
+  color: $mainInvert;
+  background-color: $white;
+  border-color: $mainInvert;
+  opacity: 0.6;
 }
 
 .btn-main-invert-outline-disabled:focus {
-	color: $mainInvert;
-	background-color: $white;
-	border-color: $mainInvert;
-	opacity: 0.6;
+  color: $mainInvert;
+  background-color: $white;
+  border-color: $mainInvert;
+  opacity: 0.6;
 }
 
-.btn-main-2-outline {
-	color: inherit;
-	background-color: inherit;
-	border-color: inherit;
+.fc-addEventButton-button {
+  background: #2ead2e !important;
+  border: none !important;
+}
+.fc-button {
+  border: none !important;
 }
 
-.btn-main-2-outline:hover {
-	color: $main;
-	background-color: transparent;
-	border-color: $main;
+.fc-button-active {
+  background: #3f5fac !important;
 }
 
-.btn-main-2-outline:focus {
-	color: $main;
-	background-color: transparent;
-	border-color: $main;
+.btn-redirect {
+  color: #3f5fac;
+  background-color: #ffffff;
+  margin-right: 5px;
+}
+.btn-redirect:focus,
+.btn-redirect:hover {
+  color: #68bbe3;
+  background-color: #ffffff;
 }
 
-.btn-grey {
-	color: $white;
-	background-color: $color7;
-	border-color: $color7;
+.btn-dashboard {
+  min-width: 300px;
+  width: 100%;
 }
-.btn-grey:hover {
-	color: $white;
-	background-color: $color7;
-	border-color: $color7;
+.btn-dashboard-reload {
+  font-size: 18px;
+  height: 35px;
+  font-weight: 300;
+  border-radius: 4px;
+}
+.btn-dashboard-task {
+  font-size: 18px;
+  border-radius: 4px;
+  font-weight: 300;
 }
 
-.btn-grey:focus {
-	color: $white;
-	background-color: $color7;
-	border-color: $color7;
+.btn-dashboard-task:hover {
+  color: #3f5fac;
+}
+
+.btn-task-active {
+  color: $white;
+  background-color: #25be03;
+  border-color: #25be03;
+
+  &:hover {
+    color: #25be03;
+    background-color: $white;
+    border-color: #25be03;
+  }
+
+  &-active {
+    color: #25be03;
+    background-color: $white;
+    border-color: #25be03;
+
+    &:hover,
+    &:focus {
+      color: #25be03;
+      background-color: $white;
+      border-color: #25be03;
+    }
+  }
+}
+
+.btn-task-primary {
+  color: $white !important;
+  background-color: $primary !important;
+  border-color: $primary !important;
+
+  &:hover {
+    color: $primary !important;
+    background-color: $white !important;
+    border-color: $primary !important;
+  }
+
+  &-active {
+    color: $primary;
+    background-color: $white;
+    border-color: $primary;
+
+    &:hover,
+    &:focus {
+      color: $primary;
+      background-color: $white;
+      border-color: $primary;
+    }
+  }
+}
+
+.btn-task-pending {
+  color: $white;
+  background-color: #f87400;
+  border-color: #f87400;
+
+  &:hover {
+    color: #f87400 !important;
+    background-color: $white;
+    border-color: #f87400 !important;
+  }
+
+  &-active {
+    color: #f87400;
+    background-color: $white;
+    border-color: #f87400;
+
+    &:hover,
+    &:focus {
+      color: #f87400;
+      background-color: $white;
+      border-color: #f87400;
+    }
+  }
+}
+.btn-task-upcoming {
+  color: $white;
+  background-color: #881dd6;
+  border-color: #881dd6;
+
+  &:hover {
+    color: #881dd6;
+    background-color: $white;
+    border-color: #881dd6;
+  }
+
+  &-active {
+    color: #881dd6;
+    background-color: $white;
+    border-color: #881dd6;
+
+    &:hover,
+    &:focus {
+      color: #881dd6;
+      background-color: $white;
+      border-color: #881dd6;
+    }
+  }
+}
+
+.btn-task-inactive {
+  color: $white;
+  background-color: #808285;
+  border-color: #808285;
+
+  &:hover {
+    color: #808285;
+    background-color: $white;
+    border-color: #808285;
+  }
+
+  &-active {
+    color: #808285;
+    background-color: $white;
+    border-color: #808285;
+    &:hover,
+    &:focus {
+      color: #808285;
+      background-color: $white;
+      border-color: #808285;
+    }
+  }
+}
+
+.btn-primary-wfc:hover {
+  color: #3f5fac !important;
+  background-color: #ffffff;
+  border-color: #3f5fac;
+}
+
+.btn-dashboard-reload:hover {
+  color: $warning;
+  background-color: $white;
+  border-color: $warning;
+}
+
+.btn-dashboard-interview {
+  min-width: 100px;
+  width: 100%;
+  height: 50px;
+}
+
+.btn-adm-main {
+  width: 200px;
+  max-width: fit-content;
+
+  @include atSmall {
+    width: 100%;
+  }
+}
+
+.float {
+  z-index: 1;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #f49917;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.card-btn-cont {
+  .ant-btn[disabled],
+  .ant-btn[disabled]:hover,
+  .ant-btn[disabled]:focus,
+  .ant-btn[disabled]:active {
+    background-color: #999 !important;
+    color: white;
+  }
+}
+
+.ant-pagination-item-active {
+  background-color: #3f5fac !important;
+}
+
+.atc-btn-opposite {
+  background-color: $sideMenuIcon !important;
+  border-color: $sideMenuIcon !important;
+  color: white;
+  text-transform: capitalize;
+
+  &:hover {
+    color: white;
+    background-color: $mainIcon !important;
+    border-color: $mainIcon !important;
+  }
+
+  &:focus {
+    color: white;
+  }
+}
+
+.atc-btn-cancel {
+  background-color: white !important;
+  border-color: $mainActive !important;
+  color: #3f5fac;
+
+  &:hover {
+    color: white;
+    background-color: $mainActive !important;
+    border-color: $mainActive !important;
+  }
+
+  &:focus {
+    color: white;
+  }
+}
+
+.btn-consultant-cancel {
+  font-size: 17px !important;
+}
+
+.btn-calendar-filter,
+.btn-calendar-filter:focus {
+  font-weight: bold;
+  color: #f49917;
+  padding: 0px;
+  padding-left: 20px;
+  background: none;
+}
+
+.btn-calendar-filter-icon:focus {
+  color: #3f5fac;
+  background: none;
+}
+
+.btn-calendar-filter-icon:hover,
+.btn-calendar-filter:hover {
+  color: #783b19;
+  background: none;
+}
+
+.btn-calendar-filter-icon {
+  font-weight: bold;
+  color: #3f5fac;
+}
+
+.modal-name-link {
+  padding-left: 0px !important;
+  padding-bottom: 0px !important;
+  margin-bottom: 0px !important;
+  text-align: left;
+  padding-top: 10px;
+}
+
+.btn-filter-consultant {
+  padding-left: 0px !important;
+}
+
+.btn-modal-success {
+  background: $new-success;
+  color: #e6e7e9;
+}
+
+.btn-modal-danger {
+  background: #9b0303;
+  color: #e6e7e9;
+}
+
+.btn-modal-warning {
+  background: #f49917;
+  color: #e6e7e9;
+}
+
+.btn-modal {
+  border: none;
+  font-size: 18px;
+  height: 40px;
+  color: $white;
+}
+
+.btn-modal:hover {
+  background: #789df9 !important;
+  color: $white;
+}
+
+.btn-modal[disabled]:hover {
+  background: #e6e7e9 !important;
+}
+
+.ant-popover-buttons {
+  display: flex;
+  .ant-btn-default {
+    order: 2;
+    color: white;
+    background: #783b19 !important;
+    border: none;
+  }
+
+  .ant-btn-primary {
+    order: 1;
+    color: white;
+    background: #3f5fac !important;
+    border: none;
+  }
+
+  .ant-btn-default:hover,
+  .ant-btn-primary:hover {
+    background: #789df9 !important;
+    color: white;
+  }
+}
+
+.name-link {
+  margin: 0px !important;
+  padding: 0px !important;
+  color: #3f5fac !important;
+  text-decoration: none;
+}
+
+.ant-slider-track {
+  background-color: #3f5fac !important;
+}
+
+.ant-slider-handle {
+  border-color: #3f5fac !important;
+}
+
+.active-slot-btn,
+.active-slot-btn:hover {
+  background: #3f5fac !important;
+  color: white !important;
+}
+
+.btn-mda-download {
+  padding: 1px 15px;
+  &:hover {
+    background: transparent !important;
+  }
+}
+
+.btn-submit-upload {
+  margin-top: 25px;
+}
+
+@media (max-width: 320px) {
+  .btn-text {
+    font-size: clamp(0.5rem, 0.0833rem + 3.3333vw, 0.75rem) !important;
+    width: 272px !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+}
+
+// Search Button
+.ant-input-search > .ant-input-group > .ant-input-group-addon:last-child .ant-input-search-button:not(.ant-btn-primary) {
+  background-color: $primary;
+  color: $white;
+
+  &:hover {
+    background-color: $white;
+    color: $primary;
+  }
+}
+
+.btn-taskcard-progress {
+  color: #f87400;
+}
+.btn-taskcard-completed {
+  color: #239904;
+}
+.btn-taskcard-upcoming {
+  color: #8612d0;
+}
+
+.btn-taskcard-progress:hover,
+.btn-taskcard-completed:hover,
+.btn-taskcard-upcomin:hover {
+  background: transparent;
+  color: $primary;
+}
+
+.btn-with-svg {
+  svg {
+    margin-right: 10px;
+  }
+}
+
+.btn-video {
+  background-color: #789df9;
+  border: 1px solid #789df9;
+}
+
+.btn-upload {
+  background-color: #789df9 !important;
+  border: 1px solid #789df9 !important;
+}
+
+.btn-download {
+  background-color: #783b19;
+  border: 1px solid #783b19;
+}
+
+.btn-video:hover,
+.btn-video:active,
+.btn-video:focus,
+.btn-video-active,
+.btn-upload:hover {
+  border: 1px solid #789df9 !important;
+  color: #789df9 !important;
+  background-color: transparent !important;
+}
+
+// .btn-upload:active,.btn-upload:focus{
+//   background-color: #789df9 !important;
+//   border: 1px solid #789df9 !important;
+//   color: white !important;
+// }
+
+.btn-download:hover,
+.btn-download:active,
+.btn-download:focus,
+.btn-download-active {
+  border: 1px solid #783b19 !important;
+  color: #783b19;
+  background-color: transparent;
+}
+
+.task-card-title {
+  .btn-ant-header {
+    span {
+      color: unset !important;
+    }
+  }
+
+  // .btn-ant-header:hover{
+  //   span{
+  //     color: #a90505 !important;
+  //   }
+  // }
 }

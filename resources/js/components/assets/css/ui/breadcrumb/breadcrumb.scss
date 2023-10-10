@@ -20,5 +20,10 @@
 	color: $breadcrumIconColor;
 }
 .breadcrumb-item-text-last {
-	color: $breadcrumLastTextColor !important;
+	color: black !important;
 }
+
+.private-layout .ant-breadcrumb .ant-breadcrumb-link a{
+	color:#c1c1c1 ;
+}
+

@@ -1,26 +1,46 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Layout, Menu, Typography } from "antd";
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 
-import { name, role, fullwidthwhitelogo } from "../../providers/companyInfo";
+import {
+    name,
+    role,
+    fullwidthwhitelogo,
+    userData,
+} from "../../providers/companyInfo";
 
 import AdminSideMenu from "./RoleMenu/admin/AdminSideMenu";
+import UserSideMenu from "./RoleMenu/user/UserSideMenu";
+import ConsultantSideMenu from "./RoleMenu/consultant/ConsultantSideMenu";
 
 export default function SideMenu(props) {
-    const { history, sideMenuCollapse, setSideMenuCollapse, width } = props;
+    const {
+        history,
+        sideMenuCollapse,
+        setSideMenuCollapse,
+        width,
+        hideLink,
+        userInfo,
+    } = props;
 
     const [menuItems, setMenuItems] = useState([]);
+    // const [userInfo, setUserInfo] = useState(userData());
 
     // console.log(window.location.origin);
     // console.log("role", role());
     // console.log("CaregiverSideMenu", CaregiverSideMenu);
 
     useEffect(() => {
-        if (role() === "Admin" || role() === "Super Admin") {
+        if (role() === "Admin") {
             setMenuItems(AdminSideMenu);
+        } else if (role() === "User") {
+            setMenuItems(UserSideMenu);
+            console.log(userInfo);
+        } else if (role() === "Consultant") {
+            setMenuItems(ConsultantSideMenu);
         }
+
         return () => {};
     }, []);
 
@@ -57,9 +77,9 @@ export default function SideMenu(props) {
     };
 
     const activeSubRoute = (routeName) => {
-        const pathname1 = history.location.pathname.split("/");
-        const pathname2 = routeName.split("/");
-        return pathname1[2] === pathname2[2] ? "ant-menu-item-selected" : "";
+        const pathname1 = history.location.pathname.split("/")[2];
+        const pathname2 = routeName.split("/")[2];
+        return pathname2 === pathname1 ? "ant-menu-item-selected" : "";
     };
 
     const handleMenuRender = () => {
@@ -126,11 +146,6 @@ export default function SideMenu(props) {
                             activeRoute(item.path) +
                             " " +
                             (item.className ?? ""),
-                        onClick: () => {
-                            if (width < 768) {
-                                setSideMenuCollapse(true);
-                            }
-                        },
                     });
                 } else {
                     items.push({
@@ -141,7 +156,15 @@ export default function SideMenu(props) {
                                 onClick={() => {
                                     setOpenKeys([]);
                                 }}
-                                to={item.path}
+                                to={
+                                    hideLink.link === item.className &&
+                                    hideLink.isHide
+                                        ? "#!"
+                                        : item.className === "MNDA" &&
+                                          userInfo.has_mnda === 0
+                                        ? "#!"
+                                        : item.path
+                                }
                             >
                                 {item.title ?? item.permission}
                             </Link>
@@ -149,7 +172,16 @@ export default function SideMenu(props) {
                         className:
                             activeRoute(item.path) +
                             " " +
-                            (item.className ?? ""),
+                            (item.className ?? "") +
+                            " " +
+                            (hideLink.link === item.className &&
+                            hideLink.hasDisabledClass !== ""
+                                ? hideLink.hasDisabledClass
+                                : "") +
+                            (item.className === "MNDA" &&
+                            userInfo.has_mnda === 0
+                                ? "isDisabled"
+                                : ""),
                         onClick: () => {
                             if (width < 768) {
                                 setSideMenuCollapse(true);
@@ -192,12 +224,12 @@ export default function SideMenu(props) {
             </div>
 
             <Menu
+                mode="inline"
+                theme="light"
                 className="sideMenu"
                 openKeys={openKeys}
                 selectedKeys={[pathname]}
                 onOpenChange={onOpenChange}
-                mode="inline"
-                theme="light"
                 items={handleMenuRender()}
             />
         </Layout.Sider>

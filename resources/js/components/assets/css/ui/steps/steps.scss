@@ -1,52 +1,50 @@
 @import "../../variables/variables.scss";
-.ant-steps-item-finish
-	> .ant-steps-item-container
-	> .ant-steps-item-content
-	> .ant-steps-item-title::after,
+.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after,
 .ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-icon,
-.ant-steps-item-process
-	> .ant-steps-item-container
-	> .ant-steps-item-content
-	> .ant-steps-item-title::after,
-.ant-steps-item-finish
-	> .ant-steps-item-container
-	> .ant-steps-item-tail::after {
-	background-color: $color1;
+.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after,
+.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-tail::after {
+  background: #3f5fac !important;
 }
-.ant-steps
-	.ant-steps-item:not(.ant-steps-item-active):not(.ant-steps-item-process)
-	> .ant-steps-item-container[role="button"]:hover
-	.ant-steps-item-icon,
-.ant-steps-item-finish .ant-steps-item-icon,
-.ant-steps-item-process .ant-steps-item-icon {
-	border-color: $color1;
-}
+// .ant-steps .ant-steps-item:not(.ant-steps-item-active):not(.ant-steps-item-process) > .ant-steps-item-container[role="button"]:hover .ant-steps-item-icon,
+// .ant-steps-item-finish .ant-steps-item-icon,
+// .ant-steps-item-process .ant-steps-item-icon {
+//   border-color: #3f5fac !important;
+// }
 .ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon,
-.ant-steps
-	.ant-steps-item:not(.ant-steps-item-active):not(.ant-steps-item-process)
-	> .ant-steps-item-container[role="button"]:hover
-	.ant-steps-item-icon
-	.ant-steps-icon,
-.ant-steps
-	.ant-steps-item:not(.ant-steps-item-active)
-	> .ant-steps-item-container[role="button"]:hover
-	.ant-steps-item-title,
-.ant-steps
-	.ant-steps-item:not(.ant-steps-item-active)
-	> .ant-steps-item-container[role="button"]:hover
-	.ant-steps-item-subtitle,
-.ant-steps
-	.ant-steps-item:not(.ant-steps-item-active)
-	> .ant-steps-item-container[role="button"]:hover
-	.ant-steps-item-description,
-.ant-steps-item-icon .ant-steps-icon,
-.ant-steps-item-process
-	> .ant-steps-item-container
-	> .ant-steps-item-content
-	> .ant-steps-item-title,
-.ant-steps-item-finish
-	> .ant-steps-item-container
-	> .ant-steps-item-content
-	> .ant-steps-item-title {
-	color: $color1;
+.ant-steps .ant-steps-item:not(.ant-steps-item-active):not(.ant-steps-item-process) > .ant-steps-item-container[role="button"]:hover {
+  
+color:#789df9;
+border-color: #789df9;
+
 }
+
+
+
+.ant-steps-item-icon .ant-steps-icon,
+.ant-steps .ant-steps-item:not(.ant-steps-item-active) > .ant-steps-item-container[role="button"]:hover .ant-steps-item-title,
+.ant-steps .ant-steps-item:not(.ant-steps-item-active) > .ant-steps-item-container[role="button"]:hover .ant-steps-item-subtitle,
+.ant-steps .ant-steps-item:not(.ant-steps-item-active) > .ant-steps-item-container[role="button"]:hover .ant-steps-item-description,
+.ant-steps-item-icon .ant-steps-icon,
+.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title,
+.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
+  color: $white;
+}
+@media (max-width: 2560px) and (min-width:769px){
+  .appointmentStages {
+  .ant-steps-small .ant-steps-item-icon{
+ 
+    line-height: 24px !important;
+  }
+}
+
+}
+
+@media (max-width: 768px) and (min-width:320px) {
+  .appointmentStages {
+    .ant-steps-small .ant-steps-item-icon{
+      line-height: 34px !important;
+    }
+  }
+}
+
+

@@ -174,3 +174,4 @@ php artisan config:clear
 
 php artisan elastic:drop-index 'App\Scout\UserIndexConfigurator'
 php artisan elastic:create-index 'App\Scout\UserIndexConfigurator'
+# atc_new_app

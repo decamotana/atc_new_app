@@ -2,15 +2,12 @@
   position: relative;
   overflow: hidden;
   min-height: 100vh;
-  background: #027273;
+  background: #f2f2f2;
 }
-
-.private-layout .ant-layout.ant-layout-has-sider:not(.messagesContainer) > .ant-layout,
-.private-layout .ant-layout.ant-layout-has-sider:not(.messagesContainer)
-> .ant-layout-content {
+.private-layout .ant-layout.ant-layout-has-sider > .ant-layout,
+.private-layout .ant-layout.ant-layout-has-sider > .ant-layout-content {
   width: 100%;
 }
-
 .private-layout .ant-input-padding-inherit .ant-input {
   padding: 6.5px 11px;
 }
@@ -26,31 +23,14 @@
   max-width: 100%;
 }
 
-.private-layout > .ant-layout > .ant-layout-content > .ant-card {
+.private-layout > .ant-layout > .ant-card {
   background-color: transparent;
   height: 100%;
 }
 
-.private-layout
-> .ant-layout
-> .ant-layout-content
-> .ant-card
-> .ant-card-body {
+.private-layout > .ant-layout > .ant-card > .ant-card-body {
   padding: 20px;
   background-color: transparent;
-}
-
-/* Media Query for Large screens */
-/* Media Query for Laptops and Desktops */
-/* Media Query for Tablets Ipads portrait mode */
-/* Media Query for Tablets, Ipads and below  */
-/* Media Query for low resolution  Tablets, Ipads */
-@media (min-width: 481px) and (max-width: 767px) {
-  .private-layout .ant-layout,
-  .private-layout > .ant-layout.ant-layout-has-collapse {
-    margin-left: 0px;
-    max-width: 100%;
-  }
 }
 
 /* Media Query for Mobile Devices */
@@ -63,12 +43,19 @@
   .private-layout .ant-breadcrumb {
     padding-left: 10px;
   }
-  .private-layout
-> .ant-layout
-> .ant-layout-content
-> .ant-card
-> .ant-card-body {
+  .private-layout > .ant-layout > .ant-card > .ant-card-body {
     padding: 10px;
   }
 }
-/*# sourceMappingURL=private-layout.css.map */
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .private-layout .ant-layout,
+  .private-layout > .ant-layout.ant-layout-has-collapse {
+    margin-left: 0px;
+    max-width: 100%;
+  }
+}
+/* Media Query for Tablets, Ipads and below  */
+/* Media Query for Tablets Ipads portrait mode */
+/* Media Query for Laptops and Desktops */
+/* Media Query for Large screens *//*# sourceMappingURL=private-layout.css.map */

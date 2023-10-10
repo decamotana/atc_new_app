@@ -1,36 +1,87 @@
 @import "../../variables/variables.scss";
 .ant-pagination {
-	.ant-pagination-prev,
-	.ant-pagination-jump-prev,
-	.ant-pagination-jump-next,
-	.ant-pagination-item {
-		margin-right: 5px;
-	}
-	.ant-btn:hover,
-	.ant-btn:focus,
-	.ant-pagination-item:hover,
-	.ant-pagination-item-active {
-		color: $white;
-		border-color: $color1;
-		background-color: $color1;
-	}
+  .ant-pagination-prev,
+  .ant-pagination-jump-prev,
+  .ant-pagination-jump-next,
+  .ant-pagination-item {
+    margin-right: 5px;
+  }
+  .ant-btn:hover,
+  .ant-btn:focus,
+  .ant-pagination-item:hover,
+  .ant-pagination-item-active {
+    color: $white;
+    border-color: $color1;
+    background-color: $color1;
+  }
 
-	.ant-pagination-jump-prev
-		.ant-pagination-item-container
-		.ant-pagination-item-link-icon,
-	.ant-pagination-jump-next
-		.ant-pagination-item-container
-		.ant-pagination-item-link-icon {
-		color: $color1;
-	}
+  .ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-link-icon,
+  .ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-link-icon {
+    color: $color1;
+  }
 
-	.ant-pagination-item-active a,
-	.ant-pagination-item-active:hover a,
-	.ant-pagination-item:hover a {
-		color: $white;
-	}
+  .ant-pagination-item-active a,
+  .ant-pagination-item-active:hover a,
+  .ant-pagination-item:hover a {
+    color: $white;
+  }
 
-	.ant-pagination-item a {
-		display: inline;
-	}
+  .ant-pagination-item a {
+    display: inline;
+  }
+}
+
+iframe {
+  width: 100%;
+  height: auto;
+}
+
+.page-video {
+  & .ant-card-body {
+    text-align: center;
+    padding: 20px 10px !important;
+
+    @include atMedium {
+      text-align: left;
+    }
+  }
+
+  &-iframe iframe {
+    margin-top: 0.5rem;
+    height: 200px;
+    width: 100%;
+
+    @include atSmall {
+      height: 300px;
+    }
+
+    @include atMedium {
+      height: 300px;
+    }
+
+    @include atLarge {
+      height: 400px;
+      width: 643.5px;
+    }
+  }
+
+  &-iframe iframe:first-child {
+    margin-bottom: 2rem;
+  }
+
+  .ant-typography.task-card-category {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    @include atMedium {
+      font-size: 20px;
+    }
+  }
+}
+
+.no-task-found {
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
 }

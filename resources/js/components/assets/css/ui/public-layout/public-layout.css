@@ -1,8 +1,6 @@
 .public-layout {
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(80%, #fefbb7));
   background: linear-gradient(180deg, white 0%, #fefbb7 80%);
 }
-
 .public-layout .ant-form-item-control-input,
 .public-layout .ant-form-item-with-help .ant-form-item-explain {
   width: 100%;
@@ -44,12 +42,4 @@
 .ant-input-group-addon {
   margin: 0 !important;
   padding: 0 !important;
-}
-
-/* Media Query for Large screens */
-/* Media Query for Laptops and Desktops */
-/* Media Query for Tablets Ipads portrait mode */
-/* Media Query for Tablets, Ipads and below  */
-/* Media Query for low resolution  Tablets, Ipads */
-/* Media Query for Mobile Devices */
-/*# sourceMappingURL=public-layout.css.map */
+}/*# sourceMappingURL=public-layout.css.map */

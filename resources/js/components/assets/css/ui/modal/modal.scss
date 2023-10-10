@@ -1,46 +1,138 @@
 @import "../../variables/variables.scss";
 
 .ant-modal-mask {
-	background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .ant-modal {
-	.ant-modal-header {
-		.ant-modal-title {
-			color: $black;
-		}
-	}
-	.ant-modal-footer {
-		// text-align: left;
-		padding: 15px 16px;
-		// .ant-btn {
-		//   background-color: $companyColor1;
-		//   border-color: $companyColor1;
-		// }
-	}
+  .ant-modal-confirm-btns .ant-btn-default {
+    color: $mainActive;
+    border-color: $mainActive;
+  }
+
+  .ant-modal-confirm-btns .ant-btn-default:hover {
+    background-color: $mainActive;
+    color: $white;
+  }
+
+  .ant-modal-confirm-btns .ant-btn-primary {
+    background-color: $main;
+    border: none;
+  }
+
+  .ant-modal-confirm-btns .ant-btn-primary:hover {
+    background-color: $mainActive;
+    color: $white;
+  }
+  .ant-modal-header {
+    background-color: $primary;
+    .ant-modal-title {
+      color: $white;
+    }
+  }
+
+  .ant-modal-close-x {
+    color: $white;
+  }
+  .ant-modal-footer {
+    // text-align: left;
+    padding: 15px 16px;
+    // .ant-btn {
+    //   background-color: $companyColor1;
+    //   border-color: $companyColor1;
+    // }
+  }
 }
 
 .ant-modal.modal-primary-default {
-	.ant-modal-content {
-		.ant-modal-close {
-			color: $white;
-		}
+  .ant-modal-content {
+    .ant-modal-close {
+      color: $black;
+    }
 
-		.ant-modal-header {
-			background: $color1;
-			.ant-modal-title {
-				color: $white;
-			}
-		}
-	}
-	.ant-modal-footer {
-		text-align: left;
-		padding: 15px 16px;
-		// .ant-btn {
-		// 	background-color: $companyColor1;
-		// 	border-color: $companyColor1;
-		// }
-	}
+    .ant-modal-header {
+      background: $white;
+
+      .ant-modal-title {
+        color: $black;
+      }
+    }
+  }
+  .ant-modal-footer {
+    text-align: left;
+    padding: 15px 16px;
+    // .ant-btn {
+    // 	background-color: $companyColor1;
+    // 	border-color: $companyColor1;
+    // }
+  }
+}
+
+.ant-picker {
+  margin-bottom: 10px;
+}
+
+.modal-fdt > .ant-form-item {
+  margin-bottom: 0px !important;
+}
+
+.modal-login {
+  & .ant-modal-footer {
+    padding: 50px 25px 40px 16px;
+  }
+
+  & .ant-space.ant-space-horizontal.ant-space-align-center .ant-space-item:first-child {
+    order: 2;
+  }
+
+  & .form-select-error {
+    padding-bottom: 0;
+  }
+}
+
+.modal-appointment {
+  .ant-modal-close-x {
+    color: black !important;
+    display: block;
+    width: 42px;
+    height: 54px;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 41px;
+    text-align: center;
+    text-transform: none;
+    text-rendering: auto;
+  }
+
+  .venue-images {
+    .ant-upload {
+      margin-top: 5px;
+    }
+    .ant-btn {
+      font-size: 10px !important;
+    }
+  }
+
+  .ant-result-title,
+  .ant-result-subtitle {
+    color: black !important;
+  }
+}
+
+.modal-notif,
+.modal-email-template {
+  .form-select-error {
+    margin-bottom: 20px !important;
+    .ant-form-item-explain-error {
+      // margin-top: 14px;
+      margin-bottom: -14px;
+    }
+  }
+}
+
+.modal-notif .form-select-error .ant-form-item-explain-error,
+.modal-email-template .form-select-error .ant-form-item-explain-error {
+  margin-top: 0;
 }
 
 /* Media Query for Mobile Devices */
@@ -66,3 +158,9 @@
 /* Media Query for Large screens */
 @media (min-width: 1281px) {
 }
+
+// .modal-send-email-notifiaction {
+//   .ant-form-item {
+//     margin-bottom: 0px !important;
+//   }
+// }

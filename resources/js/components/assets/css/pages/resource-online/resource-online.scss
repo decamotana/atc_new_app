@@ -13,24 +13,8 @@
 			}
 		}
 		.ant-list-items {
-			.container-wrapper {
-				display: flex;
-				justify-content: space-between;
-				gap: 150px;
-
-				> div:first-child {
-					width: 75%;
-				}
-				> div:last-child {
-					width: 15%;
-				}
-			}
-			.title-container {
-				display: flex;
-				justify-content: space-between;
-			}
 			.title {
-				color: $color1;
+				color: $color3;
 				font-weight: normal;
 				line-height: 1;
 				margin-bottom: 0px;
@@ -51,92 +35,5 @@
 		.ant-list-item:last-child {
 			border-bottom: 1px solid $color10;
 		}
-
-		.btn-resource-view {
-			color: $color6;
-		}
-
-		.btn-resource-view:hover,
-		.btn-resource-view:focus {
-			color: $color1;
-		}
 	}
-}
-
-/* Media Query for Large screens */
-@media (min-width: 1281px) {
-}
-@media (max-width: 1281px) {
-	.page-caregiver-resource-online
-		.resource-online-list
-		.ant-list-items
-		.container-wrapper {
-		flex-direction: column;
-		margin-bottom: 15px;
-		gap: 0px;
-
-		> div:first-child {
-			width: 100%;
-		}
-		> div:last-child {
-			width: 100%;
-		}
-	}
-}
-
-/* Media Query for Laptops and Desktops */
-@media (min-width: 1025px) and (max-width: 1280px) {
-}
-
-/* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px) {
-}
-
-/* Media Query for Tablets, Ipads and below  */
-@media (max-width: 768px) {
-	.page-caregiver-resource-online {
-		.resource-online-list {
-			.ant-list-items {
-				.title-container {
-					flex-direction: column;
-				}
-			}
-		}
-	}
-}
-
-/* Media Query for low resolution  Tablets, Ipads */
-@media (min-width: 481px) and (max-width: 767px) {
-}
-
-/* Media Query for Mobile Devices */
-@media (max-width: 575px) {
-	.page-admin-resource-library-online {
-		.section-image-preview,
-		.section-upload {
-			text-align: center;
-		}
-	}
-	.page-caregiver-resource-online {
-		.resource-online-list {
-			.ant-list-items {
-				.ant-list-item > .flex {
-					flex-direction: column;
-
-					.image > .ant-image {
-						width: 100% !important;
-					}
-				}
-			}
-		}
-	}
-}
-
-@media (max-width: 480px) {
-}
-
-@media (max-width: 375px) {
-}
-
-@media (max-width: 320px) {
 }

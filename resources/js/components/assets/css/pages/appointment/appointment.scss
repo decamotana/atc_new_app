@@ -1,0 +1,297 @@
+@import "../../variables/variables.scss";
+
+.fc-button-primary {
+  background: $color16 !important;
+}
+
+.fc-next-button {
+  margin-left: 0.5px !important;
+}
+
+.fc-button-active,
+.fc-button-primary:hover {
+  background: $mainIcon !important;
+}
+
+.modal-appointment {
+  width: 400px !important;
+
+  & .btn-modal {
+    font-size: 16px;
+  }
+
+  & .app-modal-name {
+    font-size: 16px;
+  }
+
+  // .ant-modal-body{
+  //     height: 100px !important;
+  // }
+
+  .event-title-container {
+    display: flex !important;
+    align-items: center;
+    font-size: 16px;
+    justify-content: center;
+
+    .box {
+      height: 8px;
+      width: 8px;
+      padding: 2px;
+      background: #2ead2e;
+    }
+  }
+}
+
+.modal-consultant-schedule {
+  //   width: 300px !important;
+
+  // .ant-modal-body{
+  //     height: 100px !important;
+  // }
+
+  .event-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+
+    .box {
+      height: 8px;
+      width: 8px;
+      padding: 2px;
+      background: #2ead2e;
+    }
+  }
+
+  .event-schedule-container {
+    margin-left: 18px;
+    font-size: small;
+  }
+}
+
+.fc-daygrid-event {
+  @media (min-width: 1440px) {
+    .fc-event-time {
+      font-size: 12px !important;
+    }
+  }
+}
+
+.fc-toolbar-chunk:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5px;
+  width: 300px;
+
+  @include atExtraSmall {
+    width: 350px;
+  }
+
+  .fc-button-primary {
+    margin-left: 0px !important;
+    width: 100%;
+  }
+
+  .fc-button-group {
+    margin-left: 0px !important;
+  }
+}
+
+.fc .fc-daygrid-day-number,
+.fc .fc-col-header-cell-cushion {
+  color: $color16;
+}
+
+.fc-dayGridMonth-button,
+.fc-timeGridDay-button,
+.fc-timeGridWeek-button {
+  text-transform: capitalize !important;
+}
+
+.fc-direction-ltr .fc-button-group > .fc-button:not(:last-child) {
+  margin-right: 2px;
+}
+
+.fc-toolbar {
+  .fc-button {
+    min-height: 30px;
+  }
+}
+
+.calendar-book {
+  & .fc-header-toolbar {
+    flex-direction: column;
+    font-size: 0.75rem;
+
+    @include atLarge {
+      flex-direction: row;
+      font-size: 1rem;
+    }
+  }
+
+  & .fc-toolbar-chunk:nth-child(1) {
+    order: 3;
+
+    @include atLarge {
+      order: 1;
+    }
+  }
+
+  & .fc-toolbar-chunk:nth-child(2) {
+    order: 1;
+
+    @include atLarge {
+      order: 2;
+    }
+  }
+
+  & .fc-toolbar-chunk:nth-child(3) {
+    order: 2;
+    margin-bottom: 0.5rem;
+    @include atLarge {
+      order: 3;
+      margin-bottom: 0;
+    }
+  }
+
+  & .fc-daygrid-event {
+    border: none;
+    height: 10px;
+    width: 10px;
+    //background-color: $mainIcon;
+    border-radius: 50%;
+    @include atExtraLarge {
+      height: auto;
+      width: auto;
+      //background-color: $primary;
+      border-radius: 2px;
+    }
+  }
+
+  & .fc-event-title {
+    @media (min-width: 425px) {
+      display: none !important;
+    }
+
+    @include atExtraLarge {
+      display: block !important;
+    }
+  }
+
+  & .fc-col-header-cell-cushion {
+    font-size: 0.6rem;
+    @include atMedium {
+      font-size: 0.8rem;
+    }
+  }
+
+  & .fc-scrollgrid-shrink-cushion {
+    font-size: 0.8rem;
+    @include atMedium {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.calendar-schedule {
+  & .fc-header-toolbar {
+    flex-direction: column;
+    font-size: 0.75rem;
+
+    @include atLarge {
+      flex-direction: row;
+      font-size: 1rem;
+    }
+  }
+
+  & .fc-toolbar-chunk:nth-child(1) {
+    order: 3;
+
+    @include atLarge {
+      order: 1;
+    }
+  }
+
+  & .fc-toolbar-chunk:nth-child(2) {
+    order: 1;
+
+    @include atLarge {
+      order: 2;
+    }
+  }
+
+  & .fc-toolbar-chunk:nth-child(3) {
+    order: 2;
+    margin-bottom: 0.5rem;
+    @include atLarge {
+      order: 3;
+      margin-bottom: 0;
+    }
+  }
+
+  & .fc-col-header-cell-cushion {
+    font-size: 0.6rem;
+    @include atMedium {
+      font-size: 0.8rem;
+    }
+  }
+
+  & .fc-scrollgrid-shrink-cushion {
+    font-size: 0.8rem;
+    @include atMedium {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.fc-daygrid-event {
+  justify-content: flex-start;
+
+  & .fc-event-time {
+    display: none;
+
+    @include atExtraLarge {
+      display: block;
+    }
+  }
+
+  & .fc-event-title {
+    display: none;
+    @include atExtraLarge {
+      display: block;
+    }
+  }
+}
+
+.event-showed {
+  & .fc-daygrid-event-dot {
+    border-color: green;
+  }
+}
+
+.event-cancelled {
+  & .fc-daygrid-event-dot {
+    border-color: $mainIcon;
+  }
+}
+
+.event-confirmed {
+  & .fc-daygrid-event-dot {
+    border-color: #3f5fac;
+  }
+}
+
+.event-noshow {
+  & .fc-daygrid-event-dot {
+    border-color: gray;
+  }
+}
+
+.modal-send-email-notifiaction {
+  height: auto !important;
+
+  .ant-modal-footer {
+    padding: 15px;
+  }
+}

@@ -15,16 +15,23 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('first_name')->nullable();
-            $table->string('last_name')->nullable();
-            $table->string('username')->unique();
-            $table->string('email')->unique();
-            $table->string('password');
+            $table->string('email')->unique()->nullable();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('role');
-            $table->string('status')->default('Active');
-            $table->string('profile_picture')->default('/images/default.png')->nullable();
-            $table->boolean('init_login')->default(true);
+            $table->string('username')->nullable();
+            $table->string('password')->nullable();
+            $table->string('firstname')->nullable();
+            $table->string('lastname')->nullable();
+            $table->string('middlename')->nullable();
+            $table->string('name_ext', 10)->nullable();
+            $table->string('nick_name')->nullable();
+            $table->string('gender')->nullable();
+            $table->date('birthdate')->nullable();
+            $table->string('contact_number')->nullable();
+            $table->string('role')->nullable();
+            $table->string('status', 20)->default('Active')->nullable();
+            $table->longText('profile_image')->nullable();
+            $table->boolean('one_time_modal')->default(0)->nullable();
+            $table->string('stripe_customer_id')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

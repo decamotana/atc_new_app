@@ -4,78 +4,10 @@
 		.ant-upload-list-picture-card {
 			display: flex;
 			justify-content: center;
-
-			.ant-upload {
-				width: 200px;
-				height: 200px;
-				border-color: $color6;
-				box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
-				-webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
-				-moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
-			}
-			.ant-upload-list-picture-card-container {
-				width: 200px;
-				height: 200px;
-
-				.ant-upload-list-item {
-					border-color: $color6;
-					box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
-					-webkit-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
-					-moz-box-shadow: 1px 0px 5px 0px rgba(0, 0, 0, 0.75);
-				}
-			}
-		}
-	}
-
-	.training-module-progress-bar {
-		.ant-progress-show-info .ant-progress-outer {
-			margin-right: 0;
-			padding-right: 0;
-		}
-		.percent-text {
-			display: flex;
-			justify-content: space-between;
 		}
 	}
 }
-.page-form-subscriber {
-	.float-label .ant-input-affix-wrapper .ant-input {
-		border-color: transparent !important;
-	}
-	.input-coupon-code {
-		.ant-input-group-wrapper {
-			border: 1px solid #58585a;
 
-			.ant-input {
-				border: 0px !important;
-				height: 43px !important;
-			}
-			.ant-input-group-addon {
-				border: 0px;
-				border-left: 1px solid #58585a;
-				.ant-btn {
-					border: 0px;
-					background-color: $color1;
-					color: $white;
-					height: 43px;
-					border-radius: 0px;
-				}
-			}
-		}
-	}
-
-	.input-coupon-code.coupon-success {
-		.ant-input-group-wrapper {
-			border-color: $color1;
-		}
-	}
-
-	.input-coupon-code.coupon-error {
-		.ant-input-group-wrapper {
-			border-color: $color6;
-		}
-	}
-}
 .page-careprofessional-subscriber-current-completed {
 	.ant-table table .ant-table-thead th {
 		background-color: $color1;
@@ -95,32 +27,26 @@
 	}
 }
 
-/* Media Query for Large screens */
-@media (min-width: 1281px) {
-}
-
-/* Media Query for Laptops and Desktops */
-@media (min-width: 1025px) and (max-width: 1280px) {
-}
-
-/* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px) {
-}
-
-/* Media Query for Tablets, Ipads and below  */
-@media (max-width: 768px) {
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
 }
 
 /* Media Query for low resolution  Tablets, Ipads */
 @media (min-width: 481px) and (max-width: 767px) {
 }
 
-/* Media Query for Mobile Devices */
-@media (max-width: 480px) {
+/* Media Query for Tablets, Ipads and below  */
+@media (max-width: 768px) {
 }
 
-@media (max-width: 375px) {
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
 }
 
-@media (max-width: 320px) {
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px) {
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
 }

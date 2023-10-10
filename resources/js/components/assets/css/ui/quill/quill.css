@@ -2,7 +2,6 @@
   height: 150px;
   margin-bottom: 41px;
 }
-
 .quill .ql-editor {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -17,16 +16,32 @@
     margin-bottom: 70px;
   }
 }
-
 @media screen and (min-device-width: 376px) and (max-device-width: 376px) and (-webkit-min-device-pixel-ratio: 1) {
   .ticket-quill {
     margin-bottom: 95px;
   }
 }
-
 @media screen and (min-device-width: 320px) and (max-device-width: 375px) and (-webkit-min-device-pixel-ratio: 1) {
   .ticket-quill {
     margin-bottom: 119px;
   }
 }
-/*# sourceMappingURL=quill.css.map */
+@media (min-width: 351px) and (-webkit-min-device-pixel-ratio: 1) {
+  .notif-modal-quill {
+    margin-bottom: 62px;
+  }
+}
+@media (min-width: 350px) and (max-width: 350px) and (-webkit-min-device-pixel-ratio: 1) {
+  .notif-modal-quill {
+    margin-bottom: 86px;
+  }
+}
+@media (min-width: 320px) and (max-width: 349px) and (-webkit-min-device-pixel-ratio: 1) {
+  .notif-modal-quill {
+    margin-bottom: 109px;
+  }
+}
+.ql-snow .ql-picker.ql-size .ql-picker-label::before,
+.ql-snow .ql-picker.ql-size .ql-picker-item::before {
+  content: attr(data-value) !important;
+}/*# sourceMappingURL=quill.css.map */

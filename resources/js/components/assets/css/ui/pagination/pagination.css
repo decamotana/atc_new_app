@@ -4,32 +4,78 @@
 .ant-pagination .ant-pagination-item {
   margin-right: 5px;
 }
-
 .ant-pagination .ant-btn:hover,
 .ant-pagination .ant-btn:focus,
 .ant-pagination .ant-pagination-item:hover,
 .ant-pagination .ant-pagination-item-active {
   color: #ffffff;
-  border-color: #027273;
-  background-color: #027273;
+  border-color: #4169e1;
+  background-color: #4169e1;
 }
-
-.ant-pagination .ant-pagination-jump-prev
-.ant-pagination-item-container
-.ant-pagination-item-link-icon,
-.ant-pagination .ant-pagination-jump-next
-.ant-pagination-item-container
-.ant-pagination-item-link-icon {
-  color: #027273;
+.ant-pagination .ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-link-icon,
+.ant-pagination .ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-link-icon {
+  color: #4169e1;
 }
-
 .ant-pagination .ant-pagination-item-active a,
 .ant-pagination .ant-pagination-item-active:hover a,
 .ant-pagination .ant-pagination-item:hover a {
   color: #ffffff;
 }
-
 .ant-pagination .ant-pagination-item a {
   display: inline;
 }
-/*# sourceMappingURL=pagination.css.map */
+
+iframe {
+  width: 100%;
+  height: auto;
+}
+
+.page-video .ant-card-body {
+  text-align: center;
+  padding: 20px 10px !important;
+}
+@media (min-width: 768px) {
+  .page-video .ant-card-body {
+    text-align: left;
+  }
+}
+.page-video-iframe iframe {
+  margin-top: 0.5rem;
+  height: 200px;
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .page-video-iframe iframe {
+    height: 300px;
+  }
+}
+@media (min-width: 768px) {
+  .page-video-iframe iframe {
+    height: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .page-video-iframe iframe {
+    height: 400px;
+    width: 643.5px;
+  }
+}
+.page-video-iframe iframe:first-child {
+  margin-bottom: 2rem;
+}
+.page-video .ant-typography.task-card-category {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+@media (min-width: 768px) {
+  .page-video .ant-typography.task-card-category {
+    font-size: 20px;
+  }
+}
+
+.no-task-found {
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+}/*# sourceMappingURL=pagination.css.map */

@@ -67,11 +67,11 @@ return [
                     "purpose" => "any"
                 ]
             ],
-            [
-                'name' => 'Shortcut Link 2',
-                'description' => 'Shortcut Link 2 Description',
-                'url' => '/shortcutlink2'
-            ]
+            // [
+            //     'name' => 'Shortcut Link 2',
+            //     'description' => 'Shortcut Link 2 Description',
+            //     'url' => '/shortcutlink2'
+            // ]
         ],
         'custom' => []
     ]

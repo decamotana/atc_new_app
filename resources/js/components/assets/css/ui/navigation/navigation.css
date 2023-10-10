@@ -17,15 +17,15 @@
 }
 
 .nav-primary {
-  background: #0866c6 !important;
-  border: 1px solid #0866c6;
+  background: #325db8 !important;
+  border: 1px solid #325db8;
   height: auto !important;
   padding: 0px;
 }
 
 .nav-primary > .ant-menu {
-  background: #0866c6 !important;
-  border: 1px solid #0866c6;
+  background: #325db8 !important;
+  border: 1px solid #325db8;
   height: auto !important;
   padding: 0px;
   color: white;
@@ -47,30 +47,30 @@
 }
 
 .nav-success {
-  background: #23bf08 !important;
-  border: 1px solid #23bf08;
+  background: #239904 !important;
+  border: 1px solid #239904;
   height: auto !important;
   padding: 0px;
 }
 
 .nav-success > .ant-menu {
-  background: #23bf08 !important;
-  border: 1px solid #23bf08;
+  background: #239904 !important;
+  border: 1px solid #239904;
   height: auto !important;
   padding: 0px;
   color: white;
 }
 
 .nav-warning {
-  background: #f49917 !important;
-  border: 1px solid #f49917;
+  background: #a90505 !important;
+  border: 1px solid #a90505;
   height: auto !important;
   padding: 0px;
 }
 
 .nav-warning > .ant-menu {
-  background: #f49917 !important;
-  border: 1px solid #f49917;
+  background: #a90505 !important;
+  border: 1px solid #a90505;
   height: auto !important;
   padding: 0px;
   color: white;
@@ -194,5 +194,4 @@
   height: auto !important;
   padding: 0px;
   color: white;
-}
-/*# sourceMappingURL=navigation.css.map */
+}/*# sourceMappingURL=navigation.css.map */

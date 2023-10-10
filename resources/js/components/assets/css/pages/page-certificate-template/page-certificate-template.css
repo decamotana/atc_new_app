@@ -1,122 +1,12 @@
-.page-admin-certificate-template .e_signature_canvas_wrapper {
-  height: 200px;
-}
-
 .page-admin-certificate-template .e_signature_canvas {
   border: 1px solid #949599;
-  width: 100%;
-  height: 100%;
 }
-
-.page-admin-certificate-template .img_preview_signature_container_outer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .page-admin-certificate-template .img_preview_signature_container {
   width: 500px;
   height: 200px;
   border: 1px solid #949599;
 }
-
 .page-admin-certificate-template .img_preview_signature {
   width: 100%;
   height: 100%;
-}
-
-.page-admin-certificate-template .btn-clear-save {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 12px;
-  margin-top: 10px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.modal-certificate-template-preview .ant-modal-content {
-  position: relative;
-  height: 100%;
-}
-
-.modal-certificate-template-preview .ant-modal-body {
-  position: relative;
-  height: 100%;
-}
-
-.modal-certificate-template-preview .cert-complete {
-  position: relative;
-}
-
-.modal-certificate-template-preview .cert-complete .cert-complete-date {
-  position: absolute;
-  right: 268px;
-  bottom: 208px;
-}
-
-.modal-certificate-template-preview .cert-complete .cert-complete-signature {
-  position: absolute;
-  left: 169px;
-  bottom: 217px;
-  width: 170px;
-}
-
-/* Media Query for Large screens */
-/* Media Query for Laptops and Desktops */
-/* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .modal-certificate-template-preview {
-    width: 75% !important;
-  }
-  .modal-certificate-template-preview .ant-modal-body {
-    padding: 10px;
-  }
-}
-
-/* Media Query for Tablets, Ipads and below  */
-@media (max-width: 768px) {
-  .modal-certificate-template-preview {
-    width: 100% !important;
-  }
-  .modal-certificate-template-preview .ant-modal-body {
-    padding: 10px;
-  }
-  .page-admin-certificate-template .btn-clear-save {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-/* Media Query for low resolution  Tablets, Ipads */
-@media (max-width: 575px) {
-  .page-admin-certificate-template .ant-collapse .panel-create-signature .ant-collapse-content .ant-collapse-content-box {
-    padding: 10px !important;
-  }
-  .page-admin-certificate-template .ant-collapse .panel-create-signature .ant-collapse-content .ant-collapse-content-box .ant-card .ant-card-body {
-    padding: 15px !important;
-  }
-}
-
-@media (max-width: 500px) {
-  .page-admin-certificate-template .btn-clear-save {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .page-admin-certificate-template .btn-clear-save .ant-btn {
-    width: 100%;
-  }
-}
-
-/* Media Query for Mobile Devices */
-@media (max-width: 375px) {
-  .page-admin-certificate-template .panel-create-signature .ant-collapse-content > .ant-collapse-content-box {
-    padding: 5px;
-  }
-}
-/*# sourceMappingURL=page-certificate-template.css.map */
+}/*# sourceMappingURL=page-certificate-template.css.map */

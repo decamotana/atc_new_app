@@ -65,7 +65,7 @@ const FloatInputCard = (props) => {
 				onChange={onChange}
 				value={value ?? ""}
 				alwaysShowMask={false}
-				// maskPlaceholder=""
+				maskPlaceholder=""
 				className={`mask-input mask-input-antd ` + classPlaceholder}
 			/>
 

@@ -62,7 +62,7 @@ const FloatInputCVC = (props) => {
 				onChange={props.onChange}
 				value={value ?? ""}
 				alwaysShowMask={false}
-				// maskPlaceholder=""
+				maskPlaceholder=""
 				className={`mask-input mask-input-antd ` + classPlaceholder}
 			/>
 			<span className={"maskhasfeedback " + classPlaceholderSuccess + " hide"}>

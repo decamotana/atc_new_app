@@ -1,0 +1,39 @@
+@import "../../variables/variables";
+
+.page-caregiver-resource-document {
+	.resource-document-list {
+		.ant-list-header {
+			border-bottom: 0px;
+
+			.ant-typography {
+				font-size: 52px;
+				margin-bottom: 0px;
+				line-height: 0.5;
+				font-weight: normal;
+			}
+		}
+		.ant-list-items {
+			.title {
+				color: $color3;
+				font-weight: normal;
+				line-height: 1;
+				margin-bottom: 0px;
+			}
+			.date {
+				margin-top: 5px;
+			}
+			.description {
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+		}
+		.ant-list-item {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+		.ant-list-item,
+		.ant-list-item:last-child {
+			border-bottom: 1px solid $color10;
+		}
+	}
+}

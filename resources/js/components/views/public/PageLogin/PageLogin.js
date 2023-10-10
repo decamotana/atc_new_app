@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
     Layout,
     Card,
@@ -10,7 +10,11 @@ import {
     Divider,
     Typography,
     Alert,
+    notification,
+    Space,
+    Spin,
 } from "antd";
+import axios from "axios";
 import { Link, useHistory } from "react-router-dom";
 import moment from "moment";
 import $ from "jquery";
@@ -18,20 +22,61 @@ import {
     fullwidthlogo,
     description,
     encrypt,
+    apiUrl,
 } from "../../../providers/companyInfo";
-import { POST, GET } from "../../../providers/useAxiosQuery";
+import { GET, POST } from "../../../providers/useAxiosQuery";
 import FloatInput from "../../../providers/FloatInput";
 import FloatInputPassword from "../../../providers/FloatInputPassword";
 import FloatInputMask from "../../../providers/FloatInputMask";
+import { H } from "highlight.run";
 
-export default function PageLogin() {
+export default function PageLogin({ match }) {
+    let token = match.params.token;
+    let appointment_id = match.params.id;
     let history = useHistory();
+
+    const { refetch: getMentainance } = GET(
+        "api/v1/maintenance",
+        "maintenance",
+
+        (res) => {
+            console.log("here", res.data);
+            if (match.url == "/login" || match.url == "/") {
+                if (res.data?.in_maintenance === 1) {
+                    history.push("/maintenance");
+                }
+            }
+        },
+        false
+    );
+
+    const [showAuthCodeForm, setShowAuthCodeForm] = useState(false);
+    const [isLoadingAutologIn, setIsLoadingAutoLogin] = useState(false);
+    const [message, setMessage] = useState("");
+    const [uId, setUid] = useState(0);
     const [form] = Form.useForm();
     const [formPassword] = Form.useForm();
+
+    const validator = {
+        require: {
+            required: true,
+            message: "Required",
+        },
+        require_false: {
+            required: false,
+            message: "Required",
+        },
+        email: {
+            type: "email",
+            message: "please enter a valid email",
+        },
+    };
+
     const [errorMessageLogin, setErrorMessageLogin] = useState({
         type: "success",
         message: "",
     });
+
     const [errorMessageForgot, setErrorMessageForgot] = useState({
         type: "success",
         message: "",
@@ -41,36 +86,34 @@ export default function PageLogin() {
         "api/v1/login",
         "login"
     );
-
-    const { mutate: mutateForgot, isLoading: isLoadingForgot } = POST(
-        "api/v1/forgot_password",
-        "forgot_password"
-    );
-
-    const { mutate: mutateVerify2fa, isLoading: isLoadingverify2fa } = POST(
-        "api/v1/verify2fa",
-        `verify2fa`
-    );
-
-    const [uId, setUId] = useState(0);
-    const [isGGAuth, setIsGGAuth] = useState(false);
-
-    const [errMessage2fa, setErrMessage2fa] = useState({
-        type: "",
-        message: "",
-    });
+    let screenWitdh = window.innerWidth;
 
     const onFinishLogin = (values) => {
         mutateLogin(values, {
             onSuccess: (res) => {
                 // console.log("res", res);
-                if (res.data) {
-                    if (res.data && res.data.google2fa_enable === 1) {
-                        setUId(res.data.id);
-                        setIsGGAuth(true);
+                if (res) {
+                    if (match.url == "/maintenance-login") {
+                        localStorage.fromMaintenance = "true";
+                    }
+
+                    if (res.data.google2fa_enable === 1) {
+                        setUid(res.data.id);
+                        setShowAuthCodeForm(true);
                     } else {
+                        H.identify(
+                            res.data.firstname + " " + res.data.lastname,
+                            {
+                                id: res.data.id,
+                                email: res.data.email,
+                                username: res.data.username,
+                            }
+                        );
+
                         localStorage.userdata = encrypt(res.data);
                         localStorage.token = res.token;
+                        localStorage.hasLoggedIn = true;
+
                         window.location.reload();
                     }
                 } else {
@@ -94,12 +137,161 @@ export default function PageLogin() {
         });
     };
 
+    useEffect(() => {
+        if (token) {
+            axios
+                .post(
+                    `${apiUrl}api/v1/myatc/autologin/auth`,
+                    {},
+                    {
+                        headers: {
+                            Authorization: "Bearer " + token,
+                        },
+                    }
+                )
+                .then((res) => {
+                    localStorage.userdata = encrypt(res.data.data);
+                    localStorage.token = res.data.token;
+
+                    H.identify(res.data.firstname + " " + res.data.lastname, {
+                        id: res.data.id,
+                        email: res.data.email,
+                        username: res.data.username,
+                    });
+
+                    window.location.reload();
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+        }
+    }, []);
+
+    useEffect(() => {
+        let link = window.location.search.substring(1);
+        link = link.split("email=");
+
+        let details = link[1] ? link[1].split("&") : "";
+
+        let getMessage = details[1] ? details[1].split("message=")[1] : "";
+
+        if (getMessage[1]) {
+            setMessage(getMessage.replace(/%20/g, " "));
+        }
+
+        if (details[0]) {
+            autoLogin(details[0]);
+            setIsLoadingAutoLogin(true);
+        }
+    }, [match]);
+
+    const { mutate: mutateAutoLogin } = POST("api/v1/auto_login", "auto_login");
+
+    const autoLogin = (values) => {
+        console.log("match autoLogin", values);
+
+        mutateAutoLogin(
+            { email: values },
+            {
+                onSuccess: (res) => {
+                    if (res.success) {
+                        if (res.data.google2fa_enable === 1) {
+                            setUid(res.data.id);
+                            setShowAuthCodeForm(true);
+                        } else {
+                            console.log("match res", res);
+
+                            console.log("message", message);
+                            setIsLoadingAutoLogin(false);
+                            localStorage.userdata = encrypt(res.data);
+                            localStorage.token = res.token;
+                            localStorage.hasLoggedIn = true;
+
+                            H.identify(
+                                res.data.firstname + " " + res.data.lastname,
+                                {
+                                    id: res.data.id,
+                                    email: res.data.email,
+                                    username: res.data.username,
+                                }
+                            );
+
+                            window.location.reload();
+                        }
+                    } else {
+                        //persistent
+                        setTimeout(() => {
+                            autoLogin(values);
+                        }, 2000);
+                    }
+                },
+                onError: (err) => {
+                    setIsLoadingAutoLogin(false);
+                    console.log("match err", err);
+                    setErrorMessageLogin({
+                        type: "error",
+                        message: (
+                            <>
+                                Unrecognized username or password.{" "}
+                                <b>Forgot your password?</b>
+                            </>
+                        ),
+                    });
+                },
+            }
+        );
+    };
+
+    const { mutate: mutateverify2fa, isLoading: isLoadingverify2fa } = POST(
+        "api/v1/verify2fa",
+        `verify2fa`
+    );
+
+    const verifyCode = (val) => {
+        var code = val.code.replace(/-/g, "");
+
+        mutateverify2fa(
+            { code: code, id: uId },
+            {
+                onSuccess: (res) => {
+                    if (res.success) {
+                        console.log(res);
+                        // setShowAuthCodeForm(false);
+                        localStorage.userdata = encrypt(res.data);
+                        localStorage.token = res.token;
+                        localStorage.hasLoggedIn = true;
+
+                        H.identify(
+                            res.data.firstname + " " + res.data.lastname,
+                            {
+                                id: res.data.id,
+                                email: res.data.email,
+                                username: res.data.username,
+                            }
+                        );
+
+                        window.location.reload();
+                    } else {
+                        notification.error({
+                            message: "Error",
+                            description:
+                                "Invalid Authenticator Code, Please try again",
+                        });
+                    }
+                },
+                onError: (err) => {
+                    console.log(err);
+                },
+            }
+        );
+    };
+
     const onFinishForgotPassword = (values) => {
-        // console.log("onFinishForgotPassword", values);
+        console.log("onFinishForgotPassword", values);
 
         let data = {
             ...values,
-            link_origin: window.location.origin,
+            link: window.location.origin,
         };
         mutateForgot(data, {
             onSuccess: (res) => {
@@ -120,45 +312,14 @@ export default function PageLogin() {
         });
     };
 
-    const onFinishVerifyCode = (values) => {
-        // console.log("onFinishVerifyCode", values);
-
-        var code = values.code.replace(/-/g, "");
-
-        mutateVerify2fa(
-            { code: code, id: uId },
-            {
-                onSuccess: (res) => {
-                    if (res.data) {
-                        localStorage.userdata = encrypt(res.data);
-                        localStorage.token = res.token;
-                        window.location.reload();
-                    } else {
-                        setErrMessage2fa({
-                            type: "error",
-                            message:
-                                "Invalid Authenticator Code, Please try again",
-                        });
-                    }
-                },
-                onError: (err) => {
-                    console.log(err);
-                },
-            }
-        );
-    };
+    const { mutate: mutateForgot, isLoading: isLoadingForgot } = POST(
+        "api/v1/forgot_password",
+        "forgot_password"
+    );
 
     const hadleShowPassword = () => {
         $("#login-form-forget").slideToggle();
     };
-
-    GET("api/v1/maintenance", "maintenance", (res) => {
-        if (res.success === true) {
-            if (res.data.system_maintenance === 1) {
-                history.push("/maintenance");
-            }
-        }
-    });
 
     return (
         <Layout className="public-layout login-layout">
@@ -170,10 +331,10 @@ export default function PageLogin() {
                             src={fullwidthlogo}
                             preview={false}
                         />
-
-                        <Card>
-                            {!isGGAuth ? (
-                                <>
+                        <div className="login-sub-title"></div>
+                        {!isLoadingAutologIn ? (
+                            !showAuthCodeForm && (
+                                <Card className="card--public-body">
                                     <Form
                                         layout="vertical"
                                         className="login-form"
@@ -215,7 +376,7 @@ export default function PageLogin() {
                                                 {
                                                     required: true,
                                                     message:
-                                                        "This field is required.",
+                                                        "This field field is required.",
                                                 },
                                             ]}
                                             hasFeedback
@@ -231,7 +392,7 @@ export default function PageLogin() {
                                                 {
                                                     required: true,
                                                     message:
-                                                        "This field is required.",
+                                                        "This field field is required.",
                                                 },
                                             ]}
                                             hasFeedback
@@ -275,7 +436,7 @@ export default function PageLogin() {
                                             type="primary"
                                             htmlType="submit"
                                             loading={isLoadingButtonLogin}
-                                            className="btn-main m-t-sm btn-sign-in"
+                                            className="btn-primary m-t-sm btn-sign-in"
                                             block
                                             size="large"
                                         >
@@ -321,7 +482,7 @@ export default function PageLogin() {
                                                 {
                                                     required: true,
                                                     message:
-                                                        "This field is required.",
+                                                        "This field field is required.",
                                                 },
                                                 {
                                                     type: "email",
@@ -339,7 +500,7 @@ export default function PageLogin() {
                                         <Button
                                             type="primary"
                                             htmlType="submit"
-                                            className="btn-main"
+                                            className="btn-main  btn-register-here"
                                             block
                                             size="large"
                                             loading={isLoadingForgot}
@@ -357,69 +518,116 @@ export default function PageLogin() {
                                             />
                                         )}
                                     </Form>
-                                </>
-                            ) : (
-                                <Form
-                                    layout="vertical"
-                                    className="login-form"
-                                    // style={{
-                                    //   marginTop: "-50px",
-                                    // }}
-                                    onFinish={onFinishVerifyCode}
-                                    autoComplete="off"
+                                </Card>
+                            )
+                        ) : (
+                            <div style={{ marginTop: "170px" }}>
+                                <Row
+                                    style={{
+                                        display: "flex",
+                                        justifyContent: "center",
+                                    }}
                                 >
-                                    <div style={{ textAlign: "center" }}>
-                                        {" "}
-                                        <h3>
-                                            Two-Factor Authentication Required
-                                        </h3>
-                                        <p>Enter Authenticator Code </p>
-                                    </div>
+                                    <Space size="middle">
+                                        <Spin size="large" />
+                                    </Space>
+                                </Row>
+                                <Row>
+                                    <Space size="middle">
+                                        <Typography.Title
+                                            level={4}
+                                            className="text-center text-sign-in-here color-16"
+                                        >
+                                            Saving your credentials, Please
+                                            wait.
+                                        </Typography.Title>
+                                    </Space>
+                                </Row>
+                            </div>
+                        )}
 
-                                    <Form.Item
-                                        name="code"
-                                        rules={[
-                                            {
-                                                required: true,
-                                                message: "Required",
-                                            },
-                                        ]}
-                                        hasFeedback
-                                    >
-                                        <FloatInputMask
-                                            label="Authenticator Code"
-                                            placeholder="Authenticator Code"
-                                            maskLabel="code"
-                                            maskType="999-999"
-                                        />
-                                    </Form.Item>
+                        {showAuthCodeForm && (
+                            <Card
+                                style={{
+                                    // background: "transparent",
+                                    border: "0px solid",
+                                    textAlign: "center",
+                                    height: "auto",
+                                    borderRadius: "10px",
+                                    margin: "0px 10px",
+                                }}
+                                headStyle={{
+                                    borderBottom: "none",
+                                    background: "transparent!important",
+                                }}
+                                bodyStyle={{
+                                    padding:
+                                        screenWitdh < 720
+                                            ? "35px 35px"
+                                            : "35px 55px",
+                                }}
+                                className="login"
+                            >
+                                <Row className="flexdirection">
+                                    <Col xs={24} md={24}>
+                                        <Form
+                                            name="basic"
+                                            layout="vertical"
+                                            className="login-form"
+                                            // style={{
+                                            //   marginTop: "-50px",
+                                            // }}
+                                            onFinish={verifyCode}
+                                            autoComplete="off"
+                                        >
+                                            <div
+                                                style={{ textAlign: "center" }}
+                                            >
+                                                {" "}
+                                                <h3>
+                                                    Two-Factor Authentication
+                                                    Required
+                                                </h3>
+                                                <p>Enter Authenticator Code </p>
+                                            </div>
 
-                                    <Button
-                                        type="primary"
-                                        className="btn-main m-t-sm"
-                                        block
-                                        size="large"
-                                        htmlType="submit"
-                                        loading={isLoadingverify2fa}
-                                    >
-                                        SUBMIT
-                                    </Button>
+                                            <Form.Item
+                                                name="code"
+                                                rules={[validator.require]}
+                                                hasFeedback
+                                            >
+                                                <FloatInputMask
+                                                    label="Authenticator Code"
+                                                    placeholder="Authenticator Code"
+                                                    maskLabel="code"
+                                                    maskType="999-999"
+                                                />
+                                            </Form.Item>
 
-                                    {errMessage2fa.message && (
-                                        <Alert
-                                            className="m-t-sm"
-                                            type={errMessage2fa.type}
-                                            message={errMessage2fa.message}
-                                        />
-                                    )}
-                                </Form>
-                            )}
-                        </Card>
+                                            <Button
+                                                type="primary"
+                                                htmlType="submit"
+                                                loading={isLoadingverify2fa}
+                                                className="btn-loginNew-outline"
+                                                style={{
+                                                    width: "100%",
+                                                    marginTop: 10,
+                                                    fontSize: "20px",
+                                                    height: "45px",
+                                                }}
+                                            >
+                                                SUBMIT
+                                            </Button>
+                                        </Form>
+                                    </Col>
+                                </Row>
+                            </Card>
+                        )}
                     </Col>
                 </Row>
             </Layout.Content>
             <Layout.Footer className="text-center m-t-lg">
-                <Typography.Text>
+                <Typography.Text class="copyright-txt">
                     © Copyright {moment().format("YYYY")} {description}. All
                     Rights Reserved.
                 </Typography.Text>

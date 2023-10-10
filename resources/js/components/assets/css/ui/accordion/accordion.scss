@@ -112,68 +112,140 @@
   text-transform: uppercase;
 }
 
-// companyColor1
-.main-1-collapse > .ant-collapse-item > .ant-collapse-header {
-  background-color: $accordionBorder;
-  outline: none;
-  background-color: $color1;
-  border: 1px solid $color1;
-  color: $white;
+.ant-collapse {
+  & .ant-collapse-item {
+    & .ant-collapse-header {
+      outline: none;
+      border-left: 1px solid $basicNavBorder;
+      border-right: 1px solid $basicNavBorder;
+      border-top: 1px solid $basicNavBorder;
+      background-color: $sideBarBackground;
 
-  span {
-    // color: $white !important;
-    color: white;
+      span {
+        color: $primary;
+        font-weight: 400;
+      }
+      .ant-collapse-extra {
+        color: $white !important;
+      }
+    }
+
+    & .ant-collapse-content {
+      border-top: none;
+      & .ant-collapse-content-box {
+        border-left: 1px solid $basicNavBorder;
+        border-right: 1px solid $basicNavBorder;
+        border-top: 1px solid $basicNavBorder;
+      }
+    }
   }
+  & .ant-collapse-item:last-child {
+    border-radius: 0 !important;
+  }
+  & > .ant-collapse-item:last-child > .ant-collapse-header {
+    border-radius: 0 !important;
+  }
+}
+
+.main-4-collapse-inactive > .ant-collapse-item > .ant-collapse-header {
+  background-color: #fbfbfb !important;
+  outline: none;
+  border: 1px solid #d1d3d5 !important;
+  color: white !important;
+
+  .ant-collapse-extra {
+    color: $white !important;
+  }
+
+  .ant-typography-ellipsis {
+    font-size: 18px !important;
+    color: #808284 !important;
+  }
+}
+.main-4-collapse-pending > .ant-collapse-item > .ant-collapse-header {
+  background-color: #fbfbfb !important;
+  outline: none;
+  border: 1px solid #fbfbfb !important;
+
+  .ant-collapse-extra {
+    color: $white !important;
+  }
+  .ant-typography-ellipsis {
+    font-size: 18px !important;
+    color: white !important;
+  }
+}
+.main-4-collapse-complete > .ant-collapse-item > .ant-collapse-header {
+  background-color: #fbfbfb !important;
+  outline: none;
+  border: 1px solid #fbfbfb;
+
+  .ant-typography-ellipsis {
+    font-size: 18px !important;
+    color: white !important;
+  }
+
   .ant-collapse-extra {
     color: $white !important;
   }
 }
 
-// companyColor2
-.main-2-collapse > .ant-collapse-item > .ant-collapse-header {
-  background-color: $accordionBorder;
-  outline: none;
-  background-color: $color2;
-  border: 1px solid $color2;
-  color: $white;
 
-  span {
-    color: $white !important;
-  }
+.main-4-collapse-taskcards-new > .ant-collapse-item > .ant-collapse-header {
+  background-color: #d4e2fc !important;
+  outline: none;
+  border: 1px solid #f2f2f2 !important;
+
   .ant-collapse-extra {
     color: $white !important;
+  }
+  .ant-typography-ellipsis {
+    font-size: 18px !important;
+    font-weight: bold;
+    color: #325db8 !important;
   }
 }
 
-// companyColor3
-.main-3-collapse > .ant-collapse-item > .ant-collapse-header {
-  background-color: $accordionBorder;
-  outline: none;
-  background-color: $color3;
-  border: 1px solid $color3;
-  color: $white;
-
-  span {
-    color: $white !important;
-  }
-  .ant-collapse-extra {
-    color: $white !important;
+.collapse-content-inactive {
+  .ant-collapse-content > .ant-collapse-content-box {
+    background: white;
+    padding: 0px;
+    .ant-card {
+      padding: 10px;
+      color: #808284;
+      font-size: 16px;
+      .ant-typography {
+        color: #949599;
+      }
+    }
   }
 }
+.collapse-content-complete {
+  .ant-collapse-content > .ant-collapse-content-box {
+    background: white;
+    padding: 0px;
+    .ant-card {
+      padding: 10px;
+      font-size: 16px;
 
-// companyColor4
-.main-4-collapse > .ant-collapse-item > .ant-collapse-header {
-  background-color: $accordionBorder;
-  outline: none;
-  background-color: $color4;
-  border: 1px solid $color4;
-  color: $white;
-
-  span {
-    color: $white !important;
+      .ant-typography {
+        color: #949599;
+      }
+    }
   }
-  .ant-collapse-extra {
-    color: $white !important;
+}
+.collapse-content-pending {
+  .ant-collapse-content > .ant-collapse-content-box {
+    background: white;
+    padding: 0px;
+    .ant-card {
+      padding: 10px;
+      font-size: 16px;
+
+      .ant-typography {
+        color: #949599;
+      }
+    }
   }
 }
 

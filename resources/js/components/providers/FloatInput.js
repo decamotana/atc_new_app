@@ -2,66 +2,60 @@ import React, { useState, useEffect } from "react";
 import { Input } from "antd";
 import $ from "jquery";
 const FloatInput = (props) => {
-	const [focus, setFocus] = useState(false);
-	let {
-		label,
-		value,
-		placeholder,
-		type,
-		required,
-		disabled,
-		readOnly,
-		addonBefore,
-		addonAfter,
-		className,
-		allowClear,
-	} = props;
+  const [focus, setFocus] = useState(false);
+  let {
+    label,
+    value,
+    placeholder,
+    type,
+    required,
+    disabled,
+    readOnly,
+    addonAfter,
+    className,
+    allowClear,
+  } = props;
 
-	if (!placeholder) placeholder = label;
+  if (!placeholder) placeholder = label;
 
-	const isOccupied = focus || (value && value.length !== 0);
+  const isOccupied = focus || (value && value.length !== 0);
 
-	const labelClass = isOccupied ? "label as-label" : "label as-placeholder";
+  const labelClass = isOccupied ? "label as-label" : "label as-placeholder";
 
-	const requiredMark = required ? <span className="text-danger">*</span> : null;
+  const requiredMark = required ? <span className="text-danger">*</span> : null;
 
-	useEffect(() => {
-		// console.log(props)
-		$(".float-label").removeClass("hide");
-	}, []);
+  useEffect(() => {
+    // console.log(props)
+    $(".float-label").removeClass("hide");
+  }, []);
 
-	return (
-		<div
-			className={`float-label ${className ? className : ""}`}
-			onBlur={() => setFocus(false)}
-			onFocus={() => setFocus(true)}
-		>
-			<Input
-				onChange={(e) => {
-					if (props.onChange) {
-						props.onChange(e.target.value);
-					}
-				}}
-				type={type}
-				value={value ? value : ""}
-				size="large"
-				autoComplete="off"
-				disabled={disabled}
-				readOnly={readOnly}
-				addonBefore={addonBefore}
-				addonAfter={addonAfter}
-				allowClear={allowClear ? allowClear : false}
-				onBlur={(e) => {
-					if (props.onBlurInput) {
-						props.onBlurInput(e.target.value);
-					}
-				}}
-			/>
-			<label className={labelClass}>
-				{isOccupied ? label : placeholder} {requiredMark}
-			</label>
-		</div>
-	);
+  return (
+    <div
+      className={`float-label ${className ? className : ""}`}
+      onBlur={() => setFocus(false)}
+      onFocus={() => setFocus(true)}
+    >
+      <Input
+        onChange={(e) => props.onChange(e.target.value)}
+        type={type}
+        value={value}
+        size="large"
+        autoComplete="off"
+        disabled={disabled}
+        readOnly={readOnly}
+        addonAfter={addonAfter}
+        allowClear={allowClear ? allowClear : false}
+        onBlur={(e) => {
+          if (props.onBlurInput) {
+            props.onBlurInput(e.target.value);
+          }
+        }}
+      />
+      <label className={labelClass}>
+        {isOccupied ? label : placeholder} {requiredMark}
+      </label>
+    </div>
+  );
 };
 
 export default FloatInput;

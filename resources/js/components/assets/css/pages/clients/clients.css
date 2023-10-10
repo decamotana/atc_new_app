@@ -1,0 +1,41 @@
+.manageUserPage .ant-collapse-content-box {
+  padding: 6px;
+}
+@media (min-width: 576px) {
+  .manageUserPage .ant-collapse-content-box {
+    padding: 16px;
+  }
+}
+.manageUserPage .client-state .ant-select-single.ant-select-lg:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-item {
+  line-height: 57px;
+}
+.manageUserPage .ant-card-body {
+  padding: 5px;
+}
+@media (min-width: 576px) {
+  .manageUserPage .ant-card-body {
+    padding: 24px;
+  }
+}
+.manageUserPage .label.as-placeholder {
+  font-size: 8.5px;
+  font-weight: 600;
+  top: 16px;
+}
+@media (min-width: 576px) {
+  .manageUserPage .label.as-placeholder {
+    font-size: 14px;
+    font-weight: normal;
+    top: 12px;
+  }
+}
+.manageUserPage .notes-collapse {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+@media (min-width: 991px) and (max-width: 1024px) {
+  .manageUserPage .task-collapse-title {
+    font-size: 15px !important;
+  }
+}/*# sourceMappingURL=clients.css.map */
